@@ -1,0 +1,249 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  password      String
+  image         String?
+  currency      String    @default("EUR")
+  monthlyIncome Float?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts          Account[]
+  sessions          Session[]
+  transactions      Transaction[]
+  bankAccounts      BankAccount[]
+  budgets           Budget[]
+  savingsGoals      SavingsGoal[]
+  debts             Debt[]
+  assets            Asset[]
+  liabilities       Liability[]
+  netWorthSnapshots NetWorthSnapshot[]
+  readArticles      UserArticle[]
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model BankAccount {
+  id           String   @id @default(cuid())
+  userId       String
+  name         String
+  type         String   @default("checking") // checking, savings, credit, cash, investment
+  color        String   @default("#10b981")
+  icon         String?
+  isDefault    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  transactions Transaction[]
+
+  @@index([userId])
+  @@map("bank_accounts")
+}
+
+model Transaction {
+  id            String   @id @default(cuid())
+  userId        String
+  amount        Float
+  type          String
+  categoryId    String
+  description   String
+  notes         String?
+  date          DateTime
+  isRecurring   Boolean  @default(false)
+  recurrence    String?
+  bankAccountId String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bankAccount BankAccount? @relation(fields: [bankAccountId], references: [id], onDelete: SetNull)
+
+  @@index([userId, date])
+  @@index([userId, categoryId])
+  @@index([userId, bankAccountId])
+  @@map("transactions")
+}
+
+model Budget {
+  id         String   @id @default(cuid())
+  userId     String
+  categoryId String
+  amount     Float
+  month      Int
+  year       Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, categoryId, month, year])
+  @@index([userId, month, year])
+  @@map("budgets")
+}
+
+model SavingsGoal {
+  id            String    @id @default(cuid())
+  userId        String
+  name          String
+  description   String?
+  targetAmount  Float
+  currentAmount Float     @default(0)
+  targetDate    DateTime?
+  icon          String?
+  color         String?
+  isCompleted   Boolean   @default(false)
+  completedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user     User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  deposits SavingsDeposit[]
+
+  @@map("savings_goals")
+}
+
+model SavingsDeposit {
+  id     String   @id @default(cuid())
+  goalId String
+  amount Float
+  notes  String?
+  date   DateTime @default(now())
+
+  goal SavingsGoal @relation(fields: [goalId], references: [id], onDelete: Cascade)
+
+  @@map("savings_deposits")
+}
+
+model Debt {
+  id              String    @id @default(cuid())
+  userId          String
+  name            String
+  type            String
+  initialAmount   Float
+  currentBalance  Float
+  interestRate    Float
+  minimumPayment  Float?
+  startDate       DateTime
+  expectedEndDate DateTime?
+  lender          String?
+  notes           String?
+  isActive        Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  payments DebtPayment[]
+
+  @@map("debts")
+}
+
+model DebtPayment {
+  id            String   @id @default(cuid())
+  debtId        String
+  amount        Float
+  principalPaid Float?
+  interestPaid  Float?
+  date          DateTime @default(now())
+  notes         String?
+
+  debt Debt @relation(fields: [debtId], references: [id], onDelete: Cascade)
+
+  @@map("debt_payments")
+}
+
+model Asset {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  type        String
+  value       Float
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("assets")
+}
+
+model Liability {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  type        String
+  value       Float
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("liabilities")
+}
+
+model NetWorthSnapshot {
+  id               String   @id @default(cuid())
+  userId           String
+  totalAssets      Float
+  totalLiabilities Float
+  netWorth         Float
+  date             DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, date])
+  @@map("net_worth_snapshots")
+}
+
+model UserArticle {
+  id        String   @id @default(cuid())
+  userId    String
+  articleId String
+  readAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, articleId])
+  @@map("user_articles")
+}
