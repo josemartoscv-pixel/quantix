@@ -38,6 +38,8 @@ export async function POST(req: NextRequest) {
         interestRate: data.interestRate,
         minimumPayment: data.minimumPayment,
         startDate: new Date(data.startDate),
+        remainingYears: data.remainingYears,
+        remainingMonths: data.remainingMonths,
         lender: data.lender,
         notes: data.notes,
       },

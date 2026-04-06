@@ -4,8 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CompoundInterestCalc } from "@/components/calculators/compound-interest-calc";
 import { LoanPaymentCalc } from "@/components/calculators/loan-payment-calc";
-import { SavingsGoalCalc } from "@/components/calculators/savings-goal-calc";
-import { EmergencyFundCalc } from "@/components/calculators/emergency-fund-calc";
+import { HouseCalc } from "@/components/calculators/house-calc";
+import { FireCalc } from "@/components/calculators/fire-calc";
+import { InflationCalc } from "@/components/calculators/inflation-calc";
+import { RentVsBuyCalc } from "@/components/calculators/rent-vs-buy-calc";
 
 export default function CalculadorasPage() {
   return (
@@ -14,8 +16,10 @@ export default function CalculadorasPage() {
         <TabsList className="flex flex-wrap h-auto gap-1">
           <TabsTrigger value="interes">Interés compuesto</TabsTrigger>
           <TabsTrigger value="prestamo">Préstamo</TabsTrigger>
-          <TabsTrigger value="meta">Meta de ahorro</TabsTrigger>
-          <TabsTrigger value="emergencia">Fondo emergencia</TabsTrigger>
+          <TabsTrigger value="vivienda">Comprar casa</TabsTrigger>
+          <TabsTrigger value="alquiler">Alquiler vs Compra</TabsTrigger>
+          <TabsTrigger value="fire">Independencia financiera</TabsTrigger>
+          <TabsTrigger value="inflacion">Inflación</TabsTrigger>
         </TabsList>
 
         <TabsContent value="interes">
@@ -46,30 +50,58 @@ export default function CalculadorasPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="meta">
+        <TabsContent value="vivienda">
           <Card>
             <CardHeader>
-              <CardTitle>Calculadora de Meta de Ahorro</CardTitle>
+              <CardTitle>¿Puedo comprarme una casa?</CardTitle>
               <CardDescription>
-                ¿Cuánto tiempo necesitas para alcanzar tu objetivo de ahorro? Descúbrelo aquí.
+                Calcula cuánto necesitas ahorrar, los impuestos y gastos asociados, y si la hipoteca cabe en tu presupuesto.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <SavingsGoalCalc />
+              <HouseCalc />
             </CardContent>
           </Card>
         </TabsContent>
 
-        <TabsContent value="emergencia">
+        <TabsContent value="alquiler">
           <Card>
             <CardHeader>
-              <CardTitle>Calculadora de Fondo de Emergencia</CardTitle>
+              <CardTitle>¿Alquiler o Compra?</CardTitle>
               <CardDescription>
-                Calcula cuánto necesitas en tu fondo de emergencia y cuándo lo alcanzarás.
+                Compara el coste real de comprar vs alquilar e invertir la entrada. Incluye hipoteca, impuestos, revalorización y coste de oportunidad.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <EmergencyFundCalc />
+              <RentVsBuyCalc />
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="fire">
+          <Card>
+            <CardHeader>
+              <CardTitle>Independencia Financiera (FIRE)</CardTitle>
+              <CardDescription>
+                Calcula cuánto necesitas ahorrar para vivir de tus inversiones y cuándo podrías dejar de trabajar.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <FireCalc />
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="inflacion">
+          <Card>
+            <CardHeader>
+              <CardTitle>Calculadora de Inflación</CardTitle>
+              <CardDescription>
+                Descubre cuánto poder adquisitivo pierdes con el tiempo y cuánto necesitarás en el futuro para mantener tu nivel de vida.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <InflationCalc />
             </CardContent>
           </Card>
         </TabsContent>

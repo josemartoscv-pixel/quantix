@@ -47,7 +47,8 @@ export function DebtForm({ onSuccess, initialData, trigger }: DebtFormProps) {
 
   const { register, handleSubmit, reset, setValue, watch, formState: { errors, isSubmitting } } =
     useForm<DebtFormData>({
-      resolver: zodResolver(debtSchema),
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      resolver: zodResolver(debtSchema) as any,
       defaultValues: {
         name: initialData?.name || "",
         type: initialData?.type || "",
@@ -56,6 +57,8 @@ export function DebtForm({ onSuccess, initialData, trigger }: DebtFormProps) {
         interestRate: initialData?.interestRate,
         minimumPayment: initialData?.minimumPayment,
         startDate: initialData?.startDate || new Date().toISOString().split("T")[0],
+        remainingYears: initialData?.remainingYears ?? undefined,
+        remainingMonths: initialData?.remainingMonths ?? undefined,
         lender: initialData?.lender || "",
         notes: initialData?.notes || "",
       },
@@ -173,12 +176,41 @@ export function DebtForm({ onSuccess, initialData, trigger }: DebtFormProps) {
             </div>
             <div>
               <Label>Prestamista</Label>
-              <Input
-                placeholder="Ej: BBVA"
-                {...register("lender")}
-              />
+              <Input placeholder="Ej: BBVA" {...register("lender")} />
             </div>
           </div>
+
+          {watch("type") === "hipoteca" && (
+            <div>
+              <Label className="mb-2 block">Plazo pendiente de la hipoteca</Label>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label className="text-xs text-gray-500">Años restantes</Label>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="50"
+                    placeholder="Ej: 20"
+                    {...register("remainingYears", { valueAsNumber: true })}
+                    className="mt-1"
+                  />
+                  {errors.remainingYears && <p className="text-red-600 text-xs mt-1">{errors.remainingYears.message}</p>}
+                </div>
+                <div>
+                  <Label className="text-xs text-gray-500">Meses adicionales</Label>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="11"
+                    placeholder="Ej: 6"
+                    {...register("remainingMonths", { valueAsNumber: true })}
+                    className="mt-1"
+                  />
+                  {errors.remainingMonths && <p className="text-red-600 text-xs mt-1">{errors.remainingMonths.message}</p>}
+                </div>
+              </div>
+            </div>
+          )}
 
           <div>
             <Label>Notas (opcional)</Label>

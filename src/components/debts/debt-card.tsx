@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { Pencil, Trash2, PlusCircle, Loader2 } from "lucide-react";
+import { Pencil, Trash2, PlusCircle, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -41,6 +41,8 @@ interface Debt {
   currentBalance: number;
   interestRate: number;
   minimumPayment?: number | null;
+  remainingYears?: number | null;
+  remainingMonths?: number | null;
   lender?: string | null;
   notes?: string | null;
   startDate: string;
@@ -121,7 +123,64 @@ interface DebtCardProps {
   onRefresh: () => void;
 }
 
+function AmortizationTable({ balance, interestRate, payment }: { balance: number; interestRate: number; payment: number }) {
+  const rows = useMemo(() => {
+    const monthlyRate = interestRate / 100 / 12;
+    const result = [];
+    let remaining = balance;
+    const maxMonths = 360;
+    for (let i = 1; i <= maxMonths && remaining > 0.01; i++) {
+      const interest = remaining * monthlyRate;
+      const principal = Math.min(payment - interest, remaining);
+      if (principal <= 0) break;
+      remaining = remaining - principal;
+      result.push({
+        month: i,
+        payment: Math.min(payment, interest + Math.max(principal, 0)),
+        interest,
+        principal: Math.max(principal, 0),
+        balance: Math.max(remaining, 0),
+      });
+      if (result.length >= 60) { // show max 5 years
+        break;
+      }
+    }
+    return result;
+  }, [balance, interestRate, payment]);
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-xs">
+        <thead>
+          <tr className="border-b border-gray-100">
+            <th className="text-left py-1.5 px-2 text-gray-400 font-semibold">Mes</th>
+            <th className="text-right py-1.5 px-2 text-gray-400 font-semibold">Cuota</th>
+            <th className="text-right py-1.5 px-2 text-red-400 font-semibold">Interés</th>
+            <th className="text-right py-1.5 px-2 text-emerald-600 font-semibold">Capital</th>
+            <th className="text-right py-1.5 px-2 text-gray-400 font-semibold">Pendiente</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.month} className="border-b border-gray-50 hover:bg-gray-50 transition-colors">
+              <td className="py-1.5 px-2 text-gray-500">{row.month}</td>
+              <td className="py-1.5 px-2 text-right text-gray-700 font-medium">{formatCurrency(row.payment)}</td>
+              <td className="py-1.5 px-2 text-right text-red-500">{formatCurrency(row.interest)}</td>
+              <td className="py-1.5 px-2 text-right text-emerald-600">{formatCurrency(row.principal)}</td>
+              <td className="py-1.5 px-2 text-right text-gray-500">{formatCurrency(row.balance)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {rows.length >= 60 && (
+        <p className="text-[10px] text-gray-400 text-center py-2">Mostrando primeros 60 meses</p>
+      )}
+    </div>
+  );
+}
+
 export function DebtCard({ debt, onRefresh }: DebtCardProps) {
+  const [showAmortization, setShowAmortization] = useState(false);
   const paidOff = ((debt.initialAmount - debt.currentBalance) / debt.initialAmount) * 100;
 
   const handleDelete = async () => {
@@ -193,6 +252,18 @@ export function DebtCard({ debt, onRefresh }: DebtCardProps) {
             </div>
           )}
 
+          {debt.type === "hipoteca" && (debt.remainingYears != null || debt.remainingMonths != null) && (
+            <div className="flex justify-between text-sm">
+              <span className="text-gray-500">Plazo pendiente</span>
+              <span className="font-medium text-gray-700">
+                {[
+                  debt.remainingYears ? `${debt.remainingYears} año${debt.remainingYears !== 1 ? "s" : ""}` : null,
+                  debt.remainingMonths ? `${debt.remainingMonths} mes${debt.remainingMonths !== 1 ? "es" : ""}` : null,
+                ].filter(Boolean).join(" y ")}
+              </span>
+            </div>
+          )}
+
           {/* Progress */}
           <div>
             <div className="flex justify-between text-xs text-gray-500 mb-1">
@@ -212,6 +283,26 @@ export function DebtCard({ debt, onRefresh }: DebtCardProps) {
           </div>
 
           <PaymentDialog debtId={debt.id} onSuccess={onRefresh} />
+
+          {debt.minimumPayment && debt.interestRate > 0 && (
+            <button
+              onClick={() => setShowAmortization(!showAmortization)}
+              className="w-full flex items-center justify-between text-xs text-gray-400 hover:text-gray-600 transition-colors py-1 mt-1"
+            >
+              <span className="font-semibold">Tabla de amortización</span>
+              {showAmortization ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+            </button>
+          )}
+
+          {showAmortization && debt.minimumPayment && debt.interestRate > 0 && (
+            <div className="border border-gray-100 rounded-xl overflow-hidden mt-1">
+              <AmortizationTable
+                balance={debt.currentBalance}
+                interestRate={debt.interestRate}
+                payment={debt.minimumPayment}
+              />
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>

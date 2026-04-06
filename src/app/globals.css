@@ -38,6 +38,10 @@
   border-color: var(--border);
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

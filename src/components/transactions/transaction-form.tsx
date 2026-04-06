@@ -15,8 +15,9 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { transactionSchema, type TransactionFormData } from "@/lib/validations/transaction";
-import { EXPENSE_CATEGORIES, INCOME_CATEGORIES } from "@/lib/constants/categories";
+import { EXPENSE_CATEGORIES, INCOME_CATEGORIES, type Category } from "@/lib/constants/categories";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 interface BankAccount {
   id: string;
@@ -33,6 +34,7 @@ interface TransactionFormProps {
 
 export function TransactionForm({ onSuccess, initialData, trigger }: TransactionFormProps) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   const [transactionType, setTransactionType] = useState<"INCOME" | "EXPENSE">(
     (initialData?.type as "INCOME" | "EXPENSE") || "EXPENSE"
   );
@@ -57,23 +59,30 @@ export function TransactionForm({ onSuccess, initialData, trigger }: Transaction
       },
     });
 
+  const [customCategories, setCustomCategories] = useState<(Category & { type: string })[]>([]);
+
   useEffect(() => {
     if (open) {
       fetch("/api/bank-accounts")
         .then((r) => r.json())
         .then((data) => {
           setBankAccounts(data.accounts ?? []);
-          // Auto-select default account when creating new
           if (!isEditing && !initialData?.bankAccountId) {
             const def = (data.accounts ?? []).find((a: BankAccount) => a.isDefault);
             if (def) setSelectedBankAccount(def.id);
           }
         })
         .catch(() => {});
+      fetch("/api/categories")
+        .then((r) => r.json())
+        .then((data) => setCustomCategories(data.categories ?? []))
+        .catch(() => {});
     }
   }, [open, isEditing, initialData?.bankAccountId]);
 
-  const categories = transactionType === "INCOME" ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
+  const builtInCats = transactionType === "INCOME" ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
+  const customCats = customCategories.filter((c) => c.type === transactionType);
+  const categories = [...builtInCats, ...customCats];
 
   const handleTypeChange = (type: "INCOME" | "EXPENSE") => {
     setTransactionType(type);
@@ -96,6 +105,7 @@ export function TransactionForm({ onSuccess, initialData, trigger }: Transaction
       toast.success(isEditing ? "Transacción actualizada" : "Transacción creada");
       setOpen(false);
       reset();
+      router.refresh();
       onSuccess?.();
     } catch {
       toast.error("Error al guardar la transacción");
@@ -217,11 +227,6 @@ export function TransactionForm({ onSuccess, initialData, trigger }: Transaction
               className={cn("mt-1", errors.description && "border-red-300")}
             />
             {errors.description && <p className="text-red-600 text-xs mt-1">{errors.description.message}</p>}
-          </div>
-
-          <div>
-            <Label>Notas (opcional)</Label>
-            <Input placeholder="Notas adicionales..." {...register("notes")} className="mt-1" />
           </div>
 
           <div className="flex gap-3 pt-2">

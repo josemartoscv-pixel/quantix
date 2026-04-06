@@ -8,7 +8,7 @@ export const loginSchema = z.object({
   password: z.string().min(1, "La contraseña es obligatoria"),
 });
 
-export const registerBaseSchema = z.object({
+export const registerSchema = z.object({
   name: z
     .string()
     .min(2, "El nombre debe tener al menos 2 caracteres")
@@ -20,18 +20,8 @@ export const registerBaseSchema = z.object({
   password: z
     .string()
     .min(8, "La contraseña debe tener al menos 8 caracteres"),
-  confirmPassword: z.string().min(1, "Confirma tu contraseña"),
 });
 
-export const registerSchema = registerBaseSchema.refine(
-  (data) => data.password === data.confirmPassword,
-  {
-    message: "Las contraseñas no coinciden",
-    path: ["confirmPassword"],
-  }
-);
-
-// Schema for the API endpoint (no confirmPassword, no refinement)
 export const registerApiSchema = z.object({
   name: z.string().min(2).max(50),
   email: z.string().email(),
@@ -39,4 +29,4 @@ export const registerApiSchema = z.object({
 });
 
 export type LoginFormData = z.infer<typeof loginSchema>;
-export type RegisterFormData = z.infer<typeof registerBaseSchema>;
+export type RegisterFormData = z.infer<typeof registerSchema>;

@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { Plus, Pencil, Trash2, AlertCircle, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -247,6 +247,39 @@ export default function PresupuestoPage() {
         </Card>
       </div>
 
+      {/* Alert banner */}
+      {!loading && budgets.length > 0 && (() => {
+        const exceeded = budgets.filter((b) => b.spent > b.amount);
+        const warning = budgets.filter((b) => b.spent <= b.amount && b.amount > 0 && (b.spent / b.amount) >= 0.8);
+        if (exceeded.length === 0 && warning.length === 0) return null;
+        return (
+          <div className="space-y-2">
+            {exceeded.length > 0 && (
+              <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                <AlertCircle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-red-800">Presupuesto excedido</p>
+                  <p className="text-xs text-red-600 mt-0.5">
+                    {exceeded.map((b) => getCategoryById(b.categoryId)?.name || b.categoryId).join(", ")}
+                  </p>
+                </div>
+              </div>
+            )}
+            {warning.length > 0 && (
+              <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
+                <AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-amber-800">Cerca del límite (≥80%)</p>
+                  <p className="text-xs text-amber-600 mt-0.5">
+                    {warning.map((b) => getCategoryById(b.categoryId)?.name || b.categoryId).join(", ")}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })()}
+
       {/* Budgets grid */}
       {loading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -262,8 +295,10 @@ export default function PresupuestoPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {budgets.map((budget) => {
             const category = getCategoryById(budget.categoryId);
+            const isOver = budget.spent > budget.amount;
+            const isWarning = !isOver && budget.amount > 0 && (budget.spent / budget.amount) >= 0.8;
             return (
-              <Card key={budget.id} className="p-5">
+              <Card key={budget.id} className={`p-5 ${isOver ? "border-red-200 bg-red-50/30" : isWarning ? "border-amber-200 bg-amber-50/20" : ""}`}>
                 <div className="flex justify-end gap-1 mb-3">
                   <BudgetForm
                     initialData={budget}
@@ -291,6 +326,7 @@ export default function PresupuestoPage() {
                 <BudgetProgressBar
                   categoryName={category?.name || budget.categoryId}
                   categoryColor={category?.color || "#6b7280"}
+                  categoryEmoji={category?.emoji}
                   spent={budget.spent}
                   budgeted={budget.amount}
                 />

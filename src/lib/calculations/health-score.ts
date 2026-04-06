@@ -13,6 +13,8 @@ interface ScoreComponent {
   score: number;
   maxScore: number;
   description: string;
+  action?: string;
+  actionHref?: string;
 }
 
 interface HealthScoreResult {
@@ -20,6 +22,7 @@ interface HealthScoreResult {
   components: ScoreComponent[];
   label: string;
   color: string;
+  topActions: { text: string; href: string }[];
 }
 
 export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult {
@@ -44,11 +47,16 @@ export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult
   } else if (savingsRate > 0) {
     savingsScore = Math.round((savingsRate / 0.2) * 25);
   }
+  const neededSavings = monthlyIncome > 0 ? Math.ceil(monthlyIncome * 0.2 - (monthlyIncome - monthlyExpenses)) : 0;
   components.push({
-    name: "Tasa de ahorro",
+    name: "Ahorro",
     score: savingsScore,
     maxScore: 25,
     description: `Ahorras el ${Math.round(savingsRate * 100)}% de tus ingresos. Objetivo: ≥20%`,
+    action: savingsScore < 25 && neededSavings > 0
+      ? `Reduce tus gastos ${neededSavings.toFixed(0)}€/mes para llegar al 20% de ahorro`
+      : undefined,
+    actionHref: "/transacciones",
   });
 
   // 2. Adherencia al presupuesto (20 pts)
@@ -62,13 +70,19 @@ export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult
     }
   }
   components.push({
-    name: "Adherencia al presupuesto",
+    name: "Presupuesto",
     score: budgetScore,
     maxScore: 20,
     description:
       budgetCategories > 0
         ? `${categoriesOnBudget} de ${budgetCategories} categorías dentro del presupuesto`
         : "No tienes presupuestos configurados",
+    action: budgetScore < 20
+      ? budgetCategories === 0
+        ? "Configura al menos 3 categorías de presupuesto mensual"
+        : "Ajusta tus gastos para cumplir el presupuesto en todas las categorías"
+      : undefined,
+    actionHref: "/transacciones",
   });
 
   // 3. Fondo de emergencia (25 pts)
@@ -84,11 +98,18 @@ export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult
   } else if (totalSavings > 0) {
     emergencyScore = 4;
   }
+  const neededEmergency = monthlyExpenses > 0
+    ? Math.ceil((6 - Math.min(emergencyMonths, 6)) * monthlyExpenses)
+    : 0;
   components.push({
-    name: "Fondo de emergencia",
+    name: "Fondo emergencia",
     score: emergencyScore,
     maxScore: 25,
     description: `Tienes ${emergencyMonths.toFixed(1)} meses de gastos cubiertos. Objetivo: ≥6 meses`,
+    action: emergencyScore < 25 && neededEmergency > 0
+      ? `Añade ${neededEmergency.toLocaleString("es-ES")}€ a tu fondo de emergencia para tener 6 meses cubiertos`
+      : undefined,
+    actionHref: "/ahorros",
   });
 
   // 4. Ratio de deuda (20 pts)
@@ -106,10 +127,14 @@ export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult
     debtScore = 0;
   }
   components.push({
-    name: "Ratio de deuda",
+    name: "Deuda",
     score: debtScore,
     maxScore: 20,
     description: `Las deudas representan el ${Math.round(debtRatio * 100)}% de tus ingresos. Objetivo: <15%`,
+    action: debtScore < 20 && totalDebtPayments > 0
+      ? `Reduce tus pagos de deuda al 15% de tus ingresos (objetivo: ${Math.ceil(monthlyIncome * 0.15)}€/mes)`
+      : undefined,
+    actionHref: "/deudas",
   });
 
   // 5. Diversificación (10 pts)
@@ -128,6 +153,10 @@ export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult
       : totalSavings > 0
       ? "Tienes ahorros pero no inversiones"
       : "Sin ahorros ni inversiones",
+    action: !hasInvestments
+      ? "Registra al menos un activo de inversión (ETF, acciones, plan de pensiones...)"
+      : undefined,
+    actionHref: "/patrimonio",
   });
 
   const total = components.reduce((sum, c) => sum + c.score, 0);
@@ -148,5 +177,11 @@ export function calculateHealthScore(input: HealthScoreInput): HealthScoreResult
     color = "text-red-600";
   }
 
-  return { total, components, label, color };
+  const topActions = components
+    .filter((c) => c.action && c.score < c.maxScore)
+    .sort((a, b) => (b.maxScore - b.score) - (a.maxScore - a.score))
+    .slice(0, 3)
+    .map((c) => ({ text: c.action!, href: c.actionHref || "/dashboard" }));
+
+  return { total, components, label, color, topActions };
 }

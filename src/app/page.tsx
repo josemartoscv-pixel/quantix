@@ -7,11 +7,11 @@ import {
   PiggyBank,
   BookOpen,
   TrendingUp,
-  Shield,
   ArrowRight,
   CheckCircle,
   Wallet,
 } from "lucide-react";
+import { LandingWidgets } from "@/components/landing/landing-widgets";
 
 export default async function LandingPage() {
   const session = await auth();
@@ -64,48 +64,19 @@ export default async function LandingPage() {
     },
   ];
 
-  const benefits = [
-    {
-      icon: Shield,
-      title: "Seguro y privado",
-      description:
-        "Tus datos financieros son completamente privados y seguros. Nunca los compartimos con terceros.",
-    },
-    {
-      icon: BarChart3,
-      title: "Todo en un lugar",
-      description:
-        "Ingresos, gastos, ahorros, deudas y patrimonio en una sola aplicación intuitiva.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Decisiones informadas",
-      description:
-        "Con reportes claros y calculadoras financieras, toma mejores decisiones sobre tu dinero.",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
-      <nav className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💰</span>
-              <span className="font-bold text-xl text-gray-900">FinanzasApp</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Link
-                href="/login"
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-4 py-2 rounded-lg hover:bg-gray-50"
-              >
-                Iniciar sesión
+          <div className="flex justify-between items-center h-14">
+            <img src="/logo.png" alt="Quantix" className="h-8 w-auto rounded-lg" />
+            <div className="hidden sm:flex items-center gap-2">
+              <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-50 text-sm">
+                Entrar
               </Link>
-              <Link
-                href="/register"
-                className="bg-emerald-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
-              >
+              <Link href="/register" className="bg-emerald-600 text-white font-medium px-3 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-sm">
                 Empezar gratis
               </Link>
             </div>
@@ -114,76 +85,79 @@ export default async function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-10 sm:py-24">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-100 rounded-full opacity-30 blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-teal-100 rounded-full opacity-30 blur-3xl" />
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-100 rounded-full opacity-40 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-100 rounded-full opacity-40 blur-3xl" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
-              <CheckCircle className="w-4 h-4" />
-              Tu gestor de finanzas personales gratuito
+            <div className="flex justify-center mb-5">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-3xl sm:text-4xl shadow-lg shadow-emerald-200">
+                💰
+              </div>
             </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
-              Toma el control de{" "}
-              <span className="text-emerald-600">tus finanzas</span>
+            <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+              <CheckCircle className="w-3 h-3" />
+              100% gratuito · Sin tarjeta
+            </div>
+            <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4">
+              No es una app.<br />
+              <span className="text-emerald-600">Es el sistema que te faltaba.</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Registra tus ingresos y gastos, gestiona tu presupuesto, alcanza
-              tus metas de ahorro y mejora tu salud financiera con FinanzasApp.
+            <p className="text-sm sm:text-lg text-gray-500 mb-2 max-w-lg mx-auto leading-relaxed">
+              Deja de improvisar: controla, planifica y toma decisiones con sentido.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <p className="text-sm sm:text-base font-semibold text-emerald-700 mb-7">
+              Haz más con lo que ya tienes.
+            </p>
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3 justify-center">
               <Link
                 href="/register"
-                className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200 hover:shadow-emerald-300 text-lg"
+                className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3.5 rounded-2xl hover:bg-emerald-700 active:scale-95 transition-all shadow-lg shadow-emerald-200 text-sm sm:text-base"
               >
                 Empezar gratis
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/login"
-                className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-emerald-300 hover:text-emerald-700 transition-all text-lg"
+                className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-6 py-3.5 rounded-2xl border border-gray-200 hover:border-emerald-300 hover:text-emerald-700 active:scale-95 transition-all text-sm sm:text-base"
               >
-                Iniciar sesión
+                Ya tengo cuenta
               </Link>
             </div>
-            <p className="text-sm text-gray-500 mt-6">
-              Sin tarjeta de crédito. Sin suscripción. 100% gratuito.
-            </p>
           </div>
         </div>
       </section>
 
+      <LandingWidgets />
+
       {/* Features */}
-      <section className="py-20 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-3">
               Todo lo que necesitas para gestionar tu dinero
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Una plataforma completa con todas las herramientas para mejorar
-              tu situación financiera.
+            <p className="text-sm sm:text-lg text-gray-600 max-w-2xl mx-auto">
+              Una plataforma completa con todas las herramientas para mejorar tu situación financiera.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={feature.title}
-                  className="p-6 rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-md transition-all group"
+                  className="p-4 sm:p-6 rounded-2xl bg-gray-50 sm:bg-white sm:border sm:border-gray-100 hover:border-emerald-200 hover:shadow-md transition-all"
                 >
-                  <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${feature.color}`}
-                  >
-                    <Icon className="w-6 h-6" />
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center mb-3 shadow-sm ${feature.color}`}>
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2 leading-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-base text-gray-500 leading-relaxed hidden sm:block">
                     {feature.description}
                   </p>
                 </div>
@@ -193,72 +167,36 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              ¿Por qué FinanzasApp?
-            </h2>
-            <p className="text-lg text-gray-600">
-              Diseñada pensando en personas que quieren mejorar su vida
-              financiera sin complicaciones.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit) => {
-              const Icon = benefit.icon;
-              return (
-                <div
-                  key={benefit.title}
-                  className="text-center p-8 bg-white rounded-2xl shadow-sm border border-gray-100"
-                >
-                  <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-emerald-700" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Empieza a tomar el control hoy
+          <p className="text-emerald-200 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">Quantix</p>
+          <h2 className="text-2xl sm:text-4xl font-bold text-white mb-3 leading-tight">
+            Haz más con lo que ya tienes.
           </h2>
-          <p className="text-xl text-emerald-100 mb-10">
-            Únete y transforma tu relación con el dinero. Es gratis y solo
-            tarda 2 minutos.
+          <p className="text-sm sm:text-lg text-emerald-100 mb-2">
+            Deja de improvisar. Controla, planifica y toma decisiones con sentido.
+          </p>
+          <p className="text-xs sm:text-sm text-emerald-200 mb-7">
+            Es gratis y solo tarda 2 minutos.
           </p>
           <Link
             href="/register"
-            className="inline-flex items-center justify-center gap-2 bg-white text-emerald-700 font-bold px-10 py-4 rounded-xl hover:bg-emerald-50 transition-all text-lg shadow-lg"
+            className="inline-flex items-center justify-center gap-2 bg-white text-emerald-700 font-bold px-8 py-3.5 rounded-xl hover:bg-emerald-50 transition-all text-base shadow-lg"
           >
             Crear cuenta gratis
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-10">
+      <footer className="bg-gray-900 text-gray-400 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-xl">💰</span>
-              <span className="font-bold text-white">FinanzasApp</span>
-            </div>
-            <p className="text-sm">
-              © {new Date().getFullYear()} FinanzasApp. Gestiona tus finanzas con inteligencia.
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
+            <img src="/logo.png" alt="Quantix" className="h-7 w-auto rounded-md" />
+            <p className="text-xs">
+              © {new Date().getFullYear()} Quantix · Gestiona tus finanzas con inteligencia
             </p>
           </div>
         </div>

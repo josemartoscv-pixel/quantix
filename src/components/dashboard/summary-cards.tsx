@@ -67,24 +67,21 @@ export function SummaryCards({ data }: { data: SummaryData }) {
         const isNegative = card.value < 0;
         return (
           <Card key={card.label}>
-            <CardContent className="p-5">
-              <div className="flex items-start justify-between mb-3">
-                <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0", card.iconClass)}>
-                  <Icon className="w-5 h-5" />
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0", card.iconClass)}>
+                  <Icon className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs text-gray-500 truncate">{card.label}</p>
+                  <p className={cn("text-lg font-bold leading-tight", isNegative ? "text-red-600" : "text-gray-900")}>
+                    {formatCurrency(card.value)}
+                  </p>
+                  {card.prevValue !== null && card.currentValue !== null && (
+                    <PercentChange current={card.currentValue} previous={card.prevValue} />
+                  )}
                 </div>
               </div>
-              <p className="text-sm text-gray-500 mb-1">{card.label}</p>
-              <p className={cn("text-2xl font-bold", isNegative ? "text-red-600" : "text-gray-900")}>
-                {formatCurrency(card.value)}
-              </p>
-              {card.prevValue !== null && card.currentValue !== null && (
-                <div className="mt-1">
-                  <PercentChange
-                    current={card.currentValue}
-                    previous={card.prevValue}
-                  />
-                </div>
-              )}
             </CardContent>
           </Card>
         );

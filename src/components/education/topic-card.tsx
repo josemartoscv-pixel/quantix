@@ -24,7 +24,7 @@ export function TopicCard({
   isRead,
 }: TopicCardProps) {
   return (
-    <Link href={`/dashboard/educacion/${slug}`}>
+    <Link href={`/educacion/${slug}`}>
       <Card className={cn(
         "h-full hover:shadow-md transition-all hover:border-emerald-200 cursor-pointer",
         isRead && "bg-emerald-50/50 border-emerald-200"

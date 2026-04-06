@@ -22,51 +22,51 @@ export function LoanPaymentCalc() {
   const table = principal > 0 ? generateAmortizationTable(principal, annualRate, monthlyPayment).slice(0, 12) : [];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 text-[14px]">
       <div className="grid grid-cols-3 gap-4">
         <div>
-          <Label>Importe del préstamo (€)</Label>
-          <Input type="number" min="0" value={amount} onChange={(e) => setAmount(e.target.value)} className="mt-1" />
+          <Label className="text-[14px]">Importe del préstamo (€)</Label>
+          <Input type="number" min="0" value={amount} onChange={(e) => setAmount(e.target.value)} className="mt-1 text-[14px]" />
         </div>
         <div>
-          <Label>Tasa anual (%)</Label>
-          <Input type="number" min="0" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="mt-1" />
+          <Label className="text-[14px]">Tasa anual (%)</Label>
+          <Input type="number" min="0" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="mt-1 text-[14px]" />
         </div>
         <div>
-          <Label>Plazo (meses)</Label>
-          <Input type="number" min="1" max="360" value={months} onChange={(e) => setMonths(e.target.value)} className="mt-1" />
+          <Label className="text-[14px]">Plazo (meses)</Label>
+          <Input type="number" min="1" max="360" value={months} onChange={(e) => setMonths(e.target.value)} className="mt-1 text-[14px]" />
         </div>
       </div>
 
       {monthlyPayment > 0 && (
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-emerald-50 rounded-xl p-4 text-center">
-            <p className="text-xs text-emerald-700 mb-1">Cuota mensual</p>
-            <p className="text-2xl font-bold text-emerald-900">{formatCurrency(monthlyPayment)}</p>
+            <p className="text-[11px] text-emerald-700 mb-1">Cuota mensual</p>
+            <p className="text-[13px] font-bold text-emerald-900">{formatCurrency(monthlyPayment)}</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-4 text-center">
-            <p className="text-xs text-gray-600 mb-1">Total a pagar</p>
-            <p className="text-xl font-bold text-gray-900">{formatCurrency(totalPaid)}</p>
+            <p className="text-[11px] text-gray-600 mb-1">Total a pagar</p>
+            <p className="text-[13px] font-bold text-gray-900">{formatCurrency(totalPaid)}</p>
           </div>
           <div className="bg-red-50 rounded-xl p-4 text-center">
-            <p className="text-xs text-red-700 mb-1">Total intereses</p>
-            <p className="text-xl font-bold text-red-900">{formatCurrency(totalInterest)}</p>
+            <p className="text-[11px] text-red-700 mb-1">Total intereses</p>
+            <p className="text-[13px] font-bold text-red-900">{formatCurrency(totalInterest)}</p>
           </div>
         </div>
       )}
 
       {table.length > 0 && (
         <div>
-          <p className="text-sm font-medium text-gray-700 mb-2">Primeras 12 cuotas</p>
+          <p className="text-[14px] font-medium text-gray-700 mb-2">Primeras 12 cuotas</p>
           <div className="overflow-x-auto rounded-lg border border-gray-200">
-            <table className="w-full text-sm">
+            <table className="w-full text-[14px]">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="text-left px-4 py-2 text-xs text-gray-500">Mes</th>
-                  <th className="text-right px-4 py-2 text-xs text-gray-500">Cuota</th>
-                  <th className="text-right px-4 py-2 text-xs text-gray-500">Principal</th>
-                  <th className="text-right px-4 py-2 text-xs text-gray-500">Interés</th>
-                  <th className="text-right px-4 py-2 text-xs text-gray-500">Saldo</th>
+                  <th className="text-left px-4 py-2 text-[11px] text-gray-500">Mes</th>
+                  <th className="text-right px-4 py-2 text-[11px] text-gray-500">Cuota</th>
+                  <th className="text-right px-4 py-2 text-[11px] text-gray-500">Principal</th>
+                  <th className="text-right px-4 py-2 text-[11px] text-gray-500">Interés</th>
+                  <th className="text-right px-4 py-2 text-[11px] text-gray-500">Saldo</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">

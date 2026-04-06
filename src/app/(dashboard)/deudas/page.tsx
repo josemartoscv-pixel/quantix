@@ -18,6 +18,8 @@ interface Debt {
   currentBalance: number;
   interestRate: number;
   minimumPayment?: number | null;
+  remainingYears?: number | null;
+  remainingMonths?: number | null;
   lender?: string | null;
   notes?: string | null;
   startDate: string;

@@ -1,12 +1,19 @@
+export const dynamic = "force-dynamic";
+
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
-import { SummaryCards } from "@/components/dashboard/summary-cards";
 import { HealthScoreCard } from "@/components/dashboard/health-score-card";
-import { RecentTransactions } from "@/components/dashboard/recent-transactions";
+import { WelcomeHeader } from "@/components/dashboard/welcome-header";
+import { TopExpensesCard } from "@/components/dashboard/top-expenses-card";
+import { AchievementsCard } from "@/components/dashboard/achievements-card";
+import { OnboardingModal } from "@/components/dashboard/onboarding-modal";
 import { MonthlyBarChart } from "@/components/charts/monthly-bar-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { calculateHealthScore } from "@/lib/calculations/health-score";
+import { generateRecommendations } from "@/lib/calculations/recommendations";
+import { computeAchievements } from "@/lib/calculations/achievements";
+import { getCategoryById } from "@/lib/constants/categories";
 import { getMonthRange, getMonthName } from "@/lib/utils/dates";
 import { formatCurrency } from "@/lib/utils/currency";
 import Link from "next/link";
@@ -29,49 +36,39 @@ export default async function DashboardPage() {
   const [
     currentTransactions,
     prevTransactions,
-    recentTransactions,
     savingsGoals,
     debts,
     assets,
+    liabilities,
+    allTransactions,
+    completedGoals,
+    budgets,
   ] = await Promise.all([
-    db.transaction.findMany({
-      where: { userId, date: { gte: monthStart, lte: monthEnd } },
-    }),
-    db.transaction.findMany({
-      where: { userId, date: { gte: prevStart, lte: prevEnd } },
-    }),
-    db.transaction.findMany({
-      where: { userId },
-      orderBy: { date: "desc" },
-      take: 5,
-    }),
+    db.transaction.findMany({ where: { userId, date: { gte: monthStart, lte: monthEnd } } }),
+    db.transaction.findMany({ where: { userId, date: { gte: prevStart, lte: prevEnd } } }),
     db.savingsGoal.findMany({ where: { userId }, take: 3 }),
     db.debt.findMany({ where: { userId, isActive: true } }),
     db.asset.findMany({ where: { userId } }),
+    db.liability.findMany({ where: { userId } }),
+    db.transaction.findMany({ where: { userId }, select: { amount: true, type: true, date: true } }),
+    db.savingsGoal.count({ where: { userId, isCompleted: true } }),
+    db.budget.findMany({ where: { userId, month: currentMonth, year: currentYear } }),
   ]);
 
-  const totalIncome = currentTransactions
-    .filter((t) => t.type === "INCOME")
-    .reduce((s, t) => s + t.amount, 0);
-  const totalExpenses = currentTransactions
-    .filter((t) => t.type === "EXPENSE")
-    .reduce((s, t) => s + t.amount, 0);
-  const prevIncome = prevTransactions
-    .filter((t) => t.type === "INCOME")
-    .reduce((s, t) => s + t.amount, 0);
-  const prevExpenses = prevTransactions
-    .filter((t) => t.type === "EXPENSE")
-    .reduce((s, t) => s + t.amount, 0);
+  const totalIncome = currentTransactions.filter((t) => t.type === "INCOME").reduce((s, t) => s + t.amount, 0);
+  const totalExpenses = currentTransactions.filter((t) => t.type === "EXPENSE").reduce((s, t) => s + t.amount, 0);
+  const prevIncome = prevTransactions.filter((t) => t.type === "INCOME").reduce((s, t) => s + t.amount, 0);
+  const prevExpenses = prevTransactions.filter((t) => t.type === "EXPENSE").reduce((s, t) => s + t.amount, 0);
 
-  // Monthly chart data (last 6 months)
+  // Monthly chart data — reuse allTransactions, grouped in JS (no extra query)
   const monthlyData = [];
-  for (let i = 5; i >= 0; i--) {
+  for (let i = 11; i >= 0; i--) {
     const d = new Date(currentYear, currentMonth - 1 - i, 1);
     const m = d.getMonth() + 1;
     const y = d.getFullYear();
-    const { start, end } = getMonthRange(m, y);
-    const txs = await db.transaction.findMany({
-      where: { userId, date: { gte: start, lte: end } },
+    const txs = allTransactions.filter((t) => {
+      const td = new Date(t.date);
+      return td.getFullYear() === y && td.getMonth() + 1 === m;
     });
     monthlyData.push({
       month: getMonthName(m).slice(0, 3),
@@ -79,23 +76,18 @@ export default async function DashboardPage() {
       gastos: txs.filter((t) => t.type === "EXPENSE").reduce((s, t) => s + t.amount, 0),
     });
   }
-
-  // Health score
-  const budgets = await db.budget.findMany({
-    where: { userId, month: currentMonth, year: currentYear },
-  });
   const totalDebtPayments = debts.reduce((s, d) => s + (d.minimumPayment || 0), 0);
   const totalSavingsAmount = savingsGoals.reduce((s, g) => s + g.currentAmount, 0);
   const totalAssetsValue = assets.reduce((s, a) => s + a.value, 0);
-  const hasInvestments = totalAssetsValue > 0;
+  const totalLiabilitiesValue = liabilities.reduce((s, l) => s + l.value, 0);
+  const hasInvestments = assets.some((a) => a.type === "investment" || a.type === "stocks" || a.type === "crypto");
+  const netWorth = totalAssetsValue - totalLiabilitiesValue;
 
   const expenseSums: Record<string, number> = {};
   for (const tx of currentTransactions.filter((t) => t.type === "EXPENSE")) {
     expenseSums[tx.categoryId] = (expenseSums[tx.categoryId] || 0) + tx.amount;
   }
-  const categoriesOnBudget = budgets.filter(
-    (b) => (expenseSums[b.categoryId] || 0) <= b.amount
-  ).length;
+  const categoriesOnBudget = budgets.filter((b) => (expenseSums[b.categoryId] || 0) <= b.amount).length;
 
   const healthScore = calculateHealthScore({
     monthlyIncome: totalIncome,
@@ -107,82 +99,123 @@ export default async function DashboardPage() {
     hasInvestments,
   });
 
-  const totalBalance = totalIncome - totalExpenses;
+  // Top 3 expense categories with trend vs previous month
+  const prevExpenseSums: Record<string, number> = {};
+  for (const tx of prevTransactions.filter((t) => t.type === "EXPENSE")) {
+    prevExpenseSums[tx.categoryId] = (prevExpenseSums[tx.categoryId] || 0) + tx.amount;
+  }
+
+  const topExpenses = Object.entries(expenseSums)
+    .map(([categoryId, amount]) => {
+      const cat = getCategoryById(categoryId);
+      const prev = prevExpenseSums[categoryId] || 0;
+      const change = prev > 0 ? ((amount - prev) / prev) * 100 : null;
+      return { categoryId, name: cat?.name || categoryId, emoji: cat?.emoji || "📦", amount, color: cat?.color || "#6b7280", change };
+    })
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 3)
+    .map((e) => ({ ...e, percentage: totalExpenses > 0 ? (e.amount / totalExpenses) * 100 : 0 }));
+
+  // Find biggest increase for alert message
+  const biggestIncrease = topExpenses
+    .filter((e) => e.change !== null && e.change > 10)
+    .sort((a, b) => (b.change ?? 0) - (a.change ?? 0))[0] ?? null;
+
+  // Recommendations
+  const topExpenseCategory = topExpenses[0] ?? null;
+  const recommendations = generateRecommendations({
+    monthlyIncome: totalIncome,
+    monthlyExpenses: totalExpenses,
+    totalSavings: totalSavingsAmount,
+    totalDebtPayments,
+    budgetCount: budgets.length,
+    topExpenseCategory,
+    hasInvestments,
+  });
+
+  // Achievements
+  const uniqueMonths = new Set(allTransactions.map((t) => {
+    const d = new Date(t.date);
+    return `${d.getFullYear()}-${d.getMonth()}`;
+  }));
+  const savingsRate = totalIncome > 0 ? (totalIncome - totalExpenses) / totalIncome : 0;
+
+  const achievements = computeAchievements({
+    transactionCount: allTransactions.length,
+    savingsRate,
+    hasNoDebts: debts.length === 0,
+    budgetCount: budgets.length,
+    completedGoals,
+    hasInvestments,
+    monthsWithTransactions: uniqueMonths.size,
+    netWorth,
+  });
+
+  const totalBalance = allTransactions.reduce((s, t) =>
+    t.type === "INCOME" ? s + t.amount : s - t.amount, 0);
+
+  const prevMonthlySavings = prevIncome - prevExpenses;
+  const hasData = allTransactions.length > 0;
 
   return (
     <div className="space-y-6">
+      <OnboardingModal hasData={hasData} />
+
+      <WelcomeHeader
+        name={session.user?.name || ""}
+        totalIncome={totalIncome}
+        totalExpenses={totalExpenses}
+        monthlySavings={totalIncome - totalExpenses}
+        totalBalance={totalBalance}
+      />
+
       <HealthScoreCard
         total={healthScore.total}
         label={healthScore.label}
         color={healthScore.color}
         components={healthScore.components}
+        topActions={healthScore.topActions}
+        recommendations={recommendations}
       />
 
-      <SummaryCards
-        data={{
-          totalIncome,
-          totalExpenses,
-          savings: totalIncome - totalExpenses,
-          balance: totalBalance,
-          prevIncome,
-          prevExpenses,
-        }}
-      />
 
       <Card>
         <CardHeader>
-          <CardTitle>Evolución mensual (últimos 6 meses)</CardTitle>
+          <CardTitle>Evolución mensual (últimos 12 meses)</CardTitle>
         </CardHeader>
         <CardContent>
           <MonthlyBarChart data={monthlyData} />
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <RecentTransactions transactions={recentTransactions} />
+      <TopExpensesCard expenses={topExpenses} biggestIncrease={biggestIncrease} />
 
-        {/* Savings goals */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle>Metas de ahorro</CardTitle>
-            <Link
-              href="/ahorros"
-              className="text-sm text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
-            >
-              Ver todas
-              <ArrowRight className="w-4 h-4" />
+            <Link href="/ahorros" className="text-sm text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+              Ver todas <ArrowRight className="w-4 h-4" />
             </Link>
           </CardHeader>
           <CardContent className="p-0">
             {savingsGoals.length === 0 ? (
-              <div className="py-8 text-center text-gray-500 text-sm">
-                No tienes metas de ahorro creadas
-              </div>
+              <div className="py-8 text-center text-gray-500 text-sm">No tienes metas de ahorro creadas</div>
             ) : (
               <ul className="divide-y divide-gray-100">
                 {savingsGoals.map((goal) => {
-                  const pct = Math.min(
-                    (goal.currentAmount / goal.targetAmount) * 100,
-                    100
-                  );
+                  const pct = Math.min((goal.currentAmount / goal.targetAmount) * 100, 100);
                   return (
                     <li key={goal.id} className="px-6 py-4">
                       <div className="flex justify-between items-start mb-2">
                         <div className="flex items-center gap-2">
                           <span className="text-xl">{goal.icon || "🎯"}</span>
-                          <p className="text-sm font-medium text-gray-900">
-                            {goal.name}
-                          </p>
+                          <p className="text-sm font-medium text-gray-900">{goal.name}</p>
                         </div>
-                        <span className="text-sm font-semibold text-gray-700">
-                          {pct.toFixed(0)}%
-                        </span>
+                        <span className="text-sm font-semibold text-gray-700">{pct.toFixed(0)}%</span>
                       </div>
                       <div className="h-2 bg-gray-100 rounded-full overflow-hidden mb-1">
-                        <div
-                          className="h-full bg-emerald-500 rounded-full transition-all"
-                          style={{ width: `${pct}%` }}
-                        />
+                        <div className="h-full bg-emerald-500 rounded-full transition-all" style={{ width: `${pct}%` }} />
                       </div>
                       <div className="flex justify-between text-xs text-gray-400">
                         <span>{formatCurrency(goal.currentAmount)}</span>
@@ -195,6 +228,7 @@ export default async function DashboardPage() {
             )}
           </CardContent>
         </Card>
+        <AchievementsCard achievements={achievements} />
       </div>
     </div>
   );

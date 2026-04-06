@@ -2,131 +2,78 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { redirect, notFound } from "next/navigation";
 import { ARTICLES } from "@/lib/constants/education-content";
-import { Badge } from "@/components/ui/badge";
-import { Clock, ArrowLeft, CheckCircle } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import { MarkAsReadButton } from "./mark-as-read-button";
+import { ArrowLeft, Clock, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { MarkArticleRead } from "@/components/education/mark-article-read";
 
-// Simple markdown-to-HTML converter
-function parseMarkdown(content: string): string {
-  return content
-    .replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold text-gray-900 mb-4 mt-8 first:mt-0">$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2 class="text-xl font-semibold text-gray-900 mb-3 mt-6">$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-gray-800 mb-2 mt-4">$1</h3>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/^- (.+)$/gm, '<li class="ml-4 text-gray-700 mb-1">• $1</li>')
-    .replace(/^\d+\. (.+)$/gm, '<li class="ml-4 text-gray-700 mb-1 list-decimal">$1</li>')
-    .replace(/\n\n/g, '</p><p class="text-gray-700 leading-relaxed mb-4">')
-    .replace(/^(?!<[h|l])(.+)$/gm, '<p class="text-gray-700 leading-relaxed mb-4">$1</p>')
-    .replace(/<p class="[^"]*"><\/p>/g, '')
-    .replace(/\|(.+)\|/g, (match) => {
-      const cells = match.split('|').filter(c => c.trim());
-      const isHeader = match.includes('---');
-      if (isHeader) return '';
-      const cellHtml = cells.map(c => `<td class="border border-gray-200 px-3 py-2 text-sm">${c.trim()}</td>`).join('');
-      return `<tr>${cellHtml}</tr>`;
-    });
+interface Props {
+  params: { slug: string };
 }
 
-export default async function ArticlePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function ArticlePage({ params }: Props) {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
+  const userId = session.user.id;
 
   const article = ARTICLES.find((a) => a.slug === params.slug);
   if (!article) notFound();
 
-  const userArticle = await db.userArticle.findUnique({
-    where: { userId_articleId: { userId: session.user.id, articleId: article.id } },
+  const read = await db.userArticle.findUnique({
+    where: { userId_articleId: { userId, articleId: article.id } },
   });
 
-  const isRead = !!userArticle;
-
-  const related = ARTICLES.filter(
-    (a) => a.slug !== params.slug && (a.level === article.level || a.topic === article.topic)
-  ).slice(0, 3);
-
-  const htmlContent = parseMarkdown(article.content);
-
   return (
-    <div className="max-w-4xl">
-      <div className="mb-6">
-        <Link
-          href="/educacion"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 mb-4"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Volver a educación
-        </Link>
+    <div className="max-w-2xl mx-auto space-y-6">
+      {/* Back */}
+      <Link href="/educacion" className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-700 transition-colors">
+        <ArrowLeft className="w-4 h-4" />
+        Volver a Educación
+      </Link>
 
-        <div className="flex gap-2 mb-3 flex-wrap">
-          <Badge variant={article.level === "principiante" ? "default" : "info"}>
+      {/* Header */}
+      <div className="bg-white rounded-2xl p-6 space-y-3">
+        <div className="flex gap-2 flex-wrap">
+          <Badge variant={article.level === "principiante" ? "default" : "info"} className="text-xs">
             {article.level === "principiante" ? "Principiante" : "Intermedio"}
           </Badge>
-          <Badge variant="outline">{article.topic}</Badge>
-          {isRead && (
-            <Badge className="bg-emerald-100 text-emerald-800">
-              <CheckCircle className="w-3 h-3 mr-1" />
+          <Badge variant="outline" className="text-xs">{article.topic}</Badge>
+        </div>
+        <h1 className="text-xl font-bold text-gray-900 leading-snug">{article.title}</h1>
+        <p className="text-sm text-gray-500">{article.description}</p>
+        <div className="flex items-center justify-between pt-1">
+          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+            <Clock className="w-3.5 h-3.5" />
+            <span>{article.estimatedMinutes} min de lectura</span>
+          </div>
+          {read && (
+            <div className="flex items-center gap-1 text-xs text-emerald-600 font-medium">
+              <CheckCircle className="w-3.5 h-3.5" />
               Leído
-            </Badge>
+            </div>
           )}
         </div>
+      </div>
 
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">{article.title}</h1>
-        <p className="text-gray-500 text-lg mb-4">{article.description}</p>
-
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1.5 text-sm text-gray-400">
-            <Clock className="w-4 h-4" />
-            {article.estimatedMinutes} minutos de lectura
-          </div>
-          <MarkAsReadButton
-            articleId={article.id}
-            isRead={isRead}
-          />
+      {/* Content */}
+      <div className="bg-white rounded-2xl p-6">
+        <div className="prose prose-sm prose-gray max-w-none
+          prose-headings:font-bold prose-headings:text-gray-900
+          prose-h1:text-xl prose-h2:text-lg prose-h3:text-base
+          prose-p:text-gray-600 prose-p:leading-relaxed
+          prose-li:text-gray-600
+          prose-strong:text-gray-800
+          prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline
+        ">
+          <ReactMarkdown>{article.content}</ReactMarkdown>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Article content */}
-        <div className="lg:col-span-2">
-          <div
-            className="prose max-w-none bg-white rounded-2xl border border-gray-200 p-8"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
-          <div className="mt-6">
-            <MarkAsReadButton articleId={article.id} isRead={isRead} />
-          </div>
-        </div>
-
-        {/* Related articles */}
-        {related.length > 0 && (
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Artículos relacionados</h3>
-            <div className="space-y-3">
-              {related.map((rel) => (
-                <Link
-                  key={rel.slug}
-                  href={`/dashboard/educacion/${rel.slug}`}
-                  className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-emerald-200 hover:shadow-sm transition-all"
-                >
-                  <p className="text-sm font-medium text-gray-900 leading-snug mb-1">
-                    {rel.title}
-                  </p>
-                  <div className="flex items-center gap-1.5 text-xs text-gray-400">
-                    <Clock className="w-3 h-3" />
-                    {rel.estimatedMinutes} min
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+      {/* Mark as read */}
+      {!read && (
+        <MarkArticleRead articleId={article.id} userId={userId} />
+      )}
     </div>
   );
 }

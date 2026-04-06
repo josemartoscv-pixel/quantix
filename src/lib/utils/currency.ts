@@ -4,6 +4,7 @@ export function formatCurrency(amount: number, currency: string = "EUR"): string
     currency,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
+    useGrouping: true,
   }).format(amount);
 }
 

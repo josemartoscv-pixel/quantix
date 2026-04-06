@@ -162,7 +162,7 @@ export default function PatrimonioPage() {
                       <Badge variant="secondary" className="text-xs mt-0.5">{assetTypeLabels[asset.type] || asset.type}</Badge>
                     </div>
                     <span className="text-emerald-600 font-semibold text-sm">{formatCurrency(asset.value)}</span>
-                    <div className="flex gap-1 opacity-0 group-hover:opacity-100">
+                    <div className="flex gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                       <AssetForm
                         initialData={asset}
                         onSuccess={fetchData}
@@ -209,7 +209,7 @@ export default function PatrimonioPage() {
                       <Badge variant="secondary" className="text-xs mt-0.5">{assetTypeLabels[liability.type] || liability.type}</Badge>
                     </div>
                     <span className="text-red-600 font-semibold text-sm">{formatCurrency(liability.value)}</span>
-                    <div className="flex gap-1 opacity-0 group-hover:opacity-100">
+                    <div className="flex gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                       <LiabilityForm
                         initialData={liability}
                         onSuccess={fetchData}

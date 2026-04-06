@@ -86,7 +86,6 @@ function PasswordStrengthIndicator({ password }: { password: string }) {
 export function RegisterForm() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirm, setShowConfirm] = useState(false);
   const [serverError, setServerError] = useState("");
 
   const {
@@ -201,34 +200,6 @@ export function RegisterForm() {
           <p className="text-red-600 text-sm">{errors.password.message}</p>
         )}
         <PasswordStrengthIndicator password={password} />
-      </div>
-
-      <div className="space-y-1">
-        <label className="block text-sm font-medium text-gray-700">
-          Confirmar contraseña
-        </label>
-        <div className="relative">
-          <input
-            type={showConfirm ? "text" : "password"}
-            autoComplete="new-password"
-            placeholder="••••••••"
-            className={cn(
-              "w-full px-4 py-3 pr-11 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-colors",
-              errors.confirmPassword ? "border-red-300 focus:ring-red-500" : "border-gray-300"
-            )}
-            {...register("confirmPassword")}
-          />
-          <button
-            type="button"
-            onClick={() => setShowConfirm(!showConfirm)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-          >
-            {showConfirm ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-          </button>
-        </div>
-        {errors.confirmPassword && (
-          <p className="text-red-600 text-sm">{errors.confirmPassword.message}</p>
-        )}
       </div>
 
       <button
