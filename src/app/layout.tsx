@@ -3,7 +3,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Quantix - Gestiona tus finanzas personales",
+  title: "DineroyAhorro - Gestiona tus finanzas personales",
   description:
     "Controla tus ingresos, gastos, ahorros y deudas de forma sencilla y visual. Tu salud financiera en un solo lugar.",
 };

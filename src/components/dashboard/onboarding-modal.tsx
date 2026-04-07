@@ -47,7 +47,7 @@ export function OnboardingModal({ hasData }: { hasData: boolean }) {
     <Dialog open={open} onOpenChange={(v) => { if (!v) dismiss(); }}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-xl">👋 Bienvenido a Quantix</DialogTitle>
+          <DialogTitle className="text-xl">👋 Bienvenido a DineroyAhorro</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-gray-600">

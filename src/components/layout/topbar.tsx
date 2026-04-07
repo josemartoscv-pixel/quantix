@@ -58,7 +58,7 @@ export function Topbar({ userName, userEmail }: TopbarProps) {
     Object.entries(pageTitles).find(([path]) =>
       pathname.startsWith(path + "/")
     )?.[1] ||
-    "Quantix";
+    "DineroyAhorro";
 
   const initials = userName
     ? userName

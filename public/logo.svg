@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 80">
+  <!-- Pinwheel icon - 4 right triangles -->
+  <polygon points="2,2 34,2 2,34" fill="#00873D"/>
+  <polygon points="38,2 70,2 70,34" fill="#00873D"/>
+  <polygon points="2,38 2,70 34,70" fill="#00873D"/>
+  <polygon points="38,70 70,70 70,38" fill="#00873D"/>
+  <!-- Text -->
+  <text x="84" y="57"
+    font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+    font-size="50"
+    font-weight="500"
+    fill="#00873D"
+    letter-spacing="-0.5">DineroyAhorro</text>
+</svg>

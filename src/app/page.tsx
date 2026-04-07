@@ -71,7 +71,7 @@ export default async function LandingPage() {
       <nav className="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto rounded-lg" />
+            <img src="/logo.svg" alt="DineroyAhorro" className="h-8 w-auto rounded-lg" />
             <div className="hidden sm:flex items-center gap-2">
               <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-50 text-sm">
                 Entrar
@@ -170,7 +170,7 @@ export default async function LandingPage() {
       {/* CTA */}
       <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-emerald-200 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">Quantix</p>
+          <p className="text-emerald-200 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">DineroyAhorro</p>
           <h2 className="text-2xl sm:text-4xl font-bold text-white mb-3 leading-tight">
             Haz más con lo que ya tienes.
           </h2>
@@ -194,9 +194,9 @@ export default async function LandingPage() {
       <footer className="bg-gray-900 text-gray-400 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto rounded-md" />
+            <img src="/logo.svg" alt="DineroyAhorro" className="h-7 w-auto rounded-md" />
             <p className="text-xs">
-              © {new Date().getFullYear()} Quantix · Gestiona tus finanzas con inteligencia
+              © {new Date().getFullYear()} DineroyAhorro · Gestiona tus finanzas con inteligencia
             </p>
           </div>
         </div>
