@@ -192,10 +192,10 @@ export default async function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-6">
+      <footer className="bg-white border-t border-gray-100 text-gray-400 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto rounded-md" />
+            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
             <p className="text-xs">
               © {new Date().getFullYear()} DineroyAhorro · Gestiona tus finanzas con inteligencia
             </p>
