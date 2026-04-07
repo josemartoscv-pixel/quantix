@@ -53,7 +53,7 @@ export function LandingWidgets() {
   const final = raw[raw.length - 1];
 
   return (
-    <section className="py-8 sm:py-12 bg-[#f5f5f7]">
+    <section className="py-5 sm:py-8 bg-[#f5f5f7]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-5">
           <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-1">
