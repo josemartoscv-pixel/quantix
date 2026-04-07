@@ -84,11 +84,6 @@ export default async function LandingPage() {
         </div>
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="flex justify-center mb-5">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-3xl sm:text-4xl shadow-lg shadow-emerald-200">
-                💰
-              </div>
-            </div>
             <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
               <CheckCircle className="w-3 h-3" />
               100% gratuito · Sin tarjeta
