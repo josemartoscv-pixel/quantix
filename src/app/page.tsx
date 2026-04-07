@@ -90,8 +90,8 @@ export default async function LandingPage() {
             {/* Badge */}
             {/* Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-5">
-              Tu dinero,<br />
-              <span className="text-emerald-600">finalmente bajo control.</span>
+              Controla tu dinero<br />
+              <span className="text-emerald-600">para un mayor ahorro.</span>
             </h1>
 
             {/* Subheadline */}
