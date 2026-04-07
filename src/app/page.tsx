@@ -79,7 +79,7 @@ export default async function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-14 sm:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-10 sm:py-20">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-100 rounded-full opacity-40 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-100 rounded-full opacity-40 blur-3xl" />
