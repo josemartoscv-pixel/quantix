@@ -130,7 +130,7 @@ export function LoginForm() {
           href="/register"
           className="text-emerald-600 font-semibold hover:text-emerald-700"
         >
-          Regístrate gratis
+          Regístrate
         </Link>
       </p>
     </form>

@@ -72,7 +72,7 @@ export default async function LandingPage() {
                 Entrar
               </Link>
               <Link href="/register" className="bg-emerald-600 text-white font-medium px-3 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-sm">
-                Empezar gratis
+                Empezar
               </Link>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default async function LandingPage() {
             Deja de improvisar. Controla, planifica y toma decisiones con sentido.
           </p>
           <p className="text-xs sm:text-sm text-emerald-200 mb-7">
-            Es gratis y solo tarda 2 minutos.
+            Solo tarda 2 minutos.
           </p>
           <Link
             href="/register"

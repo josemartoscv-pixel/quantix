@@ -184,7 +184,7 @@ export function LandingWidgets() {
               href="/register"
               className="flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-2xl transition-colors text-sm"
             >
-              Accede a todas las calculadoras gratis
+              Accede a todas las calculadoras
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
