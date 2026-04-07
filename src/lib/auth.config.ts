@@ -14,7 +14,14 @@ export const authConfig: NextAuthConfig = {
         PUBLIC_ROUTES.includes(nextUrl.pathname) ||
         nextUrl.pathname.startsWith("/api/auth");
 
-      if (!isPublic && !isLoggedIn) return false;
+      if (!isPublic && !isLoggedIn) {
+        // API routes: return 401 JSON instead of redirecting
+        if (nextUrl.pathname.startsWith("/api/")) {
+          return Response.json({ error: "Unauthorized" }, { status: 401 });
+        }
+        // Page routes: redirect to login
+        return false;
+      }
       return true;
     },
   },
