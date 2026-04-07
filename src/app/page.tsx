@@ -139,11 +139,8 @@ export default async function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-3">
-              Todo lo que necesitas para gestionar tu dinero
+              Todo lo que necesitas para mejorar tu situación financiera
             </h2>
-            <p className="text-sm sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Una plataforma completa con todas las herramientas para mejorar tu situación financiera.
-            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {features.map((feature) => {
