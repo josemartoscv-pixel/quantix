@@ -12,6 +12,7 @@ import {
   Calculator,
 } from "lucide-react";
 import { LandingWidgets } from "@/components/landing/landing-widgets";
+import { StepsDemo } from "@/components/landing/steps-demo";
 
 export default async function LandingPage() {
   const session = await auth();
@@ -131,6 +132,8 @@ export default async function LandingPage() {
           </div>
         </div>
       </section>
+
+      <StepsDemo />
 
       <LandingWidgets />
 
