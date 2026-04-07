@@ -62,7 +62,7 @@ export default async function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
-      <nav className="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="border-b border-gray-100 bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-center h-14">
             <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
