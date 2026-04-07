@@ -107,10 +107,6 @@ export default async function LandingPage() {
               </span>
               <span className="flex items-center justify-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                Sin tarjeta de crédito
-              </span>
-              <span className="flex items-center justify-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
                 Tus datos, siempre seguros
               </span>
             </div>
