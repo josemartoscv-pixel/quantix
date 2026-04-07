@@ -8,7 +8,6 @@ import {
   Landmark,
   PiggyBank,
   Calculator,
-  BookOpen,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +30,6 @@ const navGroups = [
     label: "Herramientas",
     items: [
       { href: "/calculadoras", icon: Calculator, label: "Calculadoras" },
-      { href: "/educacion", icon: BookOpen, label: "Educación" },
     ],
   },
 ];

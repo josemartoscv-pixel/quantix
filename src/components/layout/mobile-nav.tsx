@@ -7,7 +7,6 @@ import {
   CreditCard,
   PiggyBank,
   Calculator,
-  BookOpen,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +15,6 @@ const tabs = [
   { href: "/transacciones", icon: CreditCard, label: "Transacciones" },
   { href: "/ahorros", icon: PiggyBank, label: "Metas" },
   { href: "/calculadoras", icon: Calculator, label: "Calculadoras" },
-  { href: "/educacion", icon: BookOpen, label: "Educación" },
 ];
 
 export function MobileNav() {

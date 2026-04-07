@@ -5,7 +5,6 @@ import {
   BarChart3,
   CreditCard,
   PiggyBank,
-  BookOpen,
   TrendingUp,
   ArrowRight,
   CheckCircle,
@@ -54,13 +53,6 @@ export default async function LandingPage() {
       description:
         "Controla tus deudas y simula estrategias para liquidarlas antes.",
       color: "bg-red-100 text-red-700",
-    },
-    {
-      icon: BookOpen,
-      title: "Educación financiera",
-      description:
-        "Aprende con artículos prácticos adaptados a tu nivel de conocimiento.",
-      color: "bg-teal-100 text-teal-700",
     },
   ];
 
