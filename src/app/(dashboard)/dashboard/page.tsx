@@ -33,6 +33,9 @@ export default async function DashboardPage() {
   const prevYear = currentMonth === 1 ? currentYear - 1 : currentYear;
   const { start: prevStart, end: prevEnd } = getMonthRange(prevMonth, prevYear);
 
+  // Only fetch the 12-month window for the chart — avoids loading all transactions ever
+  const twelveMonthsAgo = new Date(currentYear, currentMonth - 1 - 11, 1);
+
   const [
     currentTransactions,
     prevTransactions,
@@ -40,9 +43,12 @@ export default async function DashboardPage() {
     debts,
     assets,
     liabilities,
-    allTransactions,
+    recentTransactions,
     completedGoals,
     budgets,
+    transactionCount,
+    totalIncomeAgg,
+    totalExpenseAgg,
   ] = await Promise.all([
     db.transaction.findMany({ where: { userId, date: { gte: monthStart, lte: monthEnd } } }),
     db.transaction.findMany({ where: { userId, date: { gte: prevStart, lte: prevEnd } } }),
@@ -50,9 +56,15 @@ export default async function DashboardPage() {
     db.debt.findMany({ where: { userId, isActive: true } }),
     db.asset.findMany({ where: { userId } }),
     db.liability.findMany({ where: { userId } }),
-    db.transaction.findMany({ where: { userId }, select: { amount: true, type: true, date: true } }),
+    db.transaction.findMany({
+      where: { userId, date: { gte: twelveMonthsAgo } },
+      select: { amount: true, type: true, date: true },
+    }),
     db.savingsGoal.count({ where: { userId, isCompleted: true } }),
     db.budget.findMany({ where: { userId, month: currentMonth, year: currentYear } }),
+    db.transaction.count({ where: { userId } }),
+    db.transaction.aggregate({ where: { userId, type: "INCOME" }, _sum: { amount: true } }),
+    db.transaction.aggregate({ where: { userId, type: "EXPENSE" }, _sum: { amount: true } }),
   ]);
 
   const totalIncome = currentTransactions.filter((t) => t.type === "INCOME").reduce((s, t) => s + t.amount, 0);
@@ -60,13 +72,13 @@ export default async function DashboardPage() {
   const prevIncome = prevTransactions.filter((t) => t.type === "INCOME").reduce((s, t) => s + t.amount, 0);
   const prevExpenses = prevTransactions.filter((t) => t.type === "EXPENSE").reduce((s, t) => s + t.amount, 0);
 
-  // Monthly chart data — reuse allTransactions, grouped in JS (no extra query)
+  // Monthly chart data — only last 12 months (already bounded by the query)
   const monthlyData = [];
   for (let i = 11; i >= 0; i--) {
     const d = new Date(currentYear, currentMonth - 1 - i, 1);
     const m = d.getMonth() + 1;
     const y = d.getFullYear();
-    const txs = allTransactions.filter((t) => {
+    const txs = recentTransactions.filter((t) => {
       const td = new Date(t.date);
       return td.getFullYear() === y && td.getMonth() + 1 === m;
     });
@@ -133,15 +145,15 @@ export default async function DashboardPage() {
     hasInvestments,
   });
 
-  // Achievements
-  const uniqueMonths = new Set(allTransactions.map((t) => {
+  // Achievements — use count query and recent window for months
+  const uniqueMonths = new Set(recentTransactions.map((t) => {
     const d = new Date(t.date);
     return `${d.getFullYear()}-${d.getMonth()}`;
   }));
   const savingsRate = totalIncome > 0 ? (totalIncome - totalExpenses) / totalIncome : 0;
 
   const achievements = computeAchievements({
-    transactionCount: allTransactions.length,
+    transactionCount,
     savingsRate,
     hasNoDebts: debts.length === 0,
     budgetCount: budgets.length,
@@ -151,11 +163,11 @@ export default async function DashboardPage() {
     netWorth,
   });
 
-  const totalBalance = allTransactions.reduce((s, t) =>
-    t.type === "INCOME" ? s + t.amount : s - t.amount, 0);
+  // totalBalance computed via aggregates — no row fetching needed
+  const totalBalance =
+    (totalIncomeAgg._sum.amount ?? 0) - (totalExpenseAgg._sum.amount ?? 0);
 
-  const prevMonthlySavings = prevIncome - prevExpenses;
-  const hasData = allTransactions.length > 0;
+  const hasData = transactionCount > 0;
 
   return (
     <div className="space-y-6">
