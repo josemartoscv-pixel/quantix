@@ -149,7 +149,7 @@ export function LandingWidgets() {
                 <span className="text-gray-500">Ahorro mensual</span>
                 <span className="font-bold text-gray-900">{formatCurrency(monthly)}</span>
               </div>
-              <input type="range" min={50} max={2000} step={50} value={monthly}
+              <input type="range" min={20} max={2000} step={20} value={monthly}
                 onChange={(e) => setMonthly(+e.target.value)}
                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
             </div>
@@ -165,9 +165,9 @@ export function LandingWidgets() {
             <div className="space-y-1">
               <div className="flex justify-between text-xs">
                 <span className="text-gray-500">Rentabilidad anual</span>
-                <span className="font-bold text-gray-900">{rate}%</span>
+                <span className="font-bold text-gray-900">{rate.toFixed(2)}%</span>
               </div>
-              <input type="range" min={1} max={15} step={0.5} value={rate}
+              <input type="range" min={0.01} max={15} step={0.01} value={rate}
                 onChange={(e) => setRate(+e.target.value)}
                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
             </div>
