@@ -5,133 +5,52 @@ import { formatCurrency } from "@/lib/utils/currency";
 import { calculateCompoundInterest } from "@/lib/calculations/compound-interest";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
-function CompoundWidget() {
+function formatK(value: number) {
+  if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M€`;
+  if (value >= 1000) return `${(value / 1000).toFixed(0)}k€`;
+  return `${value}€`;
+}
+
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bg-white border border-gray-100 rounded-xl shadow-lg p-3 text-xs">
+      <p className="font-bold text-gray-700 mb-1.5">Año {label}</p>
+      <p className="text-blue-600 font-semibold">Aportado: {formatCurrency(payload[0]?.value ?? 0)}</p>
+      <p className="text-emerald-600 font-semibold">Intereses: {formatCurrency(payload[1]?.value ?? 0)}</p>
+      <p className="text-gray-900 font-bold mt-1 border-t border-gray-100 pt-1">
+        Total: {formatCurrency((payload[0]?.value ?? 0) + (payload[1]?.value ?? 0))}
+      </p>
+    </div>
+  );
+};
+
+export function LandingWidgets() {
   const [monthly, setMonthly] = useState(300);
   const [years, setYears] = useState(20);
   const [rate, setRate] = useState(7);
 
-  const data = calculateCompoundInterest(0, rate, years, monthly);
-  const final = data[data.length - 1];
+  const raw = calculateCompoundInterest(0, rate, years, monthly);
 
-  return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-3 gap-2">
-        <div className="bg-emerald-50 rounded-2xl p-3 text-center">
-          <p className="text-[10px] text-emerald-600 font-medium">Balance final</p>
-          <p className="text-sm font-bold text-emerald-900 tabular-nums">{formatCurrency(final?.balance ?? 0)}</p>
-        </div>
-        <div className="bg-blue-50 rounded-2xl p-3 text-center">
-          <p className="text-[10px] text-blue-600 font-medium">Aportado</p>
-          <p className="text-sm font-bold text-blue-900 tabular-nums">{formatCurrency(final?.contributed ?? 0)}</p>
-        </div>
-        <div className="bg-amber-50 rounded-2xl p-3 text-center">
-          <p className="text-[10px] text-amber-600 font-medium">Intereses</p>
-          <p className="text-sm font-bold text-amber-900 tabular-nums">{formatCurrency(final?.interest ?? 0)}</p>
-        </div>
-      </div>
+  // Un punto por año
+  const chartData = raw
+    .filter((_, i) => i % 12 === 11 || i === raw.length - 1)
+    .map((d, i) => ({
+      year: i + 1,
+      aportado: Math.round(d.contributed),
+      intereses: Math.round(d.interest),
+    }));
 
-      <div className="space-y-3">
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-500">Ahorro mensual</span>
-            <span className="font-bold text-gray-900">{formatCurrency(monthly)}</span>
-          </div>
-          <input type="range" min={50} max={2000} step={50} value={monthly}
-            onChange={(e) => setMonthly(+e.target.value)}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-500">Años</span>
-            <span className="font-bold text-gray-900">{years} años</span>
-          </div>
-          <input type="range" min={1} max={40} step={1} value={years}
-            onChange={(e) => setYears(+e.target.value)}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-500">Rentabilidad anual</span>
-            <span className="font-bold text-gray-900">{rate}%</span>
-          </div>
-          <input type="range" min={1} max={15} step={0.5} value={rate}
-            onChange={(e) => setRate(+e.target.value)}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function FireWidget() {
-  const [expenses, setExpenses] = useState(2000);
-  const [savings, setSavings] = useState(500);
-  const [current, setCurrent] = useState(10000);
-
-  const fireNumber = expenses * 12 / 0.04;
-  const monthlyRate = 0.07 / 12;
-  let balance = current;
-  let months = 0;
-  while (balance < fireNumber && months < 600) {
-    balance = balance * (1 + monthlyRate) + savings;
-    months++;
-  }
-  const years = months / 12;
-  const reached = balance >= fireNumber;
-
-  return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-emerald-50 rounded-2xl p-3 text-center">
-          <p className="text-[10px] text-emerald-600 font-medium">Número FIRE</p>
-          <p className="text-sm font-bold text-emerald-900 tabular-nums">{formatCurrency(fireNumber)}</p>
-        </div>
-        <div className={`rounded-2xl p-3 text-center ${reached ? "bg-blue-50" : "bg-amber-50"}`}>
-          <p className={`text-[10px] font-medium ${reached ? "text-blue-600" : "text-amber-600"}`}>
-            {reached ? "Lo logras en" : "Más de 50 años"}
-          </p>
-          <p className={`text-sm font-bold ${reached ? "text-blue-900" : "text-amber-900"}`}>
-            {reached ? `${Math.round(years)} años` : "Aumenta el ahorro"}
-          </p>
-        </div>
-      </div>
-
-      <div className="space-y-3">
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-500">Gastos mensuales</span>
-            <span className="font-bold text-gray-900">{formatCurrency(expenses)}</span>
-          </div>
-          <input type="range" min={500} max={8000} step={100} value={expenses}
-            onChange={(e) => setExpenses(+e.target.value)}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-500">Ahorro mensual</span>
-            <span className="font-bold text-gray-900">{formatCurrency(savings)}</span>
-          </div>
-          <input type="range" min={0} max={5000} step={50} value={savings}
-            onChange={(e) => setSavings(+e.target.value)}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-500">Ahorros actuales</span>
-            <span className="font-bold text-gray-900">{formatCurrency(current)}</span>
-          </div>
-          <input type="range" min={0} max={200000} step={1000} value={current}
-            onChange={(e) => setCurrent(+e.target.value)}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export function LandingWidgets() {
-  const [active, setActive] = useState<"interes" | "fire">("interes");
+  const final = raw[raw.length - 1];
 
   return (
     <section className="py-8 sm:py-12 bg-[#f5f5f7]">
@@ -144,25 +63,114 @@ export function LandingWidgets() {
         </div>
 
         <div className="bg-white rounded-3xl shadow-sm overflow-hidden">
-          {/* Tabs */}
-          <div className="flex border-b border-gray-100">
-            <button
-              onClick={() => setActive("interes")}
-              className={`flex-1 py-3.5 text-sm font-semibold transition-colors ${active === "interes" ? "text-emerald-700 border-b-2 border-emerald-500" : "text-gray-400 hover:text-gray-700"}`}
-            >
-              Interés compuesto
-            </button>
-            <button
-              onClick={() => setActive("fire")}
-              className={`flex-1 py-3.5 text-sm font-semibold transition-colors ${active === "fire" ? "text-emerald-700 border-b-2 border-emerald-500" : "text-gray-400 hover:text-gray-700"}`}
-            >
-              Independencia financiera
-            </button>
+          {/* Header */}
+          <div className="px-6 pt-5 pb-2">
+            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Interés compuesto</p>
+            <p className="text-xs text-gray-400">Mueve los sliders y ve cómo crece tu dinero</p>
           </div>
 
-          {/* Content */}
-          <div className="p-6">
-            {active === "interes" ? <CompoundWidget /> : <FireWidget />}
+          {/* Result cards */}
+          <div className="grid grid-cols-3 gap-2 px-6 pb-4">
+            <div className="bg-emerald-50 rounded-2xl p-3 text-center">
+              <p className="text-[10px] text-emerald-600 font-medium">Balance final</p>
+              <p className="text-sm font-bold text-emerald-900 tabular-nums">{formatCurrency(final?.balance ?? 0)}</p>
+            </div>
+            <div className="bg-blue-50 rounded-2xl p-3 text-center">
+              <p className="text-[10px] text-blue-600 font-medium">Aportado</p>
+              <p className="text-sm font-bold text-blue-900 tabular-nums">{formatCurrency(final?.contributed ?? 0)}</p>
+            </div>
+            <div className="bg-amber-50 rounded-2xl p-3 text-center">
+              <p className="text-[10px] text-amber-600 font-medium">Intereses</p>
+              <p className="text-sm font-bold text-amber-900 tabular-nums">{formatCurrency(final?.interest ?? 0)}</p>
+            </div>
+          </div>
+
+          {/* Chart */}
+          <div className="px-2 pb-2" style={{ height: 220 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={chartData} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="gradAportado" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#3b82f6" stopOpacity={0.05} />
+                  </linearGradient>
+                  <linearGradient id="gradIntereses" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.4} />
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0.05} />
+                  </linearGradient>
+                </defs>
+                <XAxis
+                  dataKey="year"
+                  tick={{ fontSize: 10, fill: "#9ca3af" }}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={(v) => `${v}a`}
+                />
+                <YAxis
+                  tick={{ fontSize: 10, fill: "#9ca3af" }}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={formatK}
+                  width={40}
+                />
+                <Tooltip content={<CustomTooltip />} />
+                <Area
+                  type="monotone"
+                  dataKey="aportado"
+                  stackId="1"
+                  stroke="#3b82f6"
+                  strokeWidth={2}
+                  fill="url(#gradAportado)"
+                  name="Aportado"
+                />
+                <Area
+                  type="monotone"
+                  dataKey="intereses"
+                  stackId="1"
+                  stroke="#10b981"
+                  strokeWidth={2}
+                  fill="url(#gradIntereses)"
+                  name="Intereses"
+                />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Legend */}
+          <div className="flex justify-center gap-5 pb-4 text-xs text-gray-500">
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-400 inline-block" />Aportado</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-emerald-400 inline-block" />Intereses ganados</span>
+          </div>
+
+          {/* Sliders */}
+          <div className="px-6 pb-4 space-y-3">
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-500">Ahorro mensual</span>
+                <span className="font-bold text-gray-900">{formatCurrency(monthly)}</span>
+              </div>
+              <input type="range" min={50} max={2000} step={50} value={monthly}
+                onChange={(e) => setMonthly(+e.target.value)}
+                className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-500">Años</span>
+                <span className="font-bold text-gray-900">{years} años</span>
+              </div>
+              <input type="range" min={1} max={40} step={1} value={years}
+                onChange={(e) => setYears(+e.target.value)}
+                className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-500">Rentabilidad anual</span>
+                <span className="font-bold text-gray-900">{rate}%</span>
+              </div>
+              <input type="range" min={1} max={15} step={0.5} value={rate}
+                onChange={(e) => setRate(+e.target.value)}
+                className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-200 accent-emerald-500" />
+            </div>
           </div>
 
           {/* CTA */}
