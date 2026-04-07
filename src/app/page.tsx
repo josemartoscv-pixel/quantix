@@ -9,6 +9,7 @@ import {
   ArrowRight,
   CheckCircle,
   Wallet,
+  Calculator,
 } from "lucide-react";
 import { LandingWidgets } from "@/components/landing/landing-widgets";
 
@@ -21,38 +22,39 @@ export default async function LandingPage() {
   const features = [
     {
       icon: BarChart3,
-      title: "Dashboard inteligente",
-      description:
-        "Visualiza tu situación financiera de un vistazo con gráficos y métricas clave.",
+      title: "Dashboard",
+      description: "Ve tu salud financiera de un vistazo: ingresos, gastos y ahorro en tiempo real.",
       color: "bg-emerald-100 text-emerald-700",
     },
     {
       icon: CreditCard,
       title: "Transacciones",
-      description:
-        "Registra y categoriza tus ingresos y gastos de forma rápida y sencilla.",
+      description: "Registra y categoriza cada ingreso y gasto en segundos.",
       color: "bg-blue-100 text-blue-700",
     },
     {
       icon: Wallet,
       title: "Presupuesto",
-      description:
-        "Establece límites por categoría y controla en qué gastas cada euro.",
+      description: "Pon límites por categoría y sabe exactamente en qué gastas.",
       color: "bg-violet-100 text-violet-700",
     },
     {
       icon: PiggyBank,
       title: "Metas de ahorro",
-      description:
-        "Crea objetivos de ahorro visuales y haz seguimiento de tu progreso.",
+      description: "Crea objetivos, haz seguimiento y celebra cada avance.",
       color: "bg-amber-100 text-amber-700",
     },
     {
       icon: TrendingUp,
-      title: "Gestión de deudas",
-      description:
-        "Controla tus deudas y simula estrategias para liquidarlas antes.",
+      title: "Deudas",
+      description: "Controla lo que debes y simula cómo liquidarlo antes.",
       color: "bg-red-100 text-red-700",
+    },
+    {
+      icon: Calculator,
+      title: "Calculadoras",
+      description: "Interés compuesto, hipoteca, FIRE, inflación y más.",
+      color: "bg-teal-100 text-teal-700",
     },
   ];
 
@@ -152,23 +154,25 @@ export default async function LandingPage() {
               Una plataforma completa con todas las herramientas para mejorar tu situación financiera.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={feature.title}
-                  className="p-4 sm:p-6 rounded-2xl bg-gray-50 sm:bg-white sm:border sm:border-gray-100 hover:border-emerald-200 hover:shadow-md transition-all"
+                  className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-gray-50 sm:bg-white sm:border sm:border-gray-100 hover:border-emerald-200 hover:shadow-md transition-all sm:flex-col sm:items-start"
                 >
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center mb-3 shadow-sm ${feature.color}`}>
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 shadow-sm ${feature.color}`}>
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2 leading-tight">
-                    {feature.title}
-                  </h3>
-                  <p className="text-xs sm:text-base text-gray-500 leading-relaxed hidden sm:block">
-                    {feature.description}
-                  </p>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1 leading-tight">
+                      {feature.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
               );
             })}
