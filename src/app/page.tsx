@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+
+export const metadata: Metadata = {
+  title: "DineroyAhorro - Controla tus finanzas personales",
+  description:
+    "La app de finanzas personales en español. Registra gastos, crea presupuestos, gestiona deudas y alcanza tus metas de ahorro. Empieza hoy.",
+  alternates: { canonical: "https://www.dineroyahorro.com" },
+};
 import Link from "next/link";
 import {
   BarChart3,
