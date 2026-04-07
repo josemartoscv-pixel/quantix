@@ -173,6 +173,11 @@ export function LandingWidgets() {
             </div>
           </div>
 
+          {/* Disclaimer */}
+          <div className="mx-6 mb-4 bg-amber-50 rounded-xl px-4 py-3 text-xs text-amber-700 leading-relaxed">
+            💡 Destinar una parte de tu ahorro a invertir es clave para hacer crecer tu patrimonio a largo plazo. <span className="font-semibold">Las rentabilidades pasadas no garantizan rentabilidades futuras.</span>
+          </div>
+
           {/* CTA */}
           <div className="px-6 pb-6">
             <Link
