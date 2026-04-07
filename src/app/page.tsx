@@ -88,11 +88,6 @@ export default async function LandingPage() {
           <div className="text-center max-w-3xl mx-auto">
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
-              <CheckCircle className="w-3 h-3" />
-              La herramienta que necesitas para tomar el control de tu dinero
-            </div>
-
             {/* Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-5">
               Tu dinero,<br />
