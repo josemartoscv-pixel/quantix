@@ -62,9 +62,9 @@ export default async function LandingPage() {
       {/* Navbar */}
       <nav className="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-14">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto rounded-lg" />
-            <div className="hidden sm:flex items-center gap-2">
+          <div className="relative flex items-center justify-center h-14">
+            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
+            <div className="hidden sm:flex items-center gap-2 absolute right-0">
               <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-50 text-sm">
                 Entrar
               </Link>
