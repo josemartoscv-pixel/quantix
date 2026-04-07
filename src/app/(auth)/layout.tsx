@@ -68,15 +68,17 @@ export default function AuthLayout({
       </div>
 
       {/* Right panel - form */}
-      <div className="flex-1 flex items-center justify-center p-6 sm:p-12 bg-gray-50">
-        <div className="w-full max-w-md">
-          {/* Mobile logo */}
-          <div className="lg:hidden mb-8 text-center">
-            <Link href="/" className="inline-flex items-center gap-2">
-              <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
-            </Link>
+      <div className="flex-1 flex flex-col bg-white">
+        {/* Mobile header */}
+        <div className="lg:hidden bg-gradient-to-br from-emerald-600 to-teal-700 px-6 py-8 text-center">
+          <Link href="/">
+            <img src="/logo.png" alt="DineroyAhorro" className="h-12 w-auto mx-auto brightness-0 invert" />
+          </Link>
+        </div>
+        <div className="flex-1 flex items-center justify-center p-6 sm:p-12">
+          <div className="w-full max-w-md">
+            {children}
           </div>
-          {children}
         </div>
       </div>
     </div>
