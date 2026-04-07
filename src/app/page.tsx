@@ -77,42 +77,64 @@ export default async function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-10 sm:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-14 sm:py-28">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-100 rounded-full opacity-40 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-100 rounded-full opacity-40 blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          <div className="text-center max-w-3xl mx-auto">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
               <CheckCircle className="w-3 h-3" />
-              100% gratuito · Sin tarjeta
+              100% gratuito · Sin tarjeta · Sin límites
             </div>
-            <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4">
-              No es una app.<br />
-              <span className="text-emerald-600">Es el sistema que te faltaba.</span>
+
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-5">
+              Tu dinero,<br />
+              <span className="text-emerald-600">finalmente bajo control.</span>
             </h1>
-            <p className="text-sm sm:text-lg text-gray-500 mb-2 max-w-lg mx-auto leading-relaxed">
-              Deja de improvisar: controla, planifica y toma decisiones con sentido.
+
+            {/* Subheadline */}
+            <p className="text-base sm:text-xl text-gray-500 mb-8 max-w-xl mx-auto leading-relaxed">
+              Registra tus gastos, crea presupuestos y alcanza tus metas de ahorro. Todo en un solo lugar.
             </p>
-            <p className="text-sm sm:text-base font-semibold text-emerald-700 mb-7">
-              Haz más con lo que ya tienes.
-            </p>
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3 justify-center">
+
+            {/* Trust bullets */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-center mb-9 text-sm text-gray-500">
+              <span className="flex items-center justify-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                Configúralo en 2 minutos
+              </span>
+              <span className="flex items-center justify-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                Sin tarjeta de crédito
+              </span>
+              <span className="flex items-center justify-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                Tus datos, siempre seguros
+              </span>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
               <Link
                 href="/register"
-                className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3.5 rounded-2xl hover:bg-emerald-700 active:scale-95 transition-all shadow-lg shadow-emerald-200 text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-emerald-700 active:scale-95 transition-all shadow-lg shadow-emerald-200 text-base"
               >
-                Empezar gratis
+                Crear mi cuenta gratis
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/login"
-                className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-6 py-3.5 rounded-2xl border border-gray-200 hover:border-emerald-300 hover:text-emerald-700 active:scale-95 transition-all text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-8 py-4 rounded-2xl border border-gray-200 hover:border-emerald-300 hover:text-emerald-700 active:scale-95 transition-all text-base"
               >
                 Ya tengo cuenta
               </Link>
             </div>
+
           </div>
         </div>
       </section>
