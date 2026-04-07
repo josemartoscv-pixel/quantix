@@ -213,7 +213,7 @@ export function RegisterForm() {
             Creando cuenta...
           </>
         ) : (
-          "Crear cuenta gratis"
+          "Crear cuenta"
         )}
       </button>
 

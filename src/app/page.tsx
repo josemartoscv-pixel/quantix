@@ -118,7 +118,7 @@ export default async function LandingPage() {
                 href="/register"
                 className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-emerald-700 active:scale-95 transition-all shadow-lg shadow-emerald-200 text-base"
               >
-                Crear mi cuenta gratis
+                Crear mi cuenta
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
@@ -188,7 +188,7 @@ export default async function LandingPage() {
             href="/register"
             className="inline-flex items-center justify-center gap-2 bg-white text-emerald-700 font-bold px-8 py-3.5 rounded-xl hover:bg-emerald-50 transition-all text-base shadow-lg"
           >
-            Crear cuenta gratis
+            Crear cuenta
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
