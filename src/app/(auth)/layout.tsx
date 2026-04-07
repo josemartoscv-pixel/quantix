@@ -16,7 +16,7 @@ export default function AuthLayout({
       {/* Left panel - hidden on mobile */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-emerald-600 to-teal-700 flex-col justify-between p-12">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="DineroyAhorro" className="h-8 w-auto brightness-0 invert" />
+          <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto brightness-0 invert" />
         </Link>
 
         <div className="space-y-8">
@@ -73,7 +73,7 @@ export default function AuthLayout({
           {/* Mobile logo */}
           <div className="lg:hidden mb-8 text-center">
             <Link href="/" className="inline-flex items-center gap-2">
-              <img src="/logo.svg" alt="DineroyAhorro" className="h-8 w-auto" />
+              <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
             </Link>
           </div>
           {children}

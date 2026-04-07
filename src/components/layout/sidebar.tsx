@@ -46,7 +46,7 @@ export function Sidebar() {
     <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-60 bg-white border-r border-gray-100 flex-col z-40">
       {/* Logo */}
       <div className="flex items-center px-4 py-3 border-b border-gray-100">
-        <img src="/logo.svg" alt="DineroyAhorro" className="h-7 w-auto" />
+        <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto" />
       </div>
 
       {/* Navigation */}

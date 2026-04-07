@@ -63,7 +63,7 @@ export default async function LandingPage() {
       <nav className="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14">
-            <img src="/logo.svg" alt="DineroyAhorro" className="h-8 w-auto rounded-lg" />
+            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto rounded-lg" />
             <div className="hidden sm:flex items-center gap-2">
               <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-50 text-sm">
                 Entrar
@@ -186,7 +186,7 @@ export default async function LandingPage() {
       <footer className="bg-gray-900 text-gray-400 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-            <img src="/logo.svg" alt="DineroyAhorro" className="h-7 w-auto rounded-md" />
+            <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto rounded-md" />
             <p className="text-xs">
               © {new Date().getFullYear()} DineroyAhorro · Gestiona tus finanzas con inteligencia
             </p>
