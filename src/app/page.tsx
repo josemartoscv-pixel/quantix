@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import { CookieBanner } from "@/components/landing/cookie-banner";
 
 export const metadata: Metadata = {
   title: "DineroyAhorro - Controla tus finanzas personales",
@@ -205,11 +206,19 @@ export default async function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center h-14">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 py-5">
+            <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto" />
+            <span className="hidden sm:block text-gray-300">·</span>
+            <div className="flex items-center gap-4 text-xs text-gray-400">
+              <Link href="/privacidad" className="hover:text-gray-600 transition-colors">Privacidad</Link>
+              <Link href="/cookies" className="hover:text-gray-600 transition-colors">Cookies</Link>
+              <span>© {new Date().getFullYear()} DineroyAhorro</span>
+            </div>
           </div>
         </div>
       </footer>
+
+      <CookieBanner />
     </div>
   );
 }
