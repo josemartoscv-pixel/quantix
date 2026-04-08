@@ -107,11 +107,10 @@ export function AssetForm({ onSuccess, initialData, trigger }: AssetFormProps) {
           <div>
             <Label>Valor estimado (€)</Label>
             <Input
-              type="number"
-              step="0.01"
-              min="0"
+              type="text"
+              inputMode="decimal"
               placeholder="0,00"
-              {...register("value", { valueAsNumber: true })}
+              {...register("value", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
             />
             {errors.value && <p className="text-red-600 text-xs mt-1">{errors.value.message}</p>}
           </div>

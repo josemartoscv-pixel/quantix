@@ -65,11 +65,10 @@ export function DepositForm({ goalId, onSuccess, trigger }: DepositFormProps) {
           <div>
             <Label>Importe (€)</Label>
             <Input
-              type="number"
-              step="0.01"
-              min="0"
+              type="text"
+              inputMode="decimal"
               placeholder="0,00"
-              {...register("amount", { valueAsNumber: true })}
+              {...register("amount", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
               className={errors.amount ? "border-red-300" : ""}
             />
             {errors.amount && <p className="text-red-600 text-xs mt-1">{errors.amount.message}</p>}

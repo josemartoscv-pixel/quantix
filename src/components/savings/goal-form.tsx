@@ -96,11 +96,10 @@ export function GoalForm({ onSuccess, initialData, trigger }: GoalFormProps) {
             <div>
               <Label>Importe objetivo (€)</Label>
               <Input
-                type="number"
-                step="0.01"
-                min="0"
+                type="text"
+                inputMode="decimal"
                 placeholder="0,00"
-                {...register("targetAmount", { valueAsNumber: true })}
+                {...register("targetAmount", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
               />
               {errors.targetAmount && <p className="text-red-600 text-xs mt-1">{errors.targetAmount.message}</p>}
             </div>

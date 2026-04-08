@@ -131,19 +131,19 @@ export function DebtForm({ onSuccess, initialData, trigger }: DebtFormProps) {
             <div>
               <Label>Importe inicial (€)</Label>
               <Input
-                type="number"
-                step="0.01"
+                type="text"
+                inputMode="decimal"
                 placeholder="0,00"
-                {...register("initialAmount", { valueAsNumber: true })}
+                {...register("initialAmount", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
               />
             </div>
             <div>
               <Label>Saldo actual (€)</Label>
               <Input
-                type="number"
-                step="0.01"
+                type="text"
+                inputMode="decimal"
                 placeholder="0,00"
-                {...register("currentBalance", { valueAsNumber: true })}
+                {...register("currentBalance", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
               />
             </div>
           </div>
@@ -152,19 +152,19 @@ export function DebtForm({ onSuccess, initialData, trigger }: DebtFormProps) {
             <div>
               <Label>Interés anual (%)</Label>
               <Input
-                type="number"
-                step="0.01"
+                type="text"
+                inputMode="decimal"
                 placeholder="0,00"
-                {...register("interestRate", { valueAsNumber: true })}
+                {...register("interestRate", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
               />
             </div>
             <div>
               <Label>Pago mínimo (€/mes)</Label>
               <Input
-                type="number"
-                step="0.01"
+                type="text"
+                inputMode="decimal"
                 placeholder="0,00"
-                {...register("minimumPayment", { valueAsNumber: true })}
+                {...register("minimumPayment", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
               />
             </div>
           </div>

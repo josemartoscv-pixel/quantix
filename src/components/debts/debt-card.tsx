@@ -90,11 +90,10 @@ function PaymentDialog({ debtId, onSuccess }: { debtId: string; onSuccess: () =>
           <div>
             <Label>Importe pagado (€)</Label>
             <Input
-              type="number"
-              step="0.01"
-              min="0"
+              type="text"
+              inputMode="decimal"
               placeholder="0,00"
-              {...register("amount", { valueAsNumber: true })}
+              {...register("amount", { setValueAs: (v: string) => parseFloat(String(v).replace(",", ".")) })}
             />
             {errors.amount && <p className="text-red-600 text-xs mt-1">{errors.amount.message}</p>}
           </div>
