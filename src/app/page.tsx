@@ -187,7 +187,7 @@ export default async function LandingPage() {
             Haz más con lo que ya tienes.
           </h2>
           <p className="text-sm sm:text-lg text-emerald-100 mb-2">
-            Deja de improvisar. Controla, planifica y toma decisiones con sentido.
+            Deja de improvisar. Controla, planifica y ahorra.
           </p>
           <p className="text-xs sm:text-sm text-emerald-200 mb-7">
             Solo tarda 2 minutos.

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import confetti from "canvas-confetti";
 import { differenceInDays } from "date-fns";
 import { PlusCircle, Pencil, Trash2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -32,6 +33,35 @@ interface GoalCardProps {
 export function GoalCard({ goal, onRefresh }: GoalCardProps) {
   const pct = Math.min((goal.currentAmount / goal.targetAmount) * 100, 100);
   const remaining = goal.targetAmount - goal.currentAmount;
+
+  // Fire confetti only when goal transitions from active → completed
+  const prevCompleted = useRef(goal.isCompleted);
+  useEffect(() => {
+    if (!prevCompleted.current && goal.isCompleted) {
+      confetti({
+        particleCount: 180,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ["#10b981", "#34d399", "#6ee7b7", "#fbbf24", "#f59e0b"],
+      });
+      // Second burst for extra effect
+      setTimeout(() => {
+        confetti({
+          particleCount: 80,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0, y: 0.6 },
+        });
+        confetti({
+          particleCount: 80,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1, y: 0.6 },
+        });
+      }, 300);
+    }
+    prevCompleted.current = goal.isCompleted;
+  }, [goal.isCompleted]);
 
   let daysRemaining: number | null = null;
   if (goal.targetDate) {
