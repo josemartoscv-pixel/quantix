@@ -12,6 +12,7 @@ import { GoalForm } from "./goal-form";
 import { ConfirmDialog } from "@/components/shared/confirm-dialog";
 import { formatCurrency } from "@/lib/utils/currency";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 interface Goal {
   id: string;
@@ -34,17 +35,23 @@ export function GoalCard({ goal, onRefresh }: GoalCardProps) {
   const pct = Math.min((goal.currentAmount / goal.targetAmount) * 100, 100);
   const remaining = goal.targetAmount - goal.currentAmount;
 
-  // Fire confetti only when goal transitions from active → completed
+  // Fire confetti + toast only when goal transitions from active → completed
   const prevCompleted = useRef(goal.isCompleted);
   useEffect(() => {
     if (!prevCompleted.current && goal.isCompleted) {
+      // Celebration toast
+      toast.success(`🚀 ¡Meta lograda! "${goal.name}"`, {
+        description: `Has alcanzado tu objetivo de ${formatCurrency(goal.targetAmount)}. ¡Enhorabuena!`,
+        duration: 6000,
+      });
+
+      // Confetti burst
       confetti({
         particleCount: 180,
         spread: 80,
         origin: { y: 0.6 },
         colors: ["#10b981", "#34d399", "#6ee7b7", "#fbbf24", "#f59e0b"],
       });
-      // Second burst for extra effect
       setTimeout(() => {
         confetti({
           particleCount: 80,
