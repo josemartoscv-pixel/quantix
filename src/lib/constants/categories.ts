@@ -19,6 +19,8 @@ export const EXPENSE_CATEGORIES: Category[] = [
   { id: "restaurantes", name: "Restaurantes", icon: "UtensilsCrossed", emoji: "🍔", color: "#f59e0b" },
   { id: "viajes", name: "Viajes", icon: "Plane", emoji: "✈️", color: "#14b8a6" },
   { id: "seguros", name: "Seguros", icon: "Shield", emoji: "🛡️", color: "#64748b" },
+  { id: "belleza", name: "Belleza", icon: "Sparkles", emoji: "💅", color: "#f472b6" },
+  { id: "fiesta", name: "Fiesta", icon: "PartyPopper", emoji: "🎉", color: "#fb923c" },
   { id: "bizum", name: "Bizum", icon: "Smartphone", emoji: "📱", color: "#0ea5e9" },
   { id: "otros-gastos", name: "Otros gastos", icon: "MoreHorizontal", emoji: "📦", color: "#9ca3af" },
 ];
