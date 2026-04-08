@@ -14,6 +14,11 @@ export const authConfig: NextAuthConfig = {
         PUBLIC_ROUTES.includes(nextUrl.pathname) ||
         nextUrl.pathname.startsWith("/api/auth");
 
+      // Si está logueado y visita la landing, redirigir al dashboard
+      if (isLoggedIn && nextUrl.pathname === "/") {
+        return Response.redirect(new URL("/dashboard", nextUrl));
+      }
+
       if (!isPublic && !isLoggedIn) {
         // API routes: return 401 JSON instead of redirecting
         if (nextUrl.pathname.startsWith("/api/")) {
