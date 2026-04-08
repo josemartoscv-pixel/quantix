@@ -70,9 +70,9 @@ export default function AuthLayout({
       {/* Right panel - form */}
       <div className="flex-1 flex flex-col bg-white">
         {/* Mobile header */}
-        <div className="lg:hidden bg-gradient-to-br from-emerald-600 to-teal-700 px-6 py-8 text-center">
+        <div className="lg:hidden border-b border-gray-100 px-6 py-4 flex justify-center">
           <Link href="/">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-12 w-auto mx-auto brightness-0 invert" />
+            <img src="/logo.png" alt="DineroyAhorro" className="h-9 w-auto" />
           </Link>
         </div>
         <div className="flex-1 flex items-center justify-center p-6 sm:p-12">
