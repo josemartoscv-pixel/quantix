@@ -75,11 +75,11 @@ export default async function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-center h-14">
             <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
-            <div className="hidden sm:flex items-center gap-2 absolute right-0">
-              <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-50 text-sm">
+            <div className="flex items-center gap-1.5 absolute right-0">
+              <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-2.5 py-1.5 rounded-lg hover:bg-gray-50 text-xs sm:text-sm sm:px-3">
                 Entrar
               </Link>
-              <Link href="/register" className="bg-emerald-600 text-white font-medium px-3 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-sm">
+              <Link href="/register" className="bg-emerald-600 text-white font-medium px-2.5 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-xs sm:text-sm sm:px-3">
                 Empezar
               </Link>
             </div>
