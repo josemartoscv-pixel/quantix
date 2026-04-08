@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from "recharts";
 const Tooltip = RechartsTooltip as any;
@@ -43,7 +43,15 @@ export function CompoundInterestCalc() {
   const [years, setYears] = useState(20);
   const [monthly, setMonthly] = useState(200);
 
-  const data = calculateCompoundInterest(principal, rate, Math.min(years, 50), monthly);
+  const dPrincipal = useDeferredValue(principal);
+  const dRate = useDeferredValue(rate);
+  const dYears = useDeferredValue(years);
+  const dMonthly = useDeferredValue(monthly);
+
+  const data = useMemo(
+    () => calculateCompoundInterest(dPrincipal, dRate, Math.min(dYears, 50), dMonthly),
+    [dPrincipal, dRate, dYears, dMonthly]
+  );
   const final = data[data.length - 1];
 
   return (
@@ -85,21 +93,21 @@ export function CompoundInterestCalc() {
         <div className="grid grid-cols-3 gap-2">
           <div className="bg-emerald-50 rounded-2xl p-3 text-center">
             <p className="text-[10px] text-emerald-600 font-medium mb-0.5">Balance final</p>
-            <p className="text-sm font-bold text-emerald-900 break-all leading-tight">{formatCurrency(final.balance)}</p>
+            <p className="text-sm font-bold text-emerald-900 tabular-nums truncate">{formatCurrency(final.balance)}</p>
           </div>
           <div className="bg-blue-50 rounded-2xl p-3 text-center">
             <p className="text-[10px] text-blue-600 font-medium mb-0.5">Aportado</p>
-            <p className="text-sm font-bold text-blue-900 break-all leading-tight">{formatCurrency(final.contributed)}</p>
+            <p className="text-sm font-bold text-blue-900 tabular-nums truncate">{formatCurrency(final.contributed)}</p>
           </div>
           <div className="bg-amber-50 rounded-2xl p-3 text-center">
             <p className="text-[10px] text-amber-600 font-medium mb-0.5">Intereses</p>
-            <p className="text-sm font-bold text-amber-900 break-all leading-tight">{formatCurrency(final.interest)}</p>
+            <p className="text-sm font-bold text-amber-900 tabular-nums truncate">{formatCurrency(final.interest)}</p>
           </div>
         </div>
       )}
 
-      {/* Chart — stacked areas so contributed + interest fill the full balance */}
-      <ResponsiveContainer width="100%" height={300}>
+      {/* Chart */}
+      <ResponsiveContainer key={dYears} width="100%" height={300}>
         <AreaChart data={data} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
           <defs>
             <linearGradient id="interestGrad" x1="0" y1="0" x2="0" y2="1">

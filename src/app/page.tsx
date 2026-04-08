@@ -69,14 +69,38 @@ export default async function LandingPage() {
   ];
 
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DineroyAhorro",
+    "url": "https://www.dineroyahorro.com",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "es",
+    "description": "La app de finanzas personales en español. Registra gastos, crea presupuestos, gestiona deudas y alcanza tus metas de ahorro.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Jose Antonio Martos"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Navbar */}
       <nav className="border-b border-gray-100 bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative flex items-center justify-center h-14">
+          <div className="relative flex items-center h-14">
             <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
-            <div className="flex items-center gap-1.5 absolute right-0">
+            <div className="flex items-center gap-3 absolute right-0">
               <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-2.5 py-1.5 rounded-lg hover:bg-gray-50 text-xs sm:text-sm sm:px-3">
                 Entrar
               </Link>

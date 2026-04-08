@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { Loader2, Plus } from "lucide-react";
+import { Loader2, Plus, RefreshCw } from "lucide-react";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger,
 } from "@/components/ui/dialog";
@@ -227,6 +227,56 @@ export function TransactionForm({ onSuccess, initialData, trigger }: Transaction
               className={cn("mt-1", errors.description && "border-red-300")}
             />
             {errors.description && <p className="text-red-600 text-xs mt-1">{errors.description.message}</p>}
+          </div>
+
+          {/* Recurring toggle */}
+          <div className={cn(
+            "rounded-xl border p-3 transition-colors",
+            watch("isRecurring") ? "border-emerald-200 bg-emerald-50" : "border-gray-200 bg-gray-50"
+          )}>
+            <button
+              type="button"
+              onClick={() => {
+                const next = !watch("isRecurring");
+                setValue("isRecurring", next);
+                if (!next) setValue("recurrence", undefined);
+              }}
+              className="flex items-center gap-2 w-full text-left"
+            >
+              <RefreshCw className={cn("w-4 h-4 shrink-0", watch("isRecurring") ? "text-emerald-600" : "text-gray-400")} />
+              <span className={cn("text-sm font-medium", watch("isRecurring") ? "text-emerald-700" : "text-gray-600")}>
+                Transacción recurrente
+              </span>
+              <span className={cn(
+                "ml-auto w-9 h-5 rounded-full transition-colors relative flex-shrink-0",
+                watch("isRecurring") ? "bg-emerald-500" : "bg-gray-300"
+              )}>
+                <span className={cn(
+                  "absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform",
+                  watch("isRecurring") ? "translate-x-4" : "translate-x-0.5"
+                )} />
+              </span>
+            </button>
+            {watch("isRecurring") && (
+              <div className="mt-3">
+                <Label className="text-xs text-emerald-700">Frecuencia</Label>
+                <Select
+                  value={watch("recurrence") ?? "monthly"}
+                  onValueChange={(v) => setValue("recurrence", v)}
+                >
+                  <SelectTrigger className="mt-1 bg-white border-emerald-200 text-sm h-9">
+                    <SelectValue placeholder="Seleccionar frecuencia" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="weekly">Semanal</SelectItem>
+                    <SelectItem value="biweekly">Quincenal</SelectItem>
+                    <SelectItem value="monthly">Mensual</SelectItem>
+                    <SelectItem value="quarterly">Trimestral</SelectItem>
+                    <SelectItem value="yearly">Anual</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
           </div>
 
           <div className="flex gap-3 pt-2">

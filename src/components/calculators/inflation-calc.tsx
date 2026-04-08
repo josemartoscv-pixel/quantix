@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 import { formatCurrency } from "@/lib/utils/currency";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from "recharts";
@@ -41,23 +41,27 @@ export function InflationCalc() {
   const [inflationRate, setInflationRate] = useState(3);
   const [years, setYears] = useState(20);
 
+  const dAmount = useDeferredValue(amount);
+  const dInflationRate = useDeferredValue(inflationRate);
+  const dYears = useDeferredValue(years);
+
   const calc = useMemo(() => {
-    const futureEquivalent = amount * Math.pow(1 + inflationRate / 100, years);
-    const purchasingPower = amount / Math.pow(1 + inflationRate / 100, years);
-    const loss = amount - purchasingPower;
-    const lossPercent = (loss / amount) * 100;
+    const futureEquivalent = dAmount * Math.pow(1 + dInflationRate / 100, dYears);
+    const purchasingPower = dAmount / Math.pow(1 + dInflationRate / 100, dYears);
+    const loss = dAmount - purchasingPower;
+    const lossPercent = (loss / dAmount) * 100;
 
     const chartData = [];
-    for (let y = 0; y <= years; y++) {
+    for (let y = 0; y <= dYears; y++) {
       chartData.push({
         year: y,
-        valor: Math.round(amount / Math.pow(1 + inflationRate / 100, y)),
-        nominal: amount,
+        valor: Math.round(dAmount / Math.pow(1 + dInflationRate / 100, y)),
+        nominal: dAmount,
       });
     }
 
     return { futureEquivalent, purchasingPower, loss, lossPercent, chartData };
-  }, [amount, inflationRate, years]);
+  }, [dAmount, dInflationRate, dYears]);
 
   return (
     <div className="space-y-4">
@@ -109,7 +113,7 @@ export function InflationCalc() {
       </div>
 
       {/* Chart */}
-      <ResponsiveContainer width="100%" height={260}>
+      <ResponsiveContainer key={dYears} width="100%" height={260}>
         <AreaChart data={calc.chartData} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
           <defs>
             <linearGradient id="valorGrad" x1="0" y1="0" x2="0" y2="1">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 import { formatCurrency } from "@/lib/utils/currency";
 import { calculateCompoundInterest } from "@/lib/calculations/compound-interest";
 import Link from "next/link";
@@ -39,16 +39,19 @@ export function LandingWidgets() {
   const [years, setYears] = useState(20);
   const [rate, setRate] = useState(7);
 
-  const raw = calculateCompoundInterest(0, rate, years, monthly);
+  const dMonthly = useDeferredValue(monthly);
+  const dYears = useDeferredValue(years);
+  const dRate = useDeferredValue(rate);
 
-  // Un punto por año
-  const chartData = raw
-    .filter((_, i) => i % 12 === 11 || i === raw.length - 1)
-    .map((d, i) => ({
-      year: i + 1,
-      aportado: Math.round(d.contributed),
-      intereses: Math.round(d.interest),
-    }));
+  const raw = useMemo(
+    () => calculateCompoundInterest(0, dRate, dYears, dMonthly),
+    [dRate, dYears, dMonthly]
+  );
+
+  const chartData = useMemo(
+    () => raw.map((d) => ({ year: d.year, aportado: Math.round(d.contributed), intereses: Math.round(d.interest) })),
+    [raw]
+  );
 
   const final = raw[raw.length - 1];
 
@@ -87,7 +90,7 @@ export function LandingWidgets() {
 
           {/* Chart */}
           <div className="px-2 pb-2" style={{ height: 220 }}>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer key={years} width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="gradAportado" x1="0" y1="0" x2="0" y2="1">

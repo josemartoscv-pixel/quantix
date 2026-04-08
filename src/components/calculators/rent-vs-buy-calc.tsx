@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 import { formatCurrency } from "@/lib/utils/currency";
 import { Home, TrendingUp } from "lucide-react";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -43,35 +43,44 @@ export function RentVsBuyCalc() {
   const [investReturn, setInvestReturn] = useState(7);
   const [years, setYears] = useState(20);
 
+  const dHousePrice = useDeferredValue(housePrice);
+  const dMonthlyRent = useDeferredValue(monthlyRent);
+  const dMortgageRate = useDeferredValue(mortgageRate);
+  const dMortgageYears = useDeferredValue(mortgageYears);
+  const dAppreciation = useDeferredValue(appreciation);
+  const dRentIncrease = useDeferredValue(rentIncrease);
+  const dInvestReturn = useDeferredValue(investReturn);
+  const dYears = useDeferredValue(years);
+
   const calc = useMemo(() => {
     // --- Compra ---
-    const downPayment = housePrice * 0.20;
-    const taxes = housePrice * 0.065; // ITP segunda mano
-    const fees = housePrice * 0.018; // notaría + registro + gestoría
+    const downPayment = dHousePrice * 0.20;
+    const taxes = dHousePrice * 0.065; // ITP segunda mano
+    const fees = dHousePrice * 0.018; // notaría + registro + gestoría
     const upfront = downPayment + taxes + fees;
-    const loan = housePrice - downPayment;
-    const mr = mortgageRate / 100 / 12;
-    const n = mortgageYears * 12;
+    const loan = dHousePrice - downPayment;
+    const mr = dMortgageRate / 100 / 12;
+    const n = dMortgageYears * 12;
     const monthlyMortgage = mr > 0
       ? (loan * mr * Math.pow(1 + mr, n)) / (Math.pow(1 + mr, n) - 1)
       : loan / n;
-    const annualMaintenance = housePrice * 0.01; // 1% mantenimiento
+    const annualMaintenance = dHousePrice * 0.01; // 1% mantenimiento
 
     // --- Coste acumulado por año ---
     const chartData: { year: number; compra: number; alquiler: number }[] = [];
     let buyCumulative = upfront; // costes totales acumulados netos
     let rentCumulative = 0;
-    let currentRent = monthlyRent;
-    let propertyValue = housePrice;
+    let currentRent = dMonthlyRent;
+    let propertyValue = dHousePrice;
     let remainingLoan = loan;
     let investedCapital = upfront; // capital invertido si alquilas
 
     let breakEvenYear: number | null = null;
 
-    for (let y = 1; y <= years; y++) {
+    for (let y = 1; y <= dYears; y++) {
       // Compra: pago hipoteca + mantenimiento - revalorización
       const mortgageAnnual = monthlyMortgage * 12;
-      propertyValue *= (1 + appreciation / 100);
+      propertyValue *= (1 + dAppreciation / 100);
       // Reducción del préstamo este año (simplificado)
       for (let m = 0; m < 12; m++) {
         const interest = remainingLoan * mr;
@@ -84,8 +93,8 @@ export function RentVsBuyCalc() {
 
       // Alquiler: pago alquiler + oportunidad de invertir el down payment
       rentCumulative += currentRent * 12;
-      currentRent *= (1 + rentIncrease / 100);
-      investedCapital *= (1 + investReturn / 100);
+      currentRent *= (1 + dRentIncrease / 100);
+      investedCapital *= (1 + dInvestReturn / 100);
       const rentNetCost = rentCumulative - (investedCapital - upfront); // coste neto = alquiler - ganancia inversión
 
       chartData.push({
@@ -115,7 +124,7 @@ export function RentVsBuyCalc() {
       lastRent: lastYear.alquiler,
       diff: Math.abs(lastYear.compra - lastYear.alquiler),
     };
-  }, [housePrice, monthlyRent, mortgageRate, mortgageYears, appreciation, rentIncrease, investReturn, years]);
+  }, [dHousePrice, dMonthlyRent, dMortgageRate, dMortgageYears, dAppreciation, dRentIncrease, dInvestReturn, dYears]);
 
   return (
     <div className="space-y-4">
@@ -167,7 +176,7 @@ export function RentVsBuyCalc() {
       </div>
 
       {/* Chart */}
-      <ResponsiveContainer width="100%" height={260}>
+      <ResponsiveContainer key={dYears} width="100%" height={260}>
         <LineChart data={calc.chartData} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
           <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#94a3b8" }} label={{ value: "Años", position: "insideBottomRight", offset: -5, fontSize: 10, fill: "#94a3b8" }} />

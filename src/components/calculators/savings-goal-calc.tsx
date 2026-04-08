@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ReferenceLine } from "recharts";
 const Tooltip = RechartsTooltip as any;
@@ -13,31 +13,36 @@ export function SavingsGoalCalc() {
   const [monthly, setMonthly] = useState("300");
   const [rate, setRate] = useState("3");
 
-  const goalAmount = parseFloat(goal) || 0;
-  const monthlyAmount = parseFloat(monthly) || 0;
-  const monthlyRate = (parseFloat(rate) || 0) / 100 / 12;
+  const dGoal = useDeferredValue(goal);
+  const dMonthly = useDeferredValue(monthly);
+  const dRate = useDeferredValue(rate);
 
-  let months = 0;
-  let balance = 0;
-  const chartData = [];
+  const { months, balance, chartData } = useMemo(() => {
+    const goalAmount = parseFloat(dGoal) || 0;
+    const monthlyAmount = parseFloat(dMonthly) || 0;
+    const monthlyRate = (parseFloat(dRate) || 0) / 100 / 12;
 
-  if (monthlyAmount > 0 && goalAmount > 0) {
-    while (balance < goalAmount && months < 600) {
-      balance = balance * (1 + monthlyRate) + monthlyAmount;
-      months++;
-      if (months % 12 === 0 || months === 1) {
-        chartData.push({
-          mes: months,
-          ahorro: Math.round(balance * 100) / 100,
-          meta: goalAmount,
-        });
+    let months = 0;
+    let balance = 0;
+    const chartData: { mes: number; ahorro: number; meta: number }[] = [];
+
+    if (monthlyAmount > 0 && goalAmount > 0) {
+      while (balance < goalAmount && months < 600) {
+        balance = balance * (1 + monthlyRate) + monthlyAmount;
+        months++;
+        if (months % 12 === 0 || months === 1) {
+          chartData.push({ mes: months, ahorro: Math.round(balance * 100) / 100, meta: goalAmount });
+        }
+      }
+      if (balance < goalAmount) {
+        chartData.push({ mes: months, ahorro: Math.round(balance * 100) / 100, meta: goalAmount });
       }
     }
-    if (balance < goalAmount) {
-      chartData.push({ mes: months, ahorro: Math.round(balance * 100) / 100, meta: goalAmount });
-    }
-  }
+    return { months, balance, chartData };
+  }, [dGoal, dMonthly, dRate]);
 
+  const goalAmount = parseFloat(dGoal) || 0;
+  const monthlyAmount = parseFloat(dMonthly) || 0;
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;
 
@@ -72,7 +77,7 @@ export function SavingsGoalCalc() {
       )}
 
       {chartData.length > 0 && (
-        <ResponsiveContainer width="100%" height={250}>
+        <ResponsiveContainer key={chartData.length} width="100%" height={250}>
           <AreaChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id="savingsGoalGrad" x1="0" y1="0" x2="0" y2="1">

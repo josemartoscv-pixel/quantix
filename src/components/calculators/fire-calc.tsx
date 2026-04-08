@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 import { formatCurrency } from "@/lib/utils/currency";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ReferenceLine, ResponsiveContainer } from "recharts";
@@ -43,18 +43,24 @@ export function FireCalc() {
   const [returnRate, setReturnRate] = useState(7);
   const [withdrawalRate, setWithdrawalRate] = useState(4);
 
+  const dMonthlyExpenses = useDeferredValue(monthlyExpenses);
+  const dCurrentSavings = useDeferredValue(currentSavings);
+  const dMonthlySavings = useDeferredValue(monthlySavings);
+  const dReturnRate = useDeferredValue(returnRate);
+  const dWithdrawalRate = useDeferredValue(withdrawalRate);
+
   const calc = useMemo(() => {
-    const annualExpenses = monthlyExpenses * 12;
-    const fireNumber = annualExpenses / (withdrawalRate / 100);
-    const monthlyRate = returnRate / 100 / 12;
+    const annualExpenses = dMonthlyExpenses * 12;
+    const fireNumber = annualExpenses / (dWithdrawalRate / 100);
+    const monthlyRate = dReturnRate / 100 / 12;
 
     // Simulate month by month until we hit FIRE number
-    let balance = currentSavings;
+    let balance = dCurrentSavings;
     let months = 0;
     const MAX_MONTHS = 600; // 50 years cap
 
     while (balance < fireNumber && months < MAX_MONTHS) {
-      balance = balance * (1 + monthlyRate) + monthlySavings;
+      balance = balance * (1 + monthlyRate) + dMonthlySavings;
       months++;
     }
 
@@ -63,12 +69,12 @@ export function FireCalc() {
 
     // Build chart data (yearly points)
     const chartData: { year: number; balance: number; target: number }[] = [];
-    let b = currentSavings;
+    let b = dCurrentSavings;
     const totalYears = Math.min(Math.ceil(years) + 5, 50);
     for (let y = 0; y <= totalYears; y++) {
       chartData.push({ year: y, balance: Math.round(b), target: Math.round(fireNumber) });
       for (let m = 0; m < 12; m++) {
-        b = b * (1 + monthlyRate) + monthlySavings;
+        b = b * (1 + monthlyRate) + dMonthlySavings;
       }
     }
 
@@ -77,14 +83,14 @@ export function FireCalc() {
     const n = targetYears * 12;
     let neededMonthly = 0;
     if (monthlyRate > 0) {
-      const fv = fireNumber - currentSavings * Math.pow(1 + monthlyRate, n);
+      const fv = fireNumber - dCurrentSavings * Math.pow(1 + monthlyRate, n);
       neededMonthly = Math.max(0, (fv * monthlyRate) / (Math.pow(1 + monthlyRate, n) - 1));
     } else {
-      neededMonthly = Math.max(0, (fireNumber - currentSavings) / n);
+      neededMonthly = Math.max(0, (fireNumber - dCurrentSavings) / n);
     }
 
     return { fireNumber, annualExpenses, years, reached, chartData, neededMonthly, months };
-  }, [monthlyExpenses, currentSavings, monthlySavings, returnRate, withdrawalRate]);
+  }, [dMonthlyExpenses, dCurrentSavings, dMonthlySavings, dReturnRate, dWithdrawalRate]);
 
   const yearsInt = Math.floor(calc.years);
   const monthsRem = Math.round((calc.years - yearsInt) * 12);
@@ -158,7 +164,7 @@ export function FireCalc() {
       </div>
 
       {/* Chart */}
-      <ResponsiveContainer width="100%" height={260}>
+      <ResponsiveContainer key={calc.chartData.length} width="100%" height={260}>
         <LineChart data={calc.chartData} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
           <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#94a3b8" }} label={{ value: "Años", position: "insideBottomRight", offset: -5, fontSize: 10, fill: "#94a3b8" }} />
