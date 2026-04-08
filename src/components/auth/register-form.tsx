@@ -118,11 +118,17 @@ export function RegisterForm() {
         return;
       }
 
-      await signIn("credentials", {
+      const loginResult = await signIn("credentials", {
         email: data.email,
         password: data.password,
         redirect: false,
       });
+
+      if (loginResult?.error) {
+        // Account created but auto-login failed — send to login
+        router.push("/login?registered=1");
+        return;
+      }
 
       router.push("/dashboard");
       router.refresh();
