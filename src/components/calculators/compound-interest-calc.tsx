@@ -93,15 +93,15 @@ export function CompoundInterestCalc() {
         <div className="grid grid-cols-3 gap-2">
           <div className="bg-emerald-50 rounded-2xl p-3 text-center">
             <p className="text-[10px] text-emerald-600 font-medium mb-0.5">Balance final</p>
-            <p className="text-sm font-bold text-emerald-900 tabular-nums truncate">{formatCurrency(final.balance)}</p>
+            <p className="text-[12.5px] font-bold text-emerald-900 tabular-nums truncate">{formatCurrency(final.balance)}</p>
           </div>
           <div className="bg-blue-50 rounded-2xl p-3 text-center">
             <p className="text-[10px] text-blue-600 font-medium mb-0.5">Aportado</p>
-            <p className="text-sm font-bold text-blue-900 tabular-nums truncate">{formatCurrency(final.contributed)}</p>
+            <p className="text-[12.5px] font-bold text-blue-900 tabular-nums truncate">{formatCurrency(final.contributed)}</p>
           </div>
           <div className="bg-amber-50 rounded-2xl p-3 text-center">
             <p className="text-[10px] text-amber-600 font-medium mb-0.5">Intereses</p>
-            <p className="text-sm font-bold text-amber-900 tabular-nums truncate">{formatCurrency(final.interest)}</p>
+            <p className="text-[12.5px] font-bold text-amber-900 tabular-nums truncate">{formatCurrency(final.interest)}</p>
           </div>
         </div>
       )}
