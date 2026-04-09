@@ -9,7 +9,9 @@ import {
   Landmark,
   PiggyBank,
   Calculator,
-  Building2,
+  TrendingDown,
+  Wallet,
+  BarChart3,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -24,20 +26,17 @@ const navGroups = [
     label: "Gestión",
     items: [
       { href: "/transacciones", icon: CreditCard, label: "Transacciones" },
+      { href: "/presupuesto", icon: Wallet, label: "Presupuesto" },
+      { href: "/ahorros", icon: PiggyBank, label: "Metas de ahorro" },
+      { href: "/deudas", icon: TrendingDown, label: "Deudas" },
       { href: "/cuentas", icon: Landmark, label: "Cuentas bancarias" },
-      { href: "/ahorros", icon: PiggyBank, label: "Metas" },
     ],
   },
   {
-    label: "Herramientas",
+    label: "Análisis",
     items: [
+      { href: "/patrimonio", icon: BarChart3, label: "Patrimonio" },
       { href: "/calculadoras", icon: Calculator, label: "Calculadoras" },
-    ],
-  },
-  {
-    label: "Interno",
-    items: [
-      { href: "/oficina", icon: Building2, label: "La Oficina" },
     ],
   },
 ];
@@ -52,12 +51,10 @@ export function Sidebar() {
 
   return (
     <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-60 bg-white border-r border-gray-100 flex-col z-40">
-      {/* Logo */}
       <div className="flex items-center px-4 py-3 border-b border-gray-100">
         <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-7 w-auto" />
       </div>
 
-      {/* Navigation */}
       <nav className="flex-1 overflow-y-auto py-3 px-2">
         {navGroups.map((group) => (
           <div key={group.label} className="mb-4">
