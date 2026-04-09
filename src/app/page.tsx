@@ -116,6 +116,32 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Security */}
+      <section className="py-10 sm:py-16 bg-slate-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-flex items-center gap-1.5 bg-emerald-900/50 text-emerald-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">🔒 Seguridad y privacidad</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Tus datos son tuyos. Siempre.</h2>
+            <p className="text-sm text-slate-400 max-w-xl mx-auto">DineroyAhorro no se conecta a tu banco. Introduces los datos tú mismo, solo tú puedes verlos.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[{ icon: "🔐", title: "Contraseñas cifradas", desc: "Tu contraseña nunca se almacena en texto plano. Usamos bcrypt, el estándar de la industria." },
+              { icon: "🏦", title: "Sin acceso a tu banco", desc: "No pedimos credenciales bancarias. Tú introduces lo que quieres, cuando quieres." },
+              { icon: "🛡️", title: "Protección ante ataques", desc: "Rate limiting en el login, HTTPS forzado y cabeceras de seguridad activas en toda la web." },
+              { icon: "🇪🇺", title: "Datos en la UE", desc: "Tu base de datos reside en servidores europeos bajo normativa RGPD." },
+              { icon: "🚫", title: "Sin venta de datos", desc: "No vendemos ni compartimos tu información financiera con terceros bajo ningún concepto." },
+              { icon: "🗑️", title: "Borrado permanente", desc: "Si eliminas tu cuenta, todos tus datos se borran definitivamente en menos de 30 días." },
+            ].map((item) => (
+              <div key={item.title} className="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <span className="text-2xl mb-3 block">{item.icon}</span>
+                <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-emerald-200 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">DineroyAhorro</p>
