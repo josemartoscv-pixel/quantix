@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { ConditionalAnalytics } from "@/components/analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -72,25 +72,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S7WKB67K2G" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-S7WKB67K2G');
-        `}</Script>
-      </head>
       <body className="antialiased">
         {children}
         <Toaster
           position="top-right"
-          toastOptions={{
-            style: {
-              fontFamily: "inherit",
-            },
-          }}
+          toastOptions={{ style: { fontFamily: "inherit" } }}
         />
+        <ConditionalAnalytics />
         <Analytics />
       </body>
     </html>

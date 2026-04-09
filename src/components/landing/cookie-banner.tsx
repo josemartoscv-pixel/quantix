@@ -15,6 +15,9 @@ export function CookieBanner() {
   const accept = () => {
     localStorage.setItem(COOKIE_KEY, "accepted");
     setVisible(false);
+    // Activar GA ahora que el usuario ha aceptado
+    window.gtag?.("consent", "update", { analytics_storage: "granted" });
+    window.gtag?.("event", "page_view");
   };
 
   const reject = () => {
