@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   TrendingUp,
   PiggyBank,
@@ -16,7 +17,7 @@ export default function AuthLayout({
       {/* Left panel - hidden on mobile */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-emerald-600 to-teal-700 flex-col justify-between p-12">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto brightness-0 invert" />
+          <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-8 w-auto brightness-0 invert" />
         </Link>
 
         <div className="space-y-8">
@@ -72,7 +73,7 @@ export default function AuthLayout({
         {/* Mobile header */}
         <div className="lg:hidden border-b border-gray-100 px-6 py-4 flex justify-center">
           <Link href="/">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-9 w-auto" />
+            <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-9 w-auto" />
           </Link>
         </div>
         <div className="flex-1 flex items-center justify-center p-6 sm:p-12">

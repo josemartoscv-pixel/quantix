@@ -1,6 +1,8 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { CookieBanner } from "@/components/landing/cookie-banner";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BarChart3,
   CreditCard,
@@ -11,8 +13,8 @@ import {
   Wallet,
   Calculator,
 } from "lucide-react";
-import { LandingWidgets } from "@/components/landing/landing-widgets";
-import { StepsDemo } from "@/components/landing/steps-demo";
+const LandingWidgets = dynamic(() => import("@/components/landing/landing-widgets").then(m => ({ default: m.LandingWidgets })), { ssr: false });
+const StepsDemo = dynamic(() => import("@/components/landing/steps-demo").then(m => ({ default: m.StepsDemo })), { ssr: false });
 
 export const metadata: Metadata = {
   title: "DineroyAhorro - Controla tus finanzas personales",
@@ -50,10 +52,10 @@ export default function LandingPage() {
       <nav className="border-b border-gray-100 bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex items-center h-14">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-8 w-auto" />
+            <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-8 w-auto" priority />
             <div className="flex items-center gap-3 absolute right-0">
-              <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-2.5 py-1.5 rounded-lg hover:bg-gray-50 text-xs sm:text-sm sm:px-3">Entrar</Link>
-              <Link href="/register" className="bg-emerald-600 text-white font-medium px-2.5 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-xs sm:text-sm sm:px-3">Empezar</Link>
+              <Link href="/login" aria-label="Iniciar sesión en DineroyAhorro" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-2.5 py-1.5 rounded-lg hover:bg-gray-50 text-xs sm:text-sm sm:px-3">Entrar</Link>
+              <Link href="/register" aria-label="Crear cuenta gratis en DineroyAhorro" className="bg-emerald-600 text-white font-medium px-2.5 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-xs sm:text-sm sm:px-3">Empezar</Link>
             </div>
           </div>
         </div>
@@ -129,7 +131,7 @@ export default function LandingPage() {
       <footer className="border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 py-5">
-            <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto" />
+            <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-7 w-auto" />
             <span className="hidden sm:block text-gray-300">·</span>
             <div className="flex items-center gap-4 text-xs text-gray-400">
               <Link href="/privacidad" className="hover:text-gray-600 transition-colors">Privacidad</Link>

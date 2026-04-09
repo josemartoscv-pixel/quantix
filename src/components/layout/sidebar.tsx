@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -46,7 +47,7 @@ export function Sidebar() {
     <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-60 bg-white border-r border-gray-100 flex-col z-40">
       {/* Logo */}
       <div className="flex items-center px-4 py-3 border-b border-gray-100">
-        <img src="/logo.png" alt="DineroyAhorro" className="h-7 w-auto" />
+        <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-7 w-auto" />
       </div>
 
       {/* Navigation */}

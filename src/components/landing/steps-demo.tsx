@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { BarChart2, Plus, ArrowDownLeft, ArrowUpRight } from "lucide-react";
 import {
   BarChart,
@@ -189,7 +190,7 @@ export function StepsDemo() {
             <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-200 overflow-hidden">
               {/* Phone header */}
               <div className="bg-emerald-600 px-4 py-3 flex items-center gap-2">
-                <img src="/logo.png" alt="DineroyAhorro" className="h-5 w-auto brightness-0 invert" />
+                <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-5 w-auto brightness-0 invert" />
               </div>
               {/* Phone content */}
               <div className="p-4 min-h-[280px]">

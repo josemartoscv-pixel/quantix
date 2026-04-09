@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -34,10 +35,10 @@ export const metadata: Metadata = {
       "Controla tus ingresos, gastos, ahorros y deudas de forma sencilla y visual. Tu salud financiera en un solo lugar.",
     images: [
       {
-        url: "/logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DineroyAhorro",
+        alt: "DineroyAhorro - Gestiona tus finanzas personales",
       },
     ],
   },
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     title: "DineroyAhorro - Gestiona tus finanzas personales",
     description:
       "Controla tus ingresos, gastos, ahorros y deudas de forma sencilla y visual.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -90,6 +91,7 @@ export default function RootLayout({
             },
           }}
         />
+        <Analytics />
       </body>
     </html>
   );
