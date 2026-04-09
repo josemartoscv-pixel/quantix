@@ -9,6 +9,7 @@ import {
   Landmark,
   PiggyBank,
   Calculator,
+  Building2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -31,6 +32,12 @@ const navGroups = [
     label: "Herramientas",
     items: [
       { href: "/calculadoras", icon: Calculator, label: "Calculadoras" },
+    ],
+  },
+  {
+    label: "Interno",
+    items: [
+      { href: "/oficina", icon: Building2, label: "La Oficina" },
     ],
   },
 ];

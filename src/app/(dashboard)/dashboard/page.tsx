@@ -1,5 +1,6 @@
 export const dynamic = "force-dynamic";
 
+import { unstable_cache } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
@@ -52,10 +53,10 @@ export default async function DashboardPage() {
   ] = await Promise.all([
     db.transaction.findMany({ where: { userId, date: { gte: monthStart, lte: monthEnd } } }),
     db.transaction.findMany({ where: { userId, date: { gte: prevStart, lte: prevEnd } } }),
-    db.savingsGoal.findMany({ where: { userId }, take: 3 }),
-    db.debt.findMany({ where: { userId, isActive: true } }),
-    db.asset.findMany({ where: { userId } }),
-    db.liability.findMany({ where: { userId } }),
+    unstable_cache(() => db.savingsGoal.findMany({ where: { userId }, take: 3 }), ["goals", userId], { revalidate: 60 })(),
+    unstable_cache(() => db.debt.findMany({ where: { userId, isActive: true } }), ["debts", userId], { revalidate: 60 })(),
+    unstable_cache(() => db.asset.findMany({ where: { userId } }), ["assets", userId], { revalidate: 60 })(),
+    unstable_cache(() => db.liability.findMany({ where: { userId } }), ["liabilities", userId], { revalidate: 60 })(),
     db.transaction.findMany({
       where: { userId, date: { gte: twelveMonthsAgo } },
       select: { amount: true, type: true, date: true },
