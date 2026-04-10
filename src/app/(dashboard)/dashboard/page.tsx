@@ -172,7 +172,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-6">
-      <OnboardingModal hasData={hasData} />
+      <OnboardingModal hasData={hasData} userName={session.user?.name || ""} />
 
       <WelcomeHeader
         name={session.user?.name || ""}

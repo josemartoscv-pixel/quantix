@@ -36,6 +36,16 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    // Notificación Telegram (fire-and-forget, no bloquea la respuesta)
+    if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID) {
+      const msg = `🎉 Nuevo usuario en dineroyahorro.com\n👤 ${user.name}\n📧 ${user.email}`;
+      fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: process.env.TELEGRAM_CHAT_ID, text: msg }),
+      }).catch(() => {}); // silencia errores para no afectar el registro
+    }
+
     return NextResponse.json(
       { message: "Cuenta creada correctamente", user },
       { status: 201 }
