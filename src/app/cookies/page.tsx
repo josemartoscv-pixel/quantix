@@ -7,58 +7,13 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-const cookieTypes = [
-  {
-    icon: Shield,
-    color: "bg-emerald-50 text-emerald-600",
-    badge: "bg-emerald-100 text-emerald-700",
-    type: "Necesarias",
-    desc: "Imprescindibles para el funcionamiento de la aplicación. No pueden desactivarse.",
-    cookies: [
-      {
-        name: "next-auth.session-token",
-        purpose: "Mantener tu sesión iniciada de forma segura",
-        duration: "30 días",
-      },
-    ],
-  },
-  {
-    icon: BarChart2,
-    color: "bg-blue-50 text-blue-600",
-    badge: "bg-blue-100 text-blue-700",
-    type: "Analíticas",
-    desc: "Nos ayudan a entender cómo se usa la web. Solo se activan si aceptas las cookies.",
-    cookies: [
-      {
-        name: "_ga, _ga_*",
-        purpose: "Google Analytics — análisis de uso anónimo",
-        duration: "2 años",
-      },
-    ],
-  },
-  {
-    icon: Settings,
-    color: "bg-amber-50 text-amber-600",
-    badge: "bg-amber-100 text-amber-700",
-    type: "Preferencias",
-    desc: "Recuerdan tus decisiones para no volver a preguntarte lo mismo.",
-    cookies: [
-      {
-        name: "dyahorro_cookie_consent",
-        purpose: "Guardar tu decisión sobre el uso de cookies",
-        duration: "1 año",
-      },
-    ],
-  },
-];
-
 export default function CookiesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-3xl mx-auto px-4 py-8 sm:px-6">
-          <Link href="/" className="inline-flex items-center text-emerald-600 text-sm hover:underline mb-6 block">
+          <Link href="/" className="text-emerald-600 text-sm hover:underline mb-6 block">
             ← Volver al inicio
           </Link>
           <div className="flex items-start gap-4">
@@ -90,47 +45,55 @@ export default function CookiesPage() {
           </p>
         </div>
 
-        {/* Tipos de cookies */}
-        {cookieTypes.map((ct) => {
-          const Icon = ct.icon;
-          return (
-            <div key={ct.type} className="bg-white rounded-2xl border border-gray-100 p-5 sm:p-6">
-              <div className="flex items-center gap-3 mb-1">
-                <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${ct.color}`}>
-                  <Icon className="w-4 h-4" />
-                </div>
-                <div className="flex items-center gap-2">
-                  <h2 className="text-base font-bold text-gray-900">Cookies {ct.type}</h2>
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${ct.badge}`}>{ct.type}</span>
-                </div>
-              </div>
-              <p className="text-sm text-gray-500 mb-4 ml-12">{ct.desc}</p>
-
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-gray-50 rounded-xl">
-                      <th className="text-left px-4 py-2.5 font-semibold text-gray-600 text-xs rounded-l-xl">Cookie</th>
-                      <th className="text-left px-4 py-2.5 font-semibold text-gray-600 text-xs">Finalidad</th>
-                      <th className="text-left px-4 py-2.5 font-semibold text-gray-600 text-xs rounded-r-xl">Duración</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {ct.cookies.map((c) => (
-                      <tr key={c.name} className="border-t border-gray-50">
-                        <td className="px-4 py-3 font-mono text-xs text-gray-700">{c.name}</td>
-                        <td className="px-4 py-3 text-xs text-gray-600">{c.purpose}</td>
-                        <td className="px-4 py-3 text-xs text-gray-500 whitespace-nowrap">{c.duration}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+        {/* Necesarias */}
+        <div className="bg-white rounded-2xl border border-gray-100 p-5 sm:p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+              <Shield className="w-4 h-4" />
             </div>
-          );
-        })}
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-bold text-gray-900">Cookies necesarias</h2>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">Siempre activas</span>
+            </div>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Son imprescindibles para que la aplicación funcione correctamente. Se encargan de mantener tu sesión activa cuando inicias sesión, de forma que no tengas que identificarte en cada página. Sin estas cookies, dineroyahorro.com no puede funcionar. No pueden desactivarse.
+          </p>
+        </div>
 
-        {/* Cómo desactivar */}
+        {/* Analíticas */}
+        <div className="bg-white rounded-2xl border border-gray-100 p-5 sm:p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <BarChart2 className="w-4 h-4" />
+            </div>
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-bold text-gray-900">Cookies analíticas</h2>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">Solo con tu permiso</span>
+            </div>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Utilizamos Google Analytics para entender cómo se navega por la web: qué páginas se visitan más, desde dónde llegan los usuarios y cómo interactúan con la aplicación. Esta información es completamente anónima y nos ayuda a mejorar la experiencia. Solo se activan si aceptas las cookies al entrar en la web.
+          </p>
+        </div>
+
+        {/* Preferencias */}
+        <div className="bg-white rounded-2xl border border-gray-100 p-5 sm:p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+              <Settings className="w-4 h-4" />
+            </div>
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-bold text-gray-900">Cookies de preferencias</h2>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Funcionales</span>
+            </div>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Estas cookies recuerdan las decisiones que has tomado en la web, como si has aceptado o rechazado las cookies analíticas. Gracias a ellas no tenemos que preguntarte lo mismo cada vez que visitas dineroyahorro.com.
+          </p>
+        </div>
+
+        {/* Cómo gestionar */}
         <div className="bg-white rounded-2xl border border-gray-100 p-5 sm:p-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
@@ -140,25 +103,16 @@ export default function CookiesPage() {
           </div>
           <div className="text-sm text-gray-600 leading-relaxed space-y-3">
             <p>
-              Puedes <strong>aceptar o rechazar las cookies analíticas</strong> en el aviso que aparece al entrar en la web por primera vez.
-            </p>
-            <p>
-              Si ya has tomado una decisión y quieres cambiarla, borra las cookies de tu navegador para que vuelva a aparecer el aviso.
+              Puedes <strong>aceptar o rechazar las cookies analíticas</strong> en el aviso que aparece al entrar en la web por primera vez. Si ya tomaste una decisión y quieres cambiarla, borra las cookies de tu navegador para que vuelva a aparecer el aviso.
             </p>
             <p>
               También puedes desactivar Google Analytics de forma permanente instalando el complemento oficial:{" "}
-              <a
-                href="https://tools.google.com/dlpage/gaoptout"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-600 hover:underline"
-              >
+              <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">
                 tools.google.com/dlpage/gaoptout
-              </a>
-              .
+              </a>.
             </p>
-            <div className="bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 text-amber-700 text-xs mt-2">
-              ⚠️ Las cookies necesarias no pueden desactivarse ya que son imprescindibles para que la aplicación funcione correctamente.
+            <div className="bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 text-amber-700 text-xs">
+              ⚠️ Las cookies necesarias no pueden desactivarse ya que son imprescindibles para el funcionamiento de la aplicación.
             </div>
           </div>
         </div>
@@ -168,10 +122,7 @@ export default function CookiesPage() {
           <Mail className="w-8 h-8 mx-auto mb-3 text-emerald-200" />
           <h3 className="font-bold text-lg mb-1">¿Tienes dudas sobre las cookies?</h3>
           <p className="text-emerald-100 text-sm mb-4">Escríbenos y te respondemos lo antes posible.</p>
-          <a
-            href="mailto:hola@dineroyahorro.com"
-            className="inline-block bg-white text-emerald-700 font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-emerald-50 transition-colors"
-          >
+          <a href="mailto:hola@dineroyahorro.com" className="inline-block bg-white text-emerald-700 font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-emerald-50 transition-colors">
             hola@dineroyahorro.com
           </a>
         </div>
