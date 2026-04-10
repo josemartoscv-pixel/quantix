@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Loader2, CreditCard, PiggyBank, Wallet, BarChart3, ArrowRight, Sparkles, CheckCircle2, Circle } from "lucide-react";
+import { Loader2, CreditCard, PiggyBank, Wallet, BarChart3, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 
 const STORAGE_KEY = "onboarding-v2";
 

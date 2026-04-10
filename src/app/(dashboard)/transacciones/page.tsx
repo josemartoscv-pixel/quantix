@@ -316,7 +316,6 @@ export default function TransaccionesPage() {
     }
   };
 
-  const allTransactions = transactions;
   const incomeTransactions = transactions.filter((t) => t.type === "INCOME");
   const expenseTransactions = transactions.filter((t) => t.type === "EXPENSE");
 
@@ -452,7 +451,7 @@ export default function TransaccionesPage() {
           <Card>
             <CardContent className="p-0">
               <TransactionTable
-                transactions={allTransactions}
+                transactions={transactions}
                 loading={loading}
                 onDelete={handleDelete}
                 onSuccess={fetchTransactions}

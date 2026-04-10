@@ -51,15 +51,22 @@ export async function GET(req: NextRequest) {
     const currentMonth = now.getMonth() + 1;
     const currentYear = now.getFullYear();
 
+    // Build date range for the whole window with a single query
+    const windowStart = new Date(currentYear, currentMonth - 1 - (months - 1), 1);
+    const windowEnd = new Date(currentYear, currentMonth, 0, 23, 59, 59, 999);
+
+    const allTxs = await db.transaction.findMany({
+      where: { userId: session.user.id, date: { gte: windowStart, lte: windowEnd } },
+      select: { amount: true, type: true, date: true },
+    });
+
     const monthly = [];
     for (let i = months - 1; i >= 0; i--) {
       const d = new Date(currentYear, currentMonth - 1 - i, 1);
       const m = d.getMonth() + 1;
       const y = d.getFullYear();
       const { start, end } = getMonthRange(m, y);
-      const txs = await db.transaction.findMany({
-        where: { userId: session.user.id, date: { gte: start, lte: end } },
-      });
+      const txs = allTxs.filter((t) => t.date >= start && t.date <= end);
       const ingresos = txs.filter((t) => t.type === "INCOME").reduce((s, t) => s + t.amount, 0);
       const gastos = txs.filter((t) => t.type === "EXPENSE").reduce((s, t) => s + t.amount, 0);
       monthly.push({

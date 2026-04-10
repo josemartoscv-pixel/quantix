@@ -27,7 +27,7 @@ export async function PUT(req: NextRequest) {
     }
 
     const user = await db.user.findUnique({ where: { id: session.user.id } });
-    if (!user) {
+    if (!user || !user.password) {
       return NextResponse.json({ error: "Usuario no encontrado" }, { status: 404 });
     }
 
