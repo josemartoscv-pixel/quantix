@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Shield, Database, Eye, Clock, Users, Lock, FileText, Mail } from "lucide-react";
+import { Shield, Database, Eye, Clock, FileText, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
@@ -61,31 +61,9 @@ const sections = [
     ),
   },
   {
-    icon: Users,
-    color: "bg-rose-50 text-rose-600",
-    title: "5. Destinatarios",
-    content: (
-      <>
-        <p className="mb-3">Los datos no se ceden a terceros salvo obligación legal. Utilizamos los siguientes proveedores de servicios como encargados del tratamiento:</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {[
-            { name: "Neon", desc: "Base de datos PostgreSQL alojada en la UE" },
-            { name: "Vercel", desc: "Infraestructura cloud bajo cláusulas contractuales estándar" },
-            { name: "Google Analytics", desc: "Análisis de uso anónimo (solo con consentimiento)" },
-          ].map((p) => (
-            <div key={p.name} className="bg-gray-50 rounded-xl p-3">
-              <p className="font-semibold text-gray-900 text-sm">{p.name}</p>
-              <p className="text-xs text-gray-500 mt-0.5">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </>
-    ),
-  },
-  {
     icon: Shield,
     color: "bg-emerald-50 text-emerald-600",
-    title: "6. Tus derechos",
+    title: "5. Tus derechos",
     content: (
       <>
         <p className="mb-3">Tienes derecho a:</p>
@@ -108,29 +86,6 @@ const sections = [
           .
         </p>
       </>
-    ),
-  },
-  {
-    icon: Lock,
-    color: "bg-slate-50 text-slate-600",
-    title: "7. Seguridad",
-    content: (
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {[
-          { icon: "🔐", title: "Contraseñas cifradas", desc: "bcrypt — nunca en texto plano" },
-          { icon: "🔒", title: "HTTPS obligatorio", desc: "HSTS activo en toda la web" },
-          { icon: "🛡️", title: "Protección ante ataques", desc: "Rate limiting en el login" },
-          { icon: "🇪🇺", title: "Datos en la UE", desc: "Base de datos en servidores europeos" },
-        ].map((item) => (
-          <div key={item.title} className="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
-            <span className="text-xl">{item.icon}</span>
-            <div>
-              <p className="text-sm font-semibold text-gray-900">{item.title}</p>
-              <p className="text-xs text-gray-500">{item.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
     ),
   },
 ];
