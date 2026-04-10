@@ -75,6 +75,39 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
+    async signIn({ user, account }) {
+      // For Google OAuth: find or create the user in the database and
+      // replace user.id with the database ID so the JWT holds the right value.
+      if (account?.provider === "google") {
+        if (!user.email) return false;
+        try {
+          let dbUser = await db.user.findUnique({ where: { email: user.email } });
+          if (!dbUser) {
+            dbUser = await db.user.create({
+              data: {
+                email: user.email,
+                name: user.name ?? user.email.split("@")[0],
+                image: user.image,
+              },
+            });
+            // Telegram notification for new Google signup (fire-and-forget)
+            if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID) {
+              const msg = `🎉 Nuevo usuario (Google) en dineroyahorro.com\n👤 ${dbUser.name}\n📧 ${dbUser.email}`;
+              fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ chat_id: process.env.TELEGRAM_CHAT_ID, text: msg }),
+              }).catch(() => {});
+            }
+          }
+          user.id = dbUser.id;
+          return true;
+        } catch {
+          return false;
+        }
+      }
+      return true;
+    },
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
