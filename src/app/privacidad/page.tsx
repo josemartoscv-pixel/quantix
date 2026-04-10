@@ -1,73 +1,192 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Shield, Database, Eye, Clock, Users, Lock, FileText, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
   robots: { index: false },
 };
 
+const sections = [
+  {
+    icon: FileText,
+    color: "bg-blue-50 text-blue-600",
+    title: "1. Responsable del tratamiento",
+    content: (
+      <p>
+        El responsable del tratamiento de los datos personales recogidos a través de{" "}
+        <strong>dineroyahorro.com</strong> es <strong>Jose Antonio Martos</strong>, con dirección de
+        contacto en{" "}
+        <a href="mailto:hola@dineroyahorro.com" className="text-emerald-600 hover:underline">
+          hola@dineroyahorro.com
+        </a>
+        .
+      </p>
+    ),
+  },
+  {
+    icon: Database,
+    color: "bg-violet-50 text-violet-600",
+    title: "2. Datos que recogemos",
+    content: (
+      <ul className="space-y-2">
+        <li className="flex gap-2"><span className="text-emerald-500 mt-0.5 shrink-0">•</span><span><strong>Datos de registro:</strong> nombre, correo electrónico y contraseña (almacenada cifrada con bcrypt, nunca en texto plano).</span></li>
+        <li className="flex gap-2"><span className="text-emerald-500 mt-0.5 shrink-0">•</span><span><strong>Datos financieros:</strong> transacciones, presupuestos, metas de ahorro, deudas y patrimonio que el usuario introduce voluntariamente.</span></li>
+        <li className="flex gap-2"><span className="text-emerald-500 mt-0.5 shrink-0">•</span><span><strong>Datos de uso:</strong> páginas visitadas y acciones realizadas, recogidos de forma anónima a través de Google Analytics únicamente si aceptas las cookies analíticas.</span></li>
+      </ul>
+    ),
+  },
+  {
+    icon: Eye,
+    color: "bg-amber-50 text-amber-600",
+    title: "3. Finalidad y base legal",
+    content: (
+      <ul className="space-y-2">
+        <li className="flex gap-2"><span className="text-emerald-500 mt-0.5 shrink-0">•</span><span><strong>Prestación del servicio:</strong> gestionar tu cuenta y ofrecerte las funcionalidades de la aplicación. Base legal: ejecución de un contrato (Art. 6.1.b RGPD).</span></li>
+        <li className="flex gap-2"><span className="text-emerald-500 mt-0.5 shrink-0">•</span><span><strong>Mejora del servicio:</strong> analizar el uso mediante Google Analytics. Base legal: consentimiento mediante aceptación de cookies (Art. 6.1.a RGPD).</span></li>
+      </ul>
+    ),
+  },
+  {
+    icon: Clock,
+    color: "bg-teal-50 text-teal-600",
+    title: "4. Conservación de los datos",
+    content: (
+      <p>
+        Los datos se conservan mientras la cuenta esté activa. Si eliminas tu cuenta,{" "}
+        <strong>todos tus datos personales y financieros se borran de forma permanente</strong> en un
+        plazo máximo de 30 días. No se realizan copias de seguridad de datos de usuario tras la
+        eliminación.
+      </p>
+    ),
+  },
+  {
+    icon: Users,
+    color: "bg-rose-50 text-rose-600",
+    title: "5. Destinatarios",
+    content: (
+      <>
+        <p className="mb-3">Los datos no se ceden a terceros salvo obligación legal. Utilizamos los siguientes proveedores de servicios como encargados del tratamiento:</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {[
+            { name: "Neon", desc: "Base de datos PostgreSQL alojada en la UE" },
+            { name: "Vercel", desc: "Infraestructura cloud bajo cláusulas contractuales estándar" },
+            { name: "Google Analytics", desc: "Análisis de uso anónimo (solo con consentimiento)" },
+          ].map((p) => (
+            <div key={p.name} className="bg-gray-50 rounded-xl p-3">
+              <p className="font-semibold text-gray-900 text-sm">{p.name}</p>
+              <p className="text-xs text-gray-500 mt-0.5">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </>
+    ),
+  },
+  {
+    icon: Shield,
+    color: "bg-emerald-50 text-emerald-600",
+    title: "6. Tus derechos",
+    content: (
+      <>
+        <p className="mb-3">Tienes derecho a:</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {["Acceso", "Rectificación", "Supresión", "Portabilidad", "Oposición", "Limitación"].map((r) => (
+            <div key={r} className="bg-gray-50 rounded-lg px-3 py-2 text-sm text-gray-700 font-medium text-center">
+              {r}
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-sm">
+          Para ejercerlos, escríbenos a{" "}
+          <a href="mailto:hola@dineroyahorro.com" className="text-emerald-600 hover:underline">
+            hola@dineroyahorro.com
+          </a>
+          . También puedes reclamar ante la{" "}
+          <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">
+            Agencia Española de Protección de Datos
+          </a>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    icon: Lock,
+    color: "bg-slate-50 text-slate-600",
+    title: "7. Seguridad",
+    content: (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {[
+          { icon: "🔐", title: "Contraseñas cifradas", desc: "bcrypt — nunca en texto plano" },
+          { icon: "🔒", title: "HTTPS obligatorio", desc: "HSTS activo en toda la web" },
+          { icon: "🛡️", title: "Protección ante ataques", desc: "Rate limiting en el login" },
+          { icon: "🇪🇺", title: "Datos en la UE", desc: "Base de datos en servidores europeos" },
+        ].map((item) => (
+          <div key={item.title} className="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span className="text-xl">{item.icon}</span>
+            <div>
+              <p className="text-sm font-semibold text-gray-900">{item.title}</p>
+              <p className="text-xs text-gray-500">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    ),
+  },
+];
+
 export default function PrivacidadPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-3xl mx-auto px-4 py-12 sm:px-6">
-        <Link href="/" className="text-emerald-600 text-sm hover:underline mb-8 block">
-          ← Volver al inicio
-        </Link>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Política de Privacidad</h1>
-        <p className="text-gray-500 text-sm mb-10">Última actualización: abril de 2025</p>
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 py-8 sm:px-6">
+          <Link href="/" className="inline-flex items-center text-emerald-600 text-sm hover:underline mb-6 block">
+            ← Volver al inicio
+          </Link>
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center shrink-0">
+              <Shield className="w-6 h-6 text-emerald-600" />
+            </div>
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Política de Privacidad</h1>
+              <p className="text-gray-500 text-sm mt-1">Última actualización: abril de 2025 · Aplicable a dineroyahorro.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div className="prose prose-gray max-w-none space-y-8 text-gray-700">
+      {/* Content */}
+      <div className="max-w-3xl mx-auto px-4 py-8 sm:px-6 space-y-4">
+        {sections.map((section) => {
+          const Icon = section.icon;
+          return (
+            <div key={section.title} className="bg-white rounded-2xl border border-gray-100 p-5 sm:p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${section.color}`}>
+                  <Icon className="w-4 h-4" />
+                </div>
+                <h2 className="text-base sm:text-lg font-bold text-gray-900">{section.title}</h2>
+              </div>
+              <div className="text-sm text-gray-600 leading-relaxed">{section.content}</div>
+            </div>
+          );
+        })}
 
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Responsable del tratamiento</h2>
-            <p>El responsable del tratamiento de los datos personales recogidos a través de <strong>dineroyahorro.com</strong> es Jose Antonio Martos, con dirección de contacto en <strong>hola@dineroyahorro.com</strong>.</p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">2. Datos que recogemos</h2>
-            <ul className="list-disc pl-5 space-y-1">
-              <li><strong>Datos de registro:</strong> nombre, dirección de correo electrónico y contraseña (almacenada de forma cifrada).</li>
-              <li><strong>Datos financieros:</strong> transacciones, presupuestos, metas de ahorro, deudas y patrimonio que el usuario introduce voluntariamente.</li>
-              <li><strong>Datos de uso:</strong> páginas visitadas y acciones realizadas, recogidos de forma anónima a través de Google Analytics.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">3. Finalidad y base legal</h2>
-            <ul className="list-disc pl-5 space-y-1">
-              <li><strong>Prestación del servicio:</strong> gestionar tu cuenta y ofrecerte las funcionalidades de la aplicación. Base legal: ejecución de un contrato (Art. 6.1.b RGPD).</li>
-              <li><strong>Mejora del servicio:</strong> analizar el uso mediante Google Analytics. Base legal: interés legítimo y consentimiento mediante aceptación de cookies (Art. 6.1.a y 6.1.f RGPD).</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">4. Conservación de los datos</h2>
-            <p>Los datos se conservan mientras la cuenta esté activa. Si eliminas tu cuenta, todos tus datos personales y financieros se borran de forma permanente en un plazo máximo de 30 días.</p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">5. Destinatarios</h2>
-            <p>Los datos no se ceden a terceros salvo obligación legal. Utilizamos los siguientes proveedores de servicios:</p>
-            <ul className="list-disc pl-5 space-y-1">
-              <li><strong>Neon</strong> (base de datos) — alojada en la UE.</li>
-              <li><strong>Vercel</strong> (infraestructura) — sujeta a cláusulas estándar contractuales.</li>
-              <li><strong>Google Analytics</strong> — para análisis de uso anónimo.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">6. Tus derechos</h2>
-            <p>Tienes derecho a acceder, rectificar, suprimir, portabilidad, oposición y limitación del tratamiento de tus datos. Para ejercerlos, escríbenos a <strong>hola@dineroyahorro.com</strong>. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Seguridad</h2>
-            <p>Aplicamos medidas técnicas y organizativas para proteger tus datos: cifrado de contraseñas, conexiones HTTPS y acceso restringido a la base de datos.</p>
-          </section>
-
+        {/* Contact CTA */}
+        <div className="bg-emerald-600 rounded-2xl p-5 sm:p-6 text-white text-center">
+          <Mail className="w-8 h-8 mx-auto mb-3 text-emerald-200" />
+          <h3 className="font-bold text-lg mb-1">¿Tienes alguna pregunta?</h3>
+          <p className="text-emerald-100 text-sm mb-4">Estamos a tu disposición para cualquier consulta sobre privacidad.</p>
+          <a
+            href="mailto:hola@dineroyahorro.com"
+            className="inline-block bg-white text-emerald-700 font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-emerald-50 transition-colors"
+          >
+            hola@dineroyahorro.com
+          </a>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-500">
+        <div className="text-center text-sm text-gray-400 pb-4">
           <Link href="/cookies" className="text-emerald-600 hover:underline">Política de Cookies</Link>
           {" · "}
           <Link href="/" className="hover:underline">Volver al inicio</Link>
