@@ -32,7 +32,7 @@ export function CookieBanner() {
       <div className="max-w-3xl mx-auto bg-gray-900 text-white rounded-2xl shadow-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <p className="text-sm text-gray-300 flex-1">
           Usamos cookies propias y de Google Analytics para mejorar la experiencia.{" "}
-          <Link href="/cookies" className="text-emerald-400 hover:underline">
+          <Link href="/cookies" className="text-emerald-400 hover:underline" aria-label="Más información sobre nuestra política de cookies">
             Más información
           </Link>
         </p>

@@ -12,7 +12,8 @@ export const authConfig: NextAuthConfig = {
       const PUBLIC_ROUTES = ["/", "/login", "/register", "/cuentas-remuneradas", "/privacidad", "/cookies"];
       const isPublic =
         PUBLIC_ROUTES.includes(nextUrl.pathname) ||
-        nextUrl.pathname.startsWith("/api/auth");
+        nextUrl.pathname.startsWith("/api/auth") ||
+        nextUrl.pathname === "/api/demo";
 
       // Si está logueado y visita la landing, redirigir al dashboard
       if (isLoggedIn && nextUrl.pathname === "/") {

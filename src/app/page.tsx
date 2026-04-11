@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 const LandingWidgets = dynamic(() => import("@/components/landing/landing-widgets").then(m => ({ default: m.LandingWidgets })), { ssr: false });
 const StepsDemo = dynamic(() => import("@/components/landing/steps-demo").then(m => ({ default: m.StepsDemo })), { ssr: false });
+const DemoButton = dynamic(() => import("@/components/landing/demo-button").then(m => ({ default: m.DemoButton })), { ssr: false });
 
 export const metadata: Metadata = {
   title: "DineroyAhorro - Controla tus finanzas personales",
@@ -55,7 +56,7 @@ export default function LandingPage() {
             <Image src="/logo.png" alt="DineroyAhorro" width={386} height={54} className="h-8 w-auto" priority />
             <div className="flex items-center gap-3 absolute right-0">
               <Link href="/login" aria-label="Iniciar sesión en DineroyAhorro" className="text-gray-600 hover:text-gray-900 font-medium transition-colors px-2.5 py-1.5 rounded-lg hover:bg-gray-50 text-xs sm:text-sm sm:px-3">Entrar</Link>
-              <Link href="/register" aria-label="Crear cuenta gratis en DineroyAhorro" className="bg-emerald-600 text-white font-medium px-2.5 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-xs sm:text-sm sm:px-3">Empezar</Link>
+              <Link href="/register" className="bg-emerald-600 text-white font-medium px-2.5 py-1.5 rounded-lg hover:bg-emerald-700 transition-colors text-xs sm:text-sm sm:px-3">Crear cuenta</Link>
             </div>
           </div>
         </div>
@@ -83,10 +84,9 @@ export default function LandingPage() {
               <Link href="/register" className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-emerald-700 active:scale-95 transition-all shadow-lg shadow-emerald-200 text-base">
                 Crear mi cuenta<ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/login" className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-8 py-4 rounded-2xl border border-gray-200 hover:border-emerald-300 hover:text-emerald-700 active:scale-95 transition-all text-base">
-                Ya tengo cuenta
-              </Link>
+              <DemoButton />
             </div>
+            <p className="text-xs text-gray-400 mt-1">Sin tarjeta. Sin registro. Solo prueba.</p>
           </div>
         </div>
       </section>

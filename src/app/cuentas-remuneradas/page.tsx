@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, TrendingUp, Star, ExternalLink, Gift } from "lucide-react";
 import { getBanks, type Bank } from "@/lib/data/banks";
+
+export const metadata: Metadata = {
+  title: "Mejores Cuentas Remuneradas en España",
+  description:
+    "Compara las mejores cuentas remuneradas en España. TAE actualizada, condiciones y bonos de bienvenida para que tu dinero trabaje por ti.",
+  alternates: { canonical: "https://www.dineroyahorro.com/cuentas-remuneradas" },
+  openGraph: {
+    title: "Mejores Cuentas Remuneradas en España",
+    description:
+      "Compara las mejores cuentas remuneradas en España. TAE actualizada, condiciones y bonos de bienvenida.",
+    url: "https://www.dineroyahorro.com/cuentas-remuneradas",
+  },
+};
 
 const MONTH = new Date().toLocaleString("es-ES", { month: "long", year: "numeric" });
 
@@ -112,6 +126,7 @@ function BankCard({ bank, big }: { bank: Bank; big: boolean }) {
           href={bank.referral}
           target="_blank"
           rel="noopener noreferrer sponsored"
+          aria-label={`Abrir cuenta en ${bank.name}`}
           className="inline-flex items-center gap-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors shrink-0"
         >
           Abrir cuenta <ExternalLink className="w-3 h-3" />

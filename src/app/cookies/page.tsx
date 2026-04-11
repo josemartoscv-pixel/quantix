@@ -4,7 +4,7 @@ import { Cookie, Info, Settings, BarChart2, Shield, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Política de Cookies",
-  robots: { index: false },
+  alternates: { canonical: "https://www.dineroyahorro.com/cookies" },
 };
 
 export default function CookiesPage() {

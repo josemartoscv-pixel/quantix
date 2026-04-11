@@ -4,7 +4,7 @@ import { Shield, Database, Eye, Clock, FileText, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
-  robots: { index: false },
+  alternates: { canonical: "https://www.dineroyahorro.com/privacidad" },
 };
 
 const sections = [
