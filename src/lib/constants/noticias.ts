@@ -10,6 +10,168 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "fondos-de-inversion-vs-etfs",
+    title: "Fondos de inversión vs ETFs: cuál elegir para invertir en España",
+    description: "Comparamos fondos de inversión y ETFs en costes, fiscalidad y flexibilidad para que el inversor español sepa cuál encaja mejor con su estrategia y horizonte temporal.",
+    category: "Inversión",
+    readingMinutes: 8,
+    publishedAt: "2026-04-21",
+    content: `## Fondos de inversión y ETFs: dos formas de invertir en el mercado
+
+Cuando decides dar el salto a la inversión en activos financieros, dos opciones aparecen rápidamente en escena: los **fondos de inversión tradicionales** y los **ETFs** (del inglés *Exchange Traded Funds*, o fondos cotizados). Ambos te permiten invertir en una cesta diversificada de activos sin necesidad de comprar cada acción o bono por separado. Sin embargo, tienen diferencias importantes en costes, fiscalidad, flexibilidad y accesibilidad que conviene conocer antes de elegir.
+
+En esta guía te explicamos cómo funciona cada uno, sus ventajas e inconvenientes, y cuál puede encajar mejor con tu perfil de inversor en España.
+
+---
+
+## ¿Qué es un fondo de inversión?
+
+Un fondo de inversión es un vehículo de ahorro colectivo gestionado por una sociedad gestora. Los inversores aportan dinero al fondo, que a su vez invierte ese capital en una cartera de activos (acciones, bonos, inmuebles, divisas…) según la política definida en su folleto.
+
+Cada inversor posee **participaciones** del fondo. El valor de esas participaciones —llamado VL o valor liquidativo— se calcula al final de cada día hábil, reflejando el valor total de los activos del fondo dividido entre el número de participaciones emitidas.
+
+Existen dos grandes tipos de fondos:
+
+### Fondos de gestión activa
+
+La gestora tiene un equipo de analistas que selecciona los valores con el objetivo de batir a un índice de referencia (benchmark). Cobran comisiones más elevadas como compensación por este trabajo de análisis y selección.
+
+### Fondos de gestión pasiva o indexados
+
+Replican un índice de mercado (por ejemplo, el S&P 500 o el MSCI World) sin intentar superarlo. Simplemente compran todos o una muestra representativa de los activos que lo componen. Sus comisiones son mucho más bajas y, en la práctica, su rentabilidad a largo plazo supera a la de la mayoría de fondos activos.
+
+---
+
+## ¿Qué es un ETF?
+
+Un ETF (Exchange Traded Fund) es, en esencia, un fondo de inversión que cotiza en bolsa como si fuera una acción. Esto significa que puedes comprarlo y venderlo en cualquier momento durante el horario de mercado, con el precio fluctuando en tiempo real.
+
+La gran mayoría de los ETFs son de gestión pasiva: replican un índice con comisiones muy reducidas. Sin embargo, también existen ETFs de gestión activa, sectoriales, inversos, apalancados y temáticos para prácticamente cualquier estrategia de inversión.
+
+---
+
+## Diferencias clave entre fondos y ETFs
+
+| Característica | Fondo de inversión | ETF |
+|---|---|---|
+| Cómo se compra/vende | Órdenes al VL del día | En bolsa, en tiempo real |
+| Precio | Valor liquidativo (fin de día) | Precio de mercado (varía durante la sesión) |
+| Comisiones (gestión activa) | 1,0 %–2,5 % TER | 0,3 %–1,0 % TER |
+| Comisiones (gestión pasiva) | 0,1 %–0,5 % TER | 0,03 %–0,3 % TER |
+| Mínimo de inversión | Desde 1 €–10 € | Precio de 1 participación (varía) |
+| Traspasos sin tributar en España | Sí | No |
+| Requiere cuenta bróker | No siempre | Sí, siempre |
+| Dividendos | Generalmente reinvertidos | Pueden distribuirse o acumularse |
+
+---
+
+## La gran ventaja fiscal de los fondos en España: el traspaso
+
+Este es el punto diferencial más importante para el inversor español. Cuando traspasas dinero de un fondo de inversión a otro, **no tributa**. No importa si tienes una plusvalía de 20.000 €: mientras el dinero permanezca dentro del "paraguas" de los fondos, no pagas nada a Hacienda hasta que decides reembolsar definitivamente.
+
+Esto te permite:
+
+- Cambiar de estrategia de inversión sin coste fiscal inmediato.
+- Rebalancear tu cartera sin tributar.
+- Diferir el pago de impuestos indefinidamente, lo que potencia enormemente el efecto del interés compuesto.
+
+Con un ETF, en cambio, cada vez que vendes —aunque sea para comprar otro ETF de inmediato— estás generando un hecho imponible. Las plusvalías tributan ese mismo ejercicio como rentas del ahorro (entre el 19 % y el 28 %, según el tramo), lo que reduce el capital disponible para seguir creciendo.
+
+Esta diferencia puede valer decenas de miles de euros a largo plazo, y es el principal argumento a favor de los fondos para el inversor español con horizonte de más de diez años.
+
+---
+
+## Costes: ¿cuánto me cobran realmente?
+
+Los costes son uno de los factores más determinantes en la rentabilidad a largo plazo. Una diferencia de comisiones aparentemente pequeña —por ejemplo, un 1 % anual— puede comerse una parte enorme de tus ganancias en 20 o 30 años.
+
+### ETFs indexados: los más baratos del mercado
+
+Los ETFs de gestión pasiva son los instrumentos con menores costes disponibles. El TER (Total Expense Ratio) de ETFs indexados globales de gestoras como Vanguard, iShares o Amundi puede ser de **0,07 % a 0,20 %** anual. Por cada 10.000 € invertidos, pagas entre 7 y 20 € al año en comisiones.
+
+### Fondos indexados: coste similar, ventaja fiscal añadida
+
+Los mejores fondos indexados disponibles en España —accesibles a través de plataformas como MyInvestor, Indexa Capital o Finizens— tienen TER similares a los ETFs equivalentes: **0,10 %–0,40 %** anuales, aunque en algunos casos son ligeramente más caros que su ETF homólogo.
+
+### Fondos de gestión activa: el coste que hay que justificar
+
+Aquí los costes se disparan. Es habitual ver fondos con comisiones del **1,5 %–2,5 %** anual, más posibles comisiones de suscripción o reembolso. La pregunta clave es si esa gestión activa justifica el sobrecoste. La evidencia histórica es contundente: aproximadamente el 80–90 % de los fondos activos no logra batir a su índice de referencia a largo plazo, según los informes SPIVA publicados anualmente.
+
+---
+
+## Cómo tributan en España
+
+Cuando se produce el reembolso de un fondo o la venta de un ETF, la ganancia patrimonial tributa en la **base del ahorro** del IRPF con la siguiente escala:
+
+| Ganancia patrimonial | Tipo aplicable |
+|---|---|
+| Hasta 6.000 € | 19 % |
+| De 6.000 € a 50.000 € | 21 % |
+| De 50.000 € a 200.000 € | 23 % |
+| Más de 200.000 € | 28 % |
+
+La clave, como se ha explicado, es que los fondos permiten diferir este momento indefinidamente gracias a la figura del traspaso, mientras que los ETFs no tienen esta ventaja fiscal. Además, si tu ETF distribuye dividendos (en lugar de acumularlos), esos dividendos también tributan como rendimientos del capital mobiliario en el año en que se perciben, incluso si no has vendido nada.
+
+---
+
+## ¿Cuándo conviene cada opción?
+
+### Elige un fondo de inversión si:
+
+- Inviertes a **largo plazo** (más de 10 años) y quieres beneficiarte del diferimiento fiscal de los traspasos.
+- Prefieres automatizar tus aportaciones sin tener que gestionar un bróker ni operar en bolsa.
+- Tu objetivo es una cartera diversificada estable sin necesidad de seguir los mercados día a día.
+- Inviertes a través de un plan de pensiones, una EPSV o una cartera gestionada (roboadvisor).
+
+### Elige un ETF si:
+
+- Buscas los **costes más bajos absolutos** y no planeas cambiar de activo con frecuencia.
+- Quieres **flexibilidad** para comprar y vender en cualquier momento de la sesión bursátil.
+- Inviertes en mercados o sectores específicos con ETFs temáticos que no tienen equivalente en fondos accesibles en España.
+- Tu horizonte es más corto o tu estrategia implica ajustes tácticos ocasionales.
+- Ya tienes cuenta en un bróker y te resulta cómodo operar en bolsa.
+
+---
+
+## Los roboadvisors: la opción para quien no quiere decidir
+
+En los últimos años han proliferado en España plataformas de inversión automatizada como **Indexa Capital**, **Finizens** o **MyInvestor**. Construyen carteras diversificadas con fondos indexados de bajo coste, adaptadas al perfil de riesgo del inversor, y gestionan automáticamente los rebalanceos sin que el usuario tenga que hacer nada.
+
+Son una excelente opción para quien quiere empezar a invertir de forma sencilla, acceder a fondos con comisiones institucionales bajas y beneficiarse de la ventaja fiscal del traspaso, sin necesidad de conocimientos financieros avanzados ni tiempo para gestionar la cartera.
+
+---
+
+## Errores comunes del inversor español
+
+1. **Invertir en fondos activos caros sin comparar su rentabilidad histórica con su índice de referencia**: la mayoría no lo baten y cobran el doble o el triple de comisiones.
+2. **Vender el ETF o el fondo en cuanto cae el mercado**: el comportamiento emocional es el mayor enemigo del inversor particular. Las caídas son parte del proceso y, a largo plazo, los mercados han subido históricamente.
+3. **No aprovechar los traspasos de fondos para optimizar la cartera**: muchos inversores aguantan un fondo mediocre por miedo a tributar, sin saber que el traspaso es libre de impuestos.
+4. **Elegir el ETF o fondo por el nombre del índice sin leer la ficha**: dos ETFs que replican el "S&P 500" pueden tener estructuras, costes y fiscalidad muy distintos.
+5. **Olvidar informar a Hacienda sobre valores en el extranjero**: si tienes ETFs en brókers extranjeros y el valor supera los 50.000 €, puede ser obligatorio presentar el Modelo 720.
+
+---
+
+## Consejos prácticos para elegir entre fondos y ETFs
+
+- **Si no sabes por cuál empezar**, un fondo indexado global (por ejemplo, uno que replique el MSCI World o el MSCI ACWI) con bajas comisiones es una elección sólida y difícil de batir.
+- **Compara siempre el TER total**, no solo la comisión de gestión. Algunos fondos tienen gastos corrientes adicionales que no se ven a primera vista.
+- **Valora el diferimiento fiscal a largo plazo**: si invertirás durante más de diez años, la ventaja del traspaso de fondos puede valer más que el pequeño diferencial de costes a favor de los ETFs.
+- **No te obsesiones con el corto plazo**: tanto los fondos como los ETFs son instrumentos de largo plazo. El inversor que compra y vende frecuentemente casi siempre obtiene peores resultados que el que mantiene su posición con disciplina.
+- **Diversifica siempre**: ya sea a través de fondos o ETFs, asegúrate de que tu inversión esté bien repartida por geografía, sector y tipo de activo.
+- **Revisa la fiscalidad de tu bróker**: algunos brókers extranjeros no retienen ni informan a la Agencia Tributaria, lo que implica que tendrás que declararlo tú mismo. En España, las entidades nacionales hacen la retención y el reporte automáticamente.
+- **Aportaciones periódicas**: tanto en fondos como en ETFs, invertir una cantidad fija mensual (estrategia de coste medio o *dollar cost averaging*) reduce el riesgo de entrar en el peor momento del mercado.
+
+---
+
+## Conclusión
+
+Fondos de inversión y ETFs son dos herramientas poderosas para invertir en los mercados financieros con diversificación y, si se eligen bien, bajo coste. La elección entre uno y otro depende fundamentalmente de tu situación fiscal, tu horizonte de inversión y tu comodidad operando en bolsa.
+
+Para la mayoría de los inversores españoles con horizonte largo plazo, los fondos indexados ofrecen la ventaja del traspaso sin tributar, que en la práctica puede ser decisiva para maximizar el efecto del interés compuesto. Sin embargo, si los costes son tu prioridad absoluta y no planeas cambiar de activo con frecuencia, un ETF indexado puede resultar imbatible en términos de gastos.
+
+Lo que está claro es que, en cualquier caso, elegir un vehículo de bajo coste y mantener una estrategia disciplinada en el tiempo es la receta que la evidencia histórica señala como más eficaz para construir patrimonio a largo plazo. La clave no está en acertar cuál sube más el próximo mes, sino en mantenerse invertido el tiempo suficiente para que el mercado trabaje para ti.`,
+  },
+  {
     slug: "que-es-el-irpf-y-como-funciona",
     title: "Qué es el IRPF y cómo funciona: guía completa para entender tu declaración de la renta",
     description: "Todo lo que necesitas saber sobre el Impuesto sobre la Renta de las Personas Físicas: quién está obligado a declarar, cómo se calculan los tramos y qué deducciones puedes aplicar.",
