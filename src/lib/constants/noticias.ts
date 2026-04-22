@@ -10,6 +10,173 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-funciona-el-interes-compuesto",
+    title: "Cómo funciona el interés compuesto: la herramienta más poderosa del ahorro",
+    description: "Descubre qué es el interés compuesto, por qué es tan poderoso y cómo puedes aprovecharlo en España a través de fondos, planes de pensiones y cuentas remuneradas.",
+    category: "Ahorro",
+    readingMinutes: 8,
+    publishedAt: "2026-04-22",
+    content: `## Cómo funciona el interés compuesto: la herramienta más poderosa del ahorro
+
+Albert Einstein supuestamente lo llamó "la octava maravilla del mundo" y, aunque no está claro si la frase es realmente suya, el concepto merece ese apelativo. El interés compuesto es el principio financiero que permite que una cantidad de dinero crezca de forma exponencial con el tiempo, simplemente reinvirtiendo los intereses que genera.
+
+Si llevas tiempo oyendo hablar de él pero nunca has entendido exactamente cómo funciona o por qué es tan poderoso, este artículo es para ti. Te lo explicamos desde cero, con ejemplos prácticos y sin matemáticas complicadas.
+
+---
+
+## ¿Qué es el interés compuesto?
+
+El interés compuesto es el sistema en el que los intereses generados por un capital se suman al capital inicial y, a partir de ese momento, también generan intereses. En otras palabras: **ganas intereses sobre los intereses**.
+
+Esto contrasta con el **interés simple**, en el que los intereses siempre se calculan sobre el capital inicial y no se acumulan.
+
+### Un ejemplo sencillo
+
+Supón que tienes 10.000 € y los inviertes al 5 % anual durante 10 años:
+
+**Con interés simple:**
+
+Cada año recibes siempre el 5 % de los 10.000 € originales: 500 €. Al cabo de 10 años, habrás acumulado 5.000 € de intereses y tu capital total será de **15.000 €**.
+
+**Con interés compuesto:**
+
+- Año 1: 500 € de intereses → capital: 10.500 €
+- Año 2: 525 € de intereses (5 % sobre 10.500 €) → capital: 11.025 €
+- Año 3: 551,25 € de intereses → capital: 11.576,25 €
+- ... y así sucesivamente hasta el año 10.
+- **Capital final: 16.288,95 €**
+
+La diferencia es de más de 1.288 €, y eso con un tipo del 5 % y solo 10 años. A medida que aumenta el tiempo o el tipo de interés, la diferencia se dispara exponencialmente.
+
+---
+
+## La fórmula del interés compuesto
+
+La fórmula básica es:
+
+**Capital final = Capital inicial × (1 + tipo de interés)^número de períodos**
+
+O en notación abreviada: **CF = CI × (1 + r)^n**
+
+Donde:
+- **CF** = capital final
+- **CI** = capital inicial (el dinero que inviertes)
+- **r** = tipo de interés anual expresado en decimal (5 % = 0,05)
+- **n** = número de años
+
+Con el ejemplo anterior: CF = 10.000 × (1 + 0,05)^10 = 10.000 × 1,6289 = **16.289 €**
+
+No es necesario memorizar la fórmula. Lo importante es entender la lógica: cuanto más tiempo pasa, más rápido crece el dinero, porque la base sobre la que se aplica el porcentaje es cada vez mayor.
+
+---
+
+## El factor más importante: el tiempo
+
+El interés compuesto tiene una característica fascinante: **el tiempo es más poderoso que el tipo de interés o la cantidad invertida**. Empezar pronto, aunque sea con poco dinero, puede generar más riqueza que empezar tarde con mucho dinero.
+
+| Escenario | Capital inicial | Tipo | Años | Capital final |
+|---|---|---|---|---|
+| A — empieza pronto | 10.000 € | 6 % | 30 años | 57.435 € |
+| B — empieza tarde | 10.000 € | 6 % | 15 años | 23.966 € |
+| C — más capital, menos tiempo | 20.000 € | 6 % | 15 años | 47.932 € |
+
+Fíjate en algo llamativo: el escenario A, que empieza con 10.000 €, supera al escenario C, que empieza con el doble de capital pero tiene 15 años menos de recorrido. Eso es el poder del tiempo en el interés compuesto.
+
+---
+
+## Interés compuesto con aportaciones periódicas: aún más potente
+
+Los ejemplos anteriores asumen que solo inviertes una vez. Pero en la vida real, la mayoría de los ahorradores hacen **aportaciones periódicas**: por ejemplo, 100 € al mes.
+
+Con aportaciones de 100 € mensuales al 6 % anual, el efecto del interés compuesto se multiplica:
+
+| Años de ahorro | Total aportado | Capital final acumulado |
+|---|---|---|
+| 10 años | 12.000 € | ~16.388 € |
+| 20 años | 24.000 € | ~46.204 € |
+| 30 años | 36.000 € | ~100.452 € |
+| 40 años | 48.000 € | ~199.149 € |
+
+Aportando solo 100 € al mes durante 40 años, terminas con casi 200.000 €, de los cuales **solo has puesto de tu bolsillo 48.000 €**. El resto —más de 150.000 €— lo ha generado el interés compuesto. Esta es la lógica que hay detrás de los planes de pensiones, los fondos de inversión indexados y cualquier vehículo de ahorro a largo plazo.
+
+---
+
+## La regla del 72: cuánto tarda en doblarse tu dinero
+
+Existe un truco matemático muy útil para estimar mentalmente cuánto tiempo necesita una inversión para duplicarse: **dividir 72 entre el tipo de interés anual**.
+
+- Al 4 %: 72 ÷ 4 = **18 años** para doblar el capital
+- Al 6 %: 72 ÷ 6 = **12 años**
+- Al 8 %: 72 ÷ 8 = **9 años**
+- Al 10 %: 72 ÷ 10 = **7,2 años**
+
+La regla del 72 no es exacta al decimal, pero es una herramienta excelente para hacerse una idea rápida y visual del impacto de diferentes rentabilidades a lo largo del tiempo.
+
+---
+
+## ¿Dónde encontrar interés compuesto en España?
+
+El interés compuesto no es solo un concepto teórico. En España puedes aprovecharlo a través de múltiples vehículos de ahorro e inversión:
+
+### Fondos de inversión indexados acumulativos
+
+Los fondos que replican un índice como el MSCI World reinvierten automáticamente los dividendos dentro del fondo. Esto significa que el crecimiento del capital es puramente compuesto: los rendimientos se suman al capital y generan más rendimientos. Plataformas como MyInvestor, Indexa Capital o Finizens ofrecen acceso a este tipo de fondos con comisiones muy bajas.
+
+### Planes de pensiones
+
+Las aportaciones a planes de pensiones también trabajan con interés compuesto. Además, el dinero crece fiscalmente diferido: no pagas impuestos sobre los rendimientos generados hasta el momento del rescate, lo que potencia aún más el efecto del interés compuesto, ya que la base que crece es mayor al no haberse detraído ninguna cantidad para impuestos.
+
+### Cuentas de ahorro remuneradas
+
+Algunos bancos, especialmente los neobancos online como Trade Republic, Openbank o MyInvestor, ofrecen cuentas remuneradas que capitalizan intereses de forma periódica. Conviene verificar si el banco capitaliza mensualmente (más favorable) o solo al vencimiento de un plazo determinado.
+
+### ETFs acumulativos
+
+Los ETFs de tipo "Acc" (accumulating) reinvierten automáticamente los dividendos en el propio fondo en lugar de distribuirlos al inversor. Esto permite que todo el rendimiento quede dentro del vehículo trabajando al interés compuesto sin necesidad de tributar por los dividendos recibidos.
+
+---
+
+## Los tres enemigos del interés compuesto
+
+Para que el interés compuesto funcione a su máximo potencial, hay que conocer y evitar sus principales obstáculos:
+
+### 1. Las comisiones altas
+
+Una comisión del 2 % anual puede parecer pequeña, pero aplicada durante 30 años puede comerse hasta el 40 % de tu patrimonio final. Por eso los fondos indexados de bajo coste —con TER del 0,1 % al 0,3 %— son tan efectivos a largo plazo: dejan trabajar al interés compuesto casi íntegramente.
+
+Calcula siempre el impacto acumulado de las comisiones antes de contratar cualquier producto de inversión. El rendimiento bruto importa, pero el neto después de gastos es lo que realmente construye tu patrimonio.
+
+### 2. La inflación
+
+La inflación erosiona el poder adquisitivo de tu dinero. Si tu inversión genera un 5 % pero la inflación es del 3 %, tu rentabilidad **real** es solo del 2 %. El interés compuesto sigue funcionando, pero sobre una base real menor. Por eso invertir en activos que históricamente han superado la inflación —como las acciones de empresas globales a través de fondos indexados— es fundamental para que el interés compuesto trabaje de verdad.
+
+### 3. Interrumpir la inversión o retirar dinero antes de tiempo
+
+Cada vez que retiras dinero, rompes la cadena del interés compuesto. Una retirada de 5.000 € a mitad del camino no solo son esos 5.000 €: son también todos los intereses futuros que ese dinero habría generado en los años restantes. Si puedes, mantén tu inversión intacta el mayor tiempo posible y evita tocarla salvo que sea estrictamente necesario.
+
+---
+
+## Consejos prácticos para aprovechar el interés compuesto en España
+
+- **Empieza cuanto antes**: Incluso si solo puedes invertir 50 € al mes, empieza hoy. El tiempo es el factor más importante y no se puede recuperar. Cada año que pasa sin invertir es un año de intereses compuestos que pierdes para siempre.
+- **Elige vehículos que capitalicen los intereses automáticamente**: Los fondos acumulativos y los planes de pensiones lo hacen solos, sin que tengas que hacer nada.
+- **Mantén las comisiones al mínimo**: Compara siempre el TER de los fondos antes de contratar. Una diferencia de 1 % anual puede suponer decenas de miles de euros en 30 años.
+- **No vendas en las caídas del mercado**: El interés compuesto necesita tiempo ininterrumpido para funcionar. Las caídas son temporales; interrumpir la inversión para "protegerse" suele salir muy caro porque se pierde la recuperación posterior.
+- **Usa la regla del 72** para visualizar tus objetivos: Si quieres doblar tu dinero en 10 años, necesitas una rentabilidad aproximada del 7,2 % anual.
+- **Automatiza las aportaciones**: Configura una transferencia automática mensual a tu fondo o cuenta de ahorro. Lo que no ves, no lo gastas, y el automatismo elimina la tentación de saltarte meses cuando la vida se complica.
+- **Aprovecha la ventaja fiscal de los traspasos entre fondos**: En España, traspasar dinero de un fondo a otro no tributa. Esto significa que puedes mantener la base de capital íntegra creciendo con interés compuesto sin que Hacienda recorte las ganancias intermedias.
+
+---
+
+## Conclusión
+
+El interés compuesto no es magia: es matemática pura aplicada durante suficiente tiempo. Su poder radica en que los intereses generan más intereses, y estos a su vez generan aún más intereses, en un ciclo que se acelera de forma exponencial con los años.
+
+La buena noticia es que no necesitas ser un experto financiero ni tener mucho dinero para aprovecharlo. Con constancia, paciencia y los vehículos de inversión adecuados, cualquier persona puede hacer que su dinero trabaje para ella. En España tienes a tu disposición fondos indexados acumulativos, planes de pensiones y cuentas remuneradas que aplican este principio de forma automática y accesible.
+
+La única condición para que funcione es que empieces. Y siempre es mejor hoy que mañana.`,
+  },
+  {
     slug: "fondos-de-inversion-vs-etfs",
     title: "Fondos de inversión vs ETFs: cuál elegir para invertir en España",
     description: "Comparamos fondos de inversión y ETFs en costes, fiscalidad y flexibilidad para que el inversor español sepa cuál encaja mejor con su estrategia y horizonte temporal.",
