@@ -10,6 +10,150 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "sistema-de-pensiones-en-espana",
+    title: "El sistema de pensiones en España: cómo funciona y cuánto cobrarás al jubilarte",
+    description: "Explicamos cómo funciona el sistema público de pensiones español, qué factores determinan tu cuantía de jubilación y qué alternativas privadas existen para complementarla.",
+    category: "Pensiones",
+    readingMinutes: 8,
+    publishedAt: "2026-04-23",
+    content: `## El sistema de pensiones en España: cómo funciona y cuánto cobrarás
+
+El sistema público de pensiones en España es uno de los pilares del Estado del bienestar y la preocupación principal de millones de trabajadores que se preguntan: ¿cuánto cobraré cuando me jubile? y ¿será suficiente para mantener mi nivel de vida?
+
+En este artículo te explicamos cómo funciona el sistema, qué factores determinan el importe de tu pensión, cuál es la situación actual de la "hucha de las pensiones" y qué puedes hacer hoy para complementar tu jubilación con ahorro privado.
+
+---
+
+## ¿Cómo funciona el sistema de pensiones español?
+
+El sistema público de pensiones en España es un sistema de **reparto** o *pay-as-you-go*. Esto significa que las cotizaciones que pagan hoy los trabajadores activos financian directamente las pensiones de los jubilados actuales. No existe una cuenta individual donde va acumulándose tu dinero: lo que cotizas hoy lo cobran los jubilados de hoy.
+
+Este modelo contrasta con los sistemas de capitalización (como algunos planes de pensiones privados), donde cada trabajador acumula un capital personal que se irá convirtiendo en renta al jubilarse.
+
+### ¿Quién gestiona las pensiones?
+
+La **Seguridad Social** es el organismo público español que gestiona las pensiones. Cada mes, empresas y trabajadores realizan aportaciones (cotizaciones) a la Seguridad Social, que son un porcentaje del salario bruto:
+
+| Concepto | Empresa | Trabajador |
+|---|---|---|
+| Contingencias comunes | 23,60 % | 4,70 % |
+| Desempleo | 5,50 % | 1,55 % |
+| Formación profesional | 0,60 % | 0,10 % |
+
+Como ves, la mayor parte de la cotización la asume la empresa. El trabajador ve reflejado en su nómina solo su parte, que suele oscilar entre el 6 % y el 7 % del salario bruto, sumando todas las aportaciones.
+
+---
+
+## ¿Qué determina el importe de tu pensión?
+
+El cálculo de la pensión pública de jubilación en España tiene en cuenta dos factores principales: la base reguladora y los años cotizados.
+
+### 1. La base reguladora
+
+La base reguladora es el promedio de las bases de cotización de los **últimos 25 años** de trabajo, actualizado por el IPC. Cuanto más alto sea tu salario durante ese período, mayor será tu pensión.
+
+Es importante no confundir la base de cotización con el salario bruto. La base de cotización tiene un tope máximo (la "base máxima de cotización"), que en 2026 ronda los 4.900 € mensuales. Si ganas más de esa cantidad, solo cotizas sobre ese tope y, por tanto, tu pensión también tendrá un límite máximo.
+
+### 2. Los años cotizados: el porcentaje aplicable
+
+Una vez calculada la base reguladora, el porcentaje de ella que recibirás como pensión depende de los años que hayas cotizado:
+
+| Años cotizados | % de la base reguladora |
+|---|---|
+| 15 años (mínimo legal) | 50 % |
+| 20 años | 62 % |
+| 25 años | 74 % |
+| 30 años | 86 % |
+| 35 años | 100 % |
+| 37 años o más | 100 % (sin penalización de edad) |
+
+Para cobrar el 100 % de la base reguladora necesitas **al menos 37 años cotizados** o cumplir la edad ordinaria de jubilación. Con 15 años, el mínimo legal, solo cobrarías el 50 %.
+
+### La edad de jubilación
+
+La edad legal de jubilación en España está aumentando progresivamente hasta los **67 años** (salvo que hayas cotizado más de 38 años y 3 meses, en cuyo caso puedes jubilarte con 65 años). Este aumento gradual responde al envejecimiento de la población y a la mayor esperanza de vida.
+
+También existe la **jubilación anticipada**, aunque implica penalizaciones: por cada trimestre que te jubiles antes de la edad ordinaria, tu pensión se reduce entre un 1,69 % y un 2 %.
+
+---
+
+## La brecha de género en las pensiones
+
+Uno de los problemas más importantes del sistema español es la brecha de género. Las mujeres cobran de media aproximadamente un **30 % menos** de pensión que los hombres, debido a:
+
+- Carreras laborales más interrumpidas (maternidad, cuidados familiares).
+- Mayor prevalencia del trabajo a tiempo parcial.
+- Menores salarios históricos que se trasladan a bases de cotización más bajas.
+
+El sistema ha incorporado algunos mecanismos compensatorios, como el complemento para la reducción de la brecha de género, que añade un porcentaje extra a la pensión de quien haya visto reducida su carrera laboral por el cuidado de hijos. Sin embargo, la brecha sigue siendo muy significativa.
+
+---
+
+## El reto demográfico: ¿es sostenible el sistema?
+
+Esta es la gran pregunta que preocupa a economistas, políticos y ciudadanos. El sistema de reparto funciona bien cuando hay muchos trabajadores por cada jubilado. El problema es que España está envejeciendo:
+
+- La tasa de fecundidad española es de las más bajas de la Unión Europea.
+- La esperanza de vida sigue aumentando: los jubilados de hoy cobran pensión durante 20-25 años de media.
+- Los *baby boomers* (nacidos entre 1957 y 1977) están jubilándose masivamente durante esta década, aumentando el gasto de forma acelerada.
+
+El **Fondo de Reserva de la Seguridad Social** ("la hucha de las pensiones"), creado para afrontar estos períodos difíciles, llegó a acumular 66.800 millones de euros en 2011. Las dificultades del sistema durante la crisis de 2008-2014 y la pandemia obligaron a usarlo intensamente, reduciendo su saldo de forma notable.
+
+Las reformas más recientes han reforzado los ingresos del sistema mediante el **Mecanismo de Equidad Intergeneracional (MEI)**, un incremento adicional en la cotización destinado a nutrir el Fondo de Reserva. También se ha vinculado la revalorización anual de las pensiones al IPC, garantizando que no pierdan poder adquisitivo. Pero el debate sobre la sostenibilidad a largo plazo sigue abierto.
+
+---
+
+## ¿Cuánto cobraré de pensión? Cómo consultarlo
+
+Puedes consultar tu situación de cotización y una estimación de tu futura pensión de forma gratuita a través del portal **Importass** de la Seguridad Social, con tu DNI y clave de acceso o certificado digital.
+
+El **informe de vida laboral** muestra todos tus períodos cotizados. El **simulador de pensiones** te permite introducir diferentes escenarios para ver cómo afectan los años de cotización y la edad de jubilación al importe final.
+
+Es muy recomendable revisarlo al menos cada dos o tres años para detectar posibles errores o lagunas en tu historial, especialmente si has tenido períodos de trabajo irregular, contratos a tiempo parcial o empleos en el extranjero.
+
+---
+
+## Cómo complementar la pensión pública: principales alternativas
+
+Dado el contexto demográfico y las incertidumbres del sistema, muchos expertos recomiendan no depender exclusivamente de la pensión pública y construir un complemento de ahorro privado. Las principales opciones en España son:
+
+### Planes de pensiones individuales
+
+Son el instrumento de ahorro para la jubilación más conocido. Permiten reducir la base imponible del IRPF con las aportaciones (hasta 1.500 € anuales para aportaciones propias). El capital se rescata a partir de la jubilación y tributa como rendimiento del trabajo, por lo que conviene planificar el momento del rescate para evitar un tipo marginal elevado.
+
+### Planes de ahorro a largo plazo (PIAS)
+
+Los Planes Individuales de Ahorro Sistemático permiten acumular capital libre de impuestos durante al menos cinco años. Al rescatarlo en forma de renta vitalicia, los rendimientos acumulados quedan exentos de tributación, lo que los convierte en una opción muy eficiente fiscalmente para el largo plazo.
+
+### Fondos de inversión indexados
+
+Los fondos indexados acumulativos permiten construir patrimonio a través del interés compuesto con posibilidad de traspasos sin tributar. Son una alternativa flexible y de bajo coste para quien quiere complementar la pensión sin las restricciones de liquidez de los planes de pensiones.
+
+### Planes de pensiones de empleo
+
+Si tu empresa ofrece un plan de pensiones de empleo, aprovéchalo. Las aportaciones de la empresa son un beneficio social que no tributa como salario en el momento de recibirlas. Además, las aportaciones al plan de empleo no consumen el límite individual de 1.500 €, sino el suyo propio (hasta 8.500 € anuales en aportaciones de empresa).
+
+---
+
+## Consejos prácticos para asegurar tu jubilación
+
+- **Consulta tu vida laboral cada dos o tres años** y verifica que todos los períodos están correctamente registrados. Si detectas errores, reclámalos a la Seguridad Social cuanto antes, porque algunos tienen plazos de reclamación limitados.
+- **No abandones el mercado laboral sin calcular el impacto en tu pensión**: cada año sin cotizar puede reducir significativamente el porcentaje aplicable sobre tu base reguladora.
+- **Empieza a ahorrar para la jubilación cuanto antes**, aunque sea con pequeñas cantidades mensuales. El interés compuesto necesita tiempo para trabajar, y cada año que pasa sin ahorrar es un año de crecimiento que no recuperarás.
+- **Diversifica entre pensión pública y ahorro privado**: no pongas todos los huevos en la misma cesta. Un complemento privado, aunque modesto, puede marcar una gran diferencia en tu calidad de vida después de los 67 años.
+- **Planifica el rescate del plan de pensiones con cuidado**: el año de la jubilación suele tener ingresos altos (nómina parcial + inicio de pensión pública + rescate del plan), lo que puede disparar el tipo marginal del IRPF. Consultar a un asesor fiscal antes del rescate puede ahorrarte miles de euros.
+- **Valora si te conviene retrasar voluntariamente la jubilación**: cada año adicional cotizado mejora tanto la base reguladora como el porcentaje aplicable. Algunos años extra pueden suponer incrementos de pensión de entre el 4 % y el 8 % anual, lo que en una jubilación de 20 años supone un impacto económico enorme.
+- **Infórmate sobre las lagunas de cotización**: si tienes períodos sin cotizar (excedencias, paro de larga duración, etc.), en algunos casos puedes suscribir un convenio especial con la Seguridad Social para seguir cotizando de forma voluntaria y evitar penalizaciones en tu pensión futura.
+
+---
+
+## Conclusión
+
+El sistema de pensiones español ofrece una base de seguridad para la jubilación, pero sus retos demográficos hacen imprescindible planificar con tiempo y, en muchos casos, complementarlo con ahorro privado. Conocer cómo funciona, cuántos años necesitas cotizar y qué impacto tienen tus decisiones laborales es el primer paso para llegar a la jubilación con tranquilidad financiera.
+
+No esperes a los 50 años para pensar en ello. Las decisiones que tomas hoy —cuánto ahorras, cuándo empiezas, qué productos eliges— determinarán en buena medida el nivel de vida que tendrás cuando dejes de trabajar. La pensión pública existirá, pero depender solo de ella, en un contexto demográfico como el actual, es un riesgo que conviene no asumir sin alternativas.`,
+  },
+  {
     slug: "como-funciona-el-interes-compuesto",
     title: "Cómo funciona el interés compuesto: la herramienta más poderosa del ahorro",
     description: "Descubre qué es el interés compuesto, por qué es tan poderoso y cómo puedes aprovecharlo en España a través de fondos, planes de pensiones y cuentas remuneradas.",
