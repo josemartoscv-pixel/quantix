@@ -10,6 +10,143 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "criptomonedas-y-fiscalidad-en-espana",
+    title: "Criptomonedas y fiscalidad en España: cómo declarar Bitcoin y otras criptos en el IRPF",
+    description: "Guía completa sobre cómo tributan las criptomonedas en España: cuándo declarar, cómo calcular las ganancias, qué modelos presentar y qué errores evitar con Hacienda.",
+    category: "Criptomonedas",
+    readingMinutes: 8,
+    publishedAt: "2026-04-24",
+    content: `## Criptomonedas y fiscalidad en España: cómo declarar Bitcoin y otras criptos
+
+Las criptomonedas han pasado de ser un fenómeno marginal a ocupar un lugar relevante en las carteras de millones de españoles. Sin embargo, uno de los aspectos que más dudas genera entre los inversores es el fiscal: ¿cuándo tengo que declarar mis criptos? ¿Cómo calculo la ganancia? ¿Qué pasa si he olvidado declararlas en años anteriores?
+
+La Agencia Tributaria española ha ido aclarando progresivamente su criterio sobre la fiscalidad de los criptoactivos, y a partir de 2024 entró en vigor nueva normativa específica que aumenta notablemente las obligaciones de información. En este artículo te explicamos de forma clara y práctica cómo tributan las criptomonedas en España, qué obligaciones tiene el inversor particular y qué errores conviene evitar para no tener problemas con Hacienda.
+
+---
+
+## ¿Cuándo se genera una obligación fiscal con las criptomonedas?
+
+La respuesta corta es: **cuando realizas una operación que genera un hecho imponible**. Tener criptomonedas guardadas en un monedero sin hacer nada con ellas no genera, en principio, ninguna obligación de tributar por ganancias (aunque sí puede existir obligación de declaración patrimonial en ciertos casos, como veremos más adelante).
+
+El hecho imponible —el evento que dispara la obligación de declarar una ganancia o pérdida— se produce cuando:
+
+- **Vendes criptomonedas a cambio de euros u otra moneda fiat**.
+- **Intercambias una criptomoneda por otra** (por ejemplo, cambias Bitcoin por Ethereum).
+- **Utilizas criptomonedas para pagar bienes o servicios**.
+- **Recibes criptomonedas como remuneración** por actividades como la minería, el staking o los airdrops.
+
+Uno de los puntos que más sorprende a los inversores noveles es el segundo: el intercambio entre criptomonedas tributa aunque no conviertas nada a euros. Hacienda considera que has "vendido" la primera cripto al precio de mercado en ese momento y "comprado" la segunda, generando un hecho imponible que debes declarar.
+
+---
+
+## Cómo tributan las ganancias por criptomonedas en el IRPF
+
+### Ganancias y pérdidas patrimoniales
+
+La Agencia Tributaria española trata las ganancias derivadas de la compraventa de criptomonedas como **ganancias o pérdidas patrimoniales**, que se integran en la **base imponible del ahorro** del IRPF. Esto significa que tributan con la escala propia del ahorro, separada de los rendimientos del trabajo:
+
+| Ganancia patrimonial neta | Tipo aplicable |
+|---|---|
+| Hasta 6.000 € | 19 % |
+| De 6.000 € a 50.000 € | 21 % |
+| De 50.000 € a 200.000 € | 23 % |
+| Más de 200.000 € | 28 % |
+
+Esta escala es la misma que aplica a las ganancias por venta de acciones, fondos de inversión o inmuebles, lo que sitúa las criptomonedas en el mismo tratamiento fiscal que otros activos de inversión.
+
+### ¿Cómo se calcula la ganancia o pérdida?
+
+La ganancia o pérdida se calcula como la diferencia entre el **precio de transmisión** (lo que recibes al vender) y el **precio de adquisición** (lo que pagaste al comprar, incluyendo comisiones). Si compraste 1 Bitcoin por 20.000 € y lo vendiste por 45.000 €, tu ganancia patrimonial es de 25.000 €.
+
+Cuando tienes varias compras a distintos precios en momentos distintos, España aplica el método **FIFO** (*First In, First Out*): se considera que vendes primero las unidades que compraste antes. Esto tiene implicaciones importantes si has ido acumulando criptomonedas gradualmente.
+
+### Ejemplo práctico con método FIFO
+
+| Compra | Fecha | Unidades | Precio unitario | Coste total |
+|---|---|---|---|---|
+| 1.ª compra | Enero | 0,5 BTC | 25.000 € | 12.500 € |
+| 2.ª compra | Abril | 0,3 BTC | 35.000 € | 10.500 € |
+| Venta | Diciembre | 0,5 BTC | 50.000 € | 25.000 € |
+
+Con FIFO, la venta de 0,5 BTC utiliza los 0,5 BTC de enero (coste: 12.500 €). La ganancia es: 25.000 € − 12.500 € = **12.500 € a declarar**. Si hubieras podido elegir el método, usar los 0,3 BTC de abril (coste más alto) habría dado una ganancia menor. Pero en España, el método FIFO no es opcional: es obligatorio.
+
+---
+
+## Staking, airdrops e intereses: rendimientos del capital mobiliario
+
+No todas las rentas procedentes de criptomonedas son ganancias patrimoniales. Hay supuestos que Hacienda califica como **rendimientos del capital mobiliario**, también integrados en la base del ahorro:
+
+- **Intereses de plataformas de lending cripto**: si prestas tus criptos a una plataforma a cambio de una rentabilidad periódica, esos intereses tributan como rendimientos del capital mobiliario en el momento en que se perciben, valorados al precio de mercado de la cripto recibida.
+- **Staking**: las recompensas por bloquear criptos en protocolos de prueba de participación (*proof of stake*) tributan generalmente como rendimientos del capital mobiliario. Cuando más adelante vendas esas recompensas, además tributarás por la ganancia patrimonial desde el precio de adquisición (el valor en el momento de recibirlas) hasta el precio de venta.
+- **Airdrops**: si recibes criptos de forma gratuita por participar en proyectos o por tener otras criptos, puede tributar como ganancia patrimonial o como rendimiento del capital mobiliario según la operación concreta. La valoración se hace siempre al precio de mercado en el momento de la recepción.
+
+---
+
+## Modelos informativos específicos para criptomonedas
+
+Además de la declaración anual del IRPF (modelo 100), existen modelos específicos que conviene conocer:
+
+### Modelo 721: criptomonedas en el extranjero
+
+Desde el ejercicio 2023, los tenedores de criptomonedas en plataformas o monederos custodiados por entidades no residentes en España tienen la obligación de presentar el **modelo 721** si el saldo supera los **50.000 €** a 31 de diciembre. Es el equivalente al Modelo 720 (declaración de bienes en el extranjero), pero específico para criptoactivos.
+
+La presentación del modelo 721 es meramente informativa: no implica pagar ningún impuesto por tener esos fondos. Pero **no presentarlo cuando existe obligación** puede acarrear sanciones muy elevadas.
+
+### Modelos 172 y 173: reporte de exchanges
+
+A partir de 2024, los exchanges y plataformas que operen en España están obligados a reportar a la Agencia Tributaria las operaciones de sus clientes residentes fiscales en España (modelos 172 y 173). Esto significa que Hacienda tiene acceso a información sobre tus operaciones en exchanges regulados, del mismo modo que los bancos informan sobre tus cuentas y depósitos. El margen de que las operaciones "pasen desapercibidas" se ha reducido drásticamente.
+
+---
+
+## Compensación de ganancias y pérdidas: una palanca de optimización
+
+Una de las posibilidades que ofrece el IRPF es la **compensación de pérdidas con ganancias** dentro de la base del ahorro. Si en el mismo ejercicio has ganado 10.000 € con Bitcoin pero has perdido 4.000 € con otro token, solo tributas por los 6.000 € netos.
+
+Además, si el resultado neto del ejercicio es una pérdida, puedes compensarla con ganancias de los **cuatro ejercicios siguientes**. En un mercado tan volátil como el de las criptomonedas, este mecanismo puede ser muy valioso: en un año bajista puedes materializar pérdidas estratégicamente para utilizarlas como escudo fiscal en los años de recuperación.
+
+---
+
+## ¿Qué pasa si no has declarado criptomonedas en años anteriores?
+
+Si en ejercicios anteriores tuviste ganancias con criptomonedas y no las declaraste, tienes un riesgo fiscal real y creciente. Las opciones son:
+
+- **Regularización voluntaria**: presentar declaraciones complementarias de los ejercicios no prescritos (los cuatro últimos años) con recargos e intereses de demora. El recargo por presentación extemporánea varía entre el 1 % y el 15 % según el tiempo transcurrido, muy inferior a las sanciones de una inspección.
+- **Inacción**: si Hacienda detecta la irregularidad tras una comprobación, las sanciones pueden alcanzar entre el 50 % y el 150 % de la cuota no ingresada, más intereses de demora.
+
+Ante la duda, consulta siempre con un asesor fiscal con experiencia en criptomonedas antes de regularizar. La forma en que se hace la regularización importa tanto como el hecho de hacerla.
+
+---
+
+## Errores frecuentes del inversor en criptomonedas
+
+1. **Creer que no hay que declarar si no se convierte a euros**: el intercambio entre criptos también tributa.
+2. **No llevar registro de todas las operaciones**: con el tiempo y muchas transacciones en distintos exchanges, reconstruir el historial puede ser complejo y costoso. Empieza a llevar un registro desde hoy.
+3. **Olvidar el staking y los intereses**: aunque no vendas nada, si percibes rendimientos en cripto, debes declararlos valorados al precio de mercado en el momento de recibirlos.
+4. **No presentar el Modelo 721** cuando el saldo en plataformas extranjeras supera 50.000 €.
+5. **Confundir el coste de adquisición** al calcular la ganancia: incluye las comisiones de compra en el precio de adquisición, no solo el precio de la cripto.
+6. **Olvidar que los NFTs también pueden tributar**: la venta de NFTs genera ganancias patrimoniales sujetas al IRPF con el mismo tratamiento que las criptomonedas.
+
+---
+
+## Consejos prácticos para el inversor en criptomonedas
+
+- **Lleva un registro meticuloso desde el primer día**: fecha, precio de compra y precio de venta de cada transacción en euros, incluyendo comisiones. Es la base de cualquier cálculo fiscal correcto y puede ahorrarte muchos problemas.
+- **Usa software especializado**: herramientas como Koinly, CoinTracking o TaxBit conectan con los principales exchanges mediante API y generan informes de ganancias y pérdidas compatibles con la declaración española, ahorrándote horas de trabajo.
+- **No esperes a la campaña de la renta para revisar tus operaciones**: hazlo al cierre del año natural, cuando los datos están frescos y los extractos del exchange son más fáciles de obtener.
+- **Compensa pérdidas estratégicamente**: si tienes criptos en pérdidas latentes y otras en ganancias dentro del mismo ejercicio, valora si te interesa materializar las pérdidas antes del 31 de diciembre para compensarlas y reducir la factura fiscal.
+- **Vigila el umbral del Modelo 721**: revisa tu saldo en exchanges extranjeros a 31 de diciembre. Si supera los 50.000 €, la presentación del modelo es obligatoria y el plazo suele cerrar en enero del año siguiente.
+- **Consulta a un asesor fiscal con experiencia específica en criptomonedas**: la fiscalidad cripto tiene matices que un generalista puede pasar por alto. El coste del asesoramiento suele ser inferior a las sanciones o impuestos de más que se pueden generar por una declaración incorrecta.
+- **Guarda los justificantes durante al menos cuatro años**: extractos de exchanges, recibos de compra, historial de transacciones. Son tu única prueba ante una posible inspección de Hacienda.
+
+---
+
+## Conclusión
+
+Las criptomonedas no son una zona gris fiscal en España: Hacienda tiene criterios claros y herramientas cada vez más potentes para rastrear las operaciones de los inversores, especialmente tras la entrada en vigor de los modelos 172, 173 y 721. Declarar correctamente no es solo una obligación legal, es también la mejor forma de protegerte frente a problemas futuros y de aprovechar mecanismos legales como la compensación de pérdidas.
+
+El mundo cripto tiene sus propias complejidades fiscales, pero con un buen registro de operaciones, las herramientas adecuadas y asesoramiento profesional cuando la situación lo requiere, puedes cumplir con tus obligaciones sin sobresaltos y optimizar tu carga tributaria dentro de lo que permite la ley. La clave está en no dejarlo para el último momento y en tratar las criptomonedas con la misma seriedad fiscal que cualquier otra inversión.`,
+  },
+  {
     slug: "sistema-de-pensiones-en-espana",
     title: "El sistema de pensiones en España: cómo funciona y cuánto cobrarás al jubilarte",
     description: "Explicamos cómo funciona el sistema público de pensiones español, qué factores determinan tu cuantía de jubilación y qué alternativas privadas existen para complementarla.",
