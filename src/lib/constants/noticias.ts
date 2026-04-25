@@ -10,6 +10,155 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "inversion-en-oro-y-metales-preciosos",
+    title: "Inversión en oro y metales preciosos en España: cómo, dónde y cuánto invertir",
+    description: "Guía completa sobre cómo invertir en oro y metales preciosos desde España: lingotes, ETFs, fondos y acciones mineras, con su fiscalidad en el IRPF y consejos prácticos.",
+    category: "Inversión",
+    readingMinutes: 8,
+    publishedAt: "2026-04-25",
+    content: `## Inversión en oro y metales preciosos en España: cómo, dónde y cuánto invertir
+
+El oro lleva siendo un activo refugio durante siglos. En momentos de incertidumbre económica, tensiones geopolíticas o inflación elevada, muchos inversores recurren a los metales preciosos como forma de preservar su patrimonio. En 2026, con los precios del oro en máximos históricos y un contexto macroeconómico complejo, la pregunta sobre si merece la pena invertir en oro se ha vuelto más relevante que nunca para el inversor español.
+
+En este artículo te explicamos qué son los metales preciosos como activo de inversión, cuáles son las formas de acceder a ellos desde España, qué ventajas e inconvenientes tiene cada una y cómo tributan en el IRPF.
+
+---
+
+## ¿Por qué invertir en oro y metales preciosos?
+
+El oro es el metal precioso por excelencia como inversión, aunque la plata, el platino y el paladio también tienen sus defensores. Estos activos comparten una característica fundamental: son tangibles, escasos y no pueden ser fabricados de forma ilimitada por ningún gobierno ni banco central.
+
+Sus principales virtudes como activo de inversión son:
+
+- **Reserva de valor a largo plazo**: El oro ha conservado su poder adquisitivo durante miles de años. Una onza de oro podía comprar una toga romana de calidad; hoy, esa misma onza supera los 2.500 euros.
+- **Activo refugio**: En periodos de crisis financiera, los inversores tienden a desplazar capital hacia el oro, lo que hace que su precio suba precisamente cuando los mercados de acciones caen.
+- **Cobertura frente a la inflación**: Históricamente, el oro tiende a mantener o aumentar su valor cuando la inflación erosiona el poder adquisitivo de las monedas fiduciarias.
+- **Diversificación de cartera**: La correlación del oro con otros activos financieros (acciones, bonos) suele ser baja o negativa, lo que lo convierte en un buen diversificador.
+
+Sin embargo, el oro también tiene limitaciones importantes que hay que conocer antes de invertir.
+
+---
+
+## Limitaciones del oro como inversión
+
+- **No genera rentas**: A diferencia de las acciones (que pagan dividendos) o los bonos (que pagan intereses), el oro no genera flujos de caja. Solo ganas dinero si sube su precio.
+- **Volatilidad a corto plazo**: Aunque es considerado estable a largo plazo, el precio del oro puede oscilar significativamente en el corto y medio plazo.
+- **Costes de almacenamiento y custodia**: Si posees oro físico, necesitas un lugar seguro para guardarlo (caja fuerte, cámara bancaria), lo que implica costes adicionales.
+- **No es productivo**: El oro no construye empresas, no crea empleo ni innova. Es un activo pasivo en ese sentido.
+
+---
+
+## Formas de invertir en oro desde España
+
+Existen varias formas de invertir en metales preciosos. Cada una tiene sus ventajas, inconvenientes y tratamiento fiscal diferente.
+
+### 1. Oro físico: lingotes y monedas
+
+La forma más directa es comprar oro físico en forma de **lingotes** (barras) o **monedas de inversión** (como el Krugerand sudafricano, el Maple Leaf canadiense o el Philharmoniker austriaco). Se puede adquirir en:
+
+- **Casas de compraventa de oro y metales preciosos**: Permiten compra y venta de lingotes y monedas.
+- **Bancos**: Algunos bancos españoles ofrecen la compraventa de oro físico, aunque suelen tener diferenciales de precio más elevados.
+- **Plataformas online especializadas**: Como BullionVault o GoldMoney, que permiten comprar y custodiar oro en almacenes certificados de todo el mundo.
+
+**Ventaja fiscal clave**: La venta de oro de inversión está **exenta de IVA** en España (y en toda la UE), lo que supone una ventaja significativa frente a otros bienes físicos.
+
+### 2. ETFs de oro y metales preciosos
+
+Los ETFs de oro replican el precio del metal sin que tengas que preocuparte de su custodia física. Son participaciones cotizadas en bolsa respaldadas por oro almacenado en bóvedas certificadas.
+
+| Característica | Oro físico | ETF de oro |
+|---|---|---|
+| Accesibilidad | Alta (tiendas, plataformas) | Alta (desde bróker) |
+| Costes de custodia | Caja fuerte o banco | TER del ETF (~0,15 %–0,25 %) |
+| Liquidez | Media-baja | Alta |
+| IVA en compra | Exento (oro de inversión) | No aplica |
+| Gestión | Manual | Automática |
+| Propiedad real del metal | Sí | Depende del producto |
+
+### 3. Fondos de inversión en metales preciosos
+
+Existen fondos de inversión que invierten en oro, plata u otros metales preciosos, ya sea de forma directa o a través de acciones de empresas mineras. Tienen la ventaja fiscal del **traspaso entre fondos sin tributar**, que no existe con los ETFs. Esto los hace especialmente atractivos para el inversor español con horizonte largo plazo, ya que el diferimiento fiscal potencia el efecto del interés compuesto.
+
+### 4. Acciones de empresas mineras
+
+Otra alternativa es invertir en las empresas que extraen estos metales: Barrick Gold, Newmont Mining, Fresnillo (que cotiza en bolsa española), entre otras. Las acciones de empresas mineras suelen **amplificar los movimientos** del precio del metal: si el oro sube un 10 %, las mineras pueden subir un 20-30 % (y viceversa en las caídas).
+
+Esta opción añade el riesgo empresarial (gestión, costes de producción, deuda) al riesgo del precio del metal, lo que la hace más volátil pero también potencialmente más rentable.
+
+### 5. Contratos de futuros y CFDs
+
+Los contratos de futuros y los CFDs (contratos por diferencias) permiten especular con el precio del oro con apalancamiento. Son instrumentos complejos, de alto riesgo y orientados exclusivamente a inversores con experiencia. No son recomendables para el inversor minorista que busca preservar patrimonio.
+
+---
+
+## ¿Cuánto oro debe tener una cartera?
+
+La mayoría de los asesores financieros coinciden en que el oro no debería ser el activo principal de una cartera de inversión, sino un complemento. Las recomendaciones más habituales oscilan entre el **5 % y el 15 % del total de la cartera**.
+
+La lógica es la siguiente: si el resto de tu cartera cae en una crisis, ese porcentaje en oro puede amortiguar las pérdidas o incluso compensarlas en parte. Más allá del 15 %, la renuncia a rentas (dividendos, intereses) empieza a pesar demasiado en el rendimiento global de la cartera.
+
+---
+
+## Cómo tributa el oro en el IRPF español
+
+La fiscalidad del oro en España varía según el instrumento utilizado:
+
+| Instrumento | Tributa como | Cuándo |
+|---|---|---|
+| Venta de oro físico (lingotes, monedas) | Ganancia patrimonial (base del ahorro) | Al vender |
+| ETFs de oro | Ganancia patrimonial (base del ahorro) | Al vender |
+| Fondos de inversión en metales | Ganancia patrimonial (base del ahorro) | Al reembolsar |
+| Acciones de empresas mineras | Ganancia patrimonial (base del ahorro) | Al vender |
+
+En todos los casos, la ganancia obtenida tributa en la base del ahorro del IRPF con los tipos habituales: 19 % hasta 6.000 €, 21 % hasta 50.000 €, 23 % hasta 200.000 € y 28 % a partir de ahí.
+
+Una ventaja importante: si compras **oro de inversión** (lingotes o monedas que cumplen los requisitos de la normativa europea), la operación está **exenta de IVA**. Sin embargo, las joyas o el oro artesanal no cuentan como oro de inversión y sí están sujetos a IVA.
+
+---
+
+## La plata, el platino y el paladio: las alternativas al oro
+
+Aunque el oro es el rey, otros metales preciosos también tienen su hueco como inversión:
+
+- **Plata**: Más volátil que el oro, con mayor componente industrial (electrónica, paneles solares). Su precio es mucho más accesible y el ratio oro/plata histórico que muchos inversores utilizan como señal de valor relativo puede indicar si la plata está barata o cara respecto al oro.
+- **Platino**: Muy ligado a la industria del automóvil (catalizadores). Su precio puede ser más volátil que el del oro y también más sensible a los ciclos industriales.
+- **Paladio**: También con fuerte componente industrial. Ha tenido episodios de escasez extrema que dispararon su precio muy por encima del oro.
+
+Para el inversor particular español, la plata suele ser la alternativa más interesante por accesibilidad y liquidez. Sin embargo, ten en cuenta que la plata **sí está sujeta a IVA** (a diferencia del oro de inversión), lo que encarece la entrada y reduce la rentabilidad a igualdad de condiciones.
+
+---
+
+## Errores frecuentes del inversor en metales preciosos
+
+1. **Comprar en pánico**: Muchos inversores se lanzan a comprar oro justo cuando ha subido mucho y el miedo en los mercados es máximo. Es el peor momento para entrar: el precio ya descuenta la incertidumbre.
+2. **Confundir joyas con inversión**: Las joyas tienen un altísimo componente artesanal y de diseño en su precio que no se recupera en la reventa. No son un activo de inversión.
+3. **Ignorar el diferencial compra-venta**: En el oro físico, el precio al que puedes vender siempre es inferior al de compra. Ese diferencial puede ser del 2-5 % y es un coste real de entrada que no aparece en los gráficos de precio.
+4. **No declarar las ganancias**: La compraventa de oro deja rastro, especialmente en operaciones de importe significativo. Hacienda tiene acceso a esa información. Las ganancias deben declararse en el ejercicio en que se producen.
+5. **Sobreponderar el oro en cartera**: Un peso excesivo en oro (más del 20-25 %) renuncia a demasiado rendimiento a largo plazo, ya que el oro no paga dividendos ni intereses.
+
+---
+
+## Consejos prácticos para invertir en metales preciosos
+
+- **Empieza con un porcentaje pequeño de tu cartera**: El 5 %-10 % es una referencia razonable. El oro es un complemento, no un sustituto de una cartera diversificada de acciones y bonos.
+- **Para importes pequeños, los ETFs son la opción más práctica**: Evitas los costes de custodia del físico y la liquidez es inmediata. Una comisión anual del 0,15-0,25 % es asumible.
+- **Si compras oro físico, asegura la custodia**: Una caja fuerte homologada en casa o un servicio de custodia bancaria certificada es imprescindible. No guardes lingotes en lugares no seguros.
+- **Valora los fondos de inversión si planeas mantener a largo plazo**: La ventaja del traspaso sin tributar puede ser más valiosa que el pequeño ahorro de costes de los ETFs.
+- **No uses futuros ni CFDs si no eres un inversor experimentado**: El apalancamiento puede multiplicar las pérdidas mucho más rápido de lo que imaginas.
+- **Compra de forma escalonada**: Hacer aportaciones periódicas en lugar de una sola inversión grande reduce el riesgo de entrar en un momento de precio máximo.
+- **Revisa el ratio oro/plata**: Si históricamente el ratio es alto (el oro está caro respecto a la plata), puede ser señal de que la plata tiene más potencial de revalorización relativa a medio plazo.
+
+---
+
+## Conclusión
+
+El oro y los metales preciosos pueden ser un complemento valioso en una cartera de inversión bien diversificada, especialmente como cobertura frente a la inflación y a las crisis financieras. Pero no son la solución mágica ni el único activo que necesitas: una cartera equilibrada, con acciones globales, renta fija y un pequeño porcentaje en activos refugio como el oro, es lo que históricamente ha generado los mejores resultados ajustados al riesgo.
+
+En España, el inversor particular tiene acceso a múltiples formas de invertir en oro, desde el físico hasta los ETFs, pasando por fondos de inversión y acciones de empresas mineras. La clave está en elegir el instrumento que mejor se adapte a tu horizonte temporal, tu nivel de conocimiento y tu situación fiscal, sin olvidar nunca que ningún activo está exento de riesgo.
+
+El oro brilla más cuando el mundo tiembla, pero una cartera que solo brilla en tiempos de crisis no está bien construida. Úsalo como lo que es: un ancla de estabilidad dentro de una estrategia más amplia.`,
+  },
+  {
     slug: "criptomonedas-y-fiscalidad-en-espana",
     title: "Criptomonedas y fiscalidad en España: cómo declarar Bitcoin y otras criptos en el IRPF",
     description: "Guía completa sobre cómo tributan las criptomonedas en España: cuándo declarar, cómo calcular las ganancias, qué modelos presentar y qué errores evitar con Hacienda.",
