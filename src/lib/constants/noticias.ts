@@ -10,6 +10,184 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-hacer-un-presupuesto-familiar",
+    title: "Cómo hacer un presupuesto familiar: guía paso a paso para controlar tus finanzas",
+    description: "Aprende a crear un presupuesto familiar eficaz en España: calcula ingresos, clasifica gastos, elige el método que mejor se adapte a ti y recupera el control de tu dinero.",
+    category: "Ahorro",
+    readingMinutes: 8,
+    publishedAt: "2026-04-26",
+    content: `## Cómo hacer un presupuesto familiar: guía paso a paso para controlar tus finanzas
+
+Más de la mitad de los hogares españoles no sabe exactamente en qué gasta su dinero cada mes. Pagan la hipoteca o el alquiler, las facturas, la compra, y al final del mes el saldo de la cuenta es menor de lo esperado sin que nadie sepa muy bien por qué. La solución no es ganar más, aunque siempre ayuda: es tener un presupuesto.
+
+Un presupuesto familiar no es una lista de restricciones ni un instrumento para vivir con agobio. Es, simplemente, un plan que te dice de antemano adónde va tu dinero para que tú decidas si estás de acuerdo con ese reparto. En este artículo te explicamos cómo construirlo desde cero, qué métodos existen y cómo mantenerlo en el tiempo sin que se convierta en una carga.
+
+---
+
+## ¿Por qué necesitas un presupuesto familiar?
+
+La respuesta más directa: porque sin un presupuesto, el dinero siempre "desaparece". Los pequeños gastos invisibles —el café diario, la suscripción que olvidaste cancelar, la compra de última hora— se acumulan y pueden representar cientos de euros al mes sin que te des cuenta.
+
+Tener un presupuesto sirve para:
+
+- **Ver la realidad**: Muchas familias se sorprenden al descubrir cuánto gastan realmente en ocio, ropa o restaurantes.
+- **Alcanzar objetivos**: Ahorrar para unas vacaciones, un coche nuevo, la entrada de un piso o el fondo de emergencia requiere planificación previa.
+- **Reducir el estrés financiero**: Saber que tienes controladas las cuentas proporciona una tranquilidad mental que tiene valor en sí misma.
+- **Evitar deudas innecesarias**: Cuando los gastos se descontrolan, aparecen los descubiertos, las tarjetas de crédito con saldo pendiente y los préstamos personales de urgencia.
+
+---
+
+## Paso 1: calcula tus ingresos netos mensuales
+
+El punto de partida de cualquier presupuesto son los ingresos. No los brutos, sino los **netos**: lo que realmente entra en tu cuenta bancaria después de impuestos y cotizaciones.
+
+Si tienes nómina, el dato está en el recibo de nómina. Si eres autónomo, necesitas hacer un promedio de los últimos seis a doce meses, ya que los ingresos pueden variar. Si hay dos ingresos en el hogar, suma ambos.
+
+Incluye también:
+- Ingresos por alquiler de propiedades.
+- Prestaciones (desempleo, bajas, ayudas públicas).
+- Otros ingresos recurrentes (pensiones de familiares que conviven, dividendos periódicos).
+
+El total es tu **base disponible mensual**. Es el número a partir del cual construyes todo lo demás.
+
+---
+
+## Paso 2: identifica y clasifica todos tus gastos
+
+Este es el paso más revelador y, para muchas familias, el más sorprendente. La forma más práctica de hacerlo es revisar los movimientos de tu cuenta bancaria y tarjetas de los últimos tres meses y agrupar cada gasto en una categoría.
+
+### Gastos fijos
+
+Son los que se repiten cada mes con el mismo importe y no dependen de tu comportamiento:
+
+- Hipoteca o alquiler
+- Cuotas de préstamos
+- Seguro del coche, del hogar, de vida
+- Cuotas de comunidad de vecinos
+- Letra del coche (si la tienes)
+
+Estos gastos son difíciles de reducir a corto plazo y forman la base inamovible del presupuesto.
+
+### Gastos variables necesarios
+
+Son gastos recurrentes pero cuyo importe cambia cada mes:
+
+- Electricidad, gas, agua
+- Teléfono e internet
+- Supermercado y alimentación
+- Transporte (gasolina, transporte público, aparcamiento)
+- Medicamentos y gastos de salud recurrentes
+
+Aquí sí tienes margen de maniobra: cambiar de tarifa energética, ajustar el consumo o hacer la compra con más planificación puede reducir estos gastos de forma significativa.
+
+### Gastos discrecionales
+
+Son los que dependen exclusivamente de tus decisiones y hábitos:
+
+- Restaurantes, bares y cafeterías
+- Ocio y entretenimiento (cine, conciertos, suscripciones)
+- Ropa y calzado
+- Viajes y vacaciones
+- Caprichos y compras impulsivas
+
+Este bloque es donde la mayoría de las familias tiene el mayor margen de ajuste sin que ello implique un cambio dramático en su calidad de vida.
+
+---
+
+## Paso 3: construye el presupuesto
+
+Una vez que tienes claros tus ingresos y gastos, la operación es sencilla: **ingresos − gastos = ahorro (o déficit)**.
+
+Si el resultado es positivo, tienes un superávit que puedes dirigir hacia el ahorro o la inversión. Si es negativo, tienes un déficit que debes corregir reduciendo gastos, aumentando ingresos o ambas cosas.
+
+La siguiente tabla muestra un ejemplo de presupuesto mensual para una familia española con ingresos netos de 3.200 €:
+
+| Categoría | Gasto mensual | % sobre ingresos |
+|---|---|---|
+| Hipoteca o alquiler | 900 € | 28,1 % |
+| Seguros | 120 € | 3,75 % |
+| Alimentación y supermercado | 450 € | 14,1 % |
+| Suministros (luz, gas, agua) | 130 € | 4,1 % |
+| Teléfono e internet | 60 € | 1,9 % |
+| Transporte | 150 € | 4,7 % |
+| Ocio y restaurantes | 200 € | 6,25 % |
+| Ropa y calzado | 80 € | 2,5 % |
+| Educación y extraescolares | 100 € | 3,1 % |
+| Gastos imprevistos | 100 € | 3,1 % |
+| **Ahorro** | **910 €** | **28,4 %** |
+| **TOTAL** | **3.200 €** | **100 %** |
+
+---
+
+## Métodos de presupuesto: ¿cuál te conviene?
+
+No existe un único método correcto. Lo importante es elegir uno que se adapte a tu forma de vida y que puedas mantener en el tiempo. Estos son los tres más populares en España:
+
+### La regla 50/30/20
+
+Es el método más sencillo y conocido. Divide tus ingresos netos en tres grandes bloques:
+
+- **50 %** para necesidades básicas (vivienda, alimentación, suministros, transporte).
+- **30 %** para deseos y ocio (restaurantes, viajes, suscripciones, caprichos).
+- **20 %** para ahorro e inversión.
+
+Es una guía flexible, ideal para quien empieza y no quiere un seguimiento demasiado detallado. Si en tu ciudad el alquiler es caro, puede que necesites ajustar las proporciones, pero la lógica de fondo es válida: gastar menos de lo que ganas y guardar al menos un 20 %.
+
+### El método del sobre
+
+Consiste en asignar a principios de mes una cantidad concreta de efectivo a cada categoría de gasto variable, literalmente en sobres físicos o virtuales. Cuando el sobre se vacía, el gasto de esa categoría está terminado hasta el mes siguiente.
+
+Es especialmente eficaz para controlar los gastos discrecionales (ocio, restaurantes, ropa). La limitación del efectivo actúa como un freno psicológico mucho más potente que ver números en una pantalla.
+
+### El presupuesto base cero
+
+En este método, asignas una función a cada euro de tus ingresos: ingresos − gastos − ahorro = 0. No significa gastar todo, sino que cada euro tiene un destino previsto (incluyendo el ahorro, que también es un destino).
+
+Es el método más preciso y el que mejor funciona para quienes tienen objetivos financieros claros o quieren maximizar el ahorro. Requiere más tiempo y disciplina, pero da el mayor control sobre las finanzas personales.
+
+---
+
+## Herramientas para gestionar el presupuesto
+
+No es necesario hacerlo a mano. En España tienes varias opciones:
+
+- **Hoja de cálculo** (Excel o Google Sheets): La opción más flexible. Puedes diseñar tu propia plantilla o descargar una gratuita online. Ideal para quienes prefieren tener el control total.
+- **Apps de finanzas personales**: Aplicaciones como Fintonic, Wallet o Money Manager permiten conectar tus cuentas bancarias y categorizar los gastos de forma automática. Fintonic es especialmente popular en España.
+- **La propia app de tu banco**: Muchos bancos españoles (BBVA, CaixaBank, ING) han incorporado herramientas de análisis de gastos dentro de su aplicación móvil que categorizan los movimientos de forma automática.
+
+---
+
+## Errores frecuentes al hacer un presupuesto familiar
+
+1. **No incluir los gastos irregulares**: El coche siempre necesita algún mantenimiento, las vacaciones se pagan en verano y el seguro anual se cobra de golpe. Divide estos gastos entre doce y resérvalos cada mes en una cuenta separada.
+2. **Ser demasiado restrictivo**: Un presupuesto que no deja margen para el ocio o los pequeños placeres es un presupuesto que no se cumple. Incluye una partida realista para el disfrute.
+3. **No revisar el presupuesto periódicamente**: La vida cambia: sube el alquiler, llega un bebé, cambia el trabajo. El presupuesto debe actualizarse al menos cada seis meses.
+4. **No contar con un fondo de emergencia**: Sin un colchón de entre tres y seis meses de gastos básicos, cualquier imprevisto (avería del coche, paro temporal) puede desestabilizar toda la economía familiar.
+5. **Olvidar las suscripciones activas**: Plataformas de streaming, gimnasio, apps de pago... Revisa tus extractos y cancela todo lo que uses poco o nada.
+
+---
+
+## Consejos prácticos para mantener el presupuesto a largo plazo
+
+- **Empieza observando, no recortando**: El primer mes, simplemente registra tus gastos sin cambiar nada. Así obtienes datos reales de tu punto de partida, no estimaciones optimistas.
+- **Automatiza el ahorro desde el primer día**: Configura una transferencia automática a una cuenta de ahorro separada el mismo día que cobras. Lo que no ves, no lo gastas. Incluso 50 € al mes marcan la diferencia a lo largo del año.
+- **Celebra los logros**: Si cumples el presupuesto un mes o alcanzas un objetivo de ahorro, reconócelo. El refuerzo positivo es clave para mantener hábitos financieros saludables.
+- **Habla del dinero en familia**: Si vives en pareja o con hijos adultos, el presupuesto debe ser una decisión compartida. Un plan que solo conoce uno de los miembros del hogar tiene muchas probabilidades de fracasar.
+- **No te desanimes si fallas un mes**: El presupuesto no es un examen que suspender. Es una herramienta que se ajusta y mejora con el tiempo. Lo importante es volver al plan, no abandonarlo.
+- **Revisa las facturas recurrentes cada año**: Seguro del coche, seguro del hogar, tarifa del teléfono, proveedor de luz y gas. En España, cambiar de proveedor o renegociar puede ahorrarte fácilmente entre 200 y 600 € anuales sin cambiar nada de tu vida cotidiana.
+- **Separa el fondo de emergencia del ahorro a largo plazo**: El primero debe estar en una cuenta líquida y accesible; el segundo, en un producto con algo de rentabilidad. Mezclarlos suele acabar con el ahorro a largo plazo siendo consumido por imprevistos.
+
+---
+
+## Conclusión
+
+Hacer un presupuesto familiar no requiere ser economista ni pasarte horas con calculadoras. Requiere honestidad: ver cuánto entra, cuánto sale y si ese reparto tiene sentido con tus objetivos vitales.
+
+El presupuesto es el primer paso de cualquier estrategia financiera seria. Sin él, hablar de inversión, de planificación para la jubilación o de ahorro para comprar una vivienda es construir sobre arena. Con él, tienes la base para tomar decisiones informadas y avanzar hacia la libertad financiera que a todos nos gustaría tener.
+
+Empieza con los datos de este mes. No hace falta que sea perfecto desde el primer día. Lo importante es empezar.`,
+  },
+  {
     slug: "inversion-en-oro-y-metales-preciosos",
     title: "Inversión en oro y metales preciosos en España: cómo, dónde y cuánto invertir",
     description: "Guía completa sobre cómo invertir en oro y metales preciosos desde España: lingotes, ETFs, fondos y acciones mineras, con su fiscalidad en el IRPF y consejos prácticos.",
