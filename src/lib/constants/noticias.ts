@@ -10,6 +10,125 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "que-es-la-inflacion-y-como-afecta-al-ahorro",
+    title: "Qué es la inflación y cómo afecta a tu ahorro: guía para proteger tu dinero en España",
+    description: "Descubre qué es la inflación, cómo erosiona el poder adquisitivo de tus ahorros y qué estrategias concretas puedes aplicar para que tu dinero no pierda valor en España.",
+    category: "Inflación",
+    readingMinutes: 8,
+    publishedAt: "2026-04-27",
+    content: `## Qué es la inflación y cómo afecta a tu ahorro
+
+¿Recuerdas cuando el café con leche costaba un euro? Hoy en muchas ciudades españolas supera los dos euros, y no es que el café sea mejor: es la inflación en acción. La inflación es, en su esencia, la subida generalizada y sostenida de los precios a lo largo del tiempo, lo que hace que con el mismo dinero puedas comprar menos cosas que antes. Para quien tiene ahorros, esto significa algo muy concreto: si tu dinero no crece al menos al mismo ritmo que la inflación, cada año eres un poco más pobre, aunque el saldo de tu cuenta bancaria sea exactamente el mismo.
+
+En España, la inflación se hizo especialmente visible a partir de 2021, cuando los precios de la energía y los alimentos se dispararon y el IPC llegó a superar el 10% en algunos meses de 2022. Aunque el dato ha moderado desde entonces, la inflación acumulada en los últimos años ha erosionado significativamente el poder adquisitivo de millones de familias españolas. Entender cómo funciona y qué puedes hacer para proteger tu dinero es hoy una necesidad, no un lujo.
+
+---
+
+## ¿Qué es exactamente la inflación?
+
+La inflación mide cuánto suben los precios de una cesta representativa de bienes y servicios a lo largo del tiempo. Cuando esos precios suben de forma generalizada y sostenida, el dinero vale menos: con 100 euros puedes comprar hoy menos cosas que hace un año.
+
+Las causas de la inflación son diversas:
+
+- **Inflación de demanda**: Se produce cuando la demanda de bienes y servicios supera a la oferta. Si hay mucho dinero en circulación y poca producción, los precios suben.
+- **Inflación de costes**: Ocurre cuando los costes de producción (energía, materias primas, salarios) aumentan y las empresas trasladan ese incremento al precio final. Es lo que ocurrió en 2021-2022 con el gas y el petróleo.
+- **Inflación importada**: Cuando los bienes importados se encarecen, bien por depreciación de la moneda o por subidas en los mercados internacionales.
+
+Lo contrario de la inflación es la **deflación** (bajada generalizada de precios), que aunque suena beneficiosa para el bolsillo, puede ser muy dañina para la economía: frena el consumo —si los precios van a bajar, ¿para qué comprar hoy?— y puede provocar recesiones prolongadas.
+
+### El IPC: el termómetro oficial de la inflación en España
+
+En España, la inflación se mide principalmente a través del **Índice de Precios al Consumo (IPC)**, elaborado mensualmente por el Instituto Nacional de Estadística (INE). El IPC recoge la evolución de los precios de una cesta compuesta por cientos de productos y servicios agrupados en categorías: alimentación y bebidas no alcohólicas, vivienda, transporte, ocio, sanidad, educación, hoteles y restaurantes, entre otras.
+
+Existe también el **IPCA** (Índice de Precios al Consumo Armonizado), que sigue una metodología común europea y permite comparar la inflación española con la del resto de países de la Unión Europea. Cuando el Banco Central Europeo fija su objetivo de inflación en el 2 %, se refiere al IPCA de la zona euro. Por encima de ese nivel, la inflación comienza a considerarse un problema para la estabilidad económica y el BCE interviene subiendo los tipos de interés.
+
+### Tu inflación personal puede ser distinta al IPC
+
+Un matiz importante: el IPC refleja la media del conjunto de la población, pero tu inflación personal puede diferir bastante. Si eres propietario de tu vivienda, te afectará menos la subida del alquiler. Si tienes coche propio, te impactará más el encarecimiento de la gasolina. Si tu cesta de la compra incluye muchos productos frescos, experimentarás más volatilidad que quien consume principalmente procesados.
+
+Por eso, a la hora de evaluar si tus ahorros están perdiendo valor, conviene pensar no solo en el IPC oficial, sino en cómo han subido realmente los precios de las cosas que tú consumes.
+
+---
+
+## Cómo destruye la inflación el valor de tu ahorro
+
+Este es el punto clave para cualquier ahorrador. Si tienes 10.000 euros en una cuenta corriente sin remuneración y la inflación es del 3 % anual, al cabo de un año tu dinero tendrá el mismo poder de compra que tendrían 9.709 euros hoy. Es decir, has "perdido" casi 300 euros en términos reales sin hacer absolutamente nada.
+
+Y el efecto se acumula. Con una inflación del 3 % sostenida durante diez años, 10.000 euros de hoy equivaldrán al poder adquisitivo de aproximadamente 7.441 euros dentro de una década. Casi un 26 % de tu capacidad de compra se habrá evaporado silenciosamente.
+
+### El rendimiento real: la clave que muchos ignoran
+
+El concepto de **rendimiento real** es fundamental para evaluar cualquier producto de ahorro o inversión:
+
+> **Rendimiento real ≈ Rendimiento nominal − Tasa de inflación**
+
+Si tu cuenta de ahorro te paga un 2 % de interés y la inflación es del 3 %, tu rendimiento real es del −1 %. Recibes intereses, pero en términos prácticos estás perdiendo poder adquisitivo de todas formas.
+
+### Tabla: impacto de la inflación en distintos escenarios de ahorro
+
+| Inflación anual | Rentabilidad del producto | Rendimiento real | ¿Pierde poder adquisitivo? |
+|----------------|--------------------------|-----------------|---------------------------|
+| 3 % | 0 % (cuenta corriente sin remunerar) | −3 % | Sí, significativamente |
+| 3 % | 2 % (cuenta remunerada) | −1 % | Sí, ligeramente |
+| 3 % | 3 % (depósito a plazo) | 0 % | Se mantiene justo |
+| 3 % | 5 % (renta variable diversificada) | +2 % | No, crece en términos reales |
+| 2 % | 4 % (cartera mixta indexada) | +2 % | No, crece en términos reales |
+
+La conclusión es clara: solo superando la tasa de inflación consigues que tu dinero crezca en términos reales.
+
+---
+
+## Qué activos protegen mejor contra la inflación
+
+No todos los activos responden igual ante la inflación. Algunos la sufren especialmente; otros actúan como refugio.
+
+### Cuentas remuneradas y depósitos a plazo
+
+Son el primer escalón y el más accesible. Desde que el Banco Central Europeo subió tipos de interés a partir de 2022, algunas entidades comenzaron a ofrecer cuentas con rentabilidades del 2 % al 3,5 % TAE. Son productos seguros, garantizados por el Fondo de Garantía de Depósitos (FGD) hasta 100.000 euros por titular y entidad. Su limitación es que en períodos de alta inflación su rentabilidad puede no ser suficiente para mantener el poder adquisitivo, y además la liquidez puede estar restringida en los depósitos a plazo.
+
+### Renta variable: acciones y fondos indexados
+
+Históricamente, la bolsa ha sido uno de los mejores refugios contra la inflación a largo plazo. Las empresas pueden trasladar la subida de costes a sus precios de venta, protegiendo sus beneficios. Un fondo indexado al IBEX-35, al Eurostoxx 50 o al S&P 500 ha ofrecido rendimientos medios anuales que superan holgadamente la inflación histórica, aunque con importante volatilidad en el corto plazo. Este tipo de inversión es adecuada para el dinero que no necesitarás en menos de cinco años.
+
+### Inmuebles
+
+La inversión inmobiliaria es el refugio antiinflación favorito del español de a pie. Los contratos de alquiler se actualizan periódicamente y el valor de los inmuebles tiende a acompañar a la inflación a largo plazo. Requiere un capital inicial elevado, tiene costes de mantenimiento, gestión y fiscalidad propios, pero sigue siendo un activo sólido para quien puede permitírselo.
+
+### Bonos ligados a la inflación
+
+El Tesoro Público español emite en ocasiones bonos cuyo principal o cupón está vinculado a la evolución del IPC. Son menos conocidos por el inversor minorista, pero suponen una cobertura directa contra la inflación. También existen fondos y ETFs a nivel europeo que invierten en este tipo de activos indexados al IPC.
+
+### Oro y materias primas
+
+El oro se considera un valor refugio clásico en entornos de alta inflación o incertidumbre económica. No genera rentas —no paga dividendos ni cupones—, pero históricamente ha preservado el poder adquisitivo a muy largo plazo. Las materias primas como el petróleo o los metales industriales también tienden a subir en entornos inflacionistas, ya que forman parte directa de los costes de producción.
+
+---
+
+## La inflación y el crédito: cuándo deber puede ser ventajoso
+
+Este es un aspecto contraintuitivo pero importante: si tienes una hipoteca a tipo fijo y la inflación sube, tu deuda se "abarata" en términos reales. Debes la misma cantidad nominal, pero esa cantidad representa menos poder adquisitivo en términos reales. Por eso los deudores a tipo fijo se benefician relativamente de la inflación, mientras que los ahorradores en activos sin rendimiento salen perjudicados.
+
+Es también la razón por la que los bancos centrales suben los tipos de interés cuando la inflación se dispara: al encarecer el crédito, reducen el consumo y la inversión, frenando la presión sobre los precios.
+
+---
+
+## Consejos prácticos para proteger tu ahorro de la inflación
+
+1. **Evita dejar dinero parado en cuentas sin remuneración.** Si tu banco no te paga intereses, busca una cuenta remunerada o un depósito a plazo. La competencia entre entidades es real y hay opciones atractivas en el mercado español.
+
+2. **Piensa siempre en rendimiento real, no nominal.** Antes de contratar cualquier producto financiero, descuenta mentalmente la inflación prevista para saber si realmente tu dinero va a crecer o a encogerse.
+
+3. **Diversifica según tu horizonte temporal.** Para el dinero que no necesitarás en menos de cinco años, la renta variable indexada es una opción sólida. Para el fondo de emergencia, prioriza liquidez y seguridad aunque el rendimiento sea menor.
+
+4. **Automatiza el ahorro e invierte cuanto antes.** El tiempo es el aliado del inversor: cuanto antes esté tu dinero trabajando, más años tiene para compensar la inflación y crecer en términos reales gracias al efecto del interés compuesto.
+
+5. **Revisa tu presupuesto anualmente.** Si los precios suben un 3 %, tus gastos fijos también aumentarán. Ajusta tu planificación financiera al inicio de cada año para no llevarte sorpresas desagradables a final de mes.
+
+6. **Desconfía de los productos garantizados a muy largo plazo con baja rentabilidad.** Algunos seguros de ahorro o productos estructurados garantizan el capital nominal a 10 o 15 años, pero si la rentabilidad es inferior a la inflación acumulada en ese período, habrás perdido poder adquisitivo a pesar de recuperar el nominal.
+
+La inflación es silenciosa pero constante. No hace ruido ni aparece en el extracto bancario como una línea de gastos, pero erosiona el valor de tu dinero año tras año. Conocerla, medirla y actuar en consecuencia es el primer paso para que tu ahorro trabaje realmente para ti, y no al revés.`,
+  },
+  {
     slug: "como-hacer-un-presupuesto-familiar",
     title: "Cómo hacer un presupuesto familiar: guía paso a paso para controlar tus finanzas",
     description: "Aprende a crear un presupuesto familiar eficaz en España: calcula ingresos, clasifica gastos, elige el método que mejor se adapte a ti y recupera el control de tu dinero.",
