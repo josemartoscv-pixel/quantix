@@ -129,6 +129,179 @@ Es también la razón por la que los bancos centrales suben los tipos de interé
 La inflación es silenciosa pero constante. No hace ruido ni aparece en el extracto bancario como una línea de gastos, pero erosiona el valor de tu dinero año tras año. Conocerla, medirla y actuar en consecuencia es el primer paso para que tu ahorro trabaje realmente para ti, y no al revés.`,
   },
   {
+    slug: "seguros-del-hogar-que-cubren",
+    title: "Seguros del hogar: qué cubren y qué no (y cómo elegir el mejor)",
+    description: "Descubre qué cubre realmente un seguro del hogar en España, qué queda excluido y cómo elegir la póliza que mejor se adapta a tus necesidades sin pagar de más.",
+    category: "Seguros",
+    readingMinutes: 9,
+    publishedAt: "2026-04-28",
+    content: `## Seguros del hogar: qué cubren y qué no (y cómo elegir el mejor)
+
+El seguro del hogar es uno de los contratos más comunes en España y, paradójicamente, uno de los menos comprendidos. Según datos del sector asegurador, más del 70 % de los hogares españoles tiene contratada alguna forma de seguro para su vivienda. Sin embargo, la mayoría de los asegurados descubre lo que realmente cubre su póliza solo cuando sufren un siniestro, y entonces es cuando llegan las sorpresas desagradables.
+
+En este artículo te explicamos de forma clara y sin tecnicismos qué cubre un seguro del hogar estándar, qué queda habitualmente excluido, cuánto puedes esperar pagar y qué debes mirar antes de contratar o renovar tu póliza.
+
+---
+
+## ¿Qué es exactamente un seguro del hogar?
+
+Un seguro del hogar es un contrato entre tú y una compañía aseguradora por el que esta se compromete a indemnizarte o a reparar los daños que sufra tu vivienda —y su contenido— ante una serie de riesgos previamente acordados. A cambio, tú pagas una prima, que puede abonarse de forma anual o fraccionada.
+
+La póliza se estructura habitualmente en dos grandes bloques:
+
+- **Continente**: la estructura física del inmueble, es decir, paredes, suelo, techo, escaleras, instalaciones de fontanería, electricidad y calefacción fijas.
+- **Contenido**: todos los bienes muebles que hay dentro de la vivienda: muebles, electrodomésticos, ropa, joyas, equipos electrónicos, etc.
+
+Si eres **propietario**, te interesa asegurar tanto el continente como el contenido. Si eres **inquilino**, en la mayoría de los casos solo necesitas cubrir el contenido, ya que la responsabilidad sobre la estructura del edificio recae sobre el propietario.
+
+---
+
+## ¿Qué cubre un seguro del hogar?
+
+Las coberturas varían según la póliza y la aseguradora, pero estas son las más frecuentes en el mercado español:
+
+### Incendio y daños por fuego
+
+Cubre los daños materiales causados por incendios, explosiones, impacto de rayos e incluso los producidos por el humo generado durante el siniestro. Es una cobertura básica presente en prácticamente todas las pólizas del mercado.
+
+### Daños por agua
+
+Es, con diferencia, la cobertura más reclamada en España. Incluye daños causados por roturas de tuberías, desbordamientos de electrodomésticos (lavadoras, lavavajillas), filtraciones procedentes de la vivienda de arriba o de la azotea del propio edificio. Muchas pólizas también cubren los gastos de localización y reparación de la avería.
+
+**Importante**: los daños causados por lluvia intensa, inundación por desbordamiento de ríos o riadas no suelen cubrirlos las aseguradoras privadas, sino el **Consorcio de Compensación de Seguros**, el organismo público español que actúa en situaciones de catástrofe natural.
+
+### Robo y vandalismo
+
+Cubre el robo de objetos dentro del hogar, así como los daños materiales que los ladrones puedan causar al entrar o salir de la vivienda. Algunas pólizas amplían esta cobertura al robo fuera del hogar (por ejemplo, el robo del bolso en la calle), aunque con límites de indemnización más reducidos.
+
+### Responsabilidad civil
+
+Si causas daños materiales o personales a terceros —vecinos, visitas, transeúntes— esta cobertura los indemniza en tu nombre. Es una de las más importantes y su ausencia puede acarrear consecuencias económicas muy graves. Imagina que una tubería de tu piso se rompe durante las vacaciones y aneas el piso de abajo: la responsabilidad civil del hogar es quien paga.
+
+### Daños eléctricos
+
+Cubre las averías en electrodomésticos y equipos producidas por variaciones de tensión, cortocircuitos o fallos en la red eléctrica. Resulta especialmente útil en zonas con suministro eléctrico inestable o tras tormentas.
+
+### Fenómenos atmosféricos
+
+Cubre daños causados por viento fuerte, pedrisco o el peso de la nieve sobre la cubierta del edificio. Ojo: los fenómenos extraordinarios (tornados, terremotos, inundaciones catastróficas) son competencia del Consorcio de Compensación de Seguros.
+
+### Asistencia en el hogar 24 horas
+
+Muchas pólizas de nivel medio y alto incluyen servicios de urgencia: fontanero, electricista, cerrajero, cristalero o incluso gasista disponibles cualquier día del año. Esta cobertura es especialmente valorada y puede ahorrarte cientos de euros ante una emergencia.
+
+---
+
+## ¿Qué NO cubre un seguro del hogar?
+
+Aquí es donde la mayoría de los asegurados se lleva las mayores sorpresas. Estas son las exclusiones más comunes:
+
+### Deterioro por falta de mantenimiento
+
+El seguro cubre siniestros imprevistos, no el desgaste natural ni la dejadez. Si la gotera existe porque no has mantenido la cubierta o la terraza en buen estado durante años, la aseguradora puede denegar la indemnización alegando falta de mantenimiento.
+
+### Daños preexistentes
+
+Los daños que ya existían antes de contratar la póliza nunca estarán cubiertos. Es fundamental revisar el estado de la vivienda antes de suscribir un seguro.
+
+### Inundaciones por lluvia o crecidas de ríos
+
+Como se ha mencionado, estos eventos los cubre el Consorcio de Compensación de Seguros, no la aseguradora privada. Eso sí, para tener derecho a esta cobertura pública debes estar al corriente de pago de tu prima privada.
+
+### Objetos de alto valor no declarados
+
+Joyas, obras de arte, instrumentos musicales, equipos fotográficos profesionales o colecciones de valor deben declararse de forma específica en la póliza. Si no los has incluido, la indemnización quedará limitada al máximo genérico del contenido, que puede ser muy inferior a su valor real.
+
+### Daños causados intencionalmente
+
+Si se demuestra que el siniestro fue provocado deliberadamente por el asegurado o por alguien de su confianza, la cobertura queda completamente anulada.
+
+---
+
+## Comparativa de coberturas según tipo de póliza
+
+| Cobertura | Póliza básica | Póliza estándar | Póliza premium |
+|---|---|---|---|
+| Incendio y explosión | ✅ | ✅ | ✅ |
+| Daños por agua | ✅ | ✅ | ✅ |
+| Responsabilidad civil | ✅ | ✅ | ✅ |
+| Robo en el hogar | ❌ | ✅ | ✅ |
+| Daños eléctricos | ❌ | ✅ | ✅ |
+| Asistencia 24h | ❌ | ✅ | ✅ |
+| Robo fuera del hogar | ❌ | ❌ | ✅ |
+| Objetos de valor declarados | ❌ | Parcial | ✅ |
+| Defensa jurídica | ❌ | ❌ | ✅ |
+
+---
+
+## ¿Cuánto cuesta un seguro del hogar en España?
+
+El precio varía significativamente según la ubicación de la vivienda, su tamaño, el valor declarado del contenido y las coberturas incluidas. Como orientación:
+
+- **Póliza básica** para un piso de unos 90 m²: entre 150 y 250 euros al año.
+- **Póliza estándar** con coberturas ampliadas: entre 250 y 400 euros anuales.
+- **Póliza premium** con todas las coberturas: puede superar los 400-500 euros anuales.
+
+Si tienes una hipoteca, tu banco probablemente te ofreció —o incluso condicionó el préstamo a— contratar un seguro del hogar con ellos. Es importante saber que la ley española te permite contratar el seguro con cualquier aseguradora del mercado, no solo con la vinculada al banco. El banco no puede penalizarte por ello, aunque sí puede ajustar alguna bonificación en el tipo de interés.
+
+---
+
+## Cómo elegir el mejor seguro del hogar
+
+### 1. Define qué necesitas cubrir
+
+¿Eres propietario o inquilino? ¿Tienes joyas u objetos de valor? ¿Vives en una zona con historial de robos o en una planta baja? Tus respuestas determinan qué coberturas son imprescindibles y cuáles son prescindibles.
+
+### 2. Declara correctamente los valores
+
+Uno de los errores más habituales es **infraasegurar** la vivienda, es decir, declarar un valor del continente o del contenido inferior al real para pagar una prima más baja. Si ocurre un siniestro total, la indemnización no cubrirá el coste real de reposición. Muchas aseguradoras ofrecen herramientas de valoración en su web.
+
+### 3. Compara antes de firmar
+
+Plataformas comparadoras te permiten obtener presupuestos de varias aseguradoras en minutos. También puedes acudir a un corredor de seguros independiente, que trabaja para ti —no para la compañía— y puede negociar mejores condiciones.
+
+### 4. Lee las condiciones generales, especialmente las exclusiones
+
+Es la parte que menos gente lee y la que más importa cuando llega un siniestro. Presta atención a los límites de indemnización por categoría de bienes y a las causas de exclusión o reducción de la cobertura.
+
+### 5. Revisa la franquicia
+
+Algunas pólizas incluyen una **franquicia**: una cantidad que asumes tú antes de que la aseguradora empiece a pagar. Una franquicia de 150 euros significa que si el siniestro cuesta 300 euros, la aseguradora solo te abona 150. A mayor franquicia, menor prima mensual.
+
+### 6. Revisa el seguro cada año en la renovación
+
+La renovación automática es cómoda, pero puede costarte dinero. Cada año, antes de que se renueve, dedica 20 minutos a comparar tu cobertura actual con otras opciones del mercado.
+
+---
+
+## ¿Es obligatorio el seguro del hogar en España?
+
+No existe una obligación legal general de contratar un seguro del hogar. Sin embargo, en la práctica existen situaciones en las que es casi inevitable:
+
+- Si tienes una **hipoteca**, la entidad financiera puede exigirte un seguro de daños sobre el continente como condición del préstamo, aunque no puede obligarte a contratarlo con su propia aseguradora.
+- Muchas **comunidades de propietarios** establecen en sus estatutos que cada piso debe disponer de responsabilidad civil mínima.
+- Algunos **contratos de alquiler** incluyen la obligación para el inquilino de suscribir un seguro de contenido.
+
+---
+
+## Consejos prácticos para sacarle el máximo partido
+
+1. **Guarda la póliza y los teléfonos de asistencia** en un lugar accesible desde el móvil. En plena emergencia no es el momento de buscar documentación.
+2. **Fotografía o graba en vídeo el contenido de tu hogar** periódicamente y guarda las imágenes en la nube. Si sufres un robo o incendio, tendrás pruebas del valor real de tus bienes.
+3. **Notifica los siniestros de inmediato**: la mayoría de pólizas establecen un plazo —habitualmente siete días hábiles— para comunicar el siniestro. Superar ese plazo puede comprometer la indemnización.
+4. **No retires nada antes de que el perito lo inspeccione**. Si tiras electrodomésticos dañados o limpias escombros antes de la visita del perito, dificultas la valoración del siniestro.
+5. **Negocia en la renovación**: si llevas varios años sin siniestros, pide a tu aseguradora un descuento por buena siniestralidad o busca alternativas en el mercado.
+6. **Evita duplicidades**: algunas tarjetas de crédito premium o seguros de vida incluyen coberturas parciales del hogar. Comprueba si ya estás cubierto en alguno de estos aspectos para no pagar dos veces.
+
+---
+
+## Conclusión
+
+El seguro del hogar es una de las herramientas de protección financiera más asequibles y con mayor impacto en la tranquilidad cotidiana de las familias españolas. Sin embargo, no todos los seguros son iguales, y contratar el primero que te ofrecen —especialmente si viene de la mano de tu banco— puede dejarte con coberturas insuficientes o con un precio muy por encima del mercado.
+
+Dedica tiempo a entender tu póliza, declara correctamente los valores asegurados y compara alternativas al menos una vez al año. Un buen seguro del hogar no es el más barato ni el más caro: es el que cubre exactamente lo que tú necesitas, sin sorpresas cuando más lo necesitas.`,
+  },
+  {
     slug: "como-hacer-un-presupuesto-familiar",
     title: "Cómo hacer un presupuesto familiar: guía paso a paso para controlar tus finanzas",
     description: "Aprende a crear un presupuesto familiar eficaz en España: calcula ingresos, clasifica gastos, elige el método que mejor se adapte a ti y recupera el control de tu dinero.",
