@@ -10,6 +10,147 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-invertir-con-poco-dinero",
+    title: "Cómo invertir con poco dinero en España: guía para empezar desde cero",
+    description: "Descubre cómo empezar a invertir en España aunque solo tengas 50 euros al mes: fondos indexados, ETFs, roboadvisors y los errores que debes evitar como principiante.",
+    category: "Inversión",
+    readingMinutes: 9,
+    publishedAt: "2026-04-29",
+    content: `## Cómo invertir con poco dinero en España: guía para empezar desde cero
+
+Muchas personas creen que invertir es algo reservado para quienes tienen grandes fortunas o conocimientos financieros avanzados. Nada más lejos de la realidad. Hoy en día, con tan solo 50 euros al mes, cualquier persona en España puede comenzar a construir un patrimonio financiero real. La clave no está en el importe inicial, sino en la constancia, el tiempo y elegir los instrumentos adecuados a tu perfil.
+
+En esta guía te explicamos paso a paso cómo puedes empezar a invertir con poco dinero, qué opciones tienes disponibles en España, qué riesgos debes considerar y qué errores evitar si eres principiante.
+
+---
+
+## Por qué es importante invertir aunque solo tengas poco dinero
+
+El mayor enemigo de los ahorros que no se invierten es la inflación. Si tu dinero está quieto en una cuenta corriente y los precios suben un 3 % al año, cada año tienes un 3 % menos de poder adquisitivo. En diez años, habrás perdido aproximadamente un cuarto del valor real de tu dinero, sin hacer absolutamente nada.
+
+Invertir no es una opción exclusiva de ricos: es una necesidad para cualquiera que quiera que su dinero trabaje para él. Y gracias a la democratización de las finanzas y a las plataformas digitales disponibles hoy en España, la barrera de entrada es mínima.
+
+### El poder del tiempo: el aliado más valioso del pequeño inversor
+
+Cuando empiezas a invertir con poco dinero, el tiempo es tu mayor activo. Gracias al **interés compuesto**, los rendimientos que generas cada año se reinvierten y generan a su vez nuevos rendimientos. El resultado es un crecimiento exponencial que premia a quienes empiezan pronto, aunque sea con cantidades modestas.
+
+**Ejemplo concreto**: Si inviertes 100 euros al mes durante 30 años con una rentabilidad media anual del 7 % (aproximadamente la rentabilidad histórica de la bolsa mundial), al final tendrás más de 120.000 euros. Si esperas 10 años más para empezar e inviertes los mismos 100 euros durante solo 20 años, tendrás poco más de 52.000 euros. La diferencia no la marca el dinero aportado: la marca el tiempo que le das a tu inversión para crecer.
+
+---
+
+## Opciones para invertir con poco dinero en España
+
+### 1. Fondos indexados
+
+Los **fondos indexados** replican el comportamiento de un índice bursátil —como el MSCI World, que recoge las mayores empresas del mundo— a un coste muy bajo. Son perfectos para el inversor principiante porque no requieren conocimientos avanzados, sus comisiones son muy reducidas (a menudo por debajo del 0,2 % anual) y ofrecen diversificación automática en cientos o miles de empresas. En muchas plataformas puedes empezar con aportaciones desde 1 euro.
+
+En España puedes acceder a fondos indexados a través de gestoras como **Indexa Capital**, **Finizens** o **MyInvestor**.
+
+### 2. ETFs (Fondos cotizados)
+
+Los **ETFs** (Exchange Traded Funds) funcionan de forma similar a los fondos indexados, pero se compran y venden en bolsa como si fueran acciones ordinarias. Son igualmente baratos y diversificados. La diferencia principal con los fondos indexados es que los ETFs cotizan en tiempo real, mientras que los fondos indexados se valoran una vez al día.
+
+Una desventaja fiscal importante: a diferencia de los fondos de inversión tradicionales, los ETFs no permiten el traspaso entre fondos sin tributar en España. Cada vez que vendes un ETF para comprar otro, debes tributar por la ganancia obtenida.
+
+Puedes comprar ETFs a través de brókers como **DEGIRO**, **Interactive Brokers** o **Trade Republic**.
+
+### 3. Roboadvisors
+
+Un **roboadvisor** es una plataforma digital que construye y gestiona automáticamente una cartera de inversión para ti en función de tu perfil de riesgo. Es ideal si no quieres ocuparte de nada: tú defines cuánto riesgo estás dispuesto a asumir, aportas dinero periódicamente y el sistema se encarga del resto: rebalancear la cartera, reinvertir dividendos y optimizar costes.
+
+En España, los más conocidos son **Indexa Capital** y **Finizens**. Sus comisiones totales rondan el 0,4-0,6 % anual, lo que es razonable a cambio de una gestión totalmente automatizada.
+
+### 4. Depósitos a plazo fijo y cuentas remuneradas
+
+Si eres muy conservador o estás construyendo tu fondo de emergencia, los **depósitos a plazo fijo** y las **cuentas remuneradas** son una opción segura. Aunque la rentabilidad es menor que en la bolsa, están garantizados hasta 100.000 euros por el **Fondo de Garantía de Depósitos (FGD)**. Tras la subida de tipos del BCE, algunos bancos llegaron a ofrecer depósitos al 3-4 % TAE. Los niveles han moderado desde entonces, pero siguen siendo válidos para el dinero que no quieres arriesgar.
+
+### 5. Letras del Tesoro
+
+Desde 2022, las **Letras del Tesoro** volvieron a ser una alternativa interesante para el ahorrador español. Se trata de deuda pública a corto plazo (3, 6 y 12 meses) emitida por el Estado español. Puedes comprarlas directamente a través del Tesoro Público con una inversión mínima de 1.000 euros. Son muy seguras y han llegado a ofrecer rentabilidades cercanas al 4 % TAE en los últimos años.
+
+### 6. Planes de pensiones
+
+Los **planes de pensiones** son un vehículo de inversión a largo plazo con una ventaja fiscal notable: las aportaciones reducen la base imponible del IRPF hasta 1.500 euros anuales. Sin embargo, el dinero queda bloqueado hasta la jubilación, salvo en casos excepcionales como desempleo de larga duración, invalidez grave o enfermedad grave. Son especialmente interesantes para quienes están en tramos altos del IRPF.
+
+---
+
+## Comparativa de opciones para el pequeño inversor
+
+| Producto | Inversión mínima | Riesgo | Rentabilidad esperada | Liquidez | Ventaja fiscal |
+|----------|-----------------|--------|----------------------|----------|----------------|
+| Fondo indexado | Desde 1 € | Medio | 5-8 % anual (largo plazo) | Alta | Traspaso sin tributar |
+| ETF | 1 acción (~5-100 €) | Medio | 5-8 % anual (largo plazo) | Alta | Ninguna especial |
+| Roboadvisor | 0-1.000 € | Medio | 4-7 % anual (largo plazo) | Alta | Traspaso sin tributar |
+| Depósito a plazo | 1.000 € | Muy bajo | 1-3 % TAE | Baja | Ninguna |
+| Letras del Tesoro | 1.000 € | Muy bajo | 1-3 % TAE | Media | Ninguna |
+| Plan de pensiones | Desde 30 € | Variable | Variable | Muy baja | Deducción en IRPF |
+
+---
+
+## Errores comunes del inversor principiante
+
+### Esperar a tener "suficiente" dinero
+
+El error más frecuente es pensar que hay que esperar a tener una cantidad importante antes de empezar. Como hemos visto, el tiempo es el activo más valioso del inversor. Empezar hoy con 50 euros es infinitamente mejor que esperar a tener 5.000 euros dentro de tres años.
+
+### Invertir sin fondo de emergencia
+
+Antes de invertir, debes tener un **fondo de emergencia** equivalente a entre 3 y 6 meses de tus gastos fijos. Este dinero debe estar en un lugar seguro y líquido —cuenta remunerada o similar—, no en bolsa. Si no tienes este colchón y surge un imprevisto, podrías verte obligado a vender tus inversiones en el peor momento y materializar pérdidas.
+
+### Reaccionar a las caídas del mercado
+
+La bolsa sube y baja constantemente. Los mercados caen en media un 10 % cada año en algún momento, y un 20 % o más en las recesiones. La tentación de vender cuando la cartera cae es uno de los mayores destructores de rentabilidad para el pequeño inversor. El inversor paciente que mantiene su estrategia a largo plazo siempre ha salido ganando históricamente.
+
+### No diversificar
+
+No pongas todos los huevos en la misma cesta. Un fondo indexado que replica el mercado mundial ya ofrece diversificación en miles de empresas de decenas de países. Apostar todo a una sola acción, un sector concreto o un activo de moda es especulación, no inversión.
+
+### Fijarse en la rentabilidad pasada reciente
+
+Que un fondo haya subido un 40 % el año pasado no significa que vaya a repetirlo. De hecho, los activos que más suben en un año suelen hacerlo peor en el siguiente. Elige tus inversiones basándote en la solidez de la estrategia a largo plazo, no en los resultados recientes.
+
+---
+
+## Cómo empezar: pasos concretos
+
+1. **Calcula cuánto puedes ahorrar cada mes** sin comprometer tus gastos esenciales ni tu calidad de vida.
+2. **Construye tu fondo de emergencia** si aún no lo tienes (equivalente a 3-6 meses de gastos fijos).
+3. **Define tu horizonte temporal y tolerancia al riesgo**: ¿Cuándo necesitarás el dinero? ¿Podrías soportar ver tu cartera caer un 30 % sin entrar en pánico?
+4. **Elige un producto adecuado a tu perfil**: Si eres principiante y tienes un horizonte de más de 10 años, un fondo indexado global o un roboadvisor es probablemente tu mejor punto de partida.
+5. **Configura aportaciones automáticas**: Automatizar la inversión elimina la tentación de gastar ese dinero y te libera de tomar decisiones emocionales cada mes.
+6. **No toques la inversión innecesariamente**: Revisa tu cartera una vez al año como máximo y no te obsesiones con las fluctuaciones diarias.
+
+---
+
+## Fiscalidad de las inversiones en España
+
+Las ganancias obtenidas de inversiones tributan en la **base del ahorro del IRPF**. En 2026, los tramos son los siguientes:
+
+- Hasta 6.000 €: 19 %
+- De 6.000 € a 50.000 €: 21 %
+- De 50.000 € a 200.000 €: 23 %
+- Más de 200.000 €: 27 %
+
+Una ventaja importante de los fondos de inversión tradicionales frente a los ETFs: puedes traspasar dinero de un fondo a otro **sin tributar en el momento del traspaso**. Solo pagas impuestos cuando retiras el dinero definitivamente. Esto te permite rebalancear tu cartera o cambiar de estrategia sin coste fiscal inmediato.
+
+---
+
+## Consejos prácticos para el pequeño inversor español
+
+- **Empieza ya, aunque sea con poco**: 50 euros al mes durante 25 años pueden convertirse en una cifra significativa gracias al interés compuesto.
+- **Automatiza las aportaciones**: Configura una transferencia automática el día que cobras. Lo que no ves, no lo gastas.
+- **Elige productos con comisiones bajas**: Una diferencia del 1 % en comisiones puede suponer decenas de miles de euros menos al cabo de 30 años.
+- **No sigas consejos de redes sociales**: Las modas de inversión en redes sociales suelen llegar tarde y con frecuencia son pura especulación.
+- **Planifica los reembolsos fiscalmente**: Retirar en años en que tus ingresos son más bajos puede reducir tu factura fiscal significativamente.
+- **Ten paciencia**: La inversión es un maratón, no un sprint. Los mejores resultados llegan con años, no con semanas.
+
+---
+
+## Conclusión
+
+Invertir con poco dinero en España es perfectamente posible y, de hecho, es una de las mejores decisiones financieras que puedes tomar hoy si aún no lo haces. Los fondos indexados, los ETFs y los roboadvisors han democratizado el acceso a la inversión, eliminando las barreras de entrada que existían hace apenas dos décadas. Lo más importante no es cuánto inviertes al principio, sino cuándo empiezas y la constancia con la que mantienes el hábito. El tiempo y el interés compuesto harán el resto.`,
+  },
+  {
     slug: "que-es-la-inflacion-y-como-afecta-al-ahorro",
     title: "Qué es la inflación y cómo afecta a tu ahorro: guía para proteger tu dinero en España",
     description: "Descubre qué es la inflación, cómo erosiona el poder adquisitivo de tus ahorros y qué estrategias concretas puedes aplicar para que tu dinero no pierda valor en España.",
