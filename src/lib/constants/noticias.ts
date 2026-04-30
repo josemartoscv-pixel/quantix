@@ -10,6 +10,129 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "irpf-para-autonomos",
+    title: "IRPF para autónomos en España: pagos trimestrales, gastos deducibles y consejos fiscales",
+    description: "Todo lo que necesita saber un autónomo sobre el IRPF: modelo 130, gastos deducibles, tramos del impuesto y estrategias legales para pagar menos en la declaración de la renta.",
+    category: "Fiscalidad",
+    readingMinutes: 8,
+    publishedAt: "2026-04-30",
+    content: `## IRPF para autónomos en España: todo lo que necesitas saber
+
+Ser autónomo en España tiene muchas ventajas: libertad, flexibilidad y la posibilidad de gestionar tu propio negocio. Pero también implica hacerse cargo de obligaciones fiscales que los trabajadores por cuenta ajena no tienen que gestionar directamente. Una de las más importantes es el IRPF (Impuesto sobre la Renta de las Personas Físicas). Si eres autónomo, el IRPF te afecta de forma directa y periódica, no solo en la declaración de la renta anual de primavera.
+
+En esta guía explicamos de forma clara cómo funciona el IRPF si eres autónomo en España, qué gastos puedes deducirte, cómo funcionan los pagos fraccionados trimestrales y qué estrategias puedes aplicar para pagar menos dentro de la legalidad.
+
+---
+
+## Diferencias entre el IRPF del empleado y el del autónomo
+
+El empleado por cuenta ajena no tiene que preocuparse demasiado por el IRPF durante el año: su empresa le retiene automáticamente una parte de su nómina cada mes y lo ingresa en Hacienda en su nombre. Al llegar la campaña de la renta, simplemente confirma o corrige el borrador que le ofrece la Agencia Tributaria.
+
+El autónomo, en cambio, tiene una relación mucho más activa con el IRPF. Debe:
+
+1. **Calcular y declarar sus rendimientos** de actividad económica.
+2. **Realizar pagos fraccionados trimestrales** a Hacienda, a menos que apliquen retenciones en la práctica totalidad de sus facturas.
+3. **Presentar la declaración de la renta anual**, integrando todos sus ingresos y gastos del ejercicio.
+
+Además, si el autónomo emite facturas a empresas o profesionales españoles, en muchos casos debe aplicar una **retención del 15 %** (o del 7 % durante los primeros tres años de actividad si se dan las condiciones). Esas retenciones son un anticipo del IRPF que el cliente ingresa en Hacienda en nombre del autónomo.
+
+---
+
+## Los pagos fraccionados: el modelo 130
+
+Si eres autónomo en **estimación directa** —ya sea en la modalidad normal o simplificada—, estás obligado a presentar trimestralmente el **modelo 130** para realizar pagos fraccionados del IRPF, salvo que más del 70 % de tus ingresos estén sujetos a retención por parte de quien te paga.
+
+El modelo 130 se presenta cuatro veces al año:
+
+| Trimestre | Período | Plazo de presentación |
+|-----------|---------|----------------------|
+| 1.er trimestre | Enero – marzo | 1 al 20 de abril |
+| 2.º trimestre | Abril – junio | 1 al 20 de julio |
+| 3.er trimestre | Julio – septiembre | 1 al 20 de octubre |
+| 4.º trimestre | Octubre – diciembre | 1 al 30 de enero |
+
+El cálculo es sencillo: se toma el **rendimiento neto acumulado** (ingresos menos gastos deducibles) desde el 1 de enero hasta el final del trimestre, se aplica el **20 %** y se restan los pagos fraccionados ya realizados en trimestres anteriores y las retenciones soportadas.
+
+Si el resultado es negativo o cero, el modelo sale a cero y no hay que pagar nada ese trimestre. Si es positivo, debes ingresarlo en Hacienda antes de que venza el plazo.
+
+### Autónomos en módulos (estimación objetiva)
+
+Los autónomos en **estimación objetiva** (también llamada régimen de módulos) no usan el modelo 130, sino el **modelo 131**. En este régimen el rendimiento no se calcula a partir de ingresos y gastos reales, sino mediante unos índices fijados por Hacienda en función del tipo de actividad, el número de trabajadores, los metros cuadrados del local u otros parámetros objetivos.
+
+---
+
+## Gastos deducibles para autónomos
+
+Una de las claves para reducir la factura del IRPF es conocer bien qué gastos puedes deducirte. La regla general es que solo son deducibles los gastos **vinculados directamente a la actividad económica**, que sean reales y estén justificados con facturas o documentos válidos.
+
+### Principales gastos deducibles en estimación directa
+
+| Tipo de gasto | Condiciones principales |
+|--------------|------------------------|
+| Cuotas de autónomos al RETA | Deducibles al 100 % |
+| Alquiler del local de negocio | El local debe estar exclusivamente dedicado a la actividad |
+| Suministros del local (luz, agua, internet) | Solo la parte afecta a la actividad |
+| Sueldos y salarios de empleados | Con contratos y cotizaciones formalizadas |
+| Compras de materiales y mercancías | Deben ser necesarias para la actividad |
+| Amortizaciones de equipos y maquinaria | Según tablas de amortización de Hacienda |
+| Asesoría y gestoría | Honorarios por servicios profesionales |
+| Publicidad y marketing | Facturas de agencias, redes sociales, diseño, etc. |
+| Seguros del negocio | Responsabilidad civil, multirriesgo, etc. |
+| Gastos de formación | Directamente relacionados con la actividad ejercida |
+| Dietas y desplazamientos | 26,67 €/día en España; 48,08 €/día en el extranjero |
+
+### El caso especial del despacho en casa
+
+Si trabajas desde tu domicilio, puedes deducir una parte proporcional de los suministros del hogar (luz, agua, gas, internet). La fórmula que aplica Hacienda es: el porcentaje de la vivienda dedicado a la actividad multiplicado por el 30 %. Así, si el despacho ocupa el 15 % de la casa, el porcentaje deducible de los suministros será el 4,5 % (15 % × 30 %).
+
+Este punto genera mucha confusión: no puedes deducir el 100 % de la factura del internet de casa porque uses el ordenador para trabajar. Solo se deduce la proporción que resulta de aplicar esa fórmula.
+
+---
+
+## Tramos del IRPF en 2026
+
+El IRPF en España es un impuesto progresivo: cuanto más ganas, mayor es el porcentaje que se aplica sobre los tramos superiores de renta. Los tipos son la suma del tramo estatal y el tramo autonómico, por lo que varían ligeramente según tu comunidad autónoma. A nivel orientativo, los tramos generales son:
+
+| Base liquidable | Tipo marginal aproximado |
+|-----------------|--------------------------|
+| Hasta 12.450 € | 19 % |
+| De 12.450 € a 20.200 € | 24 % |
+| De 20.200 € a 35.200 € | 30 % |
+| De 35.200 € a 60.000 € | 37 % |
+| De 60.000 € a 300.000 € | 45 % |
+| Más de 300.000 € | 47 % |
+
+Recuerda que el IRPF funciona por tramos acumulados: si ganas 25.000 €, no pagas el 30 % sobre toda tu renta. Pagas el 19 % hasta 12.450 €, el 24 % sobre el tramo siguiente hasta 20.200 € y el 30 % solo por los 4.800 € restantes. Eso significa que el tipo efectivo (lo que realmente pagas de media sobre tus ingresos totales) es siempre inferior al tipo marginal.
+
+---
+
+## La declaración de la renta del autónomo
+
+Una vez al año, en la campaña de la renta (habitualmente entre abril y junio), debes presentar tu declaración del IRPF completa. En ella integras todos los rendimientos del año: los de tu actividad económica, pero también rendimientos del capital mobiliario (dividendos, intereses), rendimientos del capital inmobiliario (alquileres) o ganancias patrimoniales (venta de fondos de inversión, inmuebles, etc.).
+
+El **borrador** que ofrece la Agencia Tributaria puede estar incompleto si tienes actividad económica, ya que Hacienda no siempre dispone de todos los datos de tu contabilidad. Revisa siempre que los datos de tus ingresos y gastos coincidan con el **Libro de ingresos y gastos** que estás obligado a llevar como autónomo en estimación directa.
+
+La diferencia entre lo que ya has pagado durante el año —mediante los pagos fraccionados del modelo 130 y las retenciones que te han practicado tus clientes— y lo que resulta de la liquidación final determina si la renta te **sale a pagar** o **a devolver**.
+
+---
+
+## Consejos prácticos para autónomos y el IRPF
+
+- **Lleva un registro actualizado** de todos tus ingresos y gastos desde el primer día del año. Intentar reconstruir el ejercicio en junio con facturas dispersas es mucho más difícil y aumenta el riesgo de errores.
+
+- **Guarda todas las facturas**, tanto las que emites como las que recibes. La Agencia Tributaria puede revisarlas durante los cuatro años siguientes al cierre del ejercicio fiscal correspondiente.
+
+- **Planifica tus ingresos si puedes**: si prevés que el último trimestre va a ser especialmente bueno en facturación, valora adelantar algunas compras o inversiones deducibles antes de que acabe el año para compensar el aumento de base imponible.
+
+- **Maximiza las aportaciones al plan de pensiones**: como autónomo puedes deducirte hasta 1.500 € anuales en la base imponible general gracias a las aportaciones a planes individuales, más hasta 4.250 € adicionales si tienes un plan de pensiones de empleo simplificado para autónomos. El ahorro fiscal puede ser considerable si estás en tramos medios o altos.
+
+- **Revisa tus retenciones**: si la mayoría de tus clientes son empresas o profesionales que te retienen el 15 % en cada factura, es probable que el modelo 130 te salga a cero cada trimestre, ya que las retenciones acumuladas cubren o superan el 20 % del rendimiento neto. Esto reduce el esfuerzo administrativo y evita pagos trimestrales.
+
+- **No mezcles cuentas personales y de empresa**: aunque no es obligatorio tener una cuenta bancaria separada para la actividad, hacerlo facilita enormemente el control de ingresos y gastos, y simplifica la contabilidad en caso de inspección.
+
+- **Contrata un buen asesor fiscal**: para la mayoría de autónomos, el coste de una asesoría es inferior al ahorro que genera al identificar gastos deducibles que se están pasando por alto o al evitar errores que pueden derivar en sanciones de Hacienda.`,
+  },
+  {
     slug: "como-invertir-con-poco-dinero",
     title: "Cómo invertir con poco dinero en España: guía para empezar desde cero",
     description: "Descubre cómo empezar a invertir en España aunque solo tengas 50 euros al mes: fondos indexados, ETFs, roboadvisors y los errores que debes evitar como principiante.",
