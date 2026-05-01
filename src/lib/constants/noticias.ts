@@ -10,6 +10,132 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "modelo-720-declaracion-bienes-extranjero",
+    title: "Modelo 720: cómo declarar bienes en el extranjero y evitar sanciones",
+    description: "Guía completa sobre el Modelo 720: quién debe presentarlo, plazos, qué bienes se declaran, las sanciones tras la reforma europea de 2022 y consejos para cumplir sin errores.",
+    category: "Fiscalidad",
+    readingMinutes: 7,
+    publishedAt: "2026-05-01",
+    content: `## ¿Qué es el Modelo 720 y para qué sirve?
+
+El Modelo 720 es una declaración informativa que deben presentar ante la Agencia Tributaria los residentes fiscales en España que posean bienes o derechos situados en el extranjero cuyo valor conjunto supere los 50.000 euros. No es un impuesto en sí mismo: no conlleva ningún pago directo, sino la obligación de informar a Hacienda sobre esos activos.
+
+Este modelo fue creado en 2012, en plena crisis económica, con la intención de aflorar el patrimonio oculto de los contribuyentes españoles en el extranjero. Sin embargo, su diseño inicial contemplaba unas sanciones extraordinariamente severas que el Tribunal de Justicia de la Unión Europea (TJUE) declaró contrarias al derecho comunitario en 2022. Como consecuencia, el Gobierno español reformó el régimen sancionador para adaptarlo a las exigencias europeas y hoy la declaración resulta mucho menos intimidante que hace unos años.
+
+---
+
+## ¿Quién está obligado a presentarlo?
+
+Están obligados a presentar el Modelo 720 las personas físicas y jurídicas residentes fiscales en España que, a 31 de diciembre de cada año, sean titulares, beneficiarios, autorizados o titulares reales de activos situados en el extranjero cuyo valor supere los **50.000 euros** en alguna de las tres categorías siguientes:
+
+### Las tres categorías de bienes a declarar
+
+| Categoría | Ejemplos concretos |
+|-----------|-------------------|
+| **Cuentas en entidades financieras** | Cuentas corrientes, de ahorro, depósitos y cuentas de crédito en bancos extranjeros |
+| **Valores, derechos, seguros y rentas** | Acciones, fondos de inversión, planes de pensiones extranjeros, seguros de vida contratados fuera de España |
+| **Bienes inmuebles** | Viviendas, terrenos, locales comerciales o cualquier bien inmueble situado fuera de España |
+
+Cada categoría cuenta con su propio umbral independiente de 50.000 euros. Si tienes 60.000 euros en una cuenta bancaria en Alemania y 30.000 euros invertidos en un fondo en Luxemburgo, solo estarías obligado a declarar la primera categoría (cuentas), no los valores.
+
+---
+
+## Plazos y forma de presentación
+
+El Modelo 720 se presenta anualmente **entre el 1 de enero y el 31 de marzo** del año siguiente al ejercicio que se declara. Así, los bienes existentes a 31 de diciembre de 2025 deben declararse antes del 31 de marzo de 2026.
+
+La presentación es obligatoriamente **telemática**, a través de la sede electrónica de la Agencia Tributaria, con certificado digital, DNI electrónico o Cl@ve PIN.
+
+### ¿Cuándo hay que repetir la declaración?
+
+Una vez declarados por primera vez, los bienes no tienen que volver a declararse cada año. Solo existe obligación de volver a presentar el Modelo 720 si se produce alguna de estas circunstancias:
+
+- El valor de los bienes ya declarados **aumenta en más de 20.000 euros** respecto a la última declaración presentada.
+- Se **extingue la titularidad** sobre alguno de los bienes ya declarados.
+- Se incorporan **bienes nuevos** en una categoría que antes no superaba el umbral.
+
+Esto significa que, si declaraste por primera vez una cuenta con 70.000 euros en 2022 y en 2025 sigue con un saldo de 73.000 euros, no estás obligado a volver a presentarlo.
+
+---
+
+## El régimen sancionador antes y después de la reforma europea
+
+### Antes de 2023: sanciones desproporcionadas
+
+Antes de la reforma, el Modelo 720 era conocido por sus sanciones devastadoras. No declarar correctamente podía conllevar una sanción del **150 % del valor de los bienes no declarados**, además de multas formales de hasta 10.000 euros por grupo de datos y 5.000 euros por dato omitido. Además, los bienes no declarados podían considerarse ganancias patrimoniales no justificadas sin posibilidad de prescripción, lo que significaba que Hacienda podía actuar en cualquier momento, sin límite de tiempo.
+
+### Después de 2023: sanciones equiparadas a declaraciones informativas ordinarias
+
+La sentencia del TJUE de enero de 2022 obligó a España a reformar radicalmente el régimen sancionador. Desde 2023, las multas son comparables a las de cualquier otra declaración informativa nacional:
+
+| Tipo de infracción | Sanción |
+|-------------------|---------|
+| Presentación fuera de plazo sin requerimiento previo | 100 € por dato (mínimo 150 €) |
+| Presentación fuera de plazo con requerimiento previo | 200 € por dato (mínimo 300 €) |
+| Datos incorrectos o incompletos | 200 € por dato (mínimo 300 €) |
+
+La sanción del 150 % del valor del bien ha desaparecido. Y los bienes en el extranjero ya prescriben igual que cualquier renta nacional, generalmente a los cuatro años.
+
+---
+
+## Consecuencias fiscales de no declarar
+
+Aunque el Modelo 720 es meramente informativo, sus implicaciones en otros impuestos son relevantes. Si Hacienda detecta bienes en el extranjero que no han sido declarados y no puede justificar su origen, puede imputarlos como **ganancias patrimoniales no justificadas** en el IRPF, lo que puede suponer una factura fiscal considerable.
+
+### Bienes heredados en el extranjero
+
+Un caso frecuente es recibir una herencia internacional. Si un familiar residente en otro país te deja, por ejemplo, una cuenta bancaria con 90.000 euros, tienes dos obligaciones simultáneas:
+
+1. Tributar por la herencia mediante el **Impuesto sobre Sucesiones y Donaciones**.
+2. Presentar el **Modelo 720** si el valor supera los 50.000 euros por categoría.
+
+No cumplir con la segunda obligación puede llevar a que Hacienda interprete esos fondos como rentas no declaradas, con el consiguiente riesgo de sanción.
+
+---
+
+## Bienes y situaciones que quedan fuera de la obligación
+
+No todos los activos en el extranjero generan obligación de declarar. Están exentos de presentar el Modelo 720:
+
+- Bienes cuyo **valor por categoría no supera los 50.000 euros**.
+- Activos afectos a un establecimiento permanente en el extranjero vinculado a una actividad económica desarrollada en España.
+- Cuentas en entidades financieras **establecidas en España**, aunque estén denominadas en moneda extranjera.
+- Bienes registrados en **libros contables de entidades obligadas** a llevar contabilidad conforme al Código de Comercio.
+- Bienes de los que se es titular a través de **instituciones de inversión colectiva** domiciliadas en España.
+
+---
+
+## Modelo 720 y criptomonedas: una zona gris en evolución
+
+Con la proliferación de las criptomonedas, surge una pregunta recurrente: ¿hay que incluirlas en el Modelo 720? Hasta la fecha, la Agencia Tributaria no ha incorporado de forma explícita las criptomonedas al Modelo 720 tradicional, ya que técnicamente no se custodian en entidades financieras extranjeras convencionales. Sin embargo, desde 2024 existe el **Modelo 721**, específicamente creado para la declaración informativa de criptomonedas custodiadas en el extranjero, que funciona de manera paralela al 720.
+
+Si tienes criptomonedas en exchanges o carteras custodiales extranjeras, consulta con un asesor si debes presentar el 721 además del 720.
+
+---
+
+## Consejos prácticos para cumplir sin errores
+
+1. **Haz inventario a 31 de diciembre**: Antes de que termine el año, reúne información actualizada sobre todos tus activos en el extranjero. El umbral de 50.000 euros se calcula a fecha de cierre del ejercicio, no a la de presentación.
+
+2. **Ojo con la figura del autorizado**: No solo el titular está obligado a declarar. Si figuras como autorizado en la cuenta bancaria extranjera de un familiar, también tienes obligación si supera los 50.000 euros.
+
+3. **No confundas el Modelo 720 con el pago de impuestos**: Presentar el 720 no implica pagar nada directamente. Solo informa. Los rendimientos y ganancias derivados de esos bienes se declaran por separado en el IRPF o el Impuesto sobre el Patrimonio.
+
+4. **Guarda toda la documentación**: Extractos bancarios, escrituras de inmuebles, contratos de fondos y seguros. Cualquier documento que acredite el valor y la titularidad será imprescindible ante una posible inspección de Hacienda.
+
+5. **Regulariza voluntariamente si tienes bienes sin declarar**: Tras la reforma de 2023, las sanciones son manejables. Regularizar de forma espontánea es siempre mucho mejor que esperar a que sea Hacienda quien te detecte, cuando las consecuencias pueden ser mayores.
+
+6. **Consulta con un asesor fiscal especializado**: La casuística del Modelo 720 es amplia, especialmente en situaciones de herencias internacionales, expatriados o inversores con carteras diversificadas en varios países. Un profesional puede ahorrarte sorpresas desagradables.
+
+---
+
+## Conclusión
+
+El Modelo 720 fue durante años una de las obligaciones fiscales más temidas por los contribuyentes españoles con bienes en el extranjero, principalmente por sus sanciones desproporcionadas. La reforma de 2022 impulsada por la sentencia del TJUE ha cambiado radicalmente ese panorama: las penalizaciones actuales son razonables y la declaración ha dejado de ser una amenaza para convertirse en un trámite más, siempre que se cumpla correctamente y en plazo.
+
+Si tienes cuentas, inversiones o inmuebles en el extranjero que superen los 50.000 euros por categoría, revisa si estás obligado a presentar el Modelo 720 antes del 31 de marzo. Cumplir con esta obligación informativa es la mejor forma de mantener tu situación fiscal en orden y evitar futuros problemas con la Agencia Tributaria.`,
+  },
+  {
     slug: "irpf-para-autonomos",
     title: "IRPF para autónomos en España: pagos trimestrales, gastos deducibles y consejos fiscales",
     description: "Todo lo que necesita saber un autónomo sobre el IRPF: modelo 130, gastos deducibles, tramos del impuesto y estrategias legales para pagar menos en la declaración de la renta.",
