@@ -10,6 +10,155 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "planes-de-ahorro-5-pias",
+    title: "PIAS: qué son los Planes Individuales de Ahorro Sistemático y cómo funcionan",
+    description: "Descubre qué son los PIAS, sus ventajas fiscales únicas en España, cómo se comparan con planes de pensiones y fondos, y cuándo merece la pena contratarlos.",
+    category: "Ahorro",
+    readingMinutes: 8,
+    publishedAt: "2026-05-02",
+    content: `## ¿Qué es un PIAS y para qué sirve?
+
+Un Plan Individual de Ahorro Sistemático, conocido por sus siglas PIAS, es un producto financiero-asegurador diseñado para el ahorro a largo plazo. A diferencia de un depósito bancario o un fondo de inversión, el PIAS combina dos elementos: un seguro de vida y un vehículo de acumulación de capital que, si se mantiene durante al menos cinco años, permite convertir el dinero acumulado en una renta vitalicia con importantes ventajas fiscales.
+
+El gran atractivo de los PIAS no es la rentabilidad en sí misma (que puede ser modesta), sino el tratamiento fiscal que ofrece la Ley del IRPF española: si cumples los requisitos, los rendimientos generados quedan **exentos de tributación** en el momento de la conversión a renta. En un país donde los intereses de los productos financieros tributan entre el 19 % y el 28 %, esto supone una diferencia muy significativa para el ahorro a largo plazo.
+
+---
+
+## Cómo funciona un PIAS paso a paso
+
+Un PIAS funciona en dos fases claramente diferenciadas:
+
+### Fase de acumulación
+
+Durante esta etapa, el titular realiza aportaciones periódicas (mensuales, trimestrales o anuales) o únicas. El dinero se invierte en función del tipo de PIAS contratado: puede ser un PIAS garantizado (con rentabilidad asegurada), un PIAS unit-linked (vinculado a fondos de inversión con rentabilidad variable) o una combinación de ambos.
+
+Durante esta fase no hay ningún beneficio fiscal especial: las aportaciones **no se deducen** en la declaración de la renta, a diferencia de lo que ocurre con los planes de pensiones.
+
+### Fase de percepción
+
+Cuando el titular decide rescatar el dinero acumulado, tiene dos opciones:
+
+- **Rescate en forma de capital**: cobra toda la cantidad acumulada de una vez. En este caso, el dinero tributa como rendimiento del capital mobiliario (entre el 19 % y el 28 %), exactamente igual que cualquier otro producto financiero.
+- **Conversión en renta vitalicia**: aquí aparece el beneficio fiscal exclusivo de los PIAS. Si el plan ha estado vigente al menos 5 años, **los rendimientos generados quedan completamente exentos de tributación** en el momento de la conversión. Solo tributa la renta vitalicia que vayas cobrando cada mes, y con unos coeficientes de reducción muy favorables en función de la edad del beneficiario.
+
+---
+
+## Los requisitos para disfrutar de la ventaja fiscal
+
+No basta con contratar un PIAS: para acceder a la exención fiscal en los rendimientos, debes cumplir varios requisitos concretos:
+
+| Requisito | Detalle |
+|-----------|---------|
+| **Antigüedad mínima** | El PIAS debe tener al menos 5 años desde la primera aportación |
+| **Destino del capital** | El dinero acumulado debe convertirse en renta vitalicia (no se puede cobrar todo de golpe con la exención) |
+| **Límite de aportación anual** | 8.000 € por año (incluyendo las primas del seguro) |
+| **Límite de aportación total** | 240.000 € de aportaciones acumuladas por contrato |
+| **Tomador, asegurado y beneficiario** | Deben ser la misma persona (el propio titular) |
+
+Si rescatas el dinero antes de los 5 años o lo cobras como capital en lugar de como renta vitalicia, pierdes la ventaja fiscal y tributas igual que con cualquier otro producto financiero.
+
+---
+
+## PIAS garantizados vs. PIAS unit-linked
+
+Existen dos grandes tipos de PIAS en el mercado español, y la elección entre uno y otro depende de tu perfil de riesgo:
+
+### PIAS garantizados
+
+Son los más clásicos. La aseguradora garantiza que, como mínimo, recuperarás las aportaciones realizadas. La rentabilidad suele ser modesta (actualmente entre el 1 % y el 2,5 % anual), pero es predecible. Son adecuados para perfiles conservadores que prefieren la seguridad sobre la rentabilidad.
+
+### PIAS unit-linked
+
+En este caso, las aportaciones se invierten en fondos de inversión o cestas de activos seleccionados por el titular o la aseguradora. La rentabilidad puede ser superior, pero también existe riesgo de pérdida parcial del capital. Son más adecuados para perfiles moderados o dinámicos dispuestos a asumir cierta volatilidad a cambio de una mayor rentabilidad potencial a largo plazo.
+
+---
+
+## Comparativa: PIAS vs. otros productos de ahorro
+
+Una de las preguntas más frecuentes es cuándo tiene más sentido un PIAS frente a alternativas como el plan de pensiones, los fondos de inversión o los depósitos.
+
+| Producto | Deducción aportaciones | Tributación rescate | Liquidez | Garantía capital |
+|----------|----------------------|--------------------|---------|--------------------|
+| **PIAS** | No | Exento si renta vitalicia (+5 años) | Media | Opcional |
+| **Plan de pensiones** | Sí (hasta 1.500 €/año) | Como renta del trabajo | Baja | No |
+| **Fondo de inversión** | No | 19-28 % sobre plusvalías | Alta | No |
+| **Depósito bancario** | No | 19-28 % sobre intereses | Media-alta | Sí (hasta 100.000 € FGD) |
+| **Cuenta remunerada** | No | 19-28 % sobre intereses | Alta | Sí (hasta 100.000 € FGD) |
+
+El PIAS brilla especialmente cuando el objetivo es complementar la jubilación y se busca una renta garantizada de por vida con la menor carga fiscal posible. Sin embargo, si el objetivo es mantener liquidez a corto-medio plazo, un fondo de inversión o un depósito puede ser más conveniente.
+
+---
+
+## ¿Para quién tiene más sentido contratar un PIAS?
+
+No todo el mundo tiene el mismo perfil de ahorro, y el PIAS no es el producto perfecto para todos. Tiene más sentido para:
+
+### Personas que ya han agotado el límite del plan de pensiones
+
+El plan de pensiones permite deducirse hasta 1.500 € anuales en la declaración de la renta (límite vigente desde 2022). Una vez alcanzado ese tope, el PIAS es un complemento natural: no ofrece deducción, pero sí exención en los rendimientos si se convierte en renta vitalicia.
+
+### Autónomos sin plan de empleo de empresa
+
+Los trabajadores por cuenta propia tienen acceso a los planes de pensiones simplificados para autónomos, con un límite de aportación adicional de hasta 4.250 €. Una vez cubierto ese espacio fiscal, el PIAS puede ser el siguiente escalón en la planificación del ahorro.
+
+### Ahorradores con horizonte de más de 5 años
+
+Si estás seguro de que no necesitarás ese dinero durante al menos cinco años y tu objetivo es complementar la pensión pública, el PIAS es una opción eficiente desde el punto de vista fiscal.
+
+### Personas próximas a la jubilación
+
+Cuanto mayor eres en el momento de comenzar a cobrar la renta vitalicia, mayor es el porcentaje de reducción que aplica Hacienda a esa renta. La ventaja fiscal aumenta con la edad.
+
+---
+
+## Fiscalidad de la renta vitalicia generada por un PIAS
+
+Una vez convertido el capital en renta vitalicia, la renta tributa como rendimiento del capital mobiliario, pero con un porcentaje de reducción basado en la edad del titular en el momento de la constitución:
+
+| Edad al constituir la renta | % que tributa | Tipo efectivo máximo (28 %) |
+|----------------------------|---------------|---------------------------|
+| Menos de 40 años | 40 % | 11,2 % |
+| Entre 40 y 49 años | 35 % | 9,8 % |
+| Entre 50 y 59 años | 28 % | 7,84 % |
+| Entre 60 y 65 años | 24 % | 6,72 % |
+| Entre 66 y 69 años | 20 % | 5,6 % |
+| 70 años o más | 8 % | 2,24 % |
+
+Si constituyes la renta vitalicia a los 70 años o más, solo el 8 % del importe cobrado tributa, lo que implica un tipo efectivo máximo de apenas el 2,24 %. Una ventaja fiscal difícilmente igualable con otros productos de ahorro convencionales.
+
+---
+
+## Comisiones y costes a tener en cuenta
+
+Antes de contratar un PIAS, revisa atentamente las comisiones, ya que pueden reducir significativamente la rentabilidad real del producto:
+
+- **Comisión de gestión**: se aplica sobre el capital acumulado, normalmente entre el 0,5 % y el 1,5 % anual.
+- **Comisión de depósito**: en PIAS unit-linked, puede añadirse una comisión de custodia de los fondos subyacentes.
+- **Penalización por rescate anticipado**: si rescatas antes del vencimiento pactado, muchas aseguradoras aplican una penalización que puede llegar al 3-5 % del capital acumulado.
+- **Prima del seguro de vida**: el PIAS incluye una cobertura de fallecimiento; parte de tus aportaciones se destina a pagar esa prima, lo que reduce el capital invertido efectivamente.
+
+Compara siempre la rentabilidad bruta anunciada con la rentabilidad neta de todas las comisiones antes de firmar nada.
+
+---
+
+## Consejos prácticos antes de contratar un PIAS
+
+- **Compara al menos tres aseguradoras**: el mercado incluye entidades como Mapfre, Allianz, Generali, VidaCaixa o Mutua Madrileña; las condiciones varían sensiblemente entre ellas.
+- **Calcula la rentabilidad neta de comisiones**: un PIAS con rentabilidad bruta del 3 % y comisiones del 1,5 % rinde menos que un depósito al 2 % sin costes.
+- **Planifica tu horizonte temporal con honestidad**: si no tienes claro que no necesitarás el dinero en menos de 5 años, el PIAS no es el producto más adecuado para ti.
+- **Combínalo con el plan de pensiones**: ambos productos son complementarios, no excluyentes; usa el plan de pensiones para aprovechar la deducción fiscal y el PIAS para el ahorro adicional.
+- **Revisa la cobertura de fallecimiento**: en caso de fallecimiento del titular, el capital acumulado va a los beneficiarios designados, generalmente de forma ágil y sin necesidad de pasar por el proceso habitual de herencia.
+- **Consulta con un asesor fiscal**: especialmente si tu patrimonio es elevado, la combinación de PIAS, planes de pensiones y otros vehículos puede optimizarse significativamente con una planificación fiscal adecuada.
+
+---
+
+## Conclusión
+
+Los PIAS son un instrumento de ahorro diseñado específicamente para la jubilación que ofrece una ventaja fiscal única en el sistema español: la exención total de los rendimientos generados si se convierten en renta vitalicia tras cinco años de permanencia. No son el producto con mayor rentabilidad del mercado ni el más líquido, pero su eficiencia fiscal los convierte en una herramienta muy valiosa para quienes ya han agotado las opciones de ahorro con deducción y buscan complementar su pensión pública con ingresos garantizados de por vida.
+
+Como con cualquier producto financiero, la clave está en entender bien sus condiciones, comparar las opciones disponibles en el mercado y asegurarse de que encaja con tu horizonte temporal y tus objetivos de ahorro antes de comprometerte.`,
+  },
+  {
     slug: "modelo-720-declaracion-bienes-extranjero",
     title: "Modelo 720: cómo declarar bienes en el extranjero y evitar sanciones",
     description: "Guía completa sobre el Modelo 720: quién debe presentarlo, plazos, qué bienes se declaran, las sanciones tras la reforma europea de 2022 y consejos para cumplir sin errores.",
