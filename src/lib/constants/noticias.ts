@@ -10,6 +10,137 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-funciona-el-fogasa",
+    title: "Cómo funciona el FOGASA: qué cubre y cómo reclamarlo si tu empresa no te paga",
+    description: "El FOGASA protege a los trabajadores cuando su empresa no puede pagar salarios o indemnizaciones. Descubre qué cubre, sus límites legales y cómo solicitarlo paso a paso.",
+    category: "Mercado laboral",
+    readingMinutes: 7,
+    publishedAt: "2026-05-03",
+    content: `## ¿Qué es el FOGASA y para qué sirve?
+
+El Fondo de Garantía Salarial, conocido por sus siglas FOGASA, es un organismo autónomo dependiente del Ministerio de Trabajo y Economía Social de España. Su misión principal es proteger a los trabajadores cuando su empresa no puede hacer frente a sus obligaciones económicas: ya sea porque está en concurso de acreedores, porque ha cerrado de manera irregular o porque sencillamente no tiene dinero para pagar.
+
+En un mercado laboral donde las quiebras empresariales y los cierres inesperados son una realidad cotidiana, el FOGASA actúa como una red de seguridad para los trabajadores que de otro modo podrían perder meses de salario o quedarse sin la indemnización que les corresponde legalmente.
+
+Creado en 1976, el FOGASA se financia mediante contribuciones de las empresas —no de los trabajadores—, calculadas como un porcentaje de los salarios que pagan a sus empleados. Actualmente, el tipo de cotización es del 0,20 % de la base de cotización por contingencias profesionales, lo que significa que los trabajadores no aportan directamente ni un euro a su financiación.
+
+---
+
+## ¿Cuándo puedes reclamar al FOGASA?
+
+No todas las situaciones en las que una empresa no te paga te dan derecho a acudir al FOGASA. Existen dos supuestos principales en los que el organismo actúa:
+
+### Insolvencia empresarial
+
+Es el caso más habitual. Cuando la empresa está declarada en concurso de acreedores o se ha acreditado su insolvencia mediante resolución judicial, el FOGASA paga directamente en nombre del empleador los conceptos que le correspondan al trabajador. En este escenario, el organismo actúa de forma prácticamente automática una vez acreditada la situación.
+
+### Empresa que no paga pero es solvente
+
+En este caso, el FOGASA no actúa de manera directa. El trabajador debe reclamar primero a la empresa (habitualmente a través de una demanda laboral), obtener una sentencia favorable y, si la empresa sigue sin pagar, acreditar su insolvencia ante el juzgado. Solo entonces el FOGASA puede intervenir como garante de último recurso.
+
+---
+
+## Qué cubre el FOGASA: conceptos garantizados
+
+Es fundamental saber que el FOGASA no cubre todo lo que te debe una empresa. Existen límites claros establecidos por la ley que es importante conocer antes de reclamar.
+
+### Salarios pendientes
+
+El FOGASA garantiza el pago de los salarios que la empresa no haya abonado, con un tope máximo equivalente al **doble del Salario Mínimo Interprofesional (SMI) diario** por cada día de trabajo adeudado. En 2026, con un SMI de 1.184 € al mes (39,47 € diarios), el tope sería de aproximadamente 78,94 € por día.
+
+Además, existe un límite temporal: el FOGASA solo cubre los salarios de los **últimos 150 días trabajados** (aproximadamente cinco meses), aunque la deuda de la empresa sea mayor.
+
+### Indemnizaciones por despido
+
+Cuando el juez declara la extinción de la relación laboral por causas relacionadas con la insolvencia de la empresa —despido improcedente, extinción por causas objetivas, etc.—, el FOGASA cubre parte de la indemnización. El límite es el equivalente a **una anualidad de salario**, sin que el salario diario a estos efectos pueda superar el doble del SMI.
+
+### Otros conceptos cubiertos
+
+El FOGASA también puede cubrir las pagas extraordinarias no abonadas (dentro de los límites anteriores) y las percepciones correspondientes al período de tramitación de un despido reconocido como improcedente.
+
+Lo que **no cubre** el FOGASA son conceptos como dietas, gastos de desplazamiento, mejoras voluntarias pactadas por encima del convenio colectivo, conceptos extrasalariales o indemnizaciones distintas a las previstas por la extinción del contrato.
+
+---
+
+## Límites del FOGASA en cifras
+
+| Concepto | Límite |
+|----------|--------|
+| Salarios impagados | Últimos 150 días trabajados |
+| Tope diario de salario | Doble del SMI diario (aprox. 78,94 € en 2026) |
+| Indemnización por extinción | Máximo 1 anualidad de salario |
+| Tope de salario para indemnización | Doble del SMI diario |
+| Pagas extraordinarias | Incluidas dentro de los límites anteriores |
+| Plazo de prescripción | 1 año desde el reconocimiento de la deuda |
+
+---
+
+## Cómo solicitar las prestaciones del FOGASA paso a paso
+
+El procedimiento para reclamar al FOGASA varía ligeramente en función de si la empresa está en concurso o simplemente es insolvente, pero en términos generales los pasos son los siguientes:
+
+### Paso 1: Reúne la documentación necesaria
+
+Antes de presentar la solicitud necesitarás reunir:
+
+- **DNI o NIE** en vigor
+- **Certificado de empresa** o últimas nóminas como prueba del salario y la deuda
+- **Documentación acreditativa de la deuda**: sentencia judicial, auto del juzgado de lo mercantil o resolución administrativa que acredite la insolvencia
+- **Número de cuenta bancaria** donde recibir el pago (IBAN)
+
+Si la empresa no te entrega el certificado de empresa, puedes solicitarlo a través del SEPE o pedirlo directamente al juzgado de lo social que conoce del caso.
+
+### Paso 2: Presenta la solicitud
+
+Puedes hacerlo de manera presencial en la sede provincial del FOGASA o **de manera telemática** a través de la sede electrónica del Ministerio de Trabajo, usando tu certificado digital o el sistema Cl@ve. La tramitación online es más rápida, queda registrada oficialmente desde el primer momento y evita desplazamientos innecesarios.
+
+### Paso 3: Resolución del expediente
+
+El FOGASA tiene un plazo legal de **tres meses** para resolver la solicitud desde que recibe todos los documentos completos. Sin embargo, en la práctica los plazos pueden alargarse, especialmente en épocas de alta demanda o cuando el expediente presenta complejidades, como sucede con los grandes concursos de acreedores.
+
+### Paso 4: Cobro y subrogación
+
+Una vez resuelta favorablemente la solicitud, el FOGASA transfiere el importe correspondiente a tu cuenta bancaria. A partir de ese momento, el organismo **se subroga en tus derechos** frente a la empresa deudora, es decir, pasa a ser acreedor de la empresa en tu lugar y reclamará las cantidades pagadas directamente al empresario o al administrador concursal.
+
+---
+
+## ¿Cuánto tarda el FOGASA en pagar?
+
+El plazo legal es de tres meses, pero la realidad práctica puede diferir bastante de ese objetivo. Los expedientes sencillos —insolvencia clara y documentación completa desde el inicio— suelen resolverse en **dos a tres meses**. Los expedientes más complejos, especialmente los que implican concursos de acreedores con muchos trabajadores afectados, pueden tardar entre **seis meses y un año** o incluso superarlo.
+
+Por ello, es crucial presentar la documentación de manera completa desde el primer momento para evitar retrasos por requerimientos de subsanación, que reinician los plazos de tramitación.
+
+---
+
+## Caso especial: empresas con menos de 25 trabajadores
+
+La legislación española contempla una situación especial para las pequeñas empresas que muchos trabajadores desconocen. Cuando una empresa con **menos de 25 trabajadores** lleva a cabo un despido por causas económicas, técnicas, organizativas o de producción (en los términos del artículo 52.c del Estatuto de los Trabajadores), y el juzgado lo declara procedente, el FOGASA **asume directamente el 40 % de la indemnización** que le correspondería al trabajador —aunque la empresa no esté en situación de insolvencia.
+
+Esta medida fue diseñada para facilitar los ajustes de plantilla en la pequeña empresa sin que el peso económico recayese íntegramente en el empresario. En la práctica, actúa como un subsidio parcial al despido en pymes, y conviene conocerla tanto si eres trabajador como si eres empleador.
+
+---
+
+## Consejos prácticos si te encuentras en esta situación
+
+1. **Actúa con rapidez**: el derecho a reclamar al FOGASA prescribe en **un año** desde que se reconoció la deuda (sentencia firme o auto de insolvencia). Cada semana que pasa acerca la fecha límite.
+
+2. **Conserva todas las nóminas y contratos**: son la prueba fundamental de tu relación laboral y de los salarios adeudados. Guarda copias digitales en la nube porque los documentos en papel pueden perderse o deteriorarse.
+
+3. **No esperes a que la empresa cierre definitivamente**: si llevas meses sin cobrar y ves que la situación no mejora, empieza a reunir documentación y consulta con un abogado laboralista lo antes posible.
+
+4. **Consulta a un abogado laboralista**: aunque el proceso es relativamente sencillo en teoría, un profesional puede detectar conceptos que quizás estés pasando por alto, calcular correctamente los importes y agilizar la tramitación.
+
+5. **Usa la vía telemática**: la solicitud online a través de la sede electrónica del Ministerio de Trabajo queda registrada de manera oficial desde el primer momento y suele tramitarse más rápido que las solicitudes presenciales.
+
+6. **No confundas FOGASA con SEPE**: el FOGASA cubre salarios e indemnizaciones impagados por la empresa. El SEPE (antiguo INEM) gestiona las prestaciones por desempleo. Son organismos distintos, aunque en una situación de despido ambos pueden actuar de manera simultánea.
+
+7. **Infórmate sobre el concurso de acreedores**: si tu empresa está en concurso, el administrador concursal tiene la obligación de comunicar al FOGASA la relación de trabajadores afectados y los créditos reconocidos. Esto puede significar que la tramitación sea casi automática en muchos casos, sin que tengas que hacer gran cosa por tu parte.
+
+---
+
+El FOGASA es una herramienta de protección valiosa que muchos trabajadores desconocen hasta que la necesitan urgentemente. Entender cómo funciona, qué cubre exactamente y cómo solicitarlo puede marcar una diferencia económica muy significativa en uno de los momentos más difíciles de la vida laboral. Si tu empresa no te paga, no te resignes: tienes derechos y el FOGASA existe precisamente para garantizarlos.`,
+  },
+  {
     slug: "planes-de-ahorro-5-pias",
     title: "PIAS: qué son los Planes Individuales de Ahorro Sistemático y cómo funcionan",
     description: "Descubre qué son los PIAS, sus ventajas fiscales únicas en España, cómo se comparan con planes de pensiones y fondos, y cuándo merece la pena contratarlos.",
