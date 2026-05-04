@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PrintButton } from "./print-button";
 
 export const metadata: Metadata = {
   title: "Inversión en Dividendos - Presentación",
@@ -702,13 +703,7 @@ export default function PresentacionDividendos() {
         }
       `}</style>
 
-      {/* Botón de impresión */}
-      <button
-        className="print-hint"
-        onClick={() => window.print()}
-      >
-        <span>🖨️</span> Imprimir / Guardar PDF
-      </button>
+      <PrintButton />
 
       {/* ═══════════════════════════════════════════ */}
       {/* SLIDE 1: PORTADA                           */}

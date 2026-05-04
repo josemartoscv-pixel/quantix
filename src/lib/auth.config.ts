@@ -9,7 +9,7 @@ export const authConfig: NextAuthConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const PUBLIC_ROUTES = ["/", "/login", "/register", "/cuentas-remuneradas", "/privacidad", "/cookies"];
+      const PUBLIC_ROUTES = ["/", "/login", "/register", "/cuentas-remuneradas", "/privacidad", "/cookies", "/presentacion-dividendos"];
       const isPublic =
         PUBLIC_ROUTES.includes(nextUrl.pathname) ||
         nextUrl.pathname.startsWith("/api/auth") ||
