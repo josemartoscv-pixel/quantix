@@ -10,6 +10,148 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "jubilacion-anticipada-en-espana",
+    title: "Jubilación anticipada en España: requisitos, penalizaciones y cómo planificarla",
+    description: "Descubre las dos modalidades de jubilación anticipada en España, los coeficientes reductores que reducen tu pensión y los pasos clave para planificar bien esta decisión.",
+    category: "Pensiones",
+    readingMinutes: 7,
+    publishedAt: "2026-05-04",
+    content: `## ¿Qué es la jubilación anticipada en España?
+
+La jubilación anticipada es la posibilidad de retirarse del mercado laboral antes de alcanzar la edad ordinaria de jubilación, que en España se sitúa en 2026 en los 66 años y 8 meses para quienes no acrediten suficientes años cotizados, o en 65 años para quienes acrediten 37 años y 9 meses o más de cotización.
+
+Cada año este tema genera más interés, especialmente entre trabajadores mayores de 55 años que, tras una reestructuración laboral o simplemente por decisión propia, se preguntan si pueden adelantar su retiro y, sobre todo, a qué coste económico lo harían.
+
+En este artículo explicamos las dos modalidades principales de jubilación anticipada en España, los requisitos que debes cumplir, los coeficientes reductores que se aplican a tu pensión y una serie de consejos prácticos para planificar bien esta decisión tan importante.
+
+---
+
+## Las dos modalidades de jubilación anticipada
+
+En España existen dos grandes vías para jubilarse antes de la edad ordinaria, y sus condiciones son considerablemente diferentes entre sí.
+
+### Jubilación anticipada involuntaria (por causa ajena al trabajador)
+
+Esta modalidad está pensada para quienes se ven obligados a dejar el mercado laboral sin haberlo elegido. Los supuestos más habituales reconocidos por la Seguridad Social son los siguientes:
+
+- Despido colectivo o expediente de regulación de empleo (ERE)
+- Extinción del contrato por causas objetivas reconocidas judicialmente
+- Extinción por incapacidad, fallecimiento o jubilación del empresario
+- Extinción derivada de concurso de acreedores
+- Situación legal de desempleo por violencia de género o terrorismo
+
+**Requisitos principales para acceder a esta modalidad:**
+
+- Tener al menos **63 años** en el momento de la solicitud (adaptado según el calendario transitorio vigente)
+- Acreditar un mínimo de **33 años de cotización** a la Seguridad Social
+- Llevar al menos **6 meses en situación legal de desempleo** debidamente acreditada antes de la solicitud
+- No tener acceso a la jubilación ordinaria en ese momento
+
+### Jubilación anticipada voluntaria
+
+Esta modalidad permite jubilarse por propia iniciativa del trabajador, sin necesidad de que exista una causa externa. Las condiciones son algo más exigentes y los descuentos sobre la pensión ligeramente superiores.
+
+**Requisitos principales:**
+
+- Tener al menos **63 años** en el momento de la solicitud (con la adaptación transitoria correspondiente)
+- Acreditar un mínimo de **35 años de cotización**
+- Que la pensión resultante sea superior a la cuantía de la pensión mínima garantizada; si no lo es, la Seguridad Social no permite acceder a esta modalidad anticipada voluntaria
+
+---
+
+## Los coeficientes reductores: cuánto pierde tu pensión
+
+Esta es sin duda la parte que más preocupa a quienes valoran jubilarse antes de tiempo, y con razón. Por cada trimestre que se anticipe la jubilación respecto a la edad ordinaria, la pensión sufre un recorte permanente. No es una penalización temporal: se aplica todos los meses durante el resto de tu vida.
+
+Los coeficientes reductores vigentes en España son los siguientes:
+
+| Años cotizados al momento de la jubilación anticipada | Reducción por cada trimestre anticipado |
+|---|---|
+| Menos de 38 años y 6 meses | 1,875 % |
+| Entre 38 años 6 meses y 41 años 6 meses | 1,750 % |
+| Entre 41 años 6 meses y 44 años 6 meses | 1,625 % |
+| 44 años y 6 meses o más | 1,500 % |
+
+**Ejemplo práctico con cifras reales:**
+
+Imagina un trabajador de 63 años cuya edad ordinaria de jubilación es 66 años y 8 meses. Eso supone adelantar la jubilación en **14 trimestres**. Si cuenta con 35 años cotizados, el coeficiente aplicable es del 1,875 % por trimestre:
+
+- Penalización total: 14 × 1,875 % = **26,25 % de reducción permanente**
+- Si su pensión base calculada fuera de 1.500 € mensuales, la pensión real sería de aproximadamente **1.106 € al mes**
+- Eso supone 394 € menos cada mes durante toda la jubilación
+
+Este ejemplo ilustra bien la magnitud del recorte: anticipar menos de cuatro años la jubilación puede costar más de 4.700 € al año en pensión perdida.
+
+---
+
+## ¿Conviene jubilarse antes? El punto de equilibrio
+
+Para determinar si la jubilación anticipada resulta conveniente desde el punto de vista estrictamente económico, los expertos en planificación financiera utilizan el concepto del **punto de equilibrio** o *break-even*. La lógica es la siguiente:
+
+1. Calcula cuánto cobras de más por jubilarte antes (los meses adicionales de pensión antes de la edad ordinaria)
+2. Calcula cuánto cobrarías de menos cada mes por el recorte del coeficiente reductor
+3. El punto de equilibrio es el momento en que las dos cantidades se igualan
+
+**Ejemplo numérico simplificado:**
+
+- Pensión anticipada: 1.106 € / mes
+- Pensión ordinaria (si esperaras 3 años y 8 meses): 1.500 € / mes
+- Diferencia mensual: 394 €
+- Meses adicionales de pensión cobrada por haberse jubilado antes: 44 meses
+- Total cobrado en esos 44 meses extra: 44 × 1.106 € = 48.664 €
+- Tiempo necesario para compensar ese adelanto cobrando 394 € menos al mes: 48.664 / 394 ≈ **123 meses (más de 10 años)**
+
+Conclusión: si el trabajador vive más de 10 años después de la edad ordinaria de jubilación, la pensión ordinaria habría sido más rentable a largo plazo. Si su esperanza de vida es reducida por razones de salud, la jubilación anticipada puede tener sentido económico.
+
+---
+
+## Jubilación anticipada para determinados colectivos profesionales
+
+Existen colectivos que, por la especial peligrosidad, penosidad o toxicidad de su actividad laboral, tienen reconocido el derecho a jubilarse antes sin penalización alguna o con coeficientes reductores específicos. Algunos ejemplos destacados:
+
+- **Mineros del carbón**: pueden jubilarse con coeficientes especiales que en algunos casos permiten el retiro con 45 años de edad real
+- **Trabajadores del mar**: cuentan con bonificaciones en el cómputo de periodos cotizados
+- **Bomberos y policías locales**: en muchos convenios colectivos pueden jubilarse anticipadamente a partir de los 60 años sin las penalizaciones generales
+- **Personal ferroviario**: regulación específica pactada con los operadores del sector
+
+Si perteneces a alguno de estos sectores, consulta el convenio colectivo de tu sector y la normativa específica de la Seguridad Social, ya que las condiciones pueden diferir significativamente de las reglas generales.
+
+---
+
+## Compatibilidad con el trabajo: lo que debes saber
+
+Desde la reforma de pensiones de 2023, España amplió las posibilidades de compatibilizar pensión y trabajo. Sin embargo, en el caso de la **jubilación anticipada**, las limitaciones son importantes:
+
+- Si te jubilas anticipadamente, **no puedes trabajar por cuenta ajena** mientras cobras la pensión anticipada
+- Si decides reincorporarte al trabajo, la pensión queda suspendida hasta que vuelvas a jubilarte
+- Esta restricción no aplica a la jubilación activa, que solo está disponible para quienes se jubilan a la edad ordinaria o acreditan carreras de cotización especialmente largas
+
+Este punto es especialmente relevante para quienes se plantean una "semi-jubilación" y desean combinar ingresos laborales con la pensión. En ese escenario, la jubilación anticipada no es la opción adecuada.
+
+---
+
+## Consejos prácticos antes de solicitar la jubilación anticipada
+
+Antes de dar el paso definitivo, conviene revisar estos puntos con detenimiento:
+
+1. **Calcula tu pensión con el simulador oficial de la Seguridad Social**, disponible en la Sede Electrónica con certificado digital o Cl@ve PIN. Es gratuito y ofrece estimaciones bastante fiables.
+2. **Solicita tu informe de vida laboral** y revísalo con atención: los errores en el registro de cotizaciones son más frecuentes de lo que parece, y pueden costarte años de pensión si no se corrigen a tiempo.
+3. **Valora si tienes planes de pensiones o ahorro privado** que puedan compensar la reducción mensual. Un plan de pensiones con 50.000 € acumulados puede traducirse en una renta mensual complementaria que amortigüe el recorte.
+4. **Consulta a un asesor laboral o gestor** si tu situación es compleja: cotizaciones en varios países de la UE, períodos como autónomo mezclados con empleo por cuenta ajena, o lagunas de cotización significativas.
+5. **No tomes la decisión precipitadamente**: esperar seis meses más en activo puede suponer una mejora permanente de varios cientos de euros al mes en tu pensión durante décadas.
+6. **Ten en cuenta el impacto del IRPF**: la pensión tributa como rendimiento del trabajo. Si tienes otros ingresos (alquileres, dividendos), el tipo efectivo puede ser más alto de lo que esperabas.
+
+---
+
+## Conclusión
+
+La jubilación anticipada en España es una opción real y legítima para muchos trabajadores, pero conlleva un coste económico permanente que no debe subestimarse. Adelantar la jubilación dos o tres años puede reducir la pensión entre un 15 % y un 30 %, una merma que acompaña al jubilado durante el resto de su vida.
+
+La decisión correcta no siempre es la que maximiza la pensión mensual: hay factores de salud, calidad de vida y proyectos personales que tienen un peso igual o mayor que las cifras. Lo fundamental es no decidir a ciegas: calcular el punto de equilibrio, revisar la vida laboral, explorar el ahorro complementario y, si es necesario, buscar asesoramiento profesional.
+
+Tomada con información, la decisión sobre cuándo jubilarse puede mejorar significativamente el bienestar durante los años de retiro.`,
+  },
+  {
     slug: "como-funciona-el-fogasa",
     title: "Cómo funciona el FOGASA: qué cubre y cómo reclamarlo si tu empresa no te paga",
     description: "El FOGASA protege a los trabajadores cuando su empresa no puede pagar salarios o indemnizaciones. Descubre qué cubre, sus límites legales y cómo solicitarlo paso a paso.",
