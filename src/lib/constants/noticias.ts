@@ -10,6 +10,151 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "crowdfunding-inmobiliario-en-espana",
+    title: "Crowdfunding inmobiliario en España: cómo funciona, plataformas y riesgos",
+    description: "Descubre cómo funciona el crowdfunding inmobiliario en España, qué plataformas están reguladas por la CNMV y qué riesgos debes conocer antes de invertir tu dinero.",
+    category: "Inversión",
+    readingMinutes: 8,
+    publishedAt: "2026-05-05",
+    content: `## ¿Qué es el crowdfunding inmobiliario?
+
+El crowdfunding inmobiliario, también llamado financiación colectiva inmobiliaria, es un modelo de inversión que permite a cualquier persona participar en proyectos del mercado inmobiliario aportando desde unos pocos cientos de euros. En España este sistema ha ganado mucha popularidad en los últimos años como alternativa a la compra directa de propiedades, que exige un capital inicial muy elevado y una deuda hipotecaria de décadas.
+
+La idea es sencilla: en lugar de comprar un piso o un local tú solo, te unes a decenas o cientos de inversores para financiar colectivamente un proyecto. Puede ser la rehabilitación de un edificio, la promoción de viviendas nuevas o la adquisición de un activo para su explotación en alquiler. Cada inversor recibe una parte proporcional de los beneficios generados.
+
+En este artículo explicamos cómo funciona este modelo paso a paso, qué modalidades existen, qué plataformas operan legalmente en España, cuáles son los riesgos reales y qué debes tener en cuenta antes de comprometer tu dinero.
+
+---
+
+## Cómo funciona el crowdfunding inmobiliario paso a paso
+
+El proceso básico sigue siempre una secuencia similar:
+
+1. Una plataforma especializada identifica y analiza un proyecto inmobiliario concreto.
+2. La plataforma publica el proyecto con todos sus detalles: importe necesario, plazo previsto, rentabilidad estimada y nivel de riesgo.
+3. Los inversores aportan dinero a través de la plataforma hasta alcanzar el objetivo de financiación.
+4. La plataforma gestiona el proyecto durante su vida útil y, al término del plazo, distribuye los beneficios entre todos los inversores.
+
+Lo que distingue al crowdfunding inmobiliario de comprar un fondo inmobiliario o acciones de una SOCIMI es la transparencia: el inversor sabe exactamente en qué proyecto está poniendo su dinero, en qué ciudad, con qué promotor y bajo qué condiciones financieras.
+
+---
+
+## Las dos modalidades principales
+
+### Equity crowdfunding inmobiliario (participación en el capital)
+
+En esta modalidad el inversor se convierte en copropietario del inmueble o del vehículo jurídico que lo posee, generalmente una sociedad limitada creada específicamente para ese proyecto. Sus ganancias provienen de dos fuentes:
+
+- El reparto de rentas de alquiler durante la vida del proyecto.
+- La plusvalía generada al vender el inmueble al término del plazo.
+
+El riesgo es mayor que en otras modalidades porque, si el inmueble pierde valor o no se consigue vender en las condiciones previstas, el inversor puede perder parte de su capital invertido.
+
+**Rentabilidad estimada típica en España:** entre el 6 % y el 14 % anual, aunque estas cifras no están garantizadas y dependen de cada proyecto concreto.
+
+### Crowdlending inmobiliario (préstamo al promotor)
+
+En esta segunda modalidad el inversor no se convierte en propietario del inmueble, sino que presta dinero al promotor del proyecto a cambio de un tipo de interés fijo. Al vencimiento del plazo recupera el capital más los intereses pactados.
+
+Sus ventajas son:
+- Un flujo de caja más predecible, ya que los intereses suelen abonarse de forma periódica.
+- Posición preferente en caso de impago respecto a los socios capitalistas.
+
+La desventaja principal es que la rentabilidad suele ser algo inferior a la del equity y el inversor no participa en posibles plusvalías del inmueble.
+
+**Rentabilidades típicas en España:** entre el 7 % y el 11 % anual en proyectos de crowdlending inmobiliario bien estructurados.
+
+---
+
+## Regulación en España: la CNMV y el reglamento europeo
+
+Desde la entrada en vigor de la Ley 5/2015 de Fomento de la Financiación Empresarial, y con la posterior adaptación al Reglamento Europeo de Crowdfunding (ECSP) de 2023, las plataformas que operan en España por encima de ciertos umbrales deben estar autorizadas y supervisadas por un organismo competente.
+
+La **Comisión Nacional del Mercado de Valores (CNMV)** es el organismo regulador en España para las plataformas de financiación participativa. Antes de invertir en cualquier plataforma, comprueba siempre que está registrada en el registro oficial de la CNMV, accesible de forma gratuita en su página web.
+
+El reglamento europeo ECSP permite a las plataformas autorizadas operar en toda la Unión Europea con una única licencia y establece límites de inversión para proteger a los inversores menos experimentados:
+
+- **Inversores no sofisticados:** límite de 1.000 € por proyecto o hasta el 5 % del patrimonio neto anual, lo que sea mayor.
+- **Inversores sofisticados:** sin límite específico, previo reconocimiento de su experiencia y conocimientos.
+
+---
+
+## Principales plataformas de crowdfunding inmobiliario en España
+
+| Plataforma | Modalidad principal | Inversión mínima | Rentabilidad media estimada |
+|---|---|---|---|
+| Urbanitae | Equity y lending | 500 € | 8 %–14 % anual |
+| Housers | Equity y lending | 50 € | 5 %–10 % anual |
+| Civislend | Lending | 250 € | 7 %–11 % anual |
+| StockCrowd IN | Equity y lending | 100 € | 8 %–12 % anual |
+| Inmo Investment | Lending | 500 € | 8 %–10 % anual |
+
+*Las rentabilidades son estimaciones basadas en el histórico de cada plataforma. Las rentabilidades pasadas no garantizan resultados futuros. Verifica siempre el estado regulatorio de cada plataforma en el registro de la CNMV.*
+
+---
+
+## Riesgos del crowdfunding inmobiliario que debes conocer
+
+Como cualquier inversión, el crowdfunding inmobiliario conlleva riesgos reales. Ignorarlos puede llevarte a perder dinero, así que es fundamental entenderlos antes de actuar.
+
+### Riesgo de impago
+
+En proyectos de lending, el promotor puede no devolver el préstamo en los plazos previstos, ya sea por problemas financieros, retrasos en la obra o dificultades en la venta. Algunas plataformas ofrecen garantías hipotecarias sobre el inmueble, pero la recuperación del capital puede llevar meses o años y conllevar costes legales significativos.
+
+### Riesgo de iliquidez
+
+A diferencia de la bolsa, no puedes vender tu participación en cualquier momento. Tu dinero queda inmovilizado durante el plazo del proyecto, que puede ir desde 12 meses hasta 4 o 5 años. Si necesitas el dinero antes, es probable que no puedas recuperarlo.
+
+### Riesgo del mercado inmobiliario
+
+Si el mercado inmobiliario se deteriora —caída de precios de vivienda, subida de costes de construcción, reducción de la demanda de alquiler— el proyecto puede generar menos rentabilidad de la prevista o incluso cerrar con pérdidas.
+
+### Riesgo operativo de la plataforma
+
+Si la plataforma cierra o tiene problemas financieros propios, la gestión de tu inversión puede complicarse considerablemente. Por eso es imprescindible invertir únicamente a través de plataformas reguladas y con track record contrastado.
+
+---
+
+## Fiscalidad del crowdfunding inmobiliario en España
+
+Los rendimientos del crowdfunding inmobiliario tributan en el **IRPF** dentro de la base imponible del ahorro, aunque el tratamiento concreto varía según la modalidad:
+
+- **Crowdlending (intereses):** tributan como rendimientos del capital mobiliario. Los tipos aplicables en 2026 son: 19 % hasta 6.000 €; 21 % de 6.000 € a 50.000 €; 23 % de 50.000 € a 200.000 €; 27 % de 200.000 € a 300.000 €; y 28 % a partir de 300.000 €.
+- **Equity (dividendos o plusvalías por venta):** también tributan en la base del ahorro aplicando los mismos tramos progresivos.
+
+La plataforma debe emitirte un certificado fiscal anual con todos los rendimientos obtenidos, lo que facilita mucho la declaración de la renta. Guarda siempre esa documentación junto con los contratos de cada proyecto.
+
+---
+
+## ¿Es el crowdfunding inmobiliario adecuado para ti?
+
+Esta inversión puede encajarte bien si:
+
+- Quieres exposición al mercado inmobiliario sin necesidad de comprar un piso entero.
+- Tienes un horizonte de inversión medio-largo (mínimo 1-3 años por proyecto).
+- Aceptas que parte del capital puede tardar en recuperarse o incluso perderse en algún proyecto.
+- Buscas diversificar más allá de la bolsa o de los depósitos bancarios tradicionales.
+
+No te resultará adecuado si:
+- Necesitas el dinero en el corto plazo o tienes poca liquidez.
+- No toleras la posibilidad de perder parte de tu inversión.
+- Buscas una alternativa al depósito garantizado por el Fondo de Garantía de Depósitos (FGD), porque el crowdfunding inmobiliario no está cubierto por ese fondo.
+
+---
+
+## Consejos prácticos antes de dar el primer paso
+
+1. **Verifica la autorización de la CNMV** antes de registrarte en ninguna plataforma ni facilitar tus datos bancarios.
+2. **Empieza con importes pequeños** mientras aprendes cómo funciona cada plataforma y su forma de gestionar incidencias.
+3. **Diversifica entre varios proyectos** en lugar de concentrar todo tu capital en uno solo; así limitas el impacto si un proyecto sale mal.
+4. **Lee el dossier completo del proyecto:** promotor, ubicación, tasación independiente, plan de negocio, garantías y historial de la plataforma con proyectos similares.
+5. **Nunca inviertas dinero que puedas necesitar** en los próximos 2-3 años, dado el carácter ilíquido de estas inversiones.
+6. **Guarda todos los documentos** (contratos, confirmaciones de inversión, certificados fiscales) para facilitar tu declaración de la renta.
+7. **Compara varias plataformas:** no todas ofrecen los mismos tipos de proyectos, las mismas garantías ni el mismo nivel de transparencia en la información.
+
+El crowdfunding inmobiliario es una herramienta de inversión real con ventajas claras frente a la compra directa de inmuebles, pero exige tiempo, análisis y criterio. Si lo abordas con cabeza y diversificas correctamente, puede convertirse en un complemento interesante dentro de una cartera de inversión equilibrada.`,
+  },
+  {
     slug: "jubilacion-anticipada-en-espana",
     title: "Jubilación anticipada en España: requisitos, penalizaciones y cómo planificarla",
     description: "Descubre las dos modalidades de jubilación anticipada en España, los coeficientes reductores que reducen tu pensión y los pasos clave para planificar bien esta decisión.",
