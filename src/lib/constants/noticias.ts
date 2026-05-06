@@ -10,6 +10,159 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "seguros-de-vida-cuando-contratarlos",
+    title: "Seguros de vida en España: cuándo contratarlos, qué cubren y cómo elegir el mejor",
+    description: "Descubre cuándo es imprescindible tener un seguro de vida en España, qué coberturas existen, cuánto cuesta y cómo elegir la póliza que mejor se adapta a tu situación.",
+    category: "Seguros",
+    readingMinutes: 8,
+    publishedAt: "2026-05-06",
+    content: `## ¿Qué es un seguro de vida y para qué sirve?
+
+El seguro de vida es uno de los productos financieros más importantes que existen, y también uno de los más ignorados. En España, muchas familias no cuentan con esta protección o tienen una cobertura insuficiente, a veces sin saberlo. Sin embargo, ante determinadas circunstancias vitales —tener una hipoteca, tener hijos dependientes, ser autónomo o ser el principal sustento del hogar—, contar con un seguro de vida puede marcar la diferencia entre que tu familia mantenga su nivel de vida o entre en graves dificultades económicas.
+
+Un seguro de vida es un contrato entre el asegurado y una compañía aseguradora por el que, a cambio de una prima periódica (mensual o anual), la aseguradora se compromete a pagar un capital —denominado capital asegurado o suma asegurada— a los beneficiarios designados si el asegurado fallece o queda en situación de invalidez permanente, dependiendo de la cobertura contratada.
+
+Su función principal es proteger económicamente a las personas que dependen del asegurado. Si el principal ingresador de un hogar fallece o queda incapacitado sin poder trabajar, la indemnización puede cubrir:
+
+- El pago de la hipoteca o la renta del alquiler.
+- Los gastos educativos de los hijos.
+- Las deudas pendientes.
+- Los gastos cotidianos durante un período de adaptación.
+
+---
+
+## Tipos de seguros de vida en España
+
+### Seguro de vida temporal
+
+Es el más común y también el más económico. Cubre el riesgo de fallecimiento durante un período de tiempo determinado (5, 10, 20 o 30 años). Si el asegurado fallece dentro del plazo, los beneficiarios cobran el capital asegurado. Si al término del plazo el asegurado sigue vivo, la póliza se extingue sin ningún valor de rescate.
+
+**Cuándo encaja mejor:** familias con hipoteca, personas con hijos menores de edad o con deudas importantes. Es ideal para quienes buscan protección concreta y asequible durante los años de mayor exposición económica.
+
+### Seguro de vida entera
+
+A diferencia del temporal, este tipo cubre el riesgo de fallecimiento de forma indefinida: la aseguradora pagará el capital asegurado cuando el asegurado fallezca, independientemente de cuándo ocurra. Por ello, es más caro que el temporal.
+
+Algunas pólizas de vida entera incorporan un componente de ahorro que genera un valor de rescate a lo largo del tiempo, pudiendo recuperar parte de las primas pagadas si se cancela la póliza antes del fallecimiento.
+
+**Cuándo encaja mejor:** personas que quieren dejar una herencia garantizada a sus beneficiarios o que desean cubrir gastos de sepelio y sucesión.
+
+### Seguro de invalidez o incapacidad
+
+Complementa o sustituye al seguro de vida en caso de que el asegurado quede en situación de incapacidad permanente total, absoluta o gran invalidez, y no pueda trabajar. Es especialmente relevante para autónomos, que no tienen la misma red de protección de la Seguridad Social que los asalariados.
+
+### Seguro de vida vinculado a la hipoteca
+
+Cuando se firma una hipoteca, el banco habitualmente ofrece —o exige— un seguro de vida vinculado al préstamo. Su capital asegurado suele estar ligado al saldo pendiente de la hipoteca e ir reduciéndose a medida que se amortiza.
+
+**Atención:** no estás obligado a contratar el seguro de vida con el mismo banco que te da la hipoteca. Puedes contratarlo con cualquier aseguradora siempre que el capital cubierto sea suficiente para cancelar el préstamo. Comparar puede suponer un ahorro significativo.
+
+---
+
+## ¿Cuándo es realmente necesario contratar un seguro de vida?
+
+No todo el mundo necesita un seguro de vida. Pero hay situaciones en las que su contratación es casi imprescindible:
+
+| Situación | ¿Necesitas seguro de vida? |
+|---|---|
+| Tienes una hipoteca y dependientes | Muy recomendable |
+| Tienes hijos menores de edad | Muy recomendable |
+| Eres autónomo y principal sustento | Muy recomendable |
+| Tienes deudas importantes | Recomendable |
+| Eres soltero sin cargas familiares | Menos prioritario |
+| Tienes patrimonio suficiente para cubrir gastos | Menos necesario |
+| Tu pareja también trabaja y tiene ingresos propios | Valorar según gastos comunes |
+
+La regla general es sencilla: si tu fallecimiento o incapacidad provocaría dificultades económicas graves a otras personas que dependen de ti, un seguro de vida es una herramienta de protección básica.
+
+---
+
+## ¿Cuánto cuesta un seguro de vida en España?
+
+El precio de un seguro de vida depende de varios factores:
+
+- **Edad del asegurado:** cuanto mayor seas al contratar, mayor será la prima anual.
+- **Estado de salud:** las aseguradoras suelen pedir un cuestionario médico y, a veces, un reconocimiento si el capital asegurado es elevado.
+- **Capital asegurado:** a mayor cobertura, mayor coste.
+- **Duración de la póliza:** en seguros temporales, plazos más largos implican primas más altas.
+- **Coberturas adicionales:** invalidez, enfermedades graves, exención de pago de primas, etc.
+
+### Ejemplos orientativos de primas anuales
+
+| Perfil | Capital asegurado | Prima anual aproximada |
+|---|---|---|
+| Hombre 30 años, no fumador | 150.000 € | 100–150 € |
+| Mujer 30 años, no fumadora | 150.000 € | 80–120 € |
+| Hombre 40 años, no fumador | 150.000 € | 200–300 € |
+| Hombre 40 años, fumador | 150.000 € | 350–500 € |
+| Hombre 50 años, no fumador | 150.000 € | 500–800 € |
+
+*Cifras orientativas para seguros de vida temporales a 20 años. Las primas reales varían según aseguradora y condiciones concretas.*
+
+Como puedes ver, contratar un seguro de vida en los 30 años resulta muy económico en relación con la protección que ofrece. Esperar a los 50 puede multiplicar la prima por cuatro o más.
+
+---
+
+## Cómo elegir el mejor seguro de vida: qué debes mirar
+
+### 1. Define cuánto capital necesitas
+
+Una regla práctica habitual es cubrir entre 5 y 10 veces tus ingresos anuales netos, más el capital pendiente de hipoteca si tienes una. El objetivo es que tu familia pueda mantener su nivel de vida durante varios años sin necesitar tus ingresos.
+
+### 2. Compara varias aseguradoras
+
+No te quedes con la primera oferta, especialmente si te la propone tu banco. Utiliza comparadores online para obtener presupuestos de varias compañías con las mismas coberturas y compara el precio y las condiciones.
+
+### 3. Lee la letra pequeña: exclusiones
+
+Todas las pólizas tienen exclusiones. Las más frecuentes en seguros de vida son:
+
+- Suicidio durante el primer año de la póliza.
+- Fallecimiento derivado de actividades de riesgo extremo no declaradas.
+- Enfermedades preexistentes no declaradas en el cuestionario médico.
+
+Declarar siempre con honestidad tu estado de salud al contratar es fundamental: si la aseguradora descubre que ocultaste información relevante, puede negarse a pagar la indemnización.
+
+### 4. Revisa los beneficiarios
+
+Puedes designar a quien quieras como beneficiario del seguro: tu pareja, tus hijos, tus padres. Es importante que la designación esté actualizada, especialmente si ha habido cambios familiares (divorcio, nuevos hijos, fallecimiento del beneficiario anterior).
+
+### 5. Considera la garantía de renovabilidad
+
+Algunos seguros temporales garantizan la renovación al término del plazo sin necesidad de nuevo reconocimiento médico, aunque con una prima actualizada. Esta cláusula es especialmente valiosa si tu salud empeora con el tiempo.
+
+---
+
+## Fiscalidad del seguro de vida en España
+
+La indemnización que reciben los beneficiarios de un seguro de vida tributa en el **Impuesto sobre Sucesiones y Donaciones (ISD)**, no en el IRPF, salvo que el beneficiario sea el propio asegurado (por ejemplo, en caso de invalidez), en cuyo caso tributa como rendimiento del trabajo en el IRPF.
+
+El ISD varía enormemente entre comunidades autónomas. En comunidades como Madrid, Andalucía o Galicia las bonificaciones para herederos directos pueden ser muy elevadas, lo que hace que la tributación sea mínima o nula. En otras comunidades la carga fiscal puede ser mayor.
+
+Además, las primas del seguro de vida **no son deducibles en la declaración de la renta** con carácter general, salvo en el caso de autónomos que usen el seguro como cobertura ligada a la actividad profesional, con ciertos límites establecidos en la normativa del IRPF.
+
+---
+
+## Consejos prácticos antes de contratar
+
+- **Contrata cuanto antes**: cada año que esperas, la prima sube. A los 30 años, un seguro de 150.000 € puede costarte menos de 150 € al año.
+- **No te quedes solo con el seguro del banco**: compara siempre en el mercado abierto; el ahorro puede ser del 30 % al 50 %.
+- **Ajusta el capital cada pocos años**: si tienes más hijos, contraes más deudas o tu salario sube, revisa si la cobertura sigue siendo suficiente.
+- **Declara con honestidad el cuestionario médico**: el riesgo de que la aseguradora deniegue el pago por ocultación no merece la pena.
+- **Guarda la póliza en un lugar accesible** y asegúrate de que tus beneficiarios saben que existe. En España puedes inscribir el seguro en el Registro de Contratos de Seguro de Cobertura de Fallecimiento, un servicio gratuito del Ministerio de Justicia.
+- **Si eres autónomo, prioriza también la cobertura por invalidez**: el sistema público cubre menos y el impacto de una incapacidad en tus ingresos puede ser inmediato.
+
+---
+
+## Conclusión
+
+Un seguro de vida no es un gasto: es una herramienta de planificación financiera que protege a las personas que más quieres de las consecuencias económicas de lo peor que podría pasarte. En España, su coste es accesible —especialmente si se contrata joven y con buena salud— y su valor en momentos de necesidad puede ser incalculable.
+
+Antes de contratar, compara, calcula el capital que realmente necesitas y lee bien las condiciones. Y si ya tienes un seguro de vida vinculado a la hipoteca, comprueba que el capital asegurado sigue siendo suficiente y que el precio es competitivo respecto al mercado.
+
+La tranquilidad que da saber que tu familia está protegida merece al menos una hora de tu tiempo revisando tus opciones.`,
+  },
+  {
     slug: "crowdfunding-inmobiliario-en-espana",
     title: "Crowdfunding inmobiliario en España: cómo funciona, plataformas y riesgos",
     description: "Descubre cómo funciona el crowdfunding inmobiliario en España, qué plataformas están reguladas por la CNMV y qué riesgos debes conocer antes de invertir tu dinero.",
