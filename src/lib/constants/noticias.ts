@@ -10,6 +10,142 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "pension-de-viudedad-en-espana",
+    title: "Pensión de viudedad en España: requisitos, cuantía y cómo solicitarla",
+    description: "Todo lo que necesitas saber sobre la pensión de viudedad en España: quién tiene derecho, cuánto cobra, cómo pedirla y situaciones especiales como parejas de hecho o divorciados.",
+    category: "Pensiones",
+    readingMinutes: 8,
+    publishedAt: "2026-05-07",
+    content: `## ¿Qué es la pensión de viudedad?
+
+La pensión de viudedad es una prestación económica que reconoce la Seguridad Social española a quienes han perdido a su cónyuge o pareja de hecho y cumplen una serie de requisitos. Su objetivo es compensar la pérdida de ingresos que genera el fallecimiento del familiar que contribuía económicamente al hogar.
+
+En España, es una de las pensiones más frecuentes: el Sistema de Seguridad Social abona mensualmente esta prestación a más de 2,5 millones de personas, en su gran mayoría mujeres, aunque el número de hombres beneficiarios ha ido creciendo de forma sostenida en los últimos años.
+
+Conviene aclarar desde el principio que **la pensión de viudedad no exige que el superviviente dependiera económicamente del fallecido**. Es decir, aunque tengas trabajo propio e ingresos suficientes, puedes tener derecho a esta pensión si se cumplen el resto de condiciones legales.
+
+---
+
+## ¿Quién puede solicitar la pensión de viudedad?
+
+### Cónyuges (matrimonios)
+
+Para los matrimonios, el acceso a la pensión de viudedad es más amplio. La persona superviviente tiene derecho si:
+
+- Estaba casada con el fallecido en el momento del fallecimiento.
+- El fallecido cotizó a la Seguridad Social un mínimo de **500 días en los 5 años anteriores al fallecimiento** en caso de fallecimiento por enfermedad común.
+- Si el fallecimiento se produjo por accidente laboral o enfermedad profesional, no se exige período de cotización previo.
+
+### Separados y divorciados
+
+Quienes estaban separados o divorciados en el momento del fallecimiento también pueden acceder a la pensión, pero con condiciones adicionales:
+
+- Deben ser **acreedores de una pensión compensatoria** que quedara extinguida por el fallecimiento del causante.
+- Si no existe pensión compensatoria reconocida, puede haber acceso en determinados supuestos relacionados con matrimonios anteriores a 2008 y situaciones de dependencia económica acreditada.
+
+### Parejas de hecho
+
+Las parejas de hecho tienen derecho a la pensión de viudedad desde la reforma de 2007, pero con requisitos más estrictos que los matrimonios:
+
+- La pareja debe estar **inscrita en el registro de parejas de hecho** de la comunidad autónoma con al menos **dos años de antelación** al fallecimiento.
+- Debe acreditarse una **convivencia estable y notoria de al menos 5 años** inmediatamente anteriores al fallecimiento.
+- Además, los ingresos del superviviente durante el año anterior no pueden superar determinados umbrales: en general, el 50 % de los ingresos conjuntos de la pareja, o bien sus ingresos anuales no deben superar 1,5 veces el Salario Mínimo Interprofesional (SMI) vigente.
+
+---
+
+## ¿Cuánto es la pensión de viudedad en 2026?
+
+La cuantía de la pensión de viudedad depende de varios factores: la base reguladora del fallecido y el porcentaje aplicable según la situación personal del beneficiario.
+
+### Base reguladora
+
+La pensión se calcula sobre la **base reguladora** del fallecido, que se obtiene a partir de las cotizaciones realizadas durante su vida laboral activa. Cuanto mayor haya sido el salario cotizado y el tiempo de cotización, mayor será la base reguladora y, por tanto, la pensión resultante.
+
+### Porcentajes aplicables según situación
+
+| Situación del superviviente | Porcentaje sobre la base reguladora |
+|---|---|
+| Caso general | 52 % |
+| Con cargas familiares (hijos menores de 26 años a cargo) | 70 % |
+| Mayor de 65 años sin otra pensión pública y con ingresos limitados | 70 % |
+| Víctimas de violencia de género o terrorismo | Mínimo 52 % |
+
+El porcentaje del **70 %** es aplicable cuando el pensionista tiene hijos menores de 26 años o con discapacidad a su cargo, los ingresos anuales del hogar no superan el límite legal establecido y la pensión de viudedad constituye la principal fuente de ingresos.
+
+### Importe mínimo garantizado
+
+En 2026, la Seguridad Social garantiza un importe mínimo para la pensión de viudedad que varía según la edad del beneficiario y si tiene o no hijos a cargo. Para beneficiarios mayores de 65 años sin cargas familiares, el mínimo se sitúa en torno a los 850 euros mensuales en 14 pagas. Este complemento a mínimos es independiente de la pensión calculada: si la tuya no llega al mínimo garantizado y cumples los requisitos de renta, la Seguridad Social lo complementa.
+
+### Compatibilidad con trabajo y otras pensiones
+
+La pensión de viudedad es **compatible con el trabajo por cuenta ajena o propia** y también con otras pensiones contributivas como la jubilación o la incapacidad permanente. Sin embargo, cuando se compatibiliza con una pensión de jubilación o incapacidad permanente, el porcentaje aplicado a la base reguladora puede reducirse al 52 % incluso en situaciones que, de otro modo, darían derecho al 70 %.
+
+---
+
+## ¿Cómo solicitar la pensión de viudedad?
+
+El trámite es sencillo pero requiere reunir la documentación necesaria y presentarla cuanto antes.
+
+### Plazo para solicitarla
+
+No existe un plazo máximo para solicitar la pensión de viudedad, pero **los efectos económicos solo se retrotraen hasta los 3 meses anteriores a la fecha de solicitud**. Esto significa que si tardas 6 meses en pedirla, perderás 3 meses de prestación. Por eso, conviene iniciar el trámite en cuanto sea posible tras el fallecimiento.
+
+### Documentación necesaria
+
+- DNI o documento de identidad del solicitante.
+- Certificado de defunción del causante.
+- Libro de familia o certificado de matrimonio.
+- Si eres pareja de hecho: certificado de inscripción en el registro de parejas de hecho y documentación que acredite la convivencia (empadronamiento conjunto, contratos de alquiler firmados conjuntamente, etc.).
+- Si estabas divorciado o separado: sentencia de separación o divorcio y documentación relativa a la pensión compensatoria reconocida.
+- La documentación laboral y de cotizaciones del fallecido puede obtenerse directamente por la Seguridad Social, pero conviene aportarla si se dispone de ella para agilizar el proceso.
+
+### ¿Dónde se solicita?
+
+La solicitud puede realizarse por dos vías:
+
+- **Presencialmente** en cualquier Centro de Atención e Información de la Seguridad Social (CAISS), con cita previa tramitada en el portal de la Seguridad Social.
+- **Online** a través de la Sede Electrónica de la Seguridad Social, con certificado digital, DNI electrónico o sistema Cl@ve PIN.
+
+### Tiempo de resolución
+
+El INSS tiene un plazo legal de **90 días hábiles** para resolver la solicitud. En la práctica, la mayoría de resoluciones se producen en un plazo de 2 a 3 meses, aunque puede variar según la complejidad del caso y la carga de trabajo del centro.
+
+---
+
+## Situaciones especiales
+
+### Pensión de viudedad por violencia de género
+
+Si el fallecimiento del causante está relacionado con violencia de género, la ley reconoce el derecho a la pensión de viudedad con independencia de que existiera separación o divorcio previo. Basta con que haya una condena penal del fallecido o una resolución judicial que acredite que fue autor de los hechos de violencia. Este es uno de los pocos casos en que la separación o el divorcio no excluye el derecho a la prestación.
+
+### Fallecimiento de un pensionista de jubilación
+
+Si el fallecido ya era pensionista de jubilación en el momento del fallecimiento, el cálculo de la base reguladora de la pensión de viudedad se realiza directamente sobre el importe de su pensión de jubilación, no sobre sus cotizaciones históricas. Esto simplifica mucho el cálculo y, en general, resulta favorable para el beneficiario.
+
+### Nueva pareja o matrimonio del pensionista de viudedad
+
+Desde la reforma de 2022, el matrimonio o la constitución de una pareja de hecho por parte del pensionista de viudedad **ya no extingue automáticamente la pensión en todos los supuestos**. Sin embargo, dependiendo de la situación concreta, sí puede afectar al importe percibido o generar obligaciones de comunicación con la Seguridad Social. Antes de formalizar una nueva relación, conviene consultar con un profesional o con el CAISS para conocer el impacto exacto.
+
+---
+
+## Consejos prácticos
+
+- **No esperes**: solicita la pensión en cuanto puedas tras el fallecimiento. Cada mes de retraso puede suponer una cantidad de dinero que no recuperarás.
+- **Reúne la documentación con antelación**: especialmente la relativa al registro de parejas de hecho si aplica, ya que acreditar la inscripción con dos años de antigüedad es un requisito que no admite excepciones.
+- **Consulta tu informe de vida laboral y el del fallecido**: para conocer las cotizaciones realizadas y estimar la cuantía que te corresponde antes de presentar la solicitud. Puedes pedirlo gratuitamente en la Sede Electrónica de la Seguridad Social.
+- **Si te deniegan la pensión, recurre**: la resolución denegatoria puede impugnarse mediante reclamación previa en vía administrativa y, si esta también es denegada, en vía judicial contencioso-social. Un número significativo de denegaciones se revierte al aportar documentación adicional o argumentar correctamente la situación.
+- **Valora el complemento a mínimos**: si la pensión calculada no alcanza el mínimo garantizado y cumples los requisitos de renta del hogar, solicita expresamente que se analice si tienes derecho al complemento.
+- **Infórmate sobre la compatibilidad con tu trabajo**: si eres trabajador activo o ya cobras otra pensión, consulta cómo afecta a tu porcentaje de cálculo para planificar bien tu situación económica a largo plazo.
+
+---
+
+## Conclusión
+
+La pensión de viudedad en España es una prestación amplia, accesible tanto a cónyuges como a parejas de hecho, y compatible con el trabajo y otras pensiones. Sin embargo, los requisitos varían de forma significativa según la situación personal del solicitante: no es lo mismo ser viudo en matrimonio vigente que estar divorciado, ni ser cónyuge que pareja de hecho registrada.
+
+Lo más importante es actuar con rapidez, reunir la documentación necesaria y no asumir que no tienes derecho sin haberlo verificado. Los trabajadores sociales de los CAISS pueden asesorarte de forma completamente gratuita, y la Sede Electrónica de la Seguridad Social ofrece simuladores orientativos para estimar la cuantía antes de presentar la solicitud. No renuncies a lo que legalmente te corresponde por falta de información.`,
+  },
+  {
     slug: "seguros-de-vida-cuando-contratarlos",
     title: "Seguros de vida en España: cuándo contratarlos, qué cubren y cómo elegir el mejor",
     description: "Descubre cuándo es imprescindible tener un seguro de vida en España, qué coberturas existen, cuánto cuesta y cómo elegir la póliza que mejor se adapta a tu situación.",
