@@ -10,6 +10,147 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "cuentas-de-ahorro-remuneradas-como-elegir",
+    title: "Cuentas de ahorro remuneradas en 2026: cómo funcionan y cuál elegir",
+    description: "Descubre qué son las cuentas de ahorro remuneradas, cómo compararlas, cuánto tributan y qué debes mirar antes de contratar una en España en 2026.",
+    category: "Ahorro",
+    readingMinutes: 8,
+    publishedAt: "2026-05-08",
+    content: `## ¿Qué es una cuenta de ahorro remunerada?
+
+Una cuenta de ahorro remunerada es un producto bancario que, a diferencia de la cuenta corriente tradicional, **ofrece una rentabilidad por el dinero depositado**. Es decir, el banco te paga intereses simplemente por tener tu dinero guardado en esa cuenta. La remuneración puede liquidarse de forma diaria, mensual o anual, y se expresa habitualmente como Tasa Anual Equivalente (TAE).
+
+Hasta hace apenas unos años, en el entorno de tipos de interés cercanos a cero impuesto por el Banco Central Europeo (BCE), estas cuentas apenas ofrecían nada. Sin embargo, desde que el BCE inició su ciclo de subidas de tipos en 2022 —y los mantuvo elevados durante los años siguientes—, los bancos empezaron a trasladar parte de esa rentabilidad al ahorrador. Hoy, en 2026, existen cuentas de ahorro que ofrecen una TAE de entre el 2 % y el 3,5 %, lo que supone una diferencia significativa respecto a tenerlo en una cuenta corriente sin rentabilidad alguna.
+
+La pregunta ya no es si merece la pena abrir una. La pregunta es cuál elegir.
+
+---
+
+## Cuenta corriente vs cuenta de ahorro: ¿en qué se diferencian?
+
+Es frecuente confundir ambos productos, pero tienen características bien distintas:
+
+| Característica | Cuenta corriente | Cuenta de ahorro |
+|---|---|---|
+| Rentabilidad | Normalmente 0 % TAE | Desde 0,5 % hasta 3,5 % TAE o más |
+| Operativa diaria | Sí (domiciliaciones, tarjetas, Bizum) | Limitada o nula |
+| Liquidez | Total e inmediata | Total o con restricciones según producto |
+| Objetivo | Gestión del día a día | Acumular y rentabilizar el ahorro |
+| Coste de mantenimiento | Posible (según entidad) | Generalmente gratuito |
+
+En resumen: la **cuenta corriente** es tu cuenta operativa para recibir la nómina, pagar recibos y usar la tarjeta. La **cuenta de ahorro** es donde aparcar el dinero que no necesitas de inmediato para que genere rentabilidad.
+
+---
+
+## Tipos de cuentas de ahorro en España
+
+No todas las cuentas de ahorro son iguales. En España existen varias modalidades:
+
+### Cuentas de ahorro a la vista
+
+Son las más flexibles: puedes retirar el dinero en cualquier momento sin penalización. Suelen ofrecer una rentabilidad menor que los depósitos a plazo fijo, pero la liquidez total es su gran ventaja. Son ideales para el **fondo de emergencia** o el ahorro a corto plazo.
+
+### Depósitos a plazo fijo
+
+Aunque técnicamente son un producto distinto, muchas personas los confunden con las cuentas de ahorro. En un depósito a plazo fijo, el dinero queda inmovilizado durante un período determinado —3, 6, 12 o 24 meses, por ejemplo— a cambio de una mayor rentabilidad. Si rescatas el dinero antes del vencimiento, normalmente pierdes los intereses o pagas una penalización.
+
+### Cuentas de ahorro vinculadas
+
+Algunas entidades ofrecen una rentabilidad mayor si el cliente cumple ciertos requisitos: domiciliar la nómina, contratar un seguro, usar la tarjeta un número mínimo de veces al mes, etc. Conviene leer bien los términos y condiciones antes de contratar una de estas cuentas, porque a veces la vinculación puede costarte más de lo que ganas en intereses.
+
+### Cuentas de ahorro de neobancos y entidades europeas
+
+En los últimos años, entidades como Trade Republic, Bunq, Openbank o MyInvestor han ganado cuota de mercado en España precisamente por ofrecer cuentas de ahorro con rentabilidades superiores a las de la banca tradicional. Al operar con menores costes de estructura, pueden trasladar más rentabilidad al cliente. Son plenamente seguras siempre que estén cubiertas por el Fondo de Garantía de Depósitos de su país de origen (en la Unión Europea, el límite de cobertura es de 100.000 euros por titular y entidad).
+
+---
+
+## ¿Cómo elegir la mejor cuenta de ahorro?
+
+A la hora de comparar cuentas de ahorro, debes fijarte en varios factores clave:
+
+### 1. La TAE, no el TIN
+
+El **Tipo de Interés Nominal (TIN)** es el tipo de interés bruto anual. La **Tasa Anual Equivalente (TAE)** incluye la frecuencia de capitalización y las comisiones, por lo que refleja la rentabilidad real. Siempre compara TAEs, nunca TINs. Dos cuentas con el mismo TIN pueden ofrecer TAEs diferentes si una capitaliza mensualmente y la otra anualmente.
+
+### 2. Condiciones de vinculación
+
+Algunos productos exigen domiciliar la nómina, mantener un saldo mínimo o contratar otros productos. Valora si esas condiciones te compensan o si prefieres una cuenta sin requisitos. Una cuenta al 3 % TAE con una cuenta corriente asociada de 10 euros al mes puede no ser mejor que otra al 2,5 % TAE completamente gratuita.
+
+### 3. Liquidez
+
+¿Puedes retirar el dinero en cualquier momento? ¿Hay penalizaciones? Para el fondo de emergencia, la liquidez total es imprescindible. Para el ahorro a más largo plazo, puedes asumir algo de inmovilización a cambio de mayor rentabilidad.
+
+### 4. Cobertura del Fondo de Garantía de Depósitos
+
+En España, el **Fondo de Garantía de Depósitos (FGD)** cubre hasta 100.000 euros por titular y entidad. Para los bancos europeos que operan en España con pasaporte comunitario, la cobertura la ofrece el fondo del país de origen. Antes de abrir una cuenta en una entidad extranjera, verifica que está adscrita a un fondo equivalente dentro de la UE.
+
+### 5. Saldo máximo remunerado
+
+Algunas cuentas solo ofrecen la TAE anunciada para el primer tramo del saldo: por ejemplo, el 3 % TAE solo para los primeros 30.000 euros, y un tipo inferior para el resto. Si tu ahorro supera ese límite, tendrás que buscar alternativas complementarias.
+
+---
+
+## Tributación de los intereses en el IRPF
+
+Los intereses generados por una cuenta de ahorro tributan en el IRPF como rendimientos del capital mobiliario y se integran en la **base imponible del ahorro**. Los tipos aplicables en 2026 son los siguientes:
+
+| Tramo de la base del ahorro | Tipo aplicable |
+|---|---|
+| Hasta 6.000 € | 19 % |
+| De 6.000 € a 50.000 € | 21 % |
+| De 50.000 € a 200.000 € | 23 % |
+| Más de 200.000 € | 27 % |
+
+El banco practica automáticamente una **retención del 19 %** sobre los intereses abonados. En la declaración de la renta, si tu tipo definitivo es superior al 19 % porque has cobrado intereses por encima de 6.000 euros anuales, deberás pagar la diferencia.
+
+Es importante incluir los intereses en la declaración aunque el banco ya haya practicado la retención, ya que la Agencia Tributaria los cruza con los datos bancarios y puede detectar discrepancias.
+
+---
+
+## Cómo abrir una cuenta de ahorro: proceso paso a paso
+
+Abrir una cuenta de ahorro hoy en día es un proceso sencillo que puede hacerse completamente online en menos de 10 minutos:
+
+1. **Elige la entidad y el producto** que mejor se adapte a tus necesidades usando un comparador independiente (HelpMyCash, iAhorro, Kelisto, etc.).
+2. **Accede al portal o app de la entidad** y haz clic en "Abrir cuenta" o "Contratar".
+3. **Facilita tu documentación**: DNI o NIE, número de teléfono y correo electrónico. Algunos bancos piden también el número de cuenta bancaria de origen para verificar tu identidad.
+4. **Verifica tu identidad**: la mayoría de entidades utilizan videoidentificación —te graban durante unos minutos mostrando el DNI— o verificación biométrica con foto.
+5. **Transfiere el dinero inicial** desde tu cuenta corriente habitual.
+6. **Comienza a generar intereses**: algunos bancos abonan los intereses de forma diaria (aunque los liquiden mensual o anualmente), otros los acumulan y pagan al final del período pactado.
+
+---
+
+## Comparativa orientativa de cuentas de ahorro en España (2026)
+
+| Tipo de entidad | TAE aproximada | Liquidez | Vinculación |
+|---|---|---|---|
+| Banca tradicional grande | 0,5 % – 1,5 % | Total | A menudo sí |
+| Banca online española | 1,5 % – 2,5 % | Total | A veces |
+| Neobancos europeos | 2,5 % – 3,5 % | Total | No |
+| Depósito a plazo fijo | 2,5 % – 3,5 % | Limitada | No |
+
+*Los datos son orientativos. Las TAEs varían según la coyuntura de tipos de interés y las políticas comerciales de cada entidad. Consulta siempre las condiciones actualizadas antes de contratar.*
+
+---
+
+## Consejos prácticos para sacar el máximo partido a tu ahorro
+
+- **Separa el fondo de emergencia del ahorro a largo plazo**: el fondo de emergencia (entre 3 y 6 meses de gastos) debe estar en una cuenta de ahorro líquida al 100 %. El ahorro a más largo plazo puede complementarse con depósitos a plazo fijo u otros productos de inversión más rentables.
+- **Diversifica entre entidades si superas los 100.000 €**: el Fondo de Garantía de Depósitos cubre hasta 100.000 euros por titular y entidad. Si tu ahorro es superior, reparte entre varias entidades para garantizar la cobertura completa.
+- **Revisa las condiciones periódicamente**: las TAEs de las cuentas de ahorro pueden cambiar. Algunas entidades ofrecen tipos promocionales durante los primeros meses y luego los reducen sin previo aviso. Programa una revisión cada 6 meses y cambia si encuentras algo mejor.
+- **No descuides la declaración de la renta**: guarda los extractos anuales con los intereses cobrados. Si no los incluyes, Hacienda puede detectarlo al cruzar datos con los bancos.
+- **Cuidado con las ofertas de bienvenida**: muchas entidades ofrecen una TAE elevada solo durante los primeros 3 o 6 meses. Anota en el calendario cuándo caduca la promoción para no quedarte sin rentabilidad por inercia.
+- **Usa comparadores independientes**: la diferencia de unas décimas de TAE puede suponer decenas o incluso cientos de euros al año si tienes un ahorro considerable. Cinco minutos de comparación pueden rentarte mucho.
+
+---
+
+## Conclusión
+
+En 2026, dejar tu dinero parado en una cuenta corriente sin rentabilidad equivale a perder poder adquisitivo cada año frente a la inflación. Las cuentas de ahorro remuneradas —especialmente las ofrecidas por neobancos y entidades con operativa digital— son una herramienta sencilla, segura y accesible para cualquier ahorrador español que quiera rentabilizar su liquidez sin asumir riesgos de inversión.
+
+No hace falta ser un experto financiero para abrir una: basta con comparar la TAE, verificar que la entidad está cubierta por un Fondo de Garantía de Depósitos de la UE, entender la fiscalidad básica y completar el proceso de alta online en pocos minutos. El esfuerzo es mínimo; el beneficio, acumulado mes a mes, puede ser muy relevante.`,
+  },
+  {
     slug: "pension-de-viudedad-en-espana",
     title: "Pensión de viudedad en España: requisitos, cuantía y cómo solicitarla",
     description: "Todo lo que necesitas saber sobre la pensión de viudedad en España: quién tiene derecho, cuánto cobra, cómo pedirla y situaciones especiales como parejas de hecho o divorciados.",
