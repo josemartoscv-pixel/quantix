@@ -10,6 +10,145 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-negociar-el-salario",
+    title: "Cómo negociar el salario en España: guía práctica para conseguir lo que mereces",
+    description: "Aprende a negociar tu salario con confianza: cómo investigar el mercado, cuándo pedir un aumento y qué argumentos usar para conseguir la retribución que mereces en España.",
+    category: "Mercado laboral",
+    readingMinutes: 7,
+    publishedAt: "2026-05-09",
+    content: `## Por qué la mayoría de los trabajadores no negocia su salario
+
+Según diversos estudios sobre mercado laboral en España, menos de la mitad de los trabajadores negocia su salario cuando recibe una oferta de empleo, y un porcentaje aún menor lo hace dentro de su empresa actual. Los motivos son variados: miedo a parecer codiciosos, temor a que retiren la oferta, falta de información sobre los salarios del mercado o simplemente no saber cómo plantearlo.
+
+Sin embargo, no negociar tiene un coste real. Imagina que aceptas un sueldo de 28.000 euros cuando podrías haber obtenido 31.000. Esa diferencia de 3.000 euros anuales, si se mantiene durante diez años con revisiones proporcionales, supone más de 30.000 euros brutos que dejarás de ganar a lo largo de tu carrera. La negociación salarial no es un lujo; es una competencia profesional fundamental.
+
+---
+
+## Cuándo es el momento adecuado para negociar
+
+No todos los momentos son iguales. La negociación salarial tiene dos escenarios principales:
+
+### En una nueva oferta de empleo
+
+El momento de mayor poder negociador es justo cuando la empresa ha decidido contratarte pero aún no has firmado nada. En ese punto, la empresa ya ha invertido tiempo y recursos en el proceso de selección y tiene interés en cerrarlo. **No aceptes nunca la primera oferta sin analizar si hay margen de mejora.**
+
+Lo ideal es pedir un par de días para valorar la propuesta, investigar el mercado y preparar tu respuesta. Decir "Necesito un día para revisarlo con calma" es completamente profesional y esperable.
+
+### En tu empresa actual
+
+Pedir un aumento dentro de tu empresa requiere más planificación. Los mejores momentos son:
+
+- **Tras una evaluación de desempeño positiva**: aprovecha el impulso del reconocimiento recibido.
+- **Después de completar un proyecto relevante o logro medible**: hay evidencia concreta de tu aportación.
+- **Cuando el mercado retribuye tu perfil claramente por encima de tu salario actual**: tienes datos objetivos que respaldan la conversación.
+- **Cuando la empresa va bien económicamente**: no es el momento de pedir un aumento durante una reestructuración o una crisis de negocio.
+
+---
+
+## Cómo preparar la negociación
+
+Una negociación sin preparación suele acabar mal. Estos son los pasos clave antes de sentarte a hablar de dinero:
+
+### 1. Investiga los salarios de mercado
+
+Antes de negociar, necesitas saber qué cobra alguien con tu perfil, experiencia, sector y ubicación geográfica. En España puedes consultar estas fuentes:
+
+- **Infojobs Salarios**: el informe anual del mercado laboral en España es una referencia habitual y gratuita.
+- **Glassdoor y LinkedIn Salary**: permiten ver rangos salariales por empresa, cargo y ciudad.
+- **Michael Page, Hays o Randstad**: estas consultoras publican guías salariales anuales detalladas por sector y nivel de experiencia.
+- **Contactos del sector**: hablar con compañeros de trabajo o profesionales de otras empresas es una fuente de información muy valiosa y a menudo infrautilizada.
+
+El objetivo es llegar con un rango salarial documentado, no con una cifra sacada de la intuición.
+
+### 2. Calcula tu valor añadido
+
+Más allá de lo que marca el mercado, identifica qué aportación concreta haces a tu empresa o harías en tu nuevo puesto:
+
+- ¿Has generado ahorros o ingresos cuantificables?
+- ¿Líderas proyectos críticos para el negocio?
+- ¿Tienes habilidades, certificaciones o idiomas difíciles de encontrar en el mercado?
+
+Cuanto más específico seas en este análisis, más sólida será tu argumentación durante la conversación.
+
+### 3. Define tu rango salarial y tu punto de anclaje
+
+Establece tres cifras antes de negociar:
+
+- **Mínimo aceptable**: por debajo de esta cifra no aceptarás bajo ningún concepto.
+- **Salario objetivo**: lo que realmente quieres conseguir y te parece justo.
+- **Cifra de anclaje**: la que lanzarás primero, ligeramente por encima de tu objetivo real.
+
+El anclaje salarial es una técnica psicológica bien documentada: la primera cifra que se pone sobre la mesa suele sesgar toda la negociación posterior. Si tú anclas alto (dentro de lo razonable), el resultado final tenderá a ser más alto que si esperas a que la empresa haga la primera oferta.
+
+---
+
+## Estrategias durante la negociación
+
+### No aceptes en el momento
+
+Aunque la oferta te parezca buena, evita aceptar en el acto. Pedir tiempo para reflexionar transmite que tomas las decisiones con seriedad y te da margen para investigar y contraoferta si fuera necesario. Un "me parece interesante, ¿puedo responderte mañana?" es completamente profesional.
+
+### Negocia el paquete completo, no solo el salario bruto
+
+El salario base es solo una parte de la retribución total. En España, muchas empresas ofrecen beneficios que tienen un valor económico real y que pueden negociarse:
+
+| Concepto | Valor orientativo anual |
+|---|---|
+| Teletrabajo parcial (2 días/semana) | 1.000–2.000 € en ahorro de desplazamiento |
+| Seguro médico privado (individual) | 500–1.500 € |
+| Ticket restaurante (11 €/día laborable) | ~2.500 € netos al año |
+| Formación financiada por la empresa | Variable según el caso |
+| Plan de pensiones de empresa | Hasta el 30 % del salario bruto |
+| Coche de empresa o kilometraje | 4.000–10.000 € anuales |
+| Días de vacaciones adicionales | Muy valorado cualitativamente |
+
+Si la empresa no puede subir el salario base por política interna o restricciones presupuestarias, pide mejorar alguno de estos conceptos. Un seguro médico privado familiar puede ahorrarte 1.500 euros al año, lo que equivale a un aumento real en tu bolsillo.
+
+### Usa el silencio como herramienta
+
+Después de lanzar tu cifra o contraoferta, **guarda silencio**. El silencio genera incomodidad, y muchas personas lo llenan con concesiones. No seas tú quien lo rompa primero tras haber puesto un número encima de la mesa.
+
+### Argumenta con datos, no con necesidades personales
+
+"Necesito más dinero porque me he comprado un piso" no es un argumento válido en una negociación salarial. Lo que sí funciona es: "Según los informes del sector, perfiles con mi experiencia en esta industria cobran entre X y Y en Madrid, y mi contribución durante el último año incluye estos resultados concretos."
+
+---
+
+## ¿Qué hacer si te dicen que no?
+
+Si la respuesta es un "no" definitivo, no significa que la negociación haya fracasado del todo. Puedes aprovechar el momento para:
+
+1. **Preguntar qué tendría que ocurrir para que esa revisión salarial fuera posible**: esto te da un mapa de ruta claro y muestra que estás comprometido con la empresa.
+2. **Acordar una revisión en seis meses**: si es posible, fíjalo por escrito en un correo de seguimiento.
+3. **Valorar otras mejoras no salariales**: más días libres, horario flexible, teletrabajo adicional o formación financiada.
+4. **Replantear si sigues en el lugar adecuado**: a veces un "no" rotundo y sin alternativas es información muy valiosa sobre el futuro de tu carrera en esa empresa.
+
+---
+
+## Errores comunes que debes evitar
+
+- **Dar el primer número sin investigar**: lanzar una cifra demasiado baja te cierra el techo de toda la negociación.
+- **Revelar tu salario actual si no es obligatorio**: en muchos procesos puedes decir que prefieres centrarte en el valor del puesto.
+- **Aceptar verbalmente antes de negociar**: una vez que dices "sí", tu poder negociador cae a cero.
+- **Negociar por correo electrónico cuando puedes hacerlo en persona**: el tono y el lenguaje no verbal importan mucho.
+- **Tomar un "no" inicial como definitivo**: en muchos casos el primer rechazo es solo el inicio de la negociación real.
+- **Mezclar lo personal con lo profesional**: centrate siempre en el valor que aportas, no en tus circunstancias personales.
+
+---
+
+## Consejos prácticos para negociar con éxito
+
+1. **Prepara datos antes de cada conversación salarial**: salario de mercado, logros cuantificables y alternativas reales que tienes disponibles.
+2. **Practica la conversación en voz alta** con un amigo de confianza o frente al espejo: la seguridad al hablar de dinero se entrena y mejora con la repetición.
+3. **Solicita reuniones específicas** para hablar de retribución, no lo hagas de pasada en el pasillo o al final de otra reunión.
+4. **Mantén siempre un tono colaborativo**, nunca confrontacional: estás buscando un acuerdo mutuamente beneficioso, no ganando una batalla.
+5. **Revisa tu situación salarial al menos una vez al año**: el mercado cambia, tus responsabilidades crecen y tu valor también evoluciona.
+6. **Si tienes una oferta competidora, úsala con cuidado**: es una palanca poderosa, pero solo si estás genuinamente dispuesto a marcharte si no igualan.
+7. **Nunca mientas sobre tu salario actual ni sobre otras ofertas**: una mentira descubierta puede costarte la oferta o la confianza de tu empleador actual.
+
+Negociar el salario es incómodo al principio, pero es una habilidad que mejora notablemente con la práctica. Cada conversación que tienes sobre tu retribución te enseña algo nuevo y construye la confianza necesaria para la siguiente. Los profesionales que negocian sistemáticamente a lo largo de su carrera acaban ganando decenas de miles de euros más que quienes nunca lo hacen. La próxima vez que tengas una oferta sobre la mesa o que llegue tu revisión anual, recuerda: siempre hay margen. Pregunta.`,
+  },
+  {
     slug: "cuentas-de-ahorro-remuneradas-como-elegir",
     title: "Cuentas de ahorro remuneradas en 2026: cómo funcionan y cuál elegir",
     description: "Descubre qué son las cuentas de ahorro remuneradas, cómo compararlas, cuánto tributan y qué debes mirar antes de contratar una en España en 2026.",
