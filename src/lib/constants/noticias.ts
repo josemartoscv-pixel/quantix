@@ -10,6 +10,143 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "deduccion-compra-vivienda-habitual",
+    title: "Deducción por compra de vivienda habitual: quién puede aplicarla y cuánto ahorra en el IRPF",
+    description: "Descubre si puedes beneficiarte de la deducción por vivienda habitual en el IRPF: quién tiene derecho al régimen transitorio, cuánto puedes deducir y cómo reflejarla en tu declaración de la Renta.",
+    category: "Fiscalidad",
+    readingMinutes: 8,
+    publishedAt: "2026-05-10",
+    content: `## ¿Qué es la deducción por compra de vivienda habitual?
+
+La deducción por inversión en vivienda habitual fue durante décadas una de las más populares en la declaración de la Renta en España. Permitía a los contribuyentes deducirse hasta 1.356 euros al año en el IRPF por las cantidades destinadas a la adquisición o rehabilitación de su vivienda habitual.
+
+Sin embargo, el Gobierno la eliminó con efectos desde el 1 de enero de 2013 mediante la Ley 16/2012. Esto no significa que haya desaparecido del todo: los contribuyentes que adquirieron su vivienda habitual antes de esa fecha pueden seguir beneficiándose de ella gracias al denominado **régimen transitorio**.
+
+Si compraste tu casa antes del 31 de diciembre de 2012, este artículo es para ti.
+
+---
+
+## ¿Quién puede seguir aplicando la deducción?
+
+Solo pueden aplicar la deducción estatal por vivienda habitual quienes cumplan **todos** estos requisitos:
+
+- Adquirieron (o comenzaron a construir) su vivienda habitual antes del 31 de diciembre de 2012.
+- Habían aplicado la deducción en la declaración de la Renta de 2012 o en algún ejercicio anterior.
+- La vivienda sigue siendo su residencia habitual (deben vivir en ella de forma continuada durante al menos 3 años).
+
+Si compraste tu casa en 2013 o más tarde, no tienes acceso a esta deducción estatal. No obstante, algunas comunidades autónomas han creado sus propias deducciones autonómicas, de las que hablaremos más adelante.
+
+---
+
+## ¿Cuánto puedes deducirte?
+
+La deducción es del **15%** de las cantidades satisfechas durante el año para la adquisición o rehabilitación de la vivienda habitual, con una base máxima de deducción de **9.040 euros anuales por declarante**.
+
+| Concepto | Detalle |
+|---|---|
+| Porcentaje de deducción | 15% |
+| Base máxima anual | 9.040 € por contribuyente |
+| Deducción máxima anual | 1.356 € |
+| Declaración conjunta | Hasta 1.356 € (base compartida) |
+| Declaraciones individuales (matrimonio) | Hasta 1.356 € por cónyuge (2.712 € en total) |
+
+### ¿Qué cantidades cuentan para el cálculo?
+
+Entran dentro de la base de deducción las siguientes partidas:
+
+- Las cuotas de amortización del préstamo hipotecario (devolución de capital).
+- Los intereses del préstamo hipotecario.
+- Los gastos de financiación incluidos en el préstamo (comisiones de apertura, tasación, etc.).
+- Las aportaciones realizadas a una cuenta vivienda antes de 2013.
+
+No computan para la base de deducción:
+- El seguro de hogar o de vida, salvo que sea obligatorio y esté integrado en el préstamo.
+- Los gastos de comunidad de propietarios ni el Impuesto sobre Bienes Inmuebles (IBI).
+
+---
+
+## Declaración individual frente a declaración conjunta: ¿cuál conviene?
+
+Esta es una de las dudas más frecuentes entre las parejas con hipoteca compartida.
+
+### Declaración conjunta
+
+En la declaración conjunta, la base máxima de deducción es de 9.040 euros para la unidad familiar. Si entre los dos habéis pagado 16.000 euros de hipoteca, solo podéis aplicar el 15% sobre 9.040 euros, es decir, 1.356 euros de deducción total.
+
+### Declaraciones individuales
+
+Si cada miembro de la pareja presenta su declaración por separado, **cada uno puede aplicar la base máxima de 9.040 euros de forma independiente**. Siendo ambos cotitulares del préstamo y de la vivienda, la deducción total puede llegar a los **2.712 euros anuales entre los dos**.
+
+**Ejemplo práctico:**
+
+Una pareja con hipoteca paga 7.200 euros anuales entre capital e intereses. Cada titular computa el 50% del importe (3.600 €), muy por debajo del tope de 9.040 €. Cada uno se deduce el 15% de 3.600 €: **540 € por persona, 1.080 € en total**. En declaración conjunta la cifra sería la misma porque 7.200 € no supera el tope de 9.040 €. Pero si la hipoteca es elevada y los pagos anuales superan los 9.040 €, las declaraciones individuales pueden ser más ventajosas.
+
+---
+
+## ¿Y si compré mi casa después de 2013?
+
+Si no tienes acceso a la deducción estatal, existen otras opciones que conviene explorar.
+
+### Deducciones autonómicas por vivienda
+
+Muchas comunidades autónomas mantienen deducciones propias para la adquisición de vivienda habitual, especialmente dirigidas a jóvenes, familias numerosas o zonas en riesgo de despoblación. Los importes y requisitos varían significativamente por región:
+
+| Comunidad Autónoma | Tipo de deducción disponible |
+|---|---|
+| Andalucía | Adquisición por jóvenes menores de 35 años |
+| Aragón | Vivienda en municipios en riesgo de despoblación |
+| Castilla y León | Jóvenes y familias numerosas |
+| Extremadura | Adquisición de vivienda habitual |
+| Canarias | Primera vivienda para jóvenes |
+| Comunidad Valenciana | Discapacitados y familias numerosas |
+
+Consulta la página de la Agencia Tributaria de tu comunidad autónoma o la sede electrónica de la AEAT para comprobar si tienes derecho a alguna deducción autonómica en tu caso concreto.
+
+---
+
+## Errores frecuentes que cometen los contribuyentes
+
+### 1. No incluir todos los conceptos computables
+
+Muchos contribuyentes solo declaran las cuotas de amortización y olvidan los intereses o las comisiones incluidas en el préstamo. El banco emite cada enero un certificado con el desglose completo de lo pagado durante el año anterior: pídelo y úsalo.
+
+### 2. Declarar una vivienda que ya no es habitual
+
+Si te has mudado por trabajo o por cualquier otro motivo y ya no vives en la vivienda, técnicamente has perdido el derecho a aplicar la deducción por esa propiedad. La normativa considera que una vivienda es habitual cuando se ocupa de forma continuada durante al menos tres años y se reside en ella en un plazo no superior a doce meses desde la adquisición.
+
+### 3. No separar la vivienda habitual de otras propiedades
+
+La deducción solo aplica a la vivienda habitual. Las cuotas de un préstamo para una segunda residencia, un local o una plaza de garaje adquirida de forma independiente no son deducibles bajo este concepto.
+
+### 4. Confirmar el borrador sin revisar los datos hipotecarios
+
+El borrador de la declaración que facilita la AEAT suele incluir los datos del préstamo hipotecario, pero en ocasiones los importes están desactualizados, especialmente tras una novación, una subrogación o un cambio de entidad bancaria. Comprueba siempre las cifras antes de confirmar.
+
+---
+
+## Cómo reflejar la deducción en tu declaración de la Renta
+
+La deducción por inversión en vivienda habitual se refleja en el apartado de deducciones del modelo de Renta, dentro del régimen transitorio. El proceso paso a paso en Renta WEB es:
+
+1. Accede a la sede electrónica de la AEAT con tu certificado digital, Cl@ve PIN o número de referencia.
+2. Ve al apartado **Deducciones estatales** y busca la opción *Deducción por inversión en vivienda habitual (régimen transitorio)*.
+3. Indica si el préstamo es compartido con otra persona (cotitular) y el porcentaje de titularidad que te corresponde.
+4. Introduce el NIF de la entidad prestamista y el importe total pagado durante el ejercicio (capital más intereses).
+5. Comprueba que la deducción aparece correctamente calculada en el resumen del resultado de la declaración.
+
+---
+
+## Consejos prácticos para no perder ni un euro
+
+- **Solicita el certificado hipotecario a tu banco cada enero**: las entidades financieras están obligadas a emitirlo con el desglose de capital e intereses pagados durante el año. Es el documento clave para rellenar correctamente la declaración.
+- **Guarda todos los justificantes durante cuatro años**: Hacienda puede revisar declaraciones anteriores dentro del plazo de prescripción. Conserva extractos bancarios, certificados del préstamo y cualquier factura relacionada con la hipoteca.
+- **Simula siempre las dos opciones si estás en pareja**: antes de confirmar tu declaración, compara el resultado en declaración individual y conjunta usando el simulador de Renta WEB. La diferencia puede ser relevante dependiendo de los ingresos de cada cónyuge y del importe de la hipoteca.
+- **Consulta a un asesor fiscal si hubo cambios en el préstamo**: una novación de hipoteca, una subrogación a otra entidad o una ampliación del capital pueden afectar a cómo se aplica la deducción. Un gestor o asesor fiscal puede aclarar si sigues dentro del régimen transitorio.
+- **Revisa si tu comunidad autónoma ofrece deducciones adicionales**: aunque no tengas acceso a la deducción estatal, algunas regiones mantienen incentivos propios que pueden reducir tu factura fiscal de forma significativa.
+
+La deducción por vivienda habitual puede suponer un ahorro de más de 1.300 euros al año en la declaración de la Renta, y para las parejas que presentan declaraciones individuales, el beneficio puede duplicarse. Si compraste tu casa antes de 2013, asegúrate de que la estás aplicando correctamente cada año para no dejar dinero sobre la mesa.`,
+  },
+  {
     slug: "como-negociar-el-salario",
     title: "Cómo negociar el salario en España: guía práctica para conseguir lo que mereces",
     description: "Aprende a negociar tu salario con confianza: cómo investigar el mercado, cuándo pedir un aumento y qué argumentos usar para conseguir la retribución que mereces en España.",
