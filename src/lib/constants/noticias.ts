@@ -10,6 +10,128 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "prestamos-entre-particulares-y-fiscalidad",
+    title: "Préstamos entre particulares en España: cómo formalizarlos y qué debes declarar a Hacienda",
+    description: "Guía completa sobre los préstamos privados entre personas: cómo documentarlos legalmente, qué obligaciones fiscales generan y cómo evitar problemas con la Agencia Tributaria.",
+    category: "Fiscalidad",
+    readingMinutes: 7,
+    publishedAt: "2026-05-11",
+    content: `## ¿Qué es un préstamo entre particulares?
+
+Un préstamo entre particulares es un acuerdo económico por el que una persona física (el prestamista) entrega una cantidad de dinero a otra (el prestatario), que se compromete a devolverla en un plazo determinado, con o sin intereses. No interviene ninguna entidad financiera como un banco o una caja de ahorros.
+
+Este tipo de préstamos son muy habituales en España, especialmente entre familiares o amigos que se ayudan mutuamente en momentos de necesidad económica. Sin embargo, lo que mucha gente desconoce es que estos acuerdos, aunque sean informales, tienen implicaciones legales y fiscales que es imprescindible conocer para no tener problemas con Hacienda.
+
+### ¿Son legales los préstamos entre particulares?
+
+Sí, son completamente legales en España. El Código Civil, en sus artículos 1740 y siguientes, regula el contrato de préstamo (también denominado **mutuo**). Lo importante es que el acuerdo quede debidamente documentado y que se cumplan las obligaciones tributarias correspondientes.
+
+---
+
+## Cómo formalizar correctamente un préstamo entre particulares
+
+Para que el préstamo sea válido, reconocible ante la Agencia Tributaria y exigible judicialmente si fuera necesario, conviene documentarlo. Existen dos fórmulas principales:
+
+### 1. Contrato privado
+
+Es la opción más sencilla y económica. Basta con un documento escrito y firmado por ambas partes que recoja:
+
+- Nombre completo y DNI/NIF del prestamista y del prestatario
+- Importe exacto del préstamo
+- Fecha de entrega del dinero
+- Plazo de devolución (fecha límite o cuotas periódicas)
+- Tipo de interés pactado (puede ser del 0%)
+- Forma de pago acordada (se recomienda transferencia bancaria)
+
+No necesita ninguna certificación oficial, aunque siempre es aconsejable guardar copias firmadas por ambas partes y, si es posible, selladas con la fecha.
+
+### 2. Escritura pública ante notario
+
+Para préstamos de mayor importe —especialmente a partir de 10.000 o 15.000 euros— elevar el contrato a escritura pública ofrece mayor seguridad jurídica y un valor probatorio mucho más sólido. El coste notarial suele ser reducido en comparación con la protección que proporciona, y puede marcar la diferencia si alguna vez es necesario reclamar la deuda por vía judicial.
+
+---
+
+## Obligaciones fiscales del préstamo entre particulares
+
+Este es el apartado que más sorprende a quienes recurren por primera vez a un préstamo privado. Aunque no se cobren intereses, el préstamo genera obligaciones tributarias para ambas partes.
+
+### El Impuesto sobre Transmisiones Patrimoniales (ITP)
+
+Los préstamos entre particulares están sujetos al Impuesto sobre Transmisiones Patrimoniales y Actos Jurídicos Documentados (ITP-AJD), en su modalidad de Transmisiones Patrimoniales Onerosas. Sin embargo, están **exentos de pago** en virtud del artículo 45.I.B.15 del Real Decreto Legislativo 1/1993.
+
+Esto significa que no hay que pagar nada, pero **sí hay que presentar el modelo tributario correspondiente**. En concreto, el prestatario (quien recibe el dinero) debe presentar el **Modelo 600** ante la Hacienda de su comunidad autónoma en el plazo de **30 días hábiles** desde la firma del contrato.
+
+No presentar el modelo, aunque la cuota sea cero, supone un incumplimiento formal que podría acarrear sanciones administrativas.
+
+### Préstamos sin intereses: el riesgo de la donación encubierta
+
+Si el préstamo es gratuito (al 0% de interés), la Agencia Tributaria puede entender que en realidad existe una **donación encubierta**, especialmente si se produce entre familiares. Para evitar este problema, muchos expertos fiscales recomiendan fijar un tipo de interés, aunque sea simbólico.
+
+Como referencia, el **interés legal del dinero** —que se fija anualmente en los Presupuestos Generales del Estado y que en los últimos ejercicios se ha situado en torno al 3-4%— es el tipo que Hacienda puede utilizar para calcular un rendimiento presunto cuando el contrato no establece ningún interés o fija uno por debajo de dicho nivel.
+
+### IRPF del prestamista: cómo tributan los intereses cobrados
+
+Cuando el prestamista cobra intereses, debe declararlos en su **declaración de la Renta** como rendimientos del capital mobiliario, integrándolos en la base imponible del ahorro. Los tipos aplicables son los siguientes:
+
+| Base imponible del ahorro | Tipo impositivo |
+|---|---|
+| Hasta 6.000 € | 19% |
+| De 6.000 € a 50.000 € | 21% |
+| De 50.000 € a 200.000 € | 23% |
+| Más de 200.000 € | 27% |
+
+Si los intereses son cero, no hay rendimiento que declarar en el IRPF. Pero recuerda: Hacienda puede cuestionar si el préstamo es real o si encubre una donación, por lo que conviene tener la documentación en orden.
+
+### IRPF del prestatario: ¿hay que tributar por el dinero recibido?
+
+No. El prestatario no paga IRPF por el importe recibido, porque no se trata de un ingreso sino de una deuda que debe devolver. Sin embargo, si en algún momento el prestamista decide **perdonar la deuda** (condonar el préstamo total o parcialmente), esa condonación sí tributará:
+
+- Como **donación** si se hace a título gratuito, debiendo el prestatario liquidar el Impuesto sobre Sucesiones y Donaciones (ISD).
+- Como **ganancia patrimonial** en determinadas circunstancias recogidas en la normativa del IRPF.
+
+---
+
+## Riesgos de no documentar el préstamo correctamente
+
+Muchas personas realizan estos préstamos mediante una simple transferencia bancaria, sin contrato ni ninguna formalidad. Esto puede generar problemas serios:
+
+1. **Inspección de Hacienda**: La Agencia Tributaria cruza datos bancarios de forma rutinaria. Si detecta una transferencia elevada entre particulares sin justificación documentada, puede iniciar una comprobación y exigir que se acredite el origen y la naturaleza de los fondos.
+
+2. **Presunción de donación**: Sin documentación, una transferencia de dinero puede ser interpretada como una donación sujeta al ISD, con el consiguiente pago de impuestos, intereses de demora y posibles sanciones.
+
+3. **Conflictos entre las partes**: Si el prestatario no devuelve el dinero, resulta muy difícil reclamar judicialmente sin un contrato que acredite las condiciones pactadas del préstamo.
+
+4. **Problemas sucesorios**: En caso de fallecimiento del prestamista, sus herederos pueden tener dificultades para reclamar la deuda si no está debidamente documentada ni consta en el patrimonio del fallecido.
+
+---
+
+## Resumen de obligaciones fiscales
+
+| Obligación | Responsable | Plazo | Modelo |
+|---|---|---|---|
+| Declarar el préstamo (exento de pago) | Prestatario | 30 días hábiles desde la firma | Modelo 600 |
+| Declarar intereses cobrados en la Renta | Prestamista | Campaña de la Renta del año siguiente | IRPF — base del ahorro |
+| Declarar condonación de deuda | Prestatario | 30 días hábiles desde la condonación | Modelo 651 (donaciones) |
+
+---
+
+## Consejos prácticos para un préstamo entre particulares sin problemas
+
+1. **Documenta siempre el acuerdo por escrito**, aunque sea entre personas de confianza. La mayoría de los problemas surgen cuando el préstamo no está formalizado y la relación personal se deteriora o aparecen malentendidos.
+
+2. **Usa siempre transferencia bancaria** para entregar el dinero. Deja rastro, protege al prestamista y evita suspicacias ante la Agencia Tributaria.
+
+3. **No olvides el Modelo 600**: aunque no haya cuota a pagar, presentarlo es obligatorio. Es un trámite sencillo que puede realizarse online en la sede electrónica de la hacienda autonómica correspondiente.
+
+4. **Fija un tipo de interés**, aunque sea igual al interés legal del dinero. Esto evita que Hacienda pueda considerar el préstamo como una donación encubierta y simplifica la justificación ante una posible inspección.
+
+5. **Renueva o extiende el contrato** si el plazo original vence sin que la deuda haya sido cancelada, para mantener la validez del acuerdo y evitar que prescriba la deuda.
+
+6. **Consulta con un asesor fiscal** si el importe es elevado, si hay particularidades especiales (préstamo entre socios de una empresa, operaciones en moneda extranjera, prestatario no residente) o si tienes dudas sobre cómo integrarlo en tu declaración de la Renta.
+
+Un préstamo entre particulares bien gestionado es una solución eficaz, completamente legal y solidaria. Con unos pocos pasos formales, puedes ayudar económicamente a alguien de tu entorno sin generar complicaciones tributarias para ninguna de las dos partes.`,
+  },
+  {
     slug: "deduccion-compra-vivienda-habitual",
     title: "Deducción por compra de vivienda habitual: quién puede aplicarla y cuánto ahorra en el IRPF",
     description: "Descubre si puedes beneficiarte de la deducción por vivienda habitual en el IRPF: quién tiene derecho al régimen transitorio, cuánto puedes deducir y cómo reflejarla en tu declaración de la Renta.",
