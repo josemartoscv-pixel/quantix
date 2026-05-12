@@ -10,6 +10,148 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "cuenta-corriente-vs-cuenta-de-ahorro",
+    title: "Cuenta corriente vs cuenta de ahorro: diferencias, ventajas y cuándo usar cada una",
+    description: "Descubre en qué se diferencian la cuenta corriente y la cuenta de ahorro, cómo tributan los intereses y por qué conviene tener ambas para gestionar bien tu dinero.",
+    category: "Ahorro",
+    readingMinutes: 8,
+    publishedAt: "2026-05-12",
+    content: `## Introducción
+
+En España hay más de 50 millones de cuentas bancarias abiertas. Sin embargo, muchos titulares no tienen claro qué diferencia a una cuenta corriente de una cuenta de ahorro, ni cuándo conviene tener una, la otra o ambas. Esta guía te explica en detalle cómo funciona cada producto, en qué se diferencian y cómo sacarles el máximo partido para gestionar mejor tu dinero.
+
+---
+
+## ¿Qué es una cuenta corriente?
+
+La cuenta corriente es el producto bancario más básico y extendido en España. Está diseñada para el uso cotidiano del dinero: recibir nóminas, domiciliar recibos, realizar transferencias, usar tarjetas de débito y crédito, y operar en el día a día.
+
+Sus características principales son:
+
+- **Disponibilidad inmediata**: puedes sacar o mover el dinero en cualquier momento, sin restricciones ni plazos.
+- **Tarjetas asociadas**: es habitual que lleve vinculada una o varias tarjetas de débito o crédito.
+- **Domiciliaciones**: perfecta para recibos de luz, agua, internet, seguros, etc.
+- **Sin rentabilidad (o muy baja)**: en la mayoría de los casos no genera intereses, o si lo hace, el tipo es mínimo.
+- **Comisiones posibles**: mantenimiento, administración, uso de cajeros, etc., aunque muchos bancos las eliminan si se cumplen ciertos requisitos como domiciliar la nómina.
+
+### ¿Para quién es ideal la cuenta corriente?
+
+Para cualquier persona que necesite un canal operativo para sus finanzas diarias. Es el punto de entrada y salida del dinero: ahí entra la nómina y de ahí salen los gastos habituales. Sin cuenta corriente, no puedes domiciliar recibos, recibir transferencias de nómina ni vincular tarjetas bancarias.
+
+---
+
+## ¿Qué es una cuenta de ahorro?
+
+La cuenta de ahorro está pensada para guardar dinero y, en muchos casos, obtener una rentabilidad por ello. A diferencia de la cuenta corriente, su función no es operar día a día, sino acumular fondos con un objetivo concreto: la compra de un coche, un viaje, la entrada de una vivienda o simplemente un colchón financiero para imprevistos.
+
+Sus características principales son:
+
+- **Rentabilidad**: ofrece intereses, que pueden ser fijos o variables. En 2025 y 2026, con el euríbor en niveles moderados, muchos bancos han relanzado sus cuentas de ahorro con tipos de entre el 2 % y el 4 % TAE.
+- **Restricciones operativas**: normalmente no tienen tarjeta asociada ni permiten domiciliar recibos. Su uso es más limitado que el de una cuenta corriente.
+- **Liquidez alta**: a diferencia de un depósito a plazo fijo, el dinero suele estar disponible en cualquier momento, aunque algunos productos imponen un plazo mínimo de permanencia para disfrutar de la rentabilidad máxima.
+- **Sin comisiones habituales**: la mayoría de cuentas de ahorro no cobran gastos de mantenimiento ni administración.
+
+### ¿Para quién es ideal la cuenta de ahorro?
+
+Para quien quiere separar el dinero que no va a gastar a corto plazo y obtener algo de rentabilidad mientras lo acumula. Es un complemento a la cuenta corriente, no un sustituto. Idealmente, la cuenta de ahorro guarda tu fondo de emergencia y tus metas financieras a medio plazo.
+
+---
+
+## Diferencias clave entre ambos productos
+
+| Característica | Cuenta corriente | Cuenta de ahorro |
+|---|---|---|
+| Uso principal | Operaciones diarias | Acumular ahorro |
+| Rentabilidad | Nula o mínima | Sí, en muchos casos |
+| Tarjeta asociada | Sí, habitualmente | No |
+| Domiciliación de recibos | Sí | No |
+| Transferencias | Sí, inmediatas | Limitadas o con condiciones |
+| Comisiones | Posibles | Raramente |
+| Liquidez | Total | Alta (con posibles condiciones) |
+| Tributación de intereses | No aplica | Sí, como rendimiento del capital |
+
+---
+
+## Tributación: ¿hay que declarar los intereses de una cuenta de ahorro?
+
+Sí. Los intereses generados por una cuenta de ahorro tributan en el IRPF como **rendimientos del capital mobiliario**, dentro de la base imponible del ahorro. Los tipos aplicables son los siguientes:
+
+| Base imponible del ahorro | Tipo impositivo |
+|---|---|
+| Hasta 6.000 € | 19 % |
+| De 6.000 € a 50.000 € | 21 % |
+| De 50.000 € a 200.000 € | 23 % |
+| Más de 200.000 € | 27 % |
+
+El banco aplica una **retención automática del 19 %** sobre los intereses antes de abonarlos, por lo que en muchos casos no hay que hacer ninguna gestión adicional. No obstante, si presentas la declaración de la Renta, estos rendimientos deben constar reflejados en el apartado correspondiente, aunque la retención ya haya sido practicada.
+
+---
+
+## ¿Puedo tener las dos a la vez?
+
+No solo puedes: es **lo más recomendable**. La estrategia más eficiente para muchos particulares en España es combinar ambos productos:
+
+1. **Cuenta corriente** para el flujo diario: nómina, pagos recurrentes, tarjetas de débito y crédito.
+2. **Cuenta de ahorro** para el fondo de emergencia y los objetivos a medio plazo: vacaciones, coche, entrada de piso, gastos imprevistos...
+
+Muchos bancos permiten hacer traspasos automáticos desde la cuenta corriente a la de ahorro —por ejemplo, cada mes o cuando el saldo supera un importe determinado—, lo que facilita el ahorro de forma sistemática sin esfuerzo activo por tu parte.
+
+---
+
+## Errores comunes que debes evitar
+
+### Dejar todo en la cuenta corriente
+
+El dinero que no vas a necesitar en los próximos meses no debería estar en la cuenta corriente, donde no genera rendimiento alguno. La inflación erosiona su poder adquisitivo poco a poco. Trasladarlo a una cuenta de ahorro o a otro producto financiero es la decisión más lógica para preservar el valor de tus ahorros.
+
+### Confundir cuenta de ahorro con depósito a plazo
+
+Aunque ambos ofrecen rentabilidad, son productos diferentes. Un **depósito a plazo fijo** bloquea el dinero durante un período concreto (normalmente entre 3 meses y 2 años) a cambio de una tasa de interés fija. Si rescatas el dinero antes, pierdes los intereses y puede haber penalizaciones económicas. La cuenta de ahorro es más flexible, aunque su rentabilidad puede ser algo inferior a la de un depósito.
+
+### No leer las condiciones de la cuenta de ahorro
+
+Algunos bancos ofrecen tipos de interés muy atractivos —hasta el 4-5 % TAE— pero solo durante los primeros meses o exclusivamente para nuevos clientes. Pasado ese período promocional, el tipo baja drásticamente. Léete siempre la letra pequeña y compara la rentabilidad a largo plazo, no únicamente la oferta inicial.
+
+### No separar el fondo de emergencia de los ahorros con objetivo
+
+Mezclar el dinero reservado para imprevistos con el que estás acumulando para un viaje o una reforma puede llevarte a gastarlo antes de tiempo. Abrir dos cuentas de ahorro separadas —una para emergencias y otra para metas— te da claridad y disciplina financiera.
+
+---
+
+## ¿Qué cuenta de ahorro elegir en 2026?
+
+En el mercado español, puedes encontrar tres perfiles de cuentas de ahorro:
+
+### Cuentas de bancos tradicionales
+
+Los grandes bancos (Santander, BBVA, CaixaBank, Sabadell) suelen ofrecer cuentas de ahorro con rentabilidades modestas pero con la ventaja de gestionar todo en la misma entidad. Son ideales si ya operas con ellos y valoras la comodidad de tener todos tus productos en un único lugar.
+
+### Cuentas de bancos online y neobancos
+
+Entidades como Openbank, Trade Republic, MyInvestor o Revolut ofrecen rentabilidades más competitivas gracias a sus estructuras de costes más bajas. En 2026, varios de ellos superan el 2,5-3 % TAE sin condiciones de vinculación ni obligación de domiciliar la nómina.
+
+### Cuentas de cajas rurales y cooperativas de crédito
+
+Menos conocidas a nivel nacional pero con productos muy competitivos y orientados al ahorro a largo plazo. Suelen tener buenas condiciones para sus socios y clientes habituales.
+
+---
+
+## Consejos prácticos
+
+- **Separa el fondo de emergencia** (equivalente a 3-6 meses de tus gastos mensuales) en una cuenta de ahorro diferente a la que uses para objetivos concretos. Así no lo tocarás sin necesidad real.
+- **Automatiza el ahorro**: configura una transferencia automática mensual desde tu cuenta corriente a la de ahorro el mismo día que cobres la nómina o el día siguiente. El dinero que no ves no lo gastas.
+- **Compara antes de contratar**: usa comparadores como HelpMyCash o iAhorro para ver qué cuentas de ahorro ofrecen mejor rentabilidad en cada momento del año.
+- **Revisa las condiciones cada 6-12 meses**: las rentabilidades cambian con frecuencia y puede que haya opciones mejores que las que tenías contratadas hace un año.
+- **No pierdas de vista la tributación**: si acumulas muchos intereses, asegúrate de reflejarlos correctamente en tu declaración de la Renta y comprueba que las retenciones aplicadas son correctas.
+- **Evita cuentas con comisiones de cancelación**: asegúrate de que puedes trasladar tu saldo a otro producto sin penalización si encuentras una opción más rentable.
+
+---
+
+## Conclusión
+
+Cuenta corriente y cuenta de ahorro no son competidoras: son complementarias. La primera gestiona tu flujo de dinero diario con total flexibilidad; la segunda custodia y hace crecer lo que no necesitas a corto plazo. Usar las dos de forma coordinada es una de las estrategias más sencillas y efectivas para mejorar tu salud financiera sin necesidad de conocimientos avanzados de inversión ni grandes sumas de dinero. El primer paso es abrir esa segunda cuenta y transferir hoy mismo lo que no vas a gastar este mes.`,
+  },
+  {
     slug: "prestamos-entre-particulares-y-fiscalidad",
     title: "Préstamos entre particulares en España: cómo formalizarlos y qué debes declarar a Hacienda",
     description: "Guía completa sobre los préstamos privados entre personas: cómo documentarlos legalmente, qué obligaciones fiscales generan y cómo evitar problemas con la Agencia Tributaria.",
