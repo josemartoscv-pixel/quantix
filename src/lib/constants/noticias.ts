@@ -10,6 +10,162 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-comparar-hipotecas",
+    title: "Cómo comparar hipotecas paso a paso: TIN, TAE, vinculaciones y lo que los bancos no te cuentan",
+    description: "Guía práctica para comparar hipotecas en España: qué mirar más allá de la cuota mensual, cómo interpretar el TIN y la TAE, y cómo negociar las mejores condiciones.",
+    category: "Hipotecas",
+    readingMinutes: 8,
+    publishedAt: "2026-05-13",
+    content: `## Introducción
+
+Contratar una hipoteca es probablemente la decisión financiera más importante que tomará la mayoría de los españoles a lo largo de su vida. Sin embargo, muchos firmantes apenas comparan dos o tres ofertas y pocas veces saben exactamente qué diferencias hay entre ellas más allá de la cuota mensual. Esta guía te explica, paso a paso, qué debes analizar para comparar hipotecas con criterio y tomar la mejor decisión posible.
+
+---
+
+## El primer error que comete casi todo el mundo: fijarse solo en la cuota mensual
+
+Cuando un banco te presenta una hipoteca, lo primero que muestra es la cuota mensual. Es el dato más visible y el que más impacta emocionalmente. Pero la cuota mensual no dice nada sobre el coste real total de la operación.
+
+Dos hipotecas con la misma cuota mensual pueden tener costes totales muy diferentes si una tiene plazo de 25 años y la otra de 30, o si una cobra comisión de apertura y la otra no. Por eso el análisis correcto empieza por otros indicadores.
+
+---
+
+## TIN vs TAE: la diferencia que realmente importa
+
+### ¿Qué es el TIN?
+
+El **TIN** (Tipo de Interés Nominal) es el porcentaje de interés puro que el banco aplica sobre el capital prestado. No incluye ningún coste adicional: ni comisiones, ni seguros vinculados, ni gastos de tasación. Es el dato que más aparece en publicidad, pero es el menos representativo del coste real.
+
+### ¿Qué es la TAE?
+
+La **TAE** (Tasa Anual Equivalente) es el indicador que recoge el coste total del préstamo expresado en términos anuales. Incluye el TIN, las comisiones de apertura y estudio, los gastos iniciales y cualquier otro coste periódico. Es el indicador clave para comparar hipotecas de forma homogénea.
+
+**Regla de oro**: cuando compares hipotecas, compara siempre las TAE, no los TIN. Dos hipotecas con el mismo TIN pueden tener TAE muy distintas si una cobra comisión de apertura y la otra no.
+
+| Concepto | ¿Qué incluye? | ¿Útil para comparar? |
+|---|---|---|
+| TIN | Solo el interés nominal | No es suficiente |
+| TAE | Interés + comisiones + gastos | Sí, es la referencia |
+| TAEG (en hipotecas) | TAE adaptada a préstamos hipotecarios | Sí, obligatorio por ley |
+
+Desde la entrada en vigor de la Ley Hipotecaria de 2019, los bancos están obligados a facilitar la **FEIN** (Ficha Europea de Información Normalizada), que recoge la TAE y todos los costes del préstamo de forma estandarizada. Exígela siempre antes de firmar nada.
+
+---
+
+## Vinculaciones: el coste oculto que infla la TAE real
+
+Uno de los puntos más problemáticos al comparar hipotecas son las **vinculaciones**: productos adicionales que el banco exige contratar como condición para obtener el tipo de interés anunciado.
+
+Las más comunes son:
+
+- **Seguro de hogar** de la entidad (suele ser más caro que en el mercado libre)
+- **Seguro de vida** vinculado al préstamo
+- **Domiciliación de nómina** en el banco prestamista
+- **Tarjeta de crédito** con un consumo mínimo anual
+- **Plan de pensiones** o fondo de inversión contratado con el banco
+- **Alarma o seguro de protección de pagos**
+
+El banco te presentará una hipoteca "sin vinculaciones" a, pongamos, euríbor + 0,90 %, y otra "con vinculaciones" a euríbor + 0,50 %. La diferencia en tipo parece atractiva, pero hay que calcular cuánto te costarán esos productos vinculados cada año. En muchos casos, el ahorro en intereses queda completamente anulado por el sobrecoste de los seguros y productos impuestos.
+
+**Consejo práctico**: pide siempre las dos versiones (con y sin vinculaciones) y calcula el coste real total en ambos escenarios a lo largo de toda la vida del préstamo.
+
+---
+
+## Qué comisiones debes revisar
+
+Además de la TAE y las vinculaciones, hay una serie de comisiones que pueden encarecer considerablemente tu hipoteca:
+
+### Comisión de apertura
+
+Puede ser un porcentaje sobre el capital (habitualmente entre el 0,5 % y el 1 %) o una cantidad fija. Muchos bancos la han eliminado en los últimos años como medida comercial, pero sigue existiendo en algunos productos. Compruébalo siempre.
+
+### Comisión por amortización anticipada
+
+Si en algún momento quieres devolver parte del capital antes de tiempo o cancelar la hipoteca, el banco puede cobrarte por ello. La Ley Hipotecaria de 2019 limitó estas comisiones: en hipotecas variables, el máximo es del 0,25 % los tres primeros años y del 0,15 % del cuarto al quinto. En hipotecas fijas, puede llegar al 2 % los primeros diez años y al 1,5 % a partir del undécimo.
+
+### Comisión por subrogación o novación
+
+Si quieres cambiar de banco (subrogación) o renegociar condiciones con el mismo banco (novación), también pueden aplicarse comisiones. Infórmate antes de firmar si habrá posibilidades de mejorar condiciones en el futuro.
+
+---
+
+## El plazo: cómo afecta al coste total
+
+El plazo de amortización tiene un efecto enorme sobre el coste total de la hipoteca, mucho mayor del que mucha gente calcula. A más años, menor cuota mensual, pero mucho más interés pagado en total.
+
+Veamos un ejemplo con una hipoteca de 200.000 € al 3,5 % fijo:
+
+| Plazo | Cuota mensual | Total pagado | Intereses totales |
+|---|---|---|---|
+| 20 años | 1.160 € | 278.400 € | 78.400 € |
+| 25 años | 1.001 € | 300.300 € | 100.300 € |
+| 30 años | 898 € | 323.280 € | 123.280 € |
+
+Ampliar el plazo de 20 a 30 años reduce la cuota en 262 € mensuales, pero supone pagar casi 45.000 € más en intereses a lo largo de la vida del préstamo. Elegir el plazo más corto que puedas asumir cómodamente —sin que la cuota supere el 35 % de tus ingresos netos mensuales— es siempre la estrategia más eficiente.
+
+---
+
+## Herramientas para comparar hipotecas
+
+Existen varias formas de comparar ofertas hipotecarias en España:
+
+### Comparadores online
+
+Varios portales especializados permiten introducir los datos de tu compra (precio del inmueble, ahorros disponibles, plazo deseado) y obtener un ranking de hipotecas disponibles en el mercado. Son útiles como punto de partida, aunque las condiciones definitivas siempre se negocian directamente con cada banco.
+
+### Bróker hipotecario
+
+Un bróker hipotecario negocia en tu nombre con varias entidades y te presenta la mejor oferta disponible para tu perfil. Algunos cobran honorarios al cliente, otros son gratuitos porque reciben comisión del banco. Pueden ser especialmente útiles si tu situación financiera es compleja: autónomo, historial de crédito irregular, o compra de inmueble en construcción.
+
+### Negociación directa con tu banco
+
+No olvides que las condiciones publicadas son un punto de partida, no el resultado final. Si tienes un buen perfil crediticio, nómina estable y antigüedad como cliente, tienes margen para negociar: reducción del tipo de interés, eliminación de la comisión de apertura o mejora de las condiciones de amortización anticipada.
+
+### La importancia de la FEIN y la FIAE
+
+Antes de firmar cualquier contrato hipotecario, el banco está legalmente obligado a entregarte dos documentos fundamentales:
+
+- **FEIN** (Ficha Europea de Información Normalizada): recoge todas las condiciones económicas del préstamo de forma estandarizada y comparable entre distintas entidades.
+- **FIAE** (Ficha de Advertencias Estandarizadas): señala las cláusulas con mayor impacto económico o que podrían resultar especialmente onerosas, como los índices de referencia variables, las condiciones de vencimiento anticipado o los gastos repercutibles al cliente.
+
+Tienes derecho a recibir estos documentos con al menos **10 días hábiles** de antelación a la firma ante notario. Úsalos para revisar el contrato con calma y, si tienes dudas, consúltalas con un asesor independiente o con el propio notario.
+
+---
+
+## Perfil crediticio: cómo afecta a las condiciones que te ofrecen
+
+Los bancos no ofrecen las mismas condiciones a todos los solicitantes. Tu **perfil de riesgo** influye directamente en el tipo de interés, las vinculaciones exigidas y la financiación máxima que te concederán.
+
+Los factores que los bancos valoran más son:
+
+- **Estabilidad laboral**: contrato indefinido frente a temporal o autónomo
+- **Nivel de ingresos** y su relación con la cuota solicitada
+- **Historial crediticio**: si apareces en ficheros de morosos (ASNEF, RAI) las condiciones empeorarán drásticamente
+- **Ahorros propios**: los bancos suelen financiar como máximo el 80 % del valor de tasación; cuanto más aportes, mejores condiciones obtendrás
+- **Estabilidad de la empresa empleadora**: no es lo mismo trabajar en una gran empresa que en una startup sin historial
+
+Mejorar tu perfil crediticio antes de solicitar la hipoteca —reduciendo deudas, evitando descubiertos y acumulando más ahorro— puede traducirse en un diferencial menor y un ahorro de miles de euros.
+
+---
+
+## Consejos prácticos antes de firmar
+
+- **Solicita la FEIN de al menos tres entidades** y compáralas con los mismos parámetros: capital, plazo y vinculaciones equivalentes.
+- **Calcula el coste total**, no solo la cuota mensual: multiplica la cuota por el número de meses y súmale los gastos iniciales (tasación, notaría, gestoría).
+- **Simula qué ocurre si sube el euríbor** en el caso de hipotecas variables: ¿podrías asumir la cuota si el índice sube dos puntos porcentuales?
+- **Comprueba que la cuota no supera el 30-35 %** de tus ingresos netos mensuales conjuntos (si la hipoteca es a dos titulares, suma ambos ingresos).
+- **Negocia el seguro de hogar**: la ley te permite contratar el seguro de hogar con cualquier compañía, no solo con el banco. Si el banco exige su propio seguro como vinculación, puede ser motivo para negociar o cambiar de entidad.
+- **Usa el período de reflexión de 10 días** para leer toda la documentación sin prisa, consultar dudas con el notario y comparar con otras ofertas activas.
+
+---
+
+## Conclusión
+
+Comparar hipotecas va mucho más allá de elegir la cuota mensual más baja. El TIN, la TAE, las vinculaciones, las comisiones y el plazo son variables que, combinadas, determinan el coste real total de tu préstamo durante décadas. Tomarte el tiempo necesario para analizarlas con rigor puede suponer un ahorro de decenas de miles de euros.
+
+El mejor contrato hipotecario no es necesariamente el del banco donde tienes la nómina, ni el que más publicidad hace. Es el que mejor se adapta a tu situación financiera y el que, con todos los costes incluidos, resulta más rentable en el horizonte temporal que hayas elegido. Compara, negocia y firma siempre con información completa.`,
+  },
+  {
     slug: "cuenta-corriente-vs-cuenta-de-ahorro",
     title: "Cuenta corriente vs cuenta de ahorro: diferencias, ventajas y cuándo usar cada una",
     description: "Descubre en qué se diferencian la cuenta corriente y la cuenta de ahorro, cómo tributan los intereses y por qué conviene tener ambas para gestionar bien tu dinero.",
