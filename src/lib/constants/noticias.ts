@@ -10,6 +10,139 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "inversion-indexada-y-gestion-pasiva",
+    title: "Inversión indexada y gestión pasiva en España: la estrategia que está cambiando cómo invertimos",
+    description: "Descubre qué es la inversión indexada, cómo se compara con la gestión activa, cuánto cuestan las comisiones y cómo empezar a invertir en fondos indexados en España.",
+    category: "Inversión",
+    readingMinutes: 7,
+    publishedAt: "2026-05-14",
+    content: `## ¿Qué es la inversión indexada y la gestión pasiva?
+
+Durante décadas, la inversión ha sido territorio exclusivo de bancos y gestoras que prometían batir al mercado a cambio de comisiones elevadas. Hoy, millones de ahorradores en todo el mundo —y cada vez más en España— están descubriendo una alternativa sencilla, barata y con sólido respaldo académico: la **gestión pasiva** y la **inversión indexada**.
+
+La inversión indexada consiste en replicar el comportamiento de un **índice bursátil**, como el S&P 500 (las 500 mayores empresas de Estados Unidos), el MSCI World (más de 1.500 empresas de países desarrollados) o el Ibex 35 (las 35 principales compañías cotizadas en España).
+
+En lugar de que un gestor analice y seleccione acciones buscando las que "van a subir más", un fondo indexado simplemente compra todas las empresas del índice en la misma proporción que tienen en él. Si Apple representa el 7 % del S&P 500, el fondo dedica el 7 % de su capital a Apple. Este enfoque se denomina **gestión pasiva** porque no requiere tomar decisiones activas de compra y venta continuas. Su opuesto es la **gestión activa**, donde el gestor decide qué valores comprar y cuándo.
+
+---
+
+## La evidencia académica: ¿realmente funciona la gestión pasiva?
+
+El economista William Sharpe demostró matemáticamente en 1991 que, en conjunto, los gestores activos no pueden superar al mercado después de costes. Si alguien gana más que el índice, otro gestor necesariamente gana menos. En promedio, el mercado se autocompensa.
+
+Los datos lo confirman año tras año. Según el informe **SPIVA** de S&P Dow Jones Indices, referencia mundial en este tipo de análisis:
+
+- El **90 % de los fondos de renta variable europeos** gestionados activamente no supera a su índice de referencia en un período de 15 años.
+- En Estados Unidos, el **92 % de los fondos activos** de gran capitalización quedaron por debajo del S&P 500 en un horizonte de 20 años.
+
+Esto no significa que ningún gestor activo sea bueno. Significa que resulta prácticamente imposible identificar de antemano cuáles lo serán de forma consistente. Los pocos que superan al mercado un año rara vez lo repiten sistemáticamente en los siguientes.
+
+---
+
+## El impacto devastador de las comisiones
+
+Si la diferencia de rentabilidad entre gestión activa y pasiva fuera marginal, quizá merecería la pena pagar más. Pero el impacto de las comisiones a largo plazo es enorme. La mayoría de los inversores lo subestima porque el coste parece pequeño año a año, pero se acumula de forma brutal con el paso del tiempo.
+
+Supongamos que inviertes 10.000 € durante 30 años con una rentabilidad bruta anual del 7 %:
+
+| Tipo de fondo | Comisión anual | Capital final | Coste en comisiones |
+|---|---|---|---|
+| Fondo indexado | 0,15 % | 73.600 € | 2.800 € |
+| Fondo activo barato | 0,80 % | 60.200 € | 16.200 € |
+| Fondo activo típico | 1,50 % | 49.800 € | 26.600 € |
+| Fondo activo caro | 2,00 % | 43.200 € | 33.200 € |
+
+La diferencia entre un fondo indexado y uno activo caro supera los **30.000 euros** en 30 años, partiendo del mismo capital inicial y asumiendo la misma rentabilidad bruta. Las comisiones no son un detalle: son uno de los factores más determinantes del resultado final.
+
+---
+
+## Fondos indexados vs ETFs: ¿cuál conviene más en España?
+
+En España existen principalmente dos vehículos para acceder a la inversión indexada: los **fondos indexados** y los **ETFs** (Exchange Traded Funds).
+
+### Fondos de inversión indexados
+
+Los fondos indexados funcionan como cualquier fondo de inversión. Compras participaciones, el fondo gestiona la cartera según el índice y recibes la parte proporcional de la rentabilidad. Su gran ventaja fiscal en España es el **traspaso sin tributar**: puedes mover dinero de un fondo a otro sin pagar impuestos hasta que decidas reembolsar definitivamente.
+
+### ETFs (Exchange Traded Funds)
+
+Los ETFs son fondos que cotizan en bolsa como si fueran acciones. Se compran y venden en tiempo real durante el horario de mercado a través de un bróker. Su comisión de gestión (TER) suele ser incluso más baja que la de los fondos indexados. Sin embargo, su desventaja fiscal en España es importante: **los ETFs no se pueden traspasar sin tributar**. Cada venta genera una ganancia patrimonial que debe declararse en el IRPF ese mismo ejercicio.
+
+| Característica | Fondo indexado | ETF |
+|---|---|---|
+| Comisión TER típica | 0,15 %–0,30 % | 0,05 %–0,20 % |
+| Cotización en bolsa | No | Sí, en tiempo real |
+| Traspaso sin tributar | Sí (ventaja clave) | No en España |
+| Mínimo de inversión | Desde 1 € en algunos | Precio de 1 participación |
+| Liquidez | Al cierre del día | Inmediata en mercado |
+
+En general, para el inversor particular español con horizonte a largo plazo y aportaciones periódicas, los **fondos indexados son más eficientes fiscalmente** que los ETFs, aunque ambos son opciones válidas según el perfil y la estrategia.
+
+---
+
+## Cómo construir una cartera indexada sencilla
+
+Una cartera indexada no necesita más de dos o tres fondos para ser eficiente y bien diversificada.
+
+### Cartera de un solo fondo global
+
+La opción más sencilla: un único fondo indexado al **MSCI World** o al **MSCI ACWI** (que incluye también mercados emergentes). Con un solo producto tienes exposición a más de 1.500 empresas de 23 países. Es la cartera ideal para quien empieza y no quiere complicarse.
+
+### Cartera de dos o tres fondos
+
+Un modelo algo más elaborado combina:
+
+1. **Renta variable global** (MSCI World o MSCI ACWI): el motor de crecimiento de la cartera.
+2. **Renta fija** (bonos de alta calidad crediticia): para reducir la volatilidad y actuar como amortiguador en caídas de bolsa.
+3. Opcionalmente, **mercados emergentes** por separado si el fondo global no los incluye.
+
+La proporción entre renta variable y renta fija depende de tu horizonte temporal y tolerancia al riesgo. Una regla orientativa clásica: resta tu edad a 110 para obtener el porcentaje en renta variable. Con 35 años: 75 % en variable y 25 % en fija. Con 55 años: 55 % en variable y 45 % en fija.
+
+### El rebalanceo periódico
+
+Con el tiempo, los pesos de cada activo se desajustan porque cada uno crece a distinta velocidad. El **rebalanceo** consiste en volver a los porcentajes objetivo, vendiendo lo que ha subido más y comprando lo que ha quedado atrás. Se recomienda hacerlo una vez al año o cuando algún activo se desvíe más de 5 puntos porcentuales de su peso objetivo.
+
+---
+
+## Dónde invertir de forma indexada en España
+
+Estas son algunas de las principales plataformas disponibles para el inversor español:
+
+- **MyInvestor**: banco digital con acceso a fondos de Vanguard, iShares y Amundi sin mínimos de inversión ni comisiones de custodia.
+- **Indexa Capital**: robo-advisor que construye una cartera indexada personalizada según tu perfil de riesgo. No tienes que elegir los fondos manualmente.
+- **inbestMe**: otro robo-advisor con carteras de ETFs o fondos indexados, con opciones de inversión socialmente responsable (ISR).
+- **Openbank** e **ING**: ofrecen fondos indexados propios con comisiones moderadas, accesibles para quienes ya tienen cuenta en esas entidades y quieren dar un primer paso sencillo.
+
+---
+
+## Fiscalidad de los fondos indexados en España
+
+Los fondos de inversión indexados tributan como **ganancias y pérdidas patrimoniales** en la base del ahorro del IRPF. Los tipos aplicables en 2026 son:
+
+| Ganancia patrimonial | Tipo impositivo |
+|---|---|
+| Hasta 6.000 € | 19 % |
+| De 6.000 € a 50.000 € | 21 % |
+| De 50.000 € a 200.000 € | 23 % |
+| Más de 200.000 € | 27 % |
+
+La gran ventaja es que **solo tributas cuando reembolsas** el fondo, no mientras mantienes la inversión. Esto permite que el capital crezca con interés compuesto durante décadas sin fricción fiscal intermedia. Si haces traspasos entre fondos en lugar de vender y comprar, no pagas impuestos en ningún momento intermedio: solo al final, cuando decides retirar el dinero.
+
+---
+
+## Consejos prácticos para empezar con la inversión indexada
+
+1. **Define tu horizonte y tolerancia al riesgo** antes de elegir la cartera. A más años por delante y mayor capacidad de asumir caídas temporales, más proporción en renta variable puedes mantener.
+2. **Empieza con un fondo global amplio** como el MSCI World. Con un solo producto tienes una diversificación enorme sin complicaciones adicionales.
+3. **Automatiza las aportaciones**: programa una transferencia mensual fija a tu fondo, aunque sea de 50 € o 100 €. La constancia importa más que el momento de entrada al mercado.
+4. **No mires la cartera cada día**: la inversión indexada funciona gracias al largo plazo. Revisar continuamente solo genera ansiedad y tentación de vender en las caídas, que son exactamente los peores momentos para hacerlo.
+5. **Compara el TER** de los fondos, no solo el nombre. Dos fondos que replican el mismo índice pueden tener comisiones muy distintas; la diferencia a 20 años es significativa.
+6. **Aprovecha el traspaso libre de impuestos** entre fondos para rebalancear sin coste fiscal.
+7. **No intentes adivinar el mercado**: los estudios demuestran que el inversor que trata de "entrar en el mejor momento" obtiene peores resultados que el que invierte de forma regular y constante, independientemente de cuándo lo haga.
+
+La inversión indexada ha democratizado el acceso a los mercados financieros globales. Cualquier persona con unos pocos euros al mes y un horizonte de diez o veinte años puede construir un patrimonio sólido sin conocimientos avanzados ni comisiones que se coman la rentabilidad. La clave está en empezar, ser constante y no dejarse llevar por el ruido del corto plazo.`,
+  },
+  {
     slug: "como-comparar-hipotecas",
     title: "Cómo comparar hipotecas paso a paso: TIN, TAE, vinculaciones y lo que los bancos no te cuentan",
     description: "Guía práctica para comparar hipotecas en España: qué mirar más allá de la cuota mensual, cómo interpretar el TIN y la TAE, y cómo negociar las mejores condiciones.",
