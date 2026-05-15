@@ -10,6 +10,143 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "letras-del-tesoro-como-invertir",
+    title: "Letras del Tesoro en España: cómo invertir en deuda pública y qué rentabilidad esperar",
+    description: "Aprende qué son las Letras del Tesoro, cómo comprarlas directamente sin comisiones, qué rentabilidad ofrecen y cómo tributan en el IRPF.",
+    category: "Ahorro",
+    readingMinutes: 7,
+    publishedAt: "2026-05-15",
+    content: `## ¿Qué son las Letras del Tesoro?
+
+Las **Letras del Tesoro** son valores de deuda pública emitidos por el Tesoro Público español a corto plazo. Cuando el Estado necesita financiarse, una de las vías que utiliza es emitir estos títulos de deuda: básicamente, el Estado te pide dinero prestado y a cambio te devuelve el capital más unos intereses al final del plazo.
+
+A diferencia de los Bonos y Obligaciones del Estado, que tienen plazos de varios años, las Letras del Tesoro tienen vencimientos más cortos: actualmente se emiten a **3, 6, 9 y 12 meses**. Esto las convierte en un instrumento de ahorro muy líquido y con escaso riesgo, ideal para quien quiere rentabilizar su dinero a corto plazo sin asumir grandes riesgos.
+
+En la práctica, las Letras del Tesoro funcionan como un **activo de renta fija al descuento**: las compras por debajo de su valor nominal (normalmente 1.000 €) y al vencimiento el Estado te devuelve 1.000 €. La diferencia entre lo que pagaste y los 1.000 € que recibes al vencimiento es tu beneficio.
+
+---
+
+## Por qué los españoles se han interesado tanto en las Letras
+
+Durante años, las Letras del Tesoro ofrecían rentabilidades negativas o cercanas al 0 %, lo que hacía poco atractivo invertir en ellas. Todo cambió a partir de 2022, cuando el Banco Central Europeo comenzó a subir los tipos de interés de forma agresiva para combatir la inflación.
+
+Las subidas de tipos dispararon las rentabilidades de la deuda pública en toda Europa. En España, las Letras del Tesoro llegaron a ofrecer rentabilidades superiores al **3,5 % anual** en 2023 y 2024. En ese contexto, con los depósitos bancarios aún dando muy poco, miles de españoles descubrieron que el Tesoro ofrecía una rentabilidad muy superior a la de sus cuentas corrientes, con la misma —o mayor— seguridad.
+
+Las largas colas en las sucursales del Banco de España y las webs colapsadas del Tesoro Público se convirtieron en noticia. El fenómeno fue tan masivo que en redes sociales las «letras del Tesoro» pasaron a ser sinónimo de ahorro inteligente a corto plazo.
+
+---
+
+## Cómo funcionan las subastas del Tesoro
+
+El Tesoro Público español emite Letras periódicamente mediante **subastas** que se celebran de forma regular. Estas subastas son la única forma de acceder a las Letras en el mercado primario (al precio de emisión original).
+
+### Tipos de oferta en las subastas
+
+En cada subasta puedes participar con dos tipos de petición:
+
+- **Petición competitiva**: especificas el precio máximo que estás dispuesto a pagar (o el tipo de interés mínimo que aceptas). Si la subasta cierra por encima de tu precio máximo, no te adjudican las letras.
+- **Petición no competitiva**: aceptas el precio marginal que resulte de la subasta, sin especificar condiciones. Es la opción más habitual para el pequeño inversor, ya que garantiza la adjudicación.
+
+Para el inversor particular, la petición no competitiva es la más sencilla y la más recomendable: presentas tu solicitud indicando el importe (mínimo 1.000 € y múltiplos de 1.000 €) y el Tesoro te adjudica las letras al precio de la subasta.
+
+---
+
+## Dónde y cómo comprar Letras del Tesoro
+
+Existen tres vías para comprar Letras del Tesoro en España:
+
+### 1. Directamente en el Tesoro Público
+
+La forma más directa y económica es hacerlo a través de la web del **Tesoro Público** (tesoro.es) o en persona en las sucursales del **Banco de España** presentes en las capitales de provincia.
+
+Para operar online necesitas:
+- DNI electrónico o certificado digital (Cl@ve PIN también está disponible)
+- Una cuenta bancaria en España a tu nombre donde abonar los rendimientos
+
+La gestión directa no tiene comisiones de compra ni de custodia, lo que la convierte en la opción más barata con diferencia.
+
+### 2. A través de tu banco o entidad financiera
+
+Los bancos y gestoras también te permiten comprar Letras del Tesoro, pero cobran **comisiones de intermediación y custodia** que pueden oscilar entre el 0,1 % y el 0,5 % anual. Para importes pequeños, estas comisiones pueden comerse una parte relevante de la rentabilidad neta.
+
+### 3. En el mercado secundario
+
+También puedes comprar o vender Letras antes de su vencimiento en el **mercado secundario** (el mercado de renta fija español). El precio en este mercado fluctúa con los tipos de interés, por lo que podrías vender con plusvalía o minusvalía dependiendo de cuándo lo hagas.
+
+---
+
+## Rentabilidad y fiscalidad
+
+### Rentabilidad actual
+
+Las rentabilidades de las Letras del Tesoro varían en cada subasta en función de la política monetaria del BCE y las condiciones del mercado. A lo largo de 2024 y 2025, las rentabilidades se han moderado conforme el BCE bajó tipos desde su pico, pero siguen siendo positivas y competitivas frente a los depósitos bancarios de muchas entidades.
+
+| Plazo | Rentabilidad orientativa (2025-2026) |
+|---|---|
+| 3 meses | 2,0 %–2,5 % TAE |
+| 6 meses | 2,3 %–2,8 % TAE |
+| 9 meses | 2,5 %–3,0 % TAE |
+| 12 meses | 2,5 %–3,2 % TAE |
+
+*Nota: estas cifras son orientativas. Consulta siempre la última subasta en tesoro.es para datos actualizados.*
+
+### Fiscalidad de las Letras del Tesoro
+
+Los rendimientos de las Letras del Tesoro tributan en el IRPF como **rendimientos del capital mobiliario**, dentro de la base del ahorro. Se aplican los mismos tipos que a los depósitos bancarios o los dividendos:
+
+| Base liquidable del ahorro | Tipo impositivo |
+|---|---|
+| Hasta 6.000 € | 19 % |
+| De 6.000 € a 50.000 € | 21 % |
+| De 50.000 € a 200.000 € | 23 % |
+| Más de 200.000 € | 27 % |
+
+A diferencia de los fondos de inversión, **no se puede diferir la tributación** comprando otra Letra al vencimiento: cada vez que cobras la rentabilidad, Hacienda aplica las retenciones correspondientes. Sin embargo, cuando se adquieren directamente a través del Tesoro Público, las Letras **están exentas de retención en el momento del cobro**. Sí tributan en la declaración de la renta, pero no sufren retención previa, lo que mejora la liquidez del inversor durante el año.
+
+---
+
+## Letras del Tesoro vs otras alternativas de ahorro
+
+| Producto | Rentabilidad orientativa | Riesgo | Liquidez | Retención previa |
+|---|---|---|---|---|
+| Cuenta corriente | 0 %–0,5 % | Muy bajo | Inmediata | Sí (19 %) |
+| Cuenta de ahorro remunerada | 1 %–2,5 % | Muy bajo | Alta | Sí (19 %) |
+| Letra del Tesoro (12 m) | 2,5 %–3,2 % | Muy bajo (Estado) | Media (mercado secundario) | No (compra directa) |
+| Depósito bancario (12 m) | 1,5 %–2,5 % | Bajo (garantía FGD) | Baja (penalización) | Sí (19 %) |
+| Fondo monetario | 2 %–3 % | Muy bajo | Alta | Diferida |
+
+Las Letras del Tesoro son especialmente competitivas cuando la diferencia de rentabilidad respecto a las cuentas de ahorro es significativa y el inversor puede comprometer el dinero durante el plazo de emisión sin necesitar ese capital para imprevistos.
+
+---
+
+## ¿Para quién son adecuadas las Letras del Tesoro?
+
+Las Letras del Tesoro son ideales si:
+
+- Tienes dinero que no vas a necesitar en el plazo elegido (3, 6 o 12 meses) y quieres obtener una rentabilidad segura.
+- Buscas la **máxima seguridad**: el riesgo de impago del Estado español es considerado muy bajo, aunque no es absolutamente cero.
+- Quieres evitar la retención previa del 19 % y gestionar tú mismo la tributación en la declaración de la renta.
+- No te convencen los depósitos bancarios o las cuentas remuneradas por su menor rentabilidad o por las condiciones vinculadas que exigen muchas entidades (domiciliar nómina, contratar seguros, etc.).
+
+No son adecuadas si necesitas el dinero de forma inmediata o si buscas rentabilidades superiores a largo plazo. Para eso existen la renta variable, los fondos indexados u otros activos con mayor potencial —y también mayor riesgo—.
+
+---
+
+## Consejos prácticos para invertir en Letras del Tesoro
+
+1. **Hazte con el certificado digital o Cl@ve PIN** antes de intentar operar en tesoro.es. El proceso de obtención puede llevar varios días, así que no lo dejes para el último momento.
+2. **Compra directamente en el Tesoro** siempre que puedas: evitas comisiones bancarias que reducen tu rentabilidad neta de forma notable.
+3. **Diversifica plazos**: en lugar de invertir todo en una sola emisión, considera escalonar las compras (por ejemplo, combinar letras a 6 y 12 meses) para no depender de una sola fecha de vencimiento y reducir el riesgo de reinvertir en un momento de tipos bajos.
+4. **Anota la fecha de vencimiento** en tu calendario. Al vencimiento, el importe nominal se abona automáticamente en tu cuenta sin que tengas que hacer nada.
+5. **Recuerda declararlo en la renta**: aunque no hay retención previa cuando compras en el Tesoro, el rendimiento debe incluirse en tu declaración del IRPF del ejercicio en que cobras la Letra.
+6. **Consulta la rentabilidad antes de cada subasta** en tesoro.es. Los tipos cambian en cada convocatoria y la diferencia entre unas semanas puede ser relevante.
+7. **No pongas todo tu fondo de emergencia en Letras**: al estar el capital inmovilizado durante el plazo, mantén siempre liquidez suficiente para imprevistos en una cuenta de acceso inmediato.
+
+---
+
+Invertir en Letras del Tesoro es una de las opciones más seguras y sencillas disponibles para el ahorrador español. Aunque no ofrecen la rentabilidad de la renta variable a largo plazo, representan una alternativa muy sólida para el dinero que no quieres arriesgar y que puedes mantener inmovilizado durante unos meses. En un entorno de tipos moderados pero positivos, conocer cómo funcionan y cómo acceder a ellas directamente puede marcar una diferencia real en tu ahorro anual.`,
+  },
+  {
     slug: "inversion-indexada-y-gestion-pasiva",
     title: "Inversión indexada y gestión pasiva en España: la estrategia que está cambiando cómo invertimos",
     description: "Descubre qué es la inversión indexada, cómo se compara con la gestión activa, cuánto cuestan las comisiones y cómo empezar a invertir en fondos indexados en España.",
