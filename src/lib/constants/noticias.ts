@@ -10,6 +10,133 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "como-crear-un-fondo-de-emergencia",
+    title: "Cómo crear un fondo de emergencia: cuánto necesitas y dónde guardarlo",
+    description: "Aprende qué es un fondo de emergencia, cuánto dinero debes reservar según tu perfil y qué productos financieros son ideales para protegerlo sin perder rentabilidad.",
+    category: "Ahorro",
+    readingMinutes: 7,
+    publishedAt: "2026-05-16",
+    content: `## ¿Qué es un fondo de emergencia?
+
+Un **fondo de emergencia** es una reserva de dinero líquido que tienes disponible para hacer frente a gastos imprevistos sin necesidad de endeudarte ni deshacer tus inversiones en el peor momento. Es la primera línea de defensa de tu economía personal.
+
+Imagina que tu coche se avería y la reparación cuesta 1.500 euros. O que pierdes el empleo y tardas cuatro meses en encontrar otro. O que la lavadora se rompe, el médico te manda unas pruebas privadas urgentes o tienes que hacer un viaje inesperado. Estos son exactamente los escenarios para los que existe el fondo de emergencia.
+
+Sin ese colchón financiero, la mayoría de las personas recurre a tarjetas de crédito, préstamos personales o, en el peor caso, a vender activos de inversión con pérdidas. El fondo de emergencia evita ese ciclo de endeudamiento y es, por eso, el punto de partida de cualquier plan financiero sólido.
+
+---
+
+## ¿Por qué es la base de cualquier plan financiero?
+
+Los asesores financieros suelen repetir una regla simple: antes de invertir un euro en bolsa, en criptomonedas o en cualquier otro activo, asegúrate de tener tu fondo de emergencia en su lugar.
+
+¿Por qué? Porque sin él, cualquier imprevisto puede obligarte a vender tus inversiones en el momento equivocado. Si la bolsa cae un 30 % justo cuando pierdes el trabajo, te verás obligado a liquidar con pérdidas para sobrevivir. Con un fondo de emergencia, puedes esperar a que los mercados se recuperen.
+
+Además, el fondo de emergencia tiene un valor psicológico enorme. Saber que tienes dinero para cubrir varios meses de gastos **reduce el estrés financiero**, mejora la toma de decisiones y te permite asumir riesgos controlados en otras áreas: negociar un aumento, montar un negocio o cambiar de sector profesional.
+
+---
+
+## ¿Cuánto dinero debes tener en tu fondo de emergencia?
+
+La recomendación más extendida es acumular entre **3 y 6 meses de gastos esenciales**. Pero la cantidad exacta depende de tu situación personal:
+
+| Perfil | Fondo recomendado |
+|---|---|
+| Asalariado con contrato fijo, dos sueldos en el hogar | 3 meses de gastos |
+| Asalariado con contrato temporal o sector inestable | 4–6 meses de gastos |
+| Autónomo o trabajador por cuenta propia | 6–9 meses de gastos |
+| Único sustentador del hogar | 6–12 meses de gastos |
+| Freelance o ingresos muy variables | 9–12 meses de gastos |
+
+Para calcular tu objetivo, suma todos tus gastos esenciales mensuales: alquiler o hipoteca, facturas (luz, agua, gas, internet), alimentación, seguros y transporte. Multiplica esa cifra por el número de meses que corresponda a tu perfil.
+
+Por ejemplo, si tus gastos esenciales mensuales son 1.800 € y eres autónomo, tu objetivo debería estar entre **10.800 € y 16.200 €**.
+
+No incluyas en ese cálculo gastos discrecionales como ocio, ropa o restaurantes: en caso de emergencia, esos son los primeros que recortarías.
+
+---
+
+## ¿Dónde guardar el fondo de emergencia?
+
+El fondo de emergencia tiene tres requisitos que debe cumplir el producto donde lo guardes:
+
+1. **Liquidez inmediata**: debes poder acceder al dinero en 24–48 horas como máximo.
+2. **Seguridad**: no puede estar sujeto a fluctuaciones de mercado.
+3. **Sin penalización por retirada**: algunos productos penalizan el rescate anticipado, lo que los hace inadecuados.
+
+### Cuenta de ahorro remunerada
+
+Las **cuentas de ahorro remuneradas** son probablemente la mejor opción para el grueso del fondo. Ofrecen intereses (actualmente entre el 1 % y el 2,5 % TAE en muchas entidades), el dinero está disponible en cualquier momento sin penalización y está protegido hasta 100.000 € por el Fondo de Garantía de Depósitos (FGD). Entidades como MyInvestor, Openbank, Trade Republic o N26 ofrecen condiciones competitivas sin comisiones.
+
+### Cuenta corriente remunerada
+
+Algunas entidades también remuneran saldos en **cuenta corriente** hasta cierto importe. La ventaja es que la operativa es aún más ágil, aunque la rentabilidad suele ser algo inferior a la cuenta de ahorro.
+
+### Depósitos a corto plazo (con cautela)
+
+Un **depósito a plazo fijo** a 3 o 6 meses puede ser útil si el fondo ya está consolidado y quieres obtener algo más de rentabilidad. Sin embargo, ojo: si necesitas el dinero antes del vencimiento, algunos depósitos aplican penalización por rescate anticipado. Úsalos solo para la parte del fondo que claramente no vas a necesitar a muy corto plazo.
+
+### Fondo monetario
+
+Los **fondos monetarios** invierten en activos de muy corto plazo (letras del Tesoro, repos, pagarés) y tienen una volatilidad prácticamente nula. La liquidez suele ser de 1–2 días hábiles. Son una alternativa interesante para quien ya tiene una parte del fondo en cuenta corriente y quiere rentabilizar el resto con un riesgo mínimo.
+
+### Lo que NO debes usar para tu fondo de emergencia
+
+- **Bolsa o acciones**: el valor puede caer justo cuando más lo necesitas.
+- **Criptomonedas**: la volatilidad extrema las hace completamente inapropiadas.
+- **Planes de pensiones**: no son rescatables libremente hasta la jubilación, salvo supuestos excepcionales como paro de larga duración o enfermedad grave.
+- **Fondos de renta variable o mixta**: mismo problema que la bolsa; puedes encontrarte vendiendo en pérdidas.
+
+---
+
+## Cómo construir tu fondo de emergencia paso a paso
+
+Construir el fondo no tiene que ser un esfuerzo heroico. Sigue estos pasos de forma sistemática:
+
+### Paso 1: Calcula tu objetivo
+
+Aplica la fórmula: **gasto mensual esencial × número de meses según tu perfil**. Ese es tu número.
+
+### Paso 2: Abre una cuenta separada
+
+Abre una cuenta de ahorro específicamente para el fondo de emergencia. Mantenerla separada de tu cuenta corriente habitual tiene un efecto psicológico muy potente: el dinero está "apartado" y no lo incluyes mentalmente en el presupuesto cotidiano.
+
+### Paso 3: Automatiza las aportaciones
+
+Configura una transferencia automática mensual el mismo día que cobras tu nómina o ingresos. Aunque sea pequeña —50 € o 100 €—, la constancia es lo que más importa. El fondo crecerá solo con el tiempo.
+
+### Paso 4: Añade ingresos extraordinarios
+
+Cuando recibas una paga extra, una devolución de Hacienda o cualquier ingreso no habitual, destina entre el 30 % y el 50 % al fondo hasta alcanzar tu objetivo. El resto puedes destinarlo a disfrutar o a invertir.
+
+### Paso 5: No lo toques salvo emergencias reales
+
+Este es el error más frecuente. Una oferta de viaje tentadora no es una emergencia. Las vacaciones de Semana Santa no son una emergencia. Una emergencia es la pérdida de ingresos, un gasto médico urgente o una avería que te impide trabajar. Mantén esa distinción clara y respétala.
+
+---
+
+## Errores comunes al construir el fondo
+
+- **Mezclar el fondo con el dinero del día a día**: tener todo en la misma cuenta corriente hace casi imposible no gastar el dinero reservado.
+- **Fijar un objetivo demasiado bajo**: un mes de gastos no es suficiente para la mayoría de las situaciones reales.
+- **Invertirlo en activos volátiles o ilíquidos**: el fondo no es para ganar dinero, es para tenerlo disponible cuando todo lo demás falla.
+- **No reponerlo tras usarlo**: si tiras del fondo, reponer lo gastado debe convertirse en tu prioridad financiera hasta volver al objetivo.
+- **Esperar al sueldo perfecto para empezar**: empieza con lo que puedas. Aunque sean 30 € al mes, la disciplina es el activo más valioso.
+
+---
+
+## Consejos prácticos
+
+- **Empieza con un mini-objetivo de 1.000 €** si el número final te parece inalcanzable. Alcanzar ese primer hito te dará motivación para continuar.
+- **Revisa el fondo anualmente**: si tus gastos han subido (nueva hipoteca, un hijo, cambio de ciudad), actualiza el objetivo en consecuencia.
+- **Calcula el fondo en función de gastos, no de ingresos**: lo que importa es cuánto necesitas para sobrevivir, no cuánto ganas.
+- **Usa aplicaciones de finanzas personales** para identificar con precisión tus gastos esenciales y saber exactamente cuánto necesitas cubrir.
+- **Comunica el objetivo a tu pareja o familia**: si convivís, el fondo de emergencia es una responsabilidad compartida y todos deben entender para qué sirve y qué lo activa.
+- **Aumenta el fondo si cambia tu situación laboral**: si pasas de asalariado a autónomo, o si tu sector entra en crisis, revisa hacia arriba el número de meses que necesitas cubrir.
+
+Crear un fondo de emergencia no es glamuroso ni emocionante como invertir en bolsa o comprar criptomonedas. Pero es, sin duda, el paso financiero más importante que puedes dar. Es la diferencia entre un imprevisto que te complica un mes y uno que te cambia la vida. Empieza hoy, aunque sea poco: la constancia hará el resto.`,
+  },
+  {
     slug: "letras-del-tesoro-como-invertir",
     title: "Letras del Tesoro en España: cómo invertir en deuda pública y qué rentabilidad esperar",
     description: "Aprende qué son las Letras del Tesoro, cómo comprarlas directamente sin comisiones, qué rentabilidad ofrecen y cómo tributan en el IRPF.",
