@@ -10,6 +10,159 @@ export interface NoticiaArticle {
 
 export const NOTICIAS_ARTICLES: NoticiaArticle[] = [
   {
+    slug: "desgravacion-alquiler-vivienda-espana",
+    title: "Cómo desgravarse el alquiler en España: deducciones estatales y autonómicas",
+    description: "Descubre qué deducciones fiscales puedes aplicar si pagas alquiler en España: desde el régimen transitorio estatal hasta las ayudas de cada comunidad autónoma.",
+    category: "Fiscalidad",
+    readingMinutes: 8,
+    publishedAt: "2026-05-17",
+    content: `## ¿Puedo desgravarme el alquiler en la declaración de la renta?
+
+Pagar el alquiler es uno de los mayores gastos fijos para millones de españoles. Según los últimos datos del Instituto Nacional de Estadística, más del 23 % de los hogares españoles vive en régimen de alquiler, una cifra que no para de crecer, especialmente entre los jóvenes menores de 35 años. Lo que muchos inquilinos no saben es que parte de ese dinero puede recuperarse a través de la declaración de la renta.
+
+En España, la deducción estatal por alquiler de vivienda habitual desapareció en 2015 para los nuevos contratos, pero muchas comunidades autónomas han creado sus propias deducciones. Además, existen otras vías fiscales que pueden ayudarte a reducir la factura. En este artículo te explicamos todo lo que necesitas saber.
+
+---
+
+## La deducción estatal por alquiler: ¿sigue vigente?
+
+La deducción estatal por alquiler de vivienda habitual fue suprimida por la Ley 26/2014, a partir del 1 de enero de 2015. Sin embargo, existe un **régimen transitorio** que permite seguir aplicándola si cumples dos condiciones simultáneamente:
+
+- Tenías un contrato de arrendamiento **anterior al 1 de enero de 2015**.
+- Tu base imponible era **inferior a 24.107,20 € anuales**.
+
+Si cumples ambos requisitos, puedes deducirte el **10,05 % de las cantidades satisfechas** en el período impositivo por el alquiler de tu vivienda habitual. La base máxima de deducción varía según tu renta:
+
+| Base imponible | Base máxima de deducción |
+|---|---|
+| Hasta 17.707,20 € | 9.040 € anuales |
+| Entre 17.707,20 € y 24.107,20 € | 9.040 € menos 1,4125 × (BI – 17.707,20 €) |
+| Igual o superior a 24.107,20 € | Sin derecho a deducción |
+
+**Importante**: si en algún momento desde 2015 renovaste el contrato o firmaste uno nuevo (aunque sea con el mismo propietario y en el mismo piso), pierdes el derecho a aplicar este régimen transitorio. La clave es que se trate exactamente del mismo contrato ininterrumpido.
+
+---
+
+## Deducciones autonómicas por alquiler: un mapa por comunidades
+
+La gran novedad de los últimos años es que casi todas las comunidades autónomas han aprobado deducciones propias para inquilinos. Su cuantía, requisitos y límites varían considerablemente. Aquí tienes un resumen actualizado de las principales:
+
+### Comunidad de Madrid
+
+Madrid ofrece una de las deducciones más generosas de España para jóvenes. Permite deducirse el **30 % del alquiler**, con un límite de **1.000 € anuales**. Los requisitos son: ser menor de 35 años, que la vivienda sea la habitual y que la base imponible no supere los 25.620 € en declaración individual o 36.200 € en conjunta.
+
+### Andalucía
+
+Andalucía ofrece una deducción del **15 % de las cantidades satisfechas**, con un máximo de **500 € anuales** (o 600 € para menores de 35 años). Para aplicarla, la base imponible no puede superar los 19.000 € en declaración individual o 24.000 € en conjunta.
+
+### Cataluña
+
+En Cataluña, la deducción es del **10 % de las cantidades pagadas**, con un máximo de **300 € anuales**. Para menores de 32 años, personas en situación de desempleo o con discapacidad reconocida, el límite sube a **600 €**. La base imponible no puede superar los 20.000 € en declaración individual o 30.000 € en conjunta.
+
+### Comunidad Valenciana
+
+Valencia ofrece una deducción del **15 % del alquiler**, con un máximo de **550 € anuales** para menores de 35 años. También existe deducción para mayores de 65 años o personas con discapacidad reconocida. La renta anual no puede superar los 25.000 €.
+
+### País Vasco y Navarra
+
+Las haciendas forales tienen sistemas propios más generosos. En el País Vasco, la deducción puede llegar al **20 % del alquiler** con límites de renta superiores a los del régimen general. Navarra también tiene un sistema específico con condiciones favorables para jóvenes y familias numerosas.
+
+### Resumen del resto de comunidades
+
+| Comunidad | Deducción | Límite anual | Requisito principal |
+|---|---|---|---|
+| Castilla y León | 15–20 % | 459–612 € | Menores de 36 años |
+| Aragón | 10 % | 300 € | Renta inferior a 15.000 € |
+| Galicia | 10–20 % | 300–600 € | Edad menor de 35 años o familia numerosa |
+| Extremadura | 10 % | 300 € | Renta inferior a 19.000 € |
+| Islas Baleares | 15 % | 400–600 € | Menores de 36 años |
+| Murcia | 10 % | 300 € | Menores de 35 años |
+| Asturias | 10 % | 455 € | Según tramo de renta |
+| Canarias | 20–25 % | 600–1.000 € | Menores de 35 o familia numerosa |
+
+---
+
+## Requisitos generales para aplicar las deducciones autonómicas
+
+Aunque cada comunidad tiene sus propias normas, hay requisitos que se repiten en casi todas:
+
+1. **Vivienda habitual**: el piso alquilado debe ser tu residencia efectiva, no una segunda vivienda ni un alquiler vacacional o de temporada.
+2. **Contrato registrado y depósito de fianza**: en casi todos los casos, el contrato debe estar debidamente formalizado y la fianza depositada en el organismo autonómico competente.
+3. **Justificación del pago**: debes poder acreditar el abono mediante transferencias bancarias o recibos. El pago en efectivo puede generar problemas de justificación ante Hacienda.
+4. **Límite de base imponible**: la mayoría de deducciones están pensadas para rentas medias y bajas. Superado cierto umbral, el derecho desaparece.
+5. **No ser propietario de otra vivienda en la misma localidad**: no puedes aplicar la deducción si eres propietario o usufructuario de un inmueble en el mismo municipio.
+
+---
+
+## El casero también tiene obligaciones fiscales
+
+Aunque este artículo está orientado al inquilino, vale la pena tener en cuenta que el arrendador también tiene obligaciones tributarias, ya que debe declarar los ingresos del alquiler en el IRPF como **rendimientos del capital inmobiliario**. A cambio, puede deducirse gastos como intereses de la hipoteca sobre el inmueble, comunidad, IBI, seguros y reparaciones. Además, si el alquiler es de vivienda habitual, el casero tiene derecho a una **reducción del 60 %** sobre el rendimiento neto positivo.
+
+Conocer esto es útil porque, en ocasiones, propietarios que no declaran sus rentas de alquiler también incumplen la obligación de depositar la fianza, lo que puede perjudicarte a ti como inquilino si intentas aplicar la deducción autonómica.
+
+---
+
+## Cómo aplicar la deducción en la declaración de la renta
+
+El proceso para aplicar la deducción autonómica es sencillo si sabes dónde buscar:
+
+1. **Accede al borrador** de la renta a través de Renta Web de la Agencia Tributaria (agenciatributaria.gob.es).
+2. **Busca el apartado de deducciones autonómicas**: suele estar al final de la declaración, en la sección específica de tu comunidad autónoma.
+3. **Introduce el importe total del alquiler pagado** durante el año fiscal correspondiente.
+4. **Verifica los datos del arrendador**: en algunos casos se solicita el NIF del propietario.
+5. **Conserva los justificantes**: aunque no se adjuntan a la declaración, Hacienda puede pedirlos en caso de comprobación posterior. Guárdalos al menos cuatro años.
+
+---
+
+## El Bono Alquiler Joven y otras ayudas complementarias
+
+Más allá de las deducciones fiscales, existen otras ayudas específicas para inquilinos que vale la pena conocer:
+
+### Bono Alquiler Joven
+
+El Gobierno central lanzó el **Bono Alquiler Joven** para personas de entre 18 y 35 años con rentas inferiores a 24.318 € anuales. La ayuda puede llegar a **250 € al mes** durante un máximo de dos años y se gestiona a través de las comunidades autónomas. Puedes solicitarlo si tu alquiler no supera los umbrales fijados en tu región y cumples los requisitos de renta.
+
+### Ayudas del Plan Estatal de Vivienda
+
+El Plan Estatal de Vivienda también contempla subvenciones al alquiler para colectivos vulnerables. Familias numerosas, personas con discapacidad, mayores de 65 años y personas en situación de especial vulnerabilidad pueden acceder a subvenciones de hasta el 40–50 % del alquiler en algunos casos. La gestión corresponde a cada comunidad autónoma.
+
+---
+
+## Consejos prácticos para maximizar tu ahorro fiscal
+
+### 1. Infórmate sobre tu comunidad antes de firmar
+
+Antes de decidir dónde vivir o qué piso alquilar, consulta las deducciones autonómicas disponibles. En algunos casos, la ventaja fiscal puede suponer varios cientos de euros al año que marcan la diferencia real en tu presupuesto mensual.
+
+### 2. Paga siempre por transferencia o Bizum
+
+Los pagos en efectivo son difíciles de justificar ante Hacienda. Usa siempre transferencia bancaria o Bizum con la referencia del alquiler para disponer de una traza documental inequívoca. Evita los recibos en papel como único justificante.
+
+### 3. Guarda todos los justificantes durante al menos cuatro años
+
+El plazo de prescripción de Hacienda es de cuatro años. Conserva los comprobantes de pago del alquiler, el contrato firmado y cualquier comunicación con el propietario. En caso de inspección, estos documentos son tu única defensa.
+
+### 4. Verifica que el propietario ha depositado la fianza
+
+En la mayoría de comunidades, la deducción requiere que la fianza esté depositada en el organismo autonómico correspondiente: el Incasòl en Cataluña, la Agencia de Vivienda Social en Madrid, la AVRA en Andalucía, etc. Puedes comprobarlo solicitándole al propietario el resguardo del depósito.
+
+### 5. Revisa si tu situación personal mejora las condiciones
+
+Muchas comunidades amplían los límites o la cuantía de la deducción para familias numerosas, personas con discapacidad, víctimas de violencia de género o personas en situación de desempleo. Si alguna de estas circunstancias te afecta, asegúrate de revisarlo antes de presentar la declaración.
+
+### 6. No confundas la deducción estatal con la autonómica
+
+Son dos mecanismos distintos. La estatal en régimen transitorio aplica exclusivamente a contratos anteriores a 2015. La autonómica es independiente y puede acumularse con la estatal si cumples simultáneamente ambos requisitos.
+
+---
+
+## Conclusión
+
+El alquiler es un gasto ineludible para millones de españoles, pero las deducciones fiscales permiten recuperar una parte significativa de ese dinero. Aunque la deducción estatal desapareció para los contratos nuevos, las comunidades autónomas han tomado el relevo con ayudas que, en algunos casos como Madrid, pueden suponer hasta 1.000 euros anuales de ahorro fiscal.
+
+La clave está en conocer las normas de tu comunidad, pagar siempre con trazabilidad bancaria y revisar con detalle el apartado de deducciones autonómicas al hacer la renta. Con un poco de planificación y atención, puedes ahorrar varios cientos de euros al año sin esfuerzo adicional.`,
+  },
+  {
     slug: "como-crear-un-fondo-de-emergencia",
     title: "Cómo crear un fondo de emergencia: cuánto necesitas y dónde guardarlo",
     description: "Aprende qué es un fondo de emergencia, cuánto dinero debes reservar según tu perfil y qué productos financieros son ideales para protegerlo sin perder rentabilidad.",
